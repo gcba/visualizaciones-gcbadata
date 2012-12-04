@@ -1733,4 +1733,6 @@ Obelisco → Obelisco:                                                          
 <text transform="matrix(1 0 0 1 72.9788 -59.5708)" font-family="'Helvetica'" font-size="18">Ciudad Autónoma de Buenos Aires</text>
 <text transform="matrix(1 0 0 1 72.9788 -86.5054)" font-family="'Helvetica-Bold'" font-size="43.0901" letter-spacing="-1">Bicicletas públicas</text>
 <text transform="matrix(1 0 0 1 72.9788 -40.5)" font-family="'Helvetica'" font-size="12">Visualización de relación matricial entre las estaciones de bicicletas de la ciudad.</text>
+<text transform="matrix(1 0 0 1 72.9788 1093.4453)"><tspan x="0" y="0" fill="#7F7F7F" font-family="'Helvetica'" font-size="12">Hecho con HTML, CSS, JavaScript, SVG </tspan><tspan x="0" y="14.4" fill="#7F7F7F" font-family="'Helvetica'" font-size="12">Código en </tspan><tspan x="58.043" y="14.4" fill="#7F7F7F" font-family="'Helvetica'" font-size="12" text-decoration=" underline">http://j.mp/gcbadata-bicicletas</tspan></text>
+<text transform="matrix(1 0 0 1 807.637 1093.4453)"><tspan x="0" y="0" fill="#7F7F7F" font-family="'Helvetica'" font-size="12">Octubre, 2012.</tspan><tspan x="-2.654" y="14.4" fill="#7F7F7F" font-family="'Helvetica'" font-size="12">Davo Galavotti. </tspan><tspan x="15.832" y="28.8" fill="#7F7F7F" font-family="'Helvetica'" font-size="12">@pixelbeat.</tspan></text>
 </svg>

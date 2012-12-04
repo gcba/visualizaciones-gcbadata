@@ -16,7 +16,8 @@
 }
 
 path.chord {
-
+/*  stroke: #000;
+  stroke-width: .25px;*/
 }
 
 #circle:hover path.fade {
@@ -90,9 +91,9 @@ d3.csv("estaciones.csv", function(cities) {
         .attr("x", 6)
         .attr("dy", 15);
 
-    // groupText.append("textPath")
-    //     .attr("xlink:href", function(d, i) { return "#group" + i; })
-    //     .text(function(d, i) { return cities[i].name; });
+    groupText.append("textPath")
+        .attr("xlink:href", function(d, i) { return "#group" + i; })
+        .text(function(d, i) { return cities[i].name; });
 
     // Remove the labels that don't fit. :(
     groupText.filter(function(d, i) { return groupPath[0][i].getTotalLength() / 2 - 16 < this.getComputedTextLength(); })
