@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Mapa de Librerías y Bibliotecas de GCBA</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/carto-gcba.css" rel="stylesheet">
+    <style>body,html {width:100%; height:100%; margin:0; padding:0; overflow:hidden;} #map_canvas {position:absolute; top:81px; left:0; right:0; bottom:0;}</style>
+    <link rel="stylesheet" href="css/leaflet.css" />
+    <!--[if IE]><link rel="stylesheet" href="css/leaflet.ie.css" /><![endif]-->
+    <link  href="css/cartodb-leaflet.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script src="js/leaflet.js"></script>
+    <script type="text/javascript" src="js/wax.leaf.min.js"></script>
+    <script type="text/javascript" src="dist/cartodb-leaflet-min.js"></script>
+    <script type="text/javascript" src="dist/cartodb-popup-min.js"></script> 
+
+    <script type="text/javascript">
+    	var puntos, map;
+      var tipo = '';
+      var estado = '';
+  	  function initialize() {
+  			map = new L.Map('map_canvas').setView(new L.LatLng(-34.618234674892, -58.404178619384766), 12);
+
+        var mapboxUrl = 'http://a.tiles.mapbox.com/v3/mapbox.mapbox-streets/{z}/{x}/{y}.png',
+        //var mapboxUrl = 'https://dnv9my2eseobd.cloudfront.net/v3/cartodb.map-pp0tkn8d/{z}/{x}/{y}.png',
+            mapbox = new L.TileLayer(mapboxUrl, {maxZoom: 17,attribution:"Powered by Leaflet and Mapbox"});
+        map.addLayer(mapbox,true);
+              
+
+    		var query="SELECT * FROM obras";
+        var popup = new L.CartoDBPopup();
+        var circleMarker = {};
+        var hover_style = {radius:4, color:"#333", weight:2, opacity:1, fillColor: "#FFCC00", fillOpacity:0, clickable:false};
+          
+          
+        puntos = new L.CartoDBLayer({
+          map: map,
+          user_name:'antoniomilanese',
+          extra_params:{v:4},
+          cdn_url:'',
+          table_name: 'antoniomilanese',
+          query: query,
+          interactivity: "cartodb_id,tipo,x,y,estado",
+          featureOver: function(ev,latlng,pos,data) {
+            document.body.style.cursor = "pointer";
+            showTooltip(data,pos)
+            
+            // Show the hover point if it is a different feature
+            if (data.cartodb_id != circleMarker.cartodb_id) {
+              map.removeLayer(circleMarker);
+            
+              circleMarker = new L.CircleMarker(new L.LatLng(data.x, data.y), hover_style);
+              circleMarker.cartodb_id = data.cartodb_id;
+              
+              map.addLayer(circleMarker);
+            }
+            
+          },
+          featureOut: function() {
+            document.body.style.cursor = "default";
+            hideTooltip();
+            
+            // Hide and remove in any case the hover point
+            circleMarker.cartodb_id = null;
+            map.removeLayer(circleMarker)
+          },
+          featureClick: function(ev,latlng,pos,data) {
+              window.open(data["link"],"_blank");
+              
+          },
+          auto_bound: false
+        });
+
+        map.addLayer(puntos)
+  	  }
+
+      function showTooltip(data,point) {
+        var html = "";
+        
+        html += "<h3>" + data["nombre"] +"</label>";
+        
+        
+        html += "<br><label>Tipo</label><p>" + data["tipo"] +"</p>";
+        html += "<br><label>Tematica</label><p>" + data["tematica"] +"</p>";
+        html += "<br><label>Ubiación</label><p>" + data["ubicacion"] +"</p>";
+        html += "<br><label>Barrio</label><p>" + data["barrio"] +"</p>";
+        
+        $("#tooltip").html(html);
+        $("#tooltip").css({left: (point.x + 15) + 'px', top: point.y - ($("#tooltip").height()) + 10 + 'px'})
+        $("#tooltip").show();
+      }
+
+      function hideTooltip() {
+        $("#tooltip").hide();
+      }
+      
+
+      function changeTipo(new_tipo) {
+          tipo = new_tipo
+          changeLayer()
+      }
+
+      function changeEstado(new_estado) {
+          estado = new_estado
+          changeLayer()
+      }
+  	  
+      function changeLayer() {
+        if (tipo == '' && estado == '') {
+            puntos.setQuery("SELECT * FROM obras");
+        } else if (tipo == '' && estado != '') {
+            puntos.setQuery("SELECT * FROM obras WHERE estado = '" + estado + "'"); 
+        } else if (tipo != '' && estado == '') {
+            puntos.setQuery("SELECT * FROM obras WHERE tipo = '" + tipo + "'");
+        } else if ( tipo != '' && estado != '') {
+            puntos.setQuery("SELECT * FROM obras WHERE estado = '" + estado + "' AND tipo = '" + tipo +"'");
+        }
+      }
+    </script>
+
+  </head>
+  <body onload="initialize()">
+    
+    <div id="map_canvas"></div>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <h1 class="brand" href="#">Bibliotecas y Librerias en GCBA</h1>
+          <div class="btn-group">
+            <button class="btn" onClick="changeTipo('')">Ver todas</button>
+            <button class="btn" onClick="changeTipo('CALLE')">CALLE</button>
+            <button class="btn" onClick="changeTipo('VEREDA')">VEREDA</button>
+            <button class="btn" onClick="changeTipo('PARCELA')">PARCELA</button>
+          </div>
+
+          <div class="btn-group">
+            <button class="btn" onClick="changeEstado('')">Ver todas</button>
+            <button class="btn" onClick="changeEstado('EJEC')">EJEC</button>
+            <button class="btn" onClick="changeEstado('DENE')">DENE</button>
+            <button class="btn" onClick="changeEstado('VERI')">VERI</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="alert alert-info" id="tooltip">
+      <p>Tooltip</p>
+    </div>    
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-tab.js"></script>
+    <script src="js/bootstrap-tooltip.js"></script>
+  </body>
+</html>
+
