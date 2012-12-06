@@ -27,3 +27,18 @@ html, body {
   width:auto;
   margin:0 10px;
 }
+
+.navbar-inner {
+  padding: 20px;
+}
+
+body,html {width:100%; height:100%; margin:0; padding:0; overflow:hidden;}
+#map_canvas {position:absolute; top:80px; left:0; right:0; bottom:0;}
+
+.brand {
+  margin-left: 10px !important;
+}
+
+.btn-group {
+  margin-right: 10px;
+}
