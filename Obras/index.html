@@ -17,8 +17,10 @@
     <script type="text/javascript" src="js/wax.leaf.min.js"></script>
     <script type="text/javascript" src="dist/cartodb-leaflet-min.js"></script>
     <script type="text/javascript" src="dist/cartodb-popup-min.js"></script> 
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
 
     <script type="text/javascript">
+
     	var puntos, map;
       var tipo = '';
       var estado = '';
@@ -101,12 +103,44 @@
 
       function changeTipo(new_tipo) {
           tipo = new_tipo
+          changeButtonTipo(tipo)
           changeLayer()
       }
 
       function changeEstado(new_estado) {
           estado = new_estado
+          changeButtonEstado(estado)
           changeLayer()
+      }
+
+      function changeButtonTipo(new_tipo){
+        if (new_tipo == '') {
+          new_tipo = 'ALLTIPO'
+        }
+        cleanButtonTipo()
+        document.getElementById(new_tipo).className = "btn btn-primary"; 
+      }
+
+      function changeButtonEstado(new_estado){
+        if (new_estado == '') {
+          new_estado = 'ALLESTADO'
+        }
+        cleanButtonEstado()
+        document.getElementById(new_estado).className = "btn btn-primary"; 
+      }
+
+      function cleanButtonTipo() {
+        document.getElementById('ALLTIPO').className = "btn";
+        document.getElementById('PARCELA').className = "btn";
+        document.getElementById('VEREDA').className = "btn";
+        document.getElementById('CALLE').className = "btn";
+      }
+
+      function cleanButtonEstado() {
+        document.getElementById('ALLESTADO').className = "btn";
+        document.getElementById('EJEC').className = "btn";
+        document.getElementById('DENE').className = "btn";
+        document.getElementById('VERI').className = "btn";
       }
   	  
       function changeLayer() {
@@ -132,17 +166,17 @@
           <a class="brand" href="#">Obras en GCBA</a>
           <div class="btn-group pull-right">
           <div class="btn-group">
-            <button class="btn btn-primary" onClick="changeTipo('')" type="button">Ver todas</button>
-            <button class="btn" onClick="changeTipo('CALLE')" type="button">CALLE</button>
-            <button class="btn" onClick="changeTipo('VEREDA')" type="button">VEREDA</button>
-            <button class="btn" onClick="changeTipo('PARCELA')" type="button">PARCELA</button>
+            <button id="ALLTIPO" class="btn btn-primary" onClick="changeTipo('')" type="button">Ver todas</button>
+            <button id="CALLE" class="btn" onClick="changeTipo('CALLE')" type="button">CALLE</button>
+            <button id="VEREDA" class="btn" onClick="changeTipo('VEREDA')" type="button">VEREDA</button>
+            <button id="PARCELA" class="btn" onClick="changeTipo('PARCELA')" type="button">PARCELA</button>
           </div>
 
           <div class="btn-group">
-            <button class="btn" onClick="changeEstado('')" type="button">Ver todas</button>
-            <button class="btn" onClick="changeEstado('EJEC')" type="button">EJEC</button>
-            <button class="btn" onClick="changeEstado('DENE')" type="button">DENE</button>
-            <button class="btn" onClick="changeEstado('VERI')" type="button">VERI</button>
+            <button id="ALLESTADO" class="btn btn-primary" onClick="changeEstado('')" type="button">Ver todas</button>
+            <button id="EJEC" class="btn" onClick="changeEstado('EJEC')" type="button">EJEC</button>
+            <button id="DENE" class="btn" onClick="changeEstado('DENE')" type="button">DENE</button>
+            <button id="VERI" class="btn" onClick="changeEstado('VERI')" type="button">VERI</button>
         </div>
       </div>
       </div>
