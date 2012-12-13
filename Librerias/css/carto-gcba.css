@@ -39,16 +39,17 @@ html, body {
 
 #tooltip {
   position:absolute;
-  right: 100px;
-  width:160px;
+  right: 50px;
+  width:250px;
   height:auto;
   padding:10px;
   z-index:1000;
   display:none;
   background:white;
-  border-color:#DDDDDD!important;
-  font:normal 12px Arial!important;
-  color:#666666!important;
 }
 
-#tooltip label {font-weight:bold;}
+#tooltip label {font-weight:bold; line-height: 10px;}
+
+.navbar .btn, .navbar .btn-group {
+margin-top: 25px;
+}
