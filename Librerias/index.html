@@ -73,17 +73,11 @@
 
       function showTooltip(data,point) {
         var html = "";
+
+        var email = data["email"] ? "<label>Email:</label><p>" + data["email"] +"</p>" : '';
         
         html += "<h3>Nombre:" + data["name"] +"</label>";
-        
-        html += "<label>Tipo</label><p>" + data["type"] +"</p>";
-        html += "<label>Tematica</label><p>" + data["kind"] +"</p>";
-        html += "<label>Ubiación</label><p>" + data["location"] +"</p>";
-        html += "<label>Barrio</label><p>" + data["neighborhood"] +"</p>";
-        html += "<label>Email</label><p>" + data["email"] +"</p>";
-        html += "<label>Email</label><p>" + data["phone"] +"</p>";
-        html += "<label>Email</label><p>" + data["web"] +"</p>";
-        html += "<img src='http://chart.apis.google.com/chart?cht=qr&chs=230x230&chld=M&choe=UTF-8&chl="+data["neighborhood"] + data["location"] + data["email"] +" ' >";
+        html += email;
 
 
 
