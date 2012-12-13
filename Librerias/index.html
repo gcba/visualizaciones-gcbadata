@@ -65,10 +65,6 @@
             circleMarker.cartodb_id = null;
             map.removeLayer(circleMarker)
           },
-          featureClick: function(ev,latlng,pos,data) {
-              window.open(data["link"],"_blank");
-              
-          },
           auto_bound: false
         });
 
@@ -79,7 +75,7 @@
         var html = "";
         
         html += "<h3>" + data["name"] +"</label>";
-        
+        html += "<label>" + data["nombre"] +"</label>";        
         
         html += "<br><label>Tipo</label><p>" + data["type"] +"</p>";
         html += "<br><label>Tematica</label><p>" + data["kind"] +"</p>";
