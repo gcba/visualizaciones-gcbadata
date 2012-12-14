@@ -84,13 +84,25 @@
 
         var kind = data["kind"] ? "<p><label>Temática: </label>" + data["kind"] +"</p>" : '';
 
+        var location = data["location"] ? "<p><label>Dirección: </label>" + data["location"] +"</p>" : '';
+
+        var neighborhood = data["neighborhood"] ? "<p><label>Barrio: </label>" + data["neighborhood"] +"</p>" : '';
+
+        var phone = data["phone"] ? "<p><label>Telefono: </label>" + data["phone"] +"</p>" : '';
+
+        var web = data["web"] ? "<p><label>Web: </label>" + data["web"] +"</p>" : '';
+
         var email = data["email"] ? "<p><label>Email: </label>" + data["email"] +"</p>" : '';
         
         html += "<h3>Nombre: " + data["name"] +"</h3>";
         html += kind;
+        html += location;
+        html += neighborhood;
+        html += phone;
+        html += web;
         html += email;
 
-        html += "<img src='http://chart.apis.google.com/chart?cht=qr&chs=230x230&chld=M&choe=UTF-8&chl="+email+" ' >";
+        html += "<img src='http://chart.apis.google.com/chart?cht=qr&chs=270x270&chld=M&choe=UTF-8&chl="+kind+location+email+" ' >";
 
 
 /*
@@ -158,7 +170,7 @@ http://chart.apis.google.com/chart?cht=qr&chs=230x230&chld=L&choe=UTF-8&chl=BEGI
       <div class="navbar-inner">
         <div class="container-fluid">
           <div class="row-fluid">
-            <div class="span3"><h1 class="brand" href="#">Bibliotecas y Librerias en GCBA</h1></div>
+            <div class="span3"><h1 class="brand" href="#">Bibliotecas y Librerías en GCBA</h1></div>
             <div class="span3"><p>
             Conoce todas las locaciones para conseguír tus libros favoritos. Busca bajo las siguientes 4 categorías y subcategorías.
           </p>  </div>
@@ -179,7 +191,7 @@ http://chart.apis.google.com/chart?cht=qr&chs=230x230&chld=L&choe=UTF-8&chl=BEGI
     </div>
     
 
-    <div class="alert alert-info" id="tooltip">
+    <div id="tooltip">
       <p>Tooltip</p>
     </div>    
 

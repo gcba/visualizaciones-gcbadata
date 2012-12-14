@@ -39,8 +39,8 @@ html, body {
 
 #tooltip {
   position:absolute;
-  right: 50px;
-  width:250px;
+  right: 0px;
+  width:300px;
   height:auto;
   padding:10px;
   z-index:1000;
@@ -62,15 +62,22 @@ margin-top: 25px;
 .brand {
     background: url(../assets/icono-home.svg);
     background-repeat: no-repeat;
-    background-position: 23px 9px;
+    background-position: 23px 25px;
     padding-left: 70px !important;
 }
 
+.navbar-fixed-bottom p {
+    text-rendering: optimizelegibility;
+    color: #414042;
+    font-size: 12px;
+    margin-top: 26px;
 
+}
 
 .nav-pills > li > a {
     border-radius: 0 !important;
     padding: 0 !important;
+    margin-right: -5px !important;
 }
 
 .nav-pills a {
@@ -82,22 +89,22 @@ margin-top: 25px;
 
 .nav-pills a.todas {
     display: block;
-    width: 165px;
+    width: 150px;
     height: 51px;
     background: url(../assets/menu-todos.svg);
     background-repeat: no-repeat;
     background-position: left bottom;
-    background-size: auto;
+    background-size: 100%;
 }
 
 .nav-pills a.libreria {
     display: block;
-    width: 140px;
+    width: 125px;
     height: 51px;
     background: url(../assets/menu-libreria.svg);
     background-repeat: no-repeat;
     background-position: left bottom;
-    background-size: auto;
+    background-size: 100%;
 }
 
 .nav-pills a.biblioteca {
@@ -107,7 +114,7 @@ margin-top: 25px;
     background: url(../assets/menu-biblioteca.svg);
     background-repeat: no-repeat;
     background-position: left bottom;
-    background-size: auto;
+    background-size: 100%;
 }
 
 .nav-pills a.biblioteca-comunitaria {
@@ -117,7 +124,7 @@ margin-top: 25px;
     background: url(../assets/menu-biblioteca-popular.svg);
     background-repeat: no-repeat;
     background-position: left bottom;
-    background-size: auto;
+    background-size: 100%;
 }
 
 
