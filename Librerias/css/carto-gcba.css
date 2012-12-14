@@ -60,9 +60,9 @@ margin-top: 25px;
 }
 
 .brand {
-    background: url(../assets/icono-home.svg);
+    background: url(../assets/icono-home.png);
     background-repeat: no-repeat;
-    background-position: 23px 25px;
+    background-position: 23px 28px;
     padding-left: 70px !important;
 }
 
@@ -81,17 +81,14 @@ margin-top: 25px;
 }
 
 .nav-pills a {
-    text-indent: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    
+  width: 20%;    
 }
 
 .nav-pills a.todas {
     display: block;
     width: 150px;
     height: 51px;
-    background: url(../assets/menu-todos.svg);
+    background: url(../assets/menu-todos.png);
     background-repeat: no-repeat;
     background-position: left bottom;
     background-size: 100%;
@@ -101,7 +98,7 @@ margin-top: 25px;
     display: block;
     width: 125px;
     height: 51px;
-    background: url(../assets/menu-libreria.svg);
+    background: url(../assets/menu-libreria.png);
     background-repeat: no-repeat;
     background-position: left bottom;
     background-size: 100%;
@@ -111,7 +108,7 @@ margin-top: 25px;
     display: block;
     width: 149px;
     height: 51px;
-    background: url(../assets/menu-biblioteca.svg);
+    background: url(../assets/menu-biblioteca.png);
     background-repeat: no-repeat;
     background-position: left bottom;
     background-size: 100%;
@@ -121,7 +118,7 @@ margin-top: 25px;
     display: block;
     width: 249px;
     height: 51px;
-    background: url(../assets/menu-biblioteca-popular.svg);
+    background: url(../assets/menu-biblioteca-popular.png);
     background-repeat: no-repeat;
     background-position: left bottom;
     background-size: 100%;
