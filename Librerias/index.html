@@ -31,7 +31,7 @@
   			map = new L.Map('map_canvas').setView(new L.LatLng(-34.618234674892, -58.404178619384766), 12);
 
         var mapboxUrl = 'http://d.tiles.mapbox.com/v3/gcbadata.map-0ub2e509/{z}/{x}/{y}.png',
-            mapbox = new L.TileLayer(mapboxUrl, {minZoom: 11, maxZoom: 17});
+            mapbox = new L.TileLayer(mapboxUrl, {minZoom: 11, maxZoom: 19});
             map.addLayer(mapbox,true);
               
 
@@ -193,10 +193,10 @@ END:VCARD
 
         <div class="row-fluid">
 
-            <div class="span3"><a href="#" onClick="changeLayer('todas')" class="todas btn btn-inverse">Ver todas</a></div>
-            <div class="span3"><a href="#" onClick="changeLayer('libreria')" class="libreria btn btn-info">Libreria</a></div>
-            <div class="span3"><a href="#" onClick="changeLayer('biblioteca')" class="biblioteca btn btn-warning">Biblioteca</a></div>
-            <div class="span3"><a href="#" onClick="changeLayer('biblioteca-comunitaria')" class="biblioteca-comunitaria btn btn-danger">Biblioteca Comunitaria</a></div>
+            <div class="span3"><a href="#" onClick="changeLayer('todas')" class="todas btn btn-large btn-inverse">Ver todas</a></div>
+            <div class="span3"><a href="#" onClick="changeLayer('libreria')" class="libreria btn btn-large btn-librerias">Librerías</a></div>
+            <div class="span3"><a href="#" onClick="changeLayer('biblioteca')" class="biblioteca btn btn-large btn-bibliotecas">Bibliotecas</a></div>
+            <div class="span3"><a href="#" onClick="changeLayer('biblioteca-comunitaria')" class="biblioteca-comunitaria btn btn-large btn-bibliotecas-comunitarias">Bibliotecas Comunitarias</a></div>
 
 
 
@@ -217,7 +217,7 @@ END:VCARD
           <div class="row-fluid">
             <div class="span5"><h1 class="brand" href="#">Bibliotecas y Librerías en GCBA</h1></div>
             <div class="span7"><p>
-            Conoce todas las locaciones para conseguír tus libros favoritos. Busca bajo las siguientes 4 categorías y subcategorías.
+            Conocé todas las locaciones para conseguir tus libros favoritos. Filtrá los puntos en las 3 categorías, Liberías, Bibliotecas y Bibliotecas Comunitarias. Y utilizando un lector de códigos QR llevate estos datos en tu celular.
           </p>  </div>
             
           </div>
