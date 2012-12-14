@@ -31,7 +31,7 @@
   			map = new L.Map('map_canvas').setView(new L.LatLng(-34.618234674892, -58.404178619384766), 12);
 
         var mapboxUrl = 'http://d.tiles.mapbox.com/v3/gcbadata.map-0ub2e509/{z}/{x}/{y}.png',
-            mapbox = new L.TileLayer(mapboxUrl, {minZoom: 11, maxZoom: 19});
+            mapbox = new L.TileLayer(mapboxUrl, {minZoom: 11, maxZoom: 19,prefix:false});
             map.addLayer(mapbox,true);
               
 
@@ -175,7 +175,7 @@ END:VCARD
     <div class="header-gcba">
         <div class="header-inner">
             <div class="container-fluid">
-                <div id="logo"></div>
+                <div><a href="/" id="logo">GCBA</a></div>
                     <h2 class="slogan">En todo estás vos</h2>
             </div>
         </div>
