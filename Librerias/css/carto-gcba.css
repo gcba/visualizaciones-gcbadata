@@ -66,24 +66,58 @@ margin-top: 25px;
     padding-left: 70px !important;
 }
 
+
+
+.nav-pills > li > a {
+    border-radius: 0 !important;
+    padding: 0 !important;
+}
+
+.nav-pills a {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    
+}
+
 .nav-pills a.todas {
     display: block;
-    width: ;
-    height: ;
-    background: url(../assets/icono-home.svg);
-    background-repeat: no-repeat; 
+    width: 165px;
+    height: 51px;
+    background: url(../assets/menu-todos.svg);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: auto;
 }
 
 .nav-pills a.libreria {
-
+    display: block;
+    width: 140px;
+    height: 51px;
+    background: url(../assets/menu-libreria.svg);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: auto;
 }
 
 .nav-pills a.biblioteca {
-
+    display: block;
+    width: 149px;
+    height: 51px;
+    background: url(../assets/menu-biblioteca.svg);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: auto;
 }
 
 .nav-pills a.biblioteca-comunitaria {
-
+    display: block;
+    width: 249px;
+    height: 51px;
+    background: url(../assets/menu-biblioteca-popular.svg);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: auto;
 }
 
 
