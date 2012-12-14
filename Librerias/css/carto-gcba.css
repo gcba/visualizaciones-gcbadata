@@ -53,3 +53,8 @@ html, body {
 .navbar .btn, .navbar .btn-group {
 margin-top: 25px;
 }
+
+.navbar-inner {
+  background: rgba(255,255,255,0.7);
+  padding: 10px;
+}
