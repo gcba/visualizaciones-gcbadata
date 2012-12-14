@@ -16,6 +16,14 @@
     <script type="text/javascript" src="dist/cartodb-leaflet-min.js"></script>
     <script type="text/javascript" src="dist/cartodb-popup-min.js"></script> 
 
+
+    <link rel="stylesheet/less" href="less/bootstrap.less">
+    <link rel="stylesheet/less" href="less/responsive.less">
+    
+    <script src="js/less.js"></script>
+    
+    <script>less.watch();</script>
+
     <script type="text/javascript">
     	var puntos, map;
 
@@ -132,11 +140,21 @@ http://chart.apis.google.com/chart?cht=qr&chs=230x230&chld=L&choe=UTF-8&chl=BEGI
 
   </head>
   <body onload="initialize()">
+    <div class="navbar-fixed-top">
+    <div class="header-gcba">
+        <div class="header-inner">
+            <div class="container">
+                <div id="logo"></div>
+                    <h2 class="slogan">En todo estás vos</h2>
+            </div>
+        </div>
+    </div>
+</div>
     
     <div id="map_canvas"></div>
 
 
-    <div class="navbar navbar-fixed-top">
+    <div class="navbar navbar-fixed-bottom">
       <div class="navbar-inner">
         <div class="container">
           <h1 class="brand" href="#">Bibliotecas y Librerias en GCBA</h1>
