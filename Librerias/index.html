@@ -124,7 +124,7 @@ http://chart.apis.google.com/chart?cht=qr&chs=230x230&chld=L&choe=UTF-8&chl=BEGI
       
 
       function changeLayer(layer) {
-          if (layer == 'All') {
+          if (layer == 'todas') {
               puntos.setQuery("SELECT * FROM noche_librerias");
           } else if (layer == 'libreria') {
               puntos.setQuery("SELECT * FROM noche_librerias WHERE type='Librería'");
@@ -158,12 +158,12 @@ http://chart.apis.google.com/chart?cht=qr&chs=230x230&chld=L&choe=UTF-8&chl=BEGI
       <div class="navbar-inner">
         <div class="container-fluid">
           <h1 class="brand" href="#">Bibliotecas y Librerias en GCBA</h1>
-          <div class="btn-group">
-            <button class="btn" onClick="changeLayer('All')">Ver todas</button>
-            <button class="btn" onClick="changeLayer('libreria')">Libreria</button>
-            <button class="btn" onClick="changeLayer('biblioteca')">Biblioteca</button>
-            <button class="btn" onClick="changeLayer('biblioteca-comunitaria')">Biblioteca Comunitaria</button>
-          </div>
+          <ul class="nav nav-pills">
+            <li><a href="#" onClick="changeLayer('todas')" class="todas">Ver todas</a></li>
+            <li><a href="#" onClick="changeLayer('libreria')" class="libreria">Libreria</a></li>
+            <li><a href="#" onClick="changeLayer('biblioteca')" class="biblioteca">Biblioteca</a></li>
+            <li><a href="#" onClick="changeLayer('biblioteca-comunitaria')" class="biblioteca-comunitaria">Biblioteca Comunitaria</a></li>
+          </ul>
         </div>
       </div>
     </div>

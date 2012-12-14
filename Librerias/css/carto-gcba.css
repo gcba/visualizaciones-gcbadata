@@ -58,3 +58,36 @@ margin-top: 25px;
   background: rgba(255,255,255,0.7);
   padding: 10px;
 }
+
+.brand {
+    background: url(../assets/icono-home.svg);
+    background-repeat: no-repeat;
+    background-position: 23px 9px;
+    padding-left: 70px !important;
+}
+
+.nav-pills a.todas {
+    display: block;
+    width: ;
+    height: ;
+    background: url(../assets/icono-home.svg);
+    background-repeat: no-repeat; 
+}
+
+.nav-pills a.libreria {
+
+}
+
+.nav-pills a.biblioteca {
+
+}
+
+.nav-pills a.biblioteca-comunitaria {
+
+}
+
+
+
+
+
+
