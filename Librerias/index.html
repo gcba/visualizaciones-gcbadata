@@ -82,6 +82,8 @@
       function showTooltip(data,point) {
         var html = "";
 
+        var name = data["name"] ? "<h3>Nombre: " + data["name"] +"</h3>" : '';
+
         var kind = data["kind"] ? "<p><label>Temática: </label>" + data["kind"] +"</p>" : '';
 
         var location = data["location"] ? "<p><label>Dirección: </label>" + data["location"] +"</p>" : '';
@@ -94,7 +96,7 @@
 
         var email = data["email"] ? "<p><label>Email: </label>" + data["email"] +"</p>" : '';
         
-        html += "<h3>Nombre: " + data["name"] +"</h3>";
+        html += name;
         html += kind;
         html += location;
         html += neighborhood;
@@ -102,26 +104,46 @@
         html += web;
         html += email;
 
-        html += "<img src='http://chart.apis.google.com/chart?cht=qr&chs=270x270&chld=M&choe=UTF-8&chl="+name+kind+location+phone+web+email+" ' >";
+
+        //var qrData = jQuery(html).text();
+
+
 
 
 /*
 
- html += "<label>Tipo</label><p>" + data["type"] +"</p>";
-        html += "<label>Tematica</label><p>" + data["kind"] +"</p>";
-        html += "<label>Ubiación</label><p>" + data["location"] +"</p>";
-        html += "<label>Barrio</label><p>" + data["neighborhood"] +"</p>";
-        html += "<label>Email</label><p>" + data["email"] +"</p>";
-        html += "<label>Email</label><p>" + data["phone"] +"</p>";
-        html += "<label>Email</label><p>" + data["web"] +"</p>";
-        html += "<img src='http://chart.apis.google.com/chart?cht=qr&chs=230x230&chld=M&choe=UTF-8&chl="+data["neighborhood"] + data["location"] + data["email"] +" ' >";
-
-
-
-http://chart.apis.google.com/chart?cht=qr&chs=230x230&chld=L&choe=UTF-8&chl=BEGIN%3AVCARD%0AN%3Anombre%0AORG%3Acompania%0ATITLE%3Alibreria%0ATEL%3A664444%0AURL%3Ahttp%3A%2F%2Fsonico.com%0AEMAIL%3Adavo%40davo.com%0AADR%3AJunin+122%0AEND%3AVCARD
-
+BEGIN:VCARD
+VERSION:2.1
+FN:Yenny
+TITLE:Libreia
+ADR:;;Bullrich 345;Buenos Aires;Palermo;;Argentina
+TEL;WORK;PREF:4535-2020
+EMAIL:info@yenny-elateneo.com.ar
+URL:http://www.yenny-elateneo.com.ar
+END:VCARD
 
 */
+
+
+        var nameQR = data["name"] ? "%0D%0AFN:" + data["name"]+"%0D%0A": '';
+
+        var kindQR = data["kind"] ? "TITLE:Tematica: " + data["kind"]+"%0D%0A": '';
+
+        var neighborhoodQR = data["neighborhood"] ? "TITLE:Barrio: " + data["neighborhood"]+"%0D%0A": '';
+
+        var phoneQR = data["phone"] ? "TEL:" + data["phone"]+"%0D%0A": '';
+
+        var webQR = data["web"] ? "URL:" + data["web"]+"%0D%0A": '';
+
+        var emailQR = data["email"] ? "EMAIL:" + data["email"]+"%0D%0A": '';
+
+        var locationQR = data["location"] ? "ADR:" + data["location"]+"%0D%0A": '';
+
+        var qrData = "BEGIN:VCARD%0D%0AVERSION:2.1%0D%0A"+nameQR+kindQR+neighborhoodQR+phoneQR+webQR+emailQR+locationQR+"END:VCARD";
+
+        html += "<img src='http://chart.apis.google.com/chart?cht=qr&chs=270x270&chld=M&choe=UTF-8&chl="+qrData+" ' >";
+
+
 
 
         
