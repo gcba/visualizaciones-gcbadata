@@ -72,8 +72,8 @@
 
 // Large
 .btn-large {
-  padding: 9px 14px;
-  font-size: @baseFontSize + 2px;
+  padding: 15px 15px !important;
+  font-size: @baseFontSize + 5px;
   line-height: normal;
   .border-radius(5px);
 }
@@ -105,6 +105,12 @@
 // Set text color
 // -------------------------
 .btn-primary,
+.btn-librerias,
+.btn-bibliotecas,
+.btn-bibliotecas-comunitarias,
+.btn-librerias:hover,
+.btn-bibliotecas:hover,
+.btn-bibliotecas-comunitarias:hover,
 .btn-primary:hover,
 .btn-warning,
 .btn-warning:hover,
@@ -159,7 +165,19 @@
 }
 // Inverse appears as dark gray
 .btn-inverse {
-  .buttonBackground(@btnInverseBackground, @btnInverseBackgroundHighlight);
+  .buttonBackground(@btnInverseBackground, @btnInverseBackground);
+}
+
+.btn-librerias {
+    .buttonBackground(#F5634A, #F5634A);
+}
+
+.btn-bibliotecas {
+    .buttonBackground(#4E6FC4, #4E6FC4);
+}
+
+.btn-bibliotecas-comunitarias {
+    .buttonBackground(#00B4CC, #00B4CC);
 }
 
 

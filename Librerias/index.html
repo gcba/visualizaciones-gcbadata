@@ -31,9 +31,8 @@
   			map = new L.Map('map_canvas').setView(new L.LatLng(-34.618234674892, -58.404178619384766), 12);
 
         var mapboxUrl = 'http://d.tiles.mapbox.com/v3/gcbadata.map-0ub2e509/{z}/{x}/{y}.png',
-        //var mapboxUrl = 'https://dnv9my2eseobd.cloudfront.net/v3/cartodb.map-pp0tkn8d/{z}/{x}/{y}.png',
-            mapbox = new L.TileLayer(mapboxUrl, {maxZoom: 17});
-        map.addLayer(mapbox,true);
+            mapbox = new L.TileLayer(mapboxUrl, {minZoom: 11, maxZoom: 19,prefix:false});
+            map.addLayer(mapbox,true);
               
 
     		var query="SELECT * FROM noche_librerias";
@@ -54,7 +53,6 @@
             document.body.style.cursor = "pointer";
             showTooltip(data,pos)
             
-            // Show the hover point if it is a different feature
             if (data.cartodb_id != circleMarker.cartodb_id) {
               map.removeLayer(circleMarker);
             
@@ -69,7 +67,6 @@
             document.body.style.cursor = "default";
             hideTooltip();
             
-            // Hide and remove in any case the hover point
             circleMarker.cartodb_id = null;
             map.removeLayer(circleMarker)
           },
@@ -125,11 +122,9 @@ END:VCARD
 */
 
 
-        var nameQR = data["name"] ? "%0D%0AFN:" + data["name"]+"%0D%0A": '';
+        var nameQR = data["name"] ? "N:" + data["name"]+"%0D%0A": '';
 
         var kindQR = data["kind"] ? "TITLE:Tematica: " + data["kind"]+"%0D%0A": '';
-
-        var neighborhoodQR = data["neighborhood"] ? "TITLE:Barrio: " + data["neighborhood"]+"%0D%0A": '';
 
         var phoneQR = data["phone"] ? "TEL:" + data["phone"]+"%0D%0A": '';
 
@@ -137,9 +132,11 @@ END:VCARD
 
         var emailQR = data["email"] ? "EMAIL:" + data["email"]+"%0D%0A": '';
 
-        var locationQR = data["location"] ? "ADR:" + data["location"]+"%0D%0A": '';
+        var locationQR = data["location"] ? "ADR:;;" + data["location"]+"%0D%0A": '';
 
-        var qrData = "BEGIN:VCARD%0D%0AVERSION:2.1%0D%0A"+nameQR+kindQR+neighborhoodQR+phoneQR+webQR+emailQR+locationQR+"END:VCARD";
+        var neighborhoodQR = data["neighborhood"] ? "NOTES:Barrio: " + data["neighborhood"]+"%0D%0A": '';
+
+        var qrData = "BEGIN:VCARD%0D%0AVERSION:2.1%0D%0A"+nameQR+kindQR+phoneQR+webQR+emailQR+locationQR+"END:VCARD";
 
         html += "<img src='http://chart.apis.google.com/chart?cht=qr&chs=270x270&chld=M&choe=UTF-8&chl="+qrData+" ' >";
 
@@ -178,7 +175,7 @@ END:VCARD
     <div class="header-gcba">
         <div class="header-inner">
             <div class="container-fluid">
-                <div id="logo"></div>
+                <div><a href="/" id="logo">GCBA</a></div>
                     <h2 class="slogan">En todo estás vos</h2>
             </div>
         </div>
@@ -189,19 +186,40 @@ END:VCARD
 
 
     <div class="navbar navbar-fixed-bottom">
+
+ <div class="container-fluid">
+
+
+
+        <div class="row-fluid">
+
+            <div class="span3"><a href="#" onClick="changeLayer('todas')" class="todas btn btn-large btn-inverse">Ver todas</a></div>
+            <div class="span3"><a href="#" onClick="changeLayer('libreria')" class="libreria btn btn-large btn-librerias">Librerías</a></div>
+            <div class="span3"><a href="#" onClick="changeLayer('biblioteca')" class="biblioteca btn btn-large btn-bibliotecas">Bibliotecas</a></div>
+            <div class="span3"><a href="#" onClick="changeLayer('biblioteca-comunitaria')" class="biblioteca-comunitaria btn btn-large btn-bibliotecas-comunitarias">Bibliotecas Comunitarias</a></div>
+
+
+
+
+
+        </div>
+
+
+        </div>
+
+
       <div class="navbar-inner">
         <div class="container-fluid">
+
+           
+
+
           <div class="row-fluid">
-            <div class="span3"><h1 class="brand" href="#">Bibliotecas y Librerías en GCBA</h1></div>
-            <div class="span3"><p>
-            Conoce todas las locaciones para conseguír tus libros favoritos. Busca bajo las siguientes 4 categorías y subcategorías.
+            <div class="span5"><h1 class="brand" href="#">Bibliotecas y Librerías en GCBA</h1></div>
+            <div class="span7"><p>
+            Conocé todas las locaciones para conseguir tus libros favoritos. Filtrá los puntos en las 3 categorías, Liberías, Bibliotecas y Bibliotecas Comunitarias. Y utilizando un lector de códigos QR llevate estos datos en tu celular.
           </p>  </div>
-            <div class="span6"><ul class="nav nav-pills">
-            <li><a href="#" onClick="changeLayer('todas')" class="todas">Ver todas</a></li>
-            <li><a href="#" onClick="changeLayer('libreria')" class="libreria">Libreria</a></li>
-            <li><a href="#" onClick="changeLayer('biblioteca')" class="biblioteca">Biblioteca</a></li>
-            <li><a href="#" onClick="changeLayer('biblioteca-comunitaria')" class="biblioteca-comunitaria">Biblioteca Comunitaria</a></li>
-          </ul></div>
+            
           </div>
           
 
