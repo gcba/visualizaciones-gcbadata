@@ -54,7 +54,8 @@
           cdn_url:'',
           table_name: 'plan_de_obras',
           query: query,
-          interactivity: "cartodb_id,email,kind,location,name,neighborhood,phone,type,web",
+//          tile_style: '',
+          interactivity: "cartodb_id",
           featureOver: function(ev,latlng,pos,data) {
             document.body.style.cursor = "pointer";
             showTooltip(data,pos)
@@ -179,7 +180,7 @@ END:VCARD
 
     $( "#slider-range" ).slider({
       range: true,
-      min: 15,
+      min: 0,
       max: 365,
       values: [ 50, 365 ],
       slide: function( event, ui ) {
@@ -219,6 +220,7 @@ END:VCARD
             <div class="span6">
 
 <div id="slider-range"></div>
+
 
 
  </div>
