@@ -10,12 +10,6 @@ div.right .blue.button.download {position:relative; display:inline; top:auto; ri
 
 .leaflet-popup-content p {width:auto!important;}
 
-/* Fonts for Firefox */
-header nav a {font:bold 12px "Segoe UI Bold", "Helvetica Neue", "Helvetica", Arial;}
-em {font: bold 13px/16px "Segoe UI Bold", "Helvetica Neue", "Helvetica", Arial!important;}
-h2 {font:bold 34px "Segoe UI Bold", "Helvetica Neue", "Helvetica", Arial!important;}
-h3 {font: bold 23px/24px "Segoe UI Bold", "Helvetica Neue", "Helvetica", Arial!important;}
-h5 {font: bold 19px/15px "Segoe UI Bold", "Helvetica Neue", "Helvetica", Arial!important;}
 
 /* Things for examples */
 form.example {
