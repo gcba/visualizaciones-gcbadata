@@ -211,6 +211,9 @@ margin-top: 25px;
 }
 
 
+.float {
+    z-index: 1030;
+}
 
 
 

@@ -1,203 +1,213 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="utf-8">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link href="css/carto-gcba.css" rel="stylesheet">
-    <style>body,html {width:100%; height:100%; margin:0; padding:0; overflow:hidden;} #map_canvas {position:absolute; top:0px; left:0; right:0; bottom:0;}</style>
-    <link rel="stylesheet" href="css/leaflet.css" />
-    <!--[if IE]><link rel="stylesheet" href="css/leaflet.ie.css" /><![endif]-->
-    <link  href="css/cartodb-leaflet.css" rel="stylesheet" type="text/css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
-    <script src="js/leaflet.js"></script>
-    <script type="text/javascript" src="js/wax.leaf.min.js"></script>
-    <script type="text/javascript" src="dist/cartodb-leaflet-min.js"></script>
-    <script type="text/javascript" src="dist/cartodb-popup-min.js"></script> 
+    <style>
+      html, body, #map {
+        height: 100%;
+        padding: 0;
+        margin: 0;
+      }
+    </style>
 
+    <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v2/themes/css/cartodb.css" />
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v2/themes/css/cartodb.ie.css" />
+    <![endif]-->
 
     <link rel="stylesheet/less" href="less/bootstrap.less">
-    <link rel="stylesheet/less" href="less/responsive.less">
+
+    http://addyosmani.github.com/jquery-ui-bootstrap/bootstrap/bootstrap.css
+
+
+
+
+
+    <link rel="stylesheet" href="css/style.css" />
 
     <script src="js/less.js"></script>
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+
+    
+
+    <link rel="stylesheet" href="http://addyosmani.github.com/jquery-ui-bootstrap/css/custom-theme/jquery-ui-1.8.16.custom.css" />
+
     <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
     <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
     <script>less.watch();</script>
 
-    <script type="text/javascript">
-    	var puntos, map;
-
-  	  function initialize() {
-  			map = new L.Map('map_canvas').setView(new L.LatLng(-34.618234674892, -58.404178619384766), 12);
-
-
-
-
-        var mapboxUrl = 'https://dnv9my2eseobd.cloudfront.net/v3/cartodb.map-eeoepub0/{z}/{x}/{y}.png',
-        //var mapboxUrl = 'https://dnv9my2eseobd.cloudfront.net/v3/cartodb.map-pp0tkn8d/{z}/{x}/{y}.png',
-            mapbox = new L.TileLayer(mapboxUrl, {maxZoom: 17});
-        map.addLayer(mapbox,true);
-              
-
-    		var query="SELECT * FROM plan_de_obras";
-        var popup = new L.CartoDBPopup();
-        var circleMarker = {};
-        var hover_style = {radius:4, color:"#333", weight:2, opacity:1, fillColor: "#FFCC00", fillOpacity:0, clickable:false};
-          
-          
-        puntos = new L.CartoDBLayer({
-          map: map,
-          user_name:'gcbadata',
-          extra_params:{v:4},
-          cdn_url:'',
-          table_name: 'plan_de_obras',
-          query: query,
-//          tile_style: '',
-          interactivity: "cartodb_id",
-          featureOver: function(ev,latlng,pos,data) {
-            document.body.style.cursor = "pointer";
-            showTooltip(data,pos)
-            
-            // Show the hover point if it is a different feature
-            if (data.cartodb_id != circleMarker.cartodb_id) {
-              map.removeLayer(circleMarker);
-            
-              circleMarker = new L.CircleMarker(new L.LatLng(data.lat, data.lon), hover_style);
-              circleMarker.cartodb_id = data.cartodb_id;
-              
-              map.addLayer(circleMarker);
-            }
-            
-          },
-          featureOut: function() {
-            document.body.style.cursor = "default";
-            hideTooltip();
-            
-            // Hide and remove in any case the hover point
-            circleMarker.cartodb_id = null;
-            map.removeLayer(circleMarker)
-          },
-          auto_bound: false
-        });
-
-        map.addLayer(puntos)
-  	  }
-
-      function showTooltip(data,point) {
-        var html = "";
-
-        
-
-
-        
-        $("#tooltip").html(html);
-        //$("#tooltip").css({left: (point.x + 15) + 'px', top: point.y - ($("#tooltip").height()) + 10 + 'px'})
-        $("#tooltip").show();
-      }
-
-      function hideTooltip() {
-        //$("#tooltip").hide();
-      }
-      
-
-      function changeLayer(layer) {
-          if (layer == 'todas') {
-              puntos.setQuery("SELECT * FROM plan_de_obras ");
-          } else if (layer == 'libreria') {
-              puntos.setQuery("SELECT * FROM plan_de_obras");
-          }
-          
-      }
-  	 
-    $(function() {
-
-      var queryCartoDB, fechaInicio, fechaFinal;
-
-
-      //queryCartoDB = puntos.setQuery("SELECT * FROM plan_de_obras ");
-
-    $( "#slider-range" ).slider({
-      range: true,
-      min: 0,
-      max: 365,
-      values: [ 50, 365 ],
-      slide: function( event, ui ) {
-        $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
-      }
-    });
-    $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
-      " - $" + $( "#slider-range" ).slider( "values", 1 ) );
-  });
-
-    </script>
-
   </head>
-  <body onload="initialize()">
-    <div class="navbar-fixed-top">
-    <div class="header-gcba">
-        <div class="header-inner">
-            <div class="container-fluid">
-                <div id="logo"></div>
-                    <h2 class="slogan">En todo estás vos</h2>
-            </div>
-        </div>
-    </div>
-</div>
     
-    <div id="map_canvas"></div>
-
-
-    <div class="navbar navbar-fixed-bottom">
-      <div class="navbar-inner">
-        <div class="container-fluid">
-          <div class="row-fluid">
-            <div class="span3"><h1 class="brand" href="#">Plan de Obras 2013, GCBA</h1></div>
-            <div class="span3"><p>
-            
-          </p>  </div>
-            <div class="span6">
-
-<div id="slider-range"></div>
+  <body>
 
 
 
- </div>
-
-
-<!--        borrar
-
-              <ul class="nav nav-pills">
-            <li><a href="#" onClick="changeLayer('todas')" class="todas">Ver todas</a></li>
-            <li><a href="#" onClick="changeLayer('libreria')" class="libreria">Libreria</a></li>
-            <li><a href="#" onClick="changeLayer('biblioteca')" class="biblioteca">Biblioteca</a></li>
-            <li><a href="#" onClick="changeLayer('biblioteca-comunitaria')" class="biblioteca-comunitaria">Biblioteca Comunitaria</a></li>
-          </ul>
-
-
-        borrar -->
-
-
-        </div>
-          </div>
-          
-
-          
-
-          
-        </div>
+<div class="navbar-fixed-top">
+  <div class="header-gcba">
+    <div class="header-inner">
+      <div class="container-fluid">
+      <div id="logo"></div>
+        <h2 class="slogan">En todo estás vos</h2>
       </div>
     </div>
-    
+  </div>
+</div>
 
-    <div id="tooltip">
-      <p>Tooltip</p>
-    </div>    
 
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/bootstrap-tab.js"></script>
-    <script src="js/bootstrap-tooltip.js"></script>
+
+<div id="map"></div>
+
+
+
+
+<div class="navbar navbar-fixed-bottom">
+<div class="navbar-inner">
+<div class="container-fluid">
+<div class="row-fluid">
+<div class="span3"><h1 class="brand" href="#">Plan de Obras 2013, GCBA</h1></div>
+
+<div class="span6">
+
+  <div id="slider-range"></div>
+  <input type="text" id="datePickerStart" />
+  <input type="text" id="datePickerEnd" />
+
+
+
+</div>
+
+</div>
   </body>
-</html>
 
+
+  <!-- include cartodb.js library -->
+  <script src="http://libs.cartocdn.com/cartodb.js/v2/cartodb.js"></script>
+  <script>
+    var myLayer
+    function main() {
+
+      var map = L.map('map', { 
+        zoomControl: false,
+        center: [-34.618234674892, -58.404178619384766],
+        zoom: 12
+      })
+
+      // add a nice baselayer from mapbox
+      L.tileLayer('http://a.tiles.mapbox.com/v3/pixelbeat.map-pet5vndu/{z}/{x}/{y}.png', {
+        attribution: 'MapBox'
+      }).addTo(map);
+
+      cartodb.createLayer(map, 'http://gcbadata.cartodb.com/api/v1/viz/16866/viz.json', {
+        query: 'select * from {{table_name}}'
+
+      })
+       .on('done', function(layer) {
+        map.addLayer(layer);
+        myLayer = layer;
+        setSlider();
+
+
+        layer.on('featureOver', function(e, pos, latlng, data) {
+          cartodb.log.log(e, pos, latlng, data);
+        });
+
+        layer.on('error', function(err) {
+          cartodb.log.log('error: ' + err);
+        });
+
+      }).on('error', function() {
+        cartodb.log.log("some error occurred");
+      });
+
+
+
+    }
+
+    // you could use $(window).load(main);
+    window.onload = main;
+
+
+    function setSlider() {
+
+    var sql = new cartodb.SQL({ user: 'gcbadata' });
+      sql.execute("SELECT MIN (START_TS) FROM plan_de_obras")
+        .done(function(data) {
+          var timeFirst = new Date(Date.parse(data.rows[0].min));
+          initSlider(timeFirst)
+        })
+        .error(function(errors) {
+          // errors contains a list of errors
+          console.log("error:" + err);
+        })
+
+    }
+
+    function updateMap(firstDate, lastDate) {
+      sql = "select * from " + myLayer.options.table_name + " where end_ts < '" + lastDate.toUTCString() + "' and start_ts > '" + firstDate.toUTCString() +"'"
+          console.log("sql: " +  sql)
+          myLayer.setQuery( sql)
+    }
+
+    function updatePickers(firstDate, lastDate){
+      $( "#datePickerStart" ).datepicker( "setDate", firstDate);
+      $( "#datePickerEnd" ).datepicker( "setDate", lastDate);
+    }
+
+    function updateSlider(minDate) {
+      one_day = 1000*60*60*24
+      $("#slider-range").slider("values", 0, Math.ceil((new Date(firstDate) - minDate)/one_day))
+      $("#slider-range").slider("values", 1, Math.ceil((new Date(lastDate) - minDate)/one_day))
+    }
+
+    function initSlider(minDate, max_days) {
+      var one_day = 1000*60*60*24;
+      var timeNow = new Date();
+      var max_days = Math.ceil((timeNow-minDate)/one_day)
+  
+      $( "#datePickerStart" ).datepicker({ defaultDate: -max_days, minDate: -max_days, maxDate: 0});
+      $( "#datePickerStart" ).datepicker( "setDate", minDate);
+
+      $("#datePickerStart").change(function(eventData) {
+        firstDate = $("#datePickerStart").datepicker("getDate");
+        lastDate = $("#datePickerEnd").datepicker("getDate")
+        updateSlider(minDate, firstDate, lastDate );
+        updateMap(firstDate, lastDate);
+      });
+
+
+      $( "#datePickerEnd" ).datepicker({ defaultDate: 0, minDate: -max_days, maxDate: 0});
+      $( "#datePickerEnd" ).datepicker( "setDate", timeNow);
+
+      $("#datePickerEnd").change(function(eventData) {
+        firstDate = $("#datePickerStart").datepicker("getDate");
+        lastDate = $("#datePickerEnd").datepicker("getDate")
+        updateSlider(minDate, firstDate, lastDate );
+        updateMap(firstDate, lastDate);
+      });
+
+
+
+
+      $( "#slider-range" ).slider({
+        range: true,
+        min: 0,
+        max: max_days,
+        values: [ 0, max_days ],
+        slide: function(event, ui) {
+          setMinDate = new Date(minDate.getTime() + ui.values[0]*24*60*60*1000);
+          setMaxDate = new Date(minDate.getTime() + ui.values[1]*24*60*60*1000);
+          updatePickers(setMinDate, setMaxDate)
+        },
+        stop: function( event, ui ) {
+          setMinDate = new Date(minDate.getTime() + ui.values[0]*24*60*60*1000);
+          setMaxDate = new Date(minDate.getTime() + ui.values[1]*24*60*60*1000);
+          updateMap(setMinDate, setMaxDate)
+        }
+      });
+      //$("#amount").val( "$" + $( "#slider-range" ).slider( "values", 0 ) + " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+    }
+
+
+  </script>
+
+
+</html>
