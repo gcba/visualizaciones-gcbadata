@@ -212,7 +212,7 @@ margin-top: 25px;
 .nav-float {
    background: white;
     background: rgba(255,255,255,0.5);
-    padding-top: 140px;
+    padding-top: 120px;
     padding-left: 20px;
     display: block;
     position: absolute;
@@ -242,6 +242,7 @@ margin-top: 25px;
   font-size: 10px;
   font-weight: normal;
   color: #666;
+  line-height: 8px;
 }
 
 
