@@ -157,9 +157,7 @@ html, body {
   border-color:grey!important;
 }
 
-.btn-group {
-  float:right;
-}
+
 
 .container {
   display:block;
@@ -211,10 +209,40 @@ margin-top: 25px;
 }
 
 
-.float {
-    z-index: 1030;
+.nav-float {
+   background: white;
+    background: rgba(255,255,255,0.5);
+    padding-top: 140px;
+    padding-left: 20px;
+    display: block;
+    position: absolute;
+    width: 500px;
+    height: 100%;
+    right: 0px;
+    top: 0px;
+    z-index: 1029;
 }
 
+.nav-float .row {
+  margin-bottom: 20px;
+}
+
+.dropdown-menu li > a:hover,
+.dropdown-menu .active > a,
+.dropdown-menu .active > a:hover,
+.dropdown-menu li > a:hover small
+ {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #4e6ac2;
+}
+
+.dropdown-menu li > a small
+  {
+  font-size: 10px;
+  font-weight: normal;
+  color: #666;
+}
 
 
 
