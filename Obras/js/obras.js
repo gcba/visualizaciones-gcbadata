@@ -99,7 +99,7 @@ window.onload = main;
 
 function initControls() {
 
-	var sql = new cartodb.SQL({ user: 'gcbadata' });
+	var sql = new cartodb.SQL({ user: 'fake' });
 	var coords = {
 		"comuna-all":[[-34.618234674892, -58.404178619384766],12],
 		"comuna-2":[[-34.586237270093079,-58.395217792415608],14],
@@ -118,23 +118,26 @@ function initControls() {
 		"comuna-1":[[-34.6063224902313,-58.371693887275981],14],
 		"comuna-13":[[-34.554665199180789,-58.454152403904935],14],
 	};
-	sql.execute("SELECT MIN (START_TS) FROM plan_de_obras")
+	sql.execute("SELECT MIN (date_st), MAX (date_end) FROM merge5")
 	
 	.done(function(data) {
 	  	var minDate = new Date(Date.parse(data.rows[0].min));
 	  	var one_day = 1000*60*60*24;
-  		var timeNow = new Date();
-  		var max_days = Math.ceil((timeNow-minDate)/one_day)
+  		var maxDate = new Date(Date.parse(data.rows[0].max));
+                var now = new Date()
+                var minus = Math.ceil((now-minDate)/one_day)
+                var max = Math.ceil((maxDate-now)/one_day)
+  		var max_days = Math.ceil((maxDate-minDate)/one_day)
 
-  		$("#datePickerStart").datepicker({ defaultDate: -max_days, minDate: -max_days, maxDate: 0});
+  		$("#datePickerStart").datepicker({ defaultDate: -minus, minDate: -minus, maxDate: max});
 		$("#datePickerStart").datepicker( "setDate", minDate );
 		$("#datePickerStart").change(function(eventData) {
 			updateSlider(minDate);
 			updateMap();
 		});
 
-		$("#datePickerEnd").datepicker({ defaultDate: 0, minDate: -max_days, maxDate: 0});
-		$("#datePickerEnd").datepicker( "setDate", timeNow);
+		$("#datePickerEnd").datepicker({ defaultDate: max, minDate: -minus, maxDate: max});
+		$("#datePickerEnd").datepicker( "setDate", maxDate);
 		$("#datePickerEnd").change(function(eventData) {
 			updateSlider(minDate);
 			updateMap();
