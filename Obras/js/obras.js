@@ -15,7 +15,7 @@ function main() {
     attribution: 'MapBox'
   }).addTo(map);
 
-  cartodb.createLayer(map, 'http://gcbadata.cartodb.com/api/v1/viz/16866/viz.json', {
+  cartodb.createLayer(map, 'http://fake.cartodb.com/api/v1/viz/1255/viz.json', {
     query: 'select * from {{table_name}}'
 
   }).on('done', function(layer) {
@@ -46,10 +46,10 @@ function updateMap() {
   switch(tipo)
   {
   	case 'calle':
-  		tipo_sql = " AND tipo = 'CALLE'";
+  		tipo_sql = " AND clase = 'CALZADA'";
   		break;
   	case 'vereda':
-  		tipo_sql = " AND tipo = 'VEREDA'";
+  		tipo_sql = " AND clase = 'ACERA'";
   		break;
   }
 
@@ -57,20 +57,29 @@ function updateMap() {
   switch(estado)
   {
   	case 'ejecutado':
-  		estado_sql = " AND estado = 'EJEC'"
+  		estado_sql = " AND status = 'EJEC'"
   		break;
   	case 'verificado':
-  		estado_sql = " AND estado = 'VERI'"
+  		estado_sql = " AND status = 'VERI'"
   		break;
   	case 'iniciado':
-  		estado_sql = " AND estado = 'INIC'"
+  		estado_sql = " AND status = 'INIC'"
+  		break;
+  	case 'finalizado':
+  		estado_sql = " AND status = 'TFIN'"
+  		break;
+  	case 'insepeccionado':
+  		estado_sql = " AND status = 'INSP'"
+  		break;
+  	case 'denegado':
+  		estado_sql = " AND status = 'DENE'"
   		break;
   }
   sql = "select * from " + 
   		myLayer.options.table_name + 
   		" where " +
-  		"end_ts < '" + lastDate.toUTCString() + 
-  		"' and start_ts > '" + firstDate.toUTCString() + "'" +
+  		"date_end < '" + lastDate.toUTCString() + 
+  		"' and date_st > '" + firstDate.toUTCString() + "'" +
   		tipo_sql +
   		estado_sql 
       myLayer.setQuery( sql)
@@ -91,7 +100,26 @@ window.onload = main;
 function initControls() {
 
 	var sql = new cartodb.SQL({ user: 'gcbadata' });
+	var coords = {
+		"comuna-all":[[-34.618234674892, -58.404178619384766],12],
+		"comuna-2":[[-34.586237270093079,-58.395217792415608],14],
+		"comuna-5":[[-34.617350525637796,-58.420606574780031],14],
+		"comuna-6":[[-34.616825186030511,-58.443603279618749],14],
+		"comuna-7":[[-34.636536531689949,-58.451923117924601],14],
+		"comuna-9":[[-34.651720387872778,-58.499097139247077],14],
+		"comuna-10":[[-34.627819642674119,-58.50287233034566],14],
+		"comuna-11":[[-34.6060970617606,-58.496878676242396],14],
+		"comuna-12":[[-34.566316140740597,-58.490428047774479],14],
+		"comuna-14":[[-34.573901590522794,-58.422434896459286],14],
+		"comuna-3":[[-34.613824541269658,-58.402684826383954],14],
+		"comuna-15":[[-34.591865572590308,-58.462810196185515],14],
+		"comuna-8":[[-34.674457001475545,-58.462180158010675],14],
+		"comuna-4":[[-34.642288664610525,-58.388842544531947],14],
+		"comuna-1":[[-34.6063224902313,-58.371693887275981],14],
+		"comuna-13":[[-34.554665199180789,-58.454152403904935],14],
+	};
 	sql.execute("SELECT MIN (START_TS) FROM plan_de_obras")
+	
 	.done(function(data) {
 	  	var minDate = new Date(Date.parse(data.rows[0].min));
 	  	var one_day = 1000*60*60*24;
@@ -118,71 +146,16 @@ function initControls() {
 		$('#radioset-estado').buttonset();
 		$('#radioset-estado').change(updateMap);
 
+		$('#comunas ul li').click(function(e) {
+			comuna_key = e.currentTarget.id
+			comuna = coords[comuna_key]
+			map.setView(comuna[0], comuna[1])
+			title = e.currentTarget.children[0].children[0].innerHTML
+			$('#comunas button:first-child').html(comuna_key)
+			e.preventDefault();
+		});
 
-		$("#comuna-all").click(function(e){
-			map.setView([-34.618234674892, -58.404178619384766], 12);
-			e.preventDefault();
-		});	
-		$("#comuna-2").click(function(e){
-			map.setView([-34.586237270093079,-58.395217792415608], 14);
-			e.preventDefault();
-		});
-		$("#comuna-5").click(function(e){
-			map.setView([-34.617350525637796,-58.420606574780031], 14);
-			e.preventDefault();
-		});
-		$("#comuna-6").click(function(e){
-			map.setView([-34.616825186030511,-58.443603279618749], 14);
-			e.preventDefault();
-		});
-		$("#comuna-7").click(function(e){
-			map.setView([-34.636536531689949,-58.451923117924601], 14);
-			e.preventDefault();
-		});
-		$("#comuna-9").click(function(e){
-			map.setView([-34.651720387872778,-58.499097139247077], 14);
-			e.preventDefault();
-		});
-		$("#comuna-10").click(function(e){
-			map.setView([-34.627819642674119,-58.50287233034566], 14);
-			e.preventDefault();
-		});
-		$("#comuna-11").click(function(e){
-			map.setView([-34.6060970617606,-58.496878676242396], 14);
-			e.preventDefault();
-		});
-		$("#comuna-12").click(function(e){
-			map.setView([-34.566316140740597,-58.490428047774479], 14);
-			e.preventDefault();
-		});
-		$("#comuna-14").click(function(e){
-			map.setView([-34.573901590522794,-58.422434896459286], 14);
-			e.preventDefault();
-		});
-		$("#comuna-3").click(function(e){
-			map.setView([-34.613824541269658,-58.402684826383954], 14);
-			e.preventDefault();
-		});
-		$("#comuna-15").click(function(e){
-			map.setView([-34.591865572590308,-58.462810196185515], 14);
-			e.preventDefault();
-		});
-		$("#comuna-8").click(function(e){
-			map.setView([-34.674457001475545,-58.462180158010675], 14);
-			e.preventDefault();
-		});
-		$("#comuna-4").click(function(e){
-			map.setView([-34.642288664610525,-58.388842544531947], 14);
-			e.preventDefault();
-		});
-		$("#comuna-1").click(function(e){
-			map.setView([-34.6063224902313,-58.371693887275981], 14);
-			e.preventDefault();
-		});
-		$("#comuna-13").click(function(e){
-			map.setView([-34.554665199180789,-58.454152403904935], 14);
-			e.preventDefault();
-		});
+		
 
 		$( "#slider-range" ).slider({
 			range: true,

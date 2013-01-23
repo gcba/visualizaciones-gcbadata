@@ -8,6 +8,7 @@
         margin: 0;
       }
     </style>
+    <meta charset="utf-8">
 
     <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v2/themes/css/cartodb.css" />
     <!--[if lte IE 8]>
@@ -54,26 +55,26 @@ ID: radioset-estado
     <div class="span6">
       <h3>Zoom por comunas</h3>
          
-          <div class="btn-group">
-            <button class="btn btn-primary">Seleccionar comuna</button>
+          <div id="comunas" class="btn-group">
+            <button class="btn btn-primary">Todas las Comunas</button>
             <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
             <ul class="dropdown-menu">
-              <li id="comuna-all"><a href="#">Todas las comunas<br /><small>Ver todas las comunas de las 1 a la 15.</small></a></li>
-              <li id="comuna-1"><a href="#">Comuna 1<br /><small>Retiro, San Nicolás, Puerto Madero, San Telmo, Montserrat y Constitución.</small></a></li>
-              <li id="comuna-2"><a href="#">Comuna 2<br /><small>Recoleta.</small></a></li>
-              <li id="comuna-3"><a href="#">Comuna 3<br /><small>Balvanera y San Cristóbal.</small></a></li>
-              <li id="comuna-4"><a href="#">Comuna 4<br /><small>La Boca, Barracas, Parque Patricios, y Nueva Pompeya.</small></a></li>
-              <li id="comuna-5"><a href="#">Comuna 5<br /><small>Almagro y Boedo.</small></a></li>
-              <li id="comuna-6"><a href="#">Comuna 6<br /><small>Caballito.</small></a></li>
-              <li id="comuna-7"><a href="#">Comuna 7<br /><small>Flores y Parque Chacabuco.</small></a></li>
-              <li id="comuna-8"><a href="#">Comuna 8<br /><small>Villa Soldati, Villa Riachuelo y Villa Lugano.</small></a></li>
-              <li id="comuna-9"><a href="#">Comuna 9<br /><small>Liniers, Mataderos y Parque Avellaneda.</small></a></li>
-              <li id="comuna-10"><a href="#">Comuna 10<br /><small>Villa Real, Monte Castro, Versalles, Floresta, Vélez Sarsfield y Villa Luro.</small></a></li>
-              <li id="comuna-11"><a href="#">Comuna 11<br /><small>Villa General Mitre, Villa Devoto, Villa del Parque y Villa Santa Rita.</small></a></li>
-              <li id="comuna-12"><a href="#">Comuna 12<br /><small>Coghlan, Saavedra, Villa Urquiza y Villa Pueyrredón.</small></a></li>
-              <li id="comuna-13"><a href="#">Comuna 13<br /><small>Núñez, Belgrano y Colegiales.</small></a></li>
-              <li id="comuna-14"><a href="#">Comuna 14<br /><small>Palermo.</small></a></li>
-              <li id="comuna-15"><a href="#">Comuna 15<br /><small>Chacarita, Villa Crespo, La Paternal, Villa Ortúzar, Agronomía y Parque Chas.</small></a></li>
+              <li id="comuna-all"><a href="#"><span class="name">Todas las Comunas</span>as comunas<br /><small>Ver todas las comunas de las 1 a la 15.</small></a></li>
+              <li id="comuna-1"><a href="#"><span class="name">Comuna 1</span><br /><small>Retiro, San Nicolás, Puerto Madero, San Telmo, Montserrat y Constitución.</small></a></li>
+              <li id="comuna-2"><a href="#"><span class="name">Comuna 2</span><br /><small>Recoleta.</small></a></li>
+              <li id="comuna-3"><a href="#"><span class="name">Comuna 3</span><br /><small>Balvanera y San Cristóbal.</small></a></li>
+              <li id="comuna-4"><a href="#"><span class="name">Comuna 4</span><br /><small>La Boca, Barracas, Parque Patricios, y Nueva Pompeya.</small></a></li>
+              <li id="comuna-5"><a href="#"><span class="name">Comuna 5</span><br /><small>Almagro y Boedo.</small></a></li>
+              <li id="comuna-6"><a href="#"><span class="name">Comuna 6</span><br /><small>Caballito.</small></a></li>
+              <li id="comuna-7"><a href="#"><span class="name">Comuna 7</span><br /><small>Flores y Parque Chacabuco.</small></a></li>
+              <li id="comuna-8"><a href="#"><span class="name">Comuna 8</span><br /><small>Villa Soldati, Villa Riachuelo y Villa Lugano.</small></a></li>
+              <li id="comuna-9"><a href="#"><span class="name">Comuna 9</span><br /><small>Liniers, Mataderos y Parque Avellaneda.</small></a></li>
+              <li id="comuna-10"><a href="#"><span class="name">Comuna 1</span>0<br /><small>Villa Real, Monte Castro, Versalles, Floresta, Vélez Sarsfield y Villa Luro.</small></a></li>
+              <li id="comuna-11"><a href="#"><span class="name">Comuna 1</span>1<br /><small>Villa General Mitre, Villa Devoto, Villa del Parque y Villa Santa Rita.</small></a></li>
+              <li id="comuna-12"><a href="#"><span class="name">Comuna 1</span>2<br /><small>Coghlan, Saavedra, Villa Urquiza y Villa Pueyrredón.</small></a></li>
+              <li id="comuna-13"><a href="#"><span class="name">Comuna 1</span>3<br /><small>Núñez, Belgrano y Colegiales.</small></a></li>
+              <li id="comuna-14"><a href="#"><span class="name">Comuna 1</span>4<br /><small>Palermo.</small></a></li>
+              <li id="comuna-15"><a href="#"><span class="name">Comuna 1</span>5<br /><small>Chacarita, Villa Crespo, La Paternal, Villa Ortúzar, Agronomía y Parque Chas.</small></a></li>
             </ul>
           </div>
 
@@ -155,18 +156,15 @@ ID: radioset-estado
   <div class="row">
     <div class="span6">
       <h3>Filtrar por estado de obra</h3>
+
       <div id="radioset-estado" class="ui-buttonset">
-
-        <input type="radio" id="estado-inic" name="radioEstado" value="iniciado" class="ui-helper-hidden-accessible"><label for="estado-inic" aria-pressed="false" class="ui-button ui-widget ui-state-default ui-button-text-only ui-corner-left" role="button" aria-disabled="false"><span class="ui-button-text">Iniciado</span></label>
-
-        
-
-        <input type="radio" id="estado-ejec" name="radioEstado" value="ejecutado" class="ui-helper-hidden-accessible"><label for="estado-ejec" aria-pressed="false" class="ui-button ui-widget ui-state-default ui-button-text-only ui-corner-right" role="button" aria-disabled="false"><span class="ui-button-text">Ejecutado</span></label>
-
-        <input type="radio" id="estado-veri" name="radioEstado" value="verificado" class="ui-helper-hidden-accessible"><label for="estado-veri" aria-pressed="false" class="ui-button ui-widget ui-state-default ui-button-text-only ui-corner-right" role="button" aria-disabled="false"><span class="ui-button-text">Verificados</span></label>
-
+        <input type="radio" id="estado-inic" name="radioEstado" value="iniciado" class="ui-helper-hidden-accessible"><label for="estado-inic" aria-pressed="false" class="ui-button ui-widget ui-state-default ui-button-text-only ui-corner-left" role="button" aria-disabled="false"><span class="ui-button-text">Estado Inicial</span></label>
+        <input type="radio" id="estado-ejec" name="radioEstado" value="ejecutado" class="ui-helper-hidden-accessible"><label for="estado-ejec" aria-pressed="false" class="ui-button ui-widget ui-state-default ui-button-text-only ui-corner-right" role="button" aria-disabled="false"><span class="ui-button-text">En Ejecución</span></label>
+        <input type="radio" id="estado-veri" name="radioEstado" value="verificado" class="ui-helper-hidden-accessible"><label for="estado-veri" aria-pressed="false" class="ui-button ui-widget ui-state-default ui-button-text-only ui-corner-right" role="button" aria-disabled="false"><span class="ui-button-text">Verificado Tecnicamente</span></label>
+        <input type="radio" id="estado-tfin" name="radioEstado" value="finalizado" class="ui-helper-hidden-accessible"><label for="estado-tfin" aria-pressed="false" class="ui-button ui-widget ui-state-default ui-button-text-only ui-corner-right" role="button" aria-disabled="false"><span class="ui-button-text">Finalizado</span></label>
+        <input type="radio" id="estado-insp" name="radioEstado" value="inspeccionado" class="ui-helper-hidden-accessible"><label for="estado-insp" aria-pressed="false" class="ui-button ui-widget ui-state-default ui-button-text-only ui-corner-right" role="button" aria-disabled="false"><span class="ui-button-text">Inspeccionado</span></label>
+        <input type="radio" id="estado-dene" name="radioEstado" value="denegado" class="ui-helper-hidden-accessible"><label for="estado-dene" aria-pressed="false" class="ui-button ui-widget ui-state-default ui-button-text-only ui-corner-right" role="button" aria-disabled="false"><span class="ui-button-text">Denegada</span></label>
         <input type="radio" id="estado-all" name="radioEstado" value="all" checked="checked" class="ui-helper-hidden-accessible"><label for="estado-all" class="ui-button ui-widget ui-state-default ui-button-text-only ui-state-active" aria-pressed="true" role="button" aria-disabled="false"><span class="ui-button-text">Todas las obras</span></label>
-        
       </div>
     </div>
   </div>
