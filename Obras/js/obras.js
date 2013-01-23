@@ -15,7 +15,7 @@ function main() {
     attribution: 'MapBox'
   }).addTo(map);
 
-  cartodb.createLayer(map, 'http://fake.cartodb.com/api/v1/viz/1255/viz.json', {
+  cartodb.createLayer(map, 'http://tataka.cartodb.com/api/v1/viz/12556/viz.json', {
     query: 'select * from {{table_name}}'
 
   }).on('done', function(layer) {
