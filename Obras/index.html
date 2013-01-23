@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      html, body, #map {
+        height: 100%;
+        padding: 0;
+        margin: 0;
+      }
+    </style>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v2/themes/css/cartodb.css" />
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v2/themes/css/cartodb.ie.css" />
+    <![endif]-->
+    <link rel="stylesheet/less" href="less/bootstrap.less">
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script src="js/less.js"></script>
+    <link rel="stylesheet" href="http://addyosmani.github.com/jquery-ui-bootstrap/css/custom-theme/jquery-ui-1.8.16.custom.css" />
+    <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-dropdown.js"></script>
+    <script>less.watch();</script>
+
+  </head>
+    
+  <body>
+
+  <div class="navbar-fixed-top">
+    <div class="header-gcba">
+      <div class="header-inner">
+        <div class="container-fluid">
+          <div id="logo"></div>
+          <h2 class="slogan">En todo estás vos</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="nav-float">
+
+<!--
+
+##########################
+
+FILTRAR POR COMUNAS
+ID: radioset-estado
+
+##########################
+
+-->
+  <div class="row">
+    <div class="span6">
+      <h3>Zoom por comunas</h3>
+         
+          <div id="comunas" class="btn-group">
+            <button class="btn btn-primary">Todas las Comunas</button>
+            <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+            <ul class="dropdown-menu">
+              <li id="comuna-all"><a href="#"><span class="name">Todas las Comunas</span>as comunas<br /><small>Ver todas las comunas de las 1 a la 15.</small></a></li>
+              <li id="comuna-1"><a href="#"><span class="name">Comuna 1</span><br /><small>Retiro, San Nicolás, Puerto Madero, San Telmo, Montserrat y Constitución.</small></a></li>
+              <li id="comuna-2"><a href="#"><span class="name">Comuna 2</span><br /><small>Recoleta.</small></a></li>
+              <li id="comuna-3"><a href="#"><span class="name">Comuna 3</span><br /><small>Balvanera y San Cristóbal.</small></a></li>
+              <li id="comuna-4"><a href="#"><span class="name">Comuna 4</span><br /><small>La Boca, Barracas, Parque Patricios, y Nueva Pompeya.</small></a></li>
+              <li id="comuna-5"><a href="#"><span class="name">Comuna 5</span><br /><small>Almagro y Boedo.</small></a></li>
+              <li id="comuna-6"><a href="#"><span class="name">Comuna 6</span><br /><small>Caballito.</small></a></li>
+              <li id="comuna-7"><a href="#"><span class="name">Comuna 7</span><br /><small>Flores y Parque Chacabuco.</small></a></li>
+              <li id="comuna-8"><a href="#"><span class="name">Comuna 8</span><br /><small>Villa Soldati, Villa Riachuelo y Villa Lugano.</small></a></li>
+              <li id="comuna-9"><a href="#"><span class="name">Comuna 9</span><br /><small>Liniers, Mataderos y Parque Avellaneda.</small></a></li>
+              <li id="comuna-10"><a href="#"><span class="name">Comuna 1</span>0<br /><small>Villa Real, Monte Castro, Versalles, Floresta, Vélez Sarsfield y Villa Luro.</small></a></li>
+              <li id="comuna-11"><a href="#"><span class="name">Comuna 1</span>1<br /><small>Villa General Mitre, Villa Devoto, Villa del Parque y Villa Santa Rita.</small></a></li>
+              <li id="comuna-12"><a href="#"><span class="name">Comuna 1</span>2<br /><small>Coghlan, Saavedra, Villa Urquiza y Villa Pueyrredón.</small></a></li>
+              <li id="comuna-13"><a href="#"><span class="name">Comuna 1</span>3<br /><small>Núñez, Belgrano y Colegiales.</small></a></li>
+              <li id="comuna-14"><a href="#"><span class="name">Comuna 1</span>4<br /><small>Palermo.</small></a></li>
+              <li id="comuna-15"><a href="#"><span class="name">Comuna 1</span>5<br /><small>Chacarita, Villa Crespo, La Paternal, Villa Ortúzar, Agronomía y Parque Chas.</small></a></li>
+            </ul>
+          </div>
+
+    </div>
+  </div>
+
+<!--
+
+########################
+
+FILTRAR OBRAS POR TIEMPO
+
+slider id: slider-range
+calendar pick id 1: datePickerStart
+calendar pick id 2: datePickerEnd
+
+########################
+
+-->
+
+  <div class="row">
+    <div class="span3">
+      <h3>Filtrar obras por tiempo</h3>
+      <div id="slider-range"></div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="span5">
+      <h4>Fecha inicial</h4><input type="text" id="datePickerStart" />
+      <h4>Fecha final</h4><input type="text" id="datePickerEnd" />
+    </div>
+  </div>
+
+
+<!--
+
+########################
+
+FILTRAR POR TIPO DE OBRA
+ID: radioset-tipo
+
+########################
+
+-->
+
+  <div class="row">
+    <div class="span5">
+      <h3>Filtrar por tipo de obra</h3>
+      <div id="radioset-tipo" class="ui-buttonset">
+
+        <input type="radio" id="tipo-calle" name="radioTipo" value="calle" class="ui-helper-hidden-accessible">
+        <label for="tipo-calle" aria-pressed="false" class="ui-button ui-widget ui-state-default ui-button-text-only ui-corner-left" role="button" aria-disabled="false">
+          <span class="ui-button-text">Calle</span>
+        </label>
+
+        
+
+        <input type="radio" id="tipo-vereda" name="radioTipo" value="vereda" class="ui-helper-hidden-accessible"><label for="tipo-vereda" aria-pressed="false" class="ui-button ui-widget ui-state-default ui-button-text-only ui-corner-right" role="button" aria-disabled="false"><span class="ui-button-text">Vereda</span></label>
+
+        <input type="radio" id="tipo-all" name="radioTipo" value="all" checked="checked" class="ui-helper-hidden-accessible"><label for="tipo-all" class="ui-button ui-widget ui-state-default ui-button-text-only ui-state-active" aria-pressed="true" role="button" aria-disabled="false"><span class="ui-button-text">Todas las obras</span></label>
+
+      </div>
+    </div>
+  </div>
+
+<!--
+
+##########################
+
+FILTRAR POR ESTADO DE OBRA
+ID: radioset-estado
+
+##########################
+
+-->
+
+
+  <div class="row">
+    <div class="span6">
+      <h3>Filtrar por estado de obra</h3>
+
+      <div id="radioset-estado" class="ui-buttonset">
+        <input type="radio" id="estado-inic" name="radioEstado" value="iniciado" class="ui-helper-hidden-accessible"><label for="estado-inic" aria-pressed="false" class="ui-button ui-widget ui-state-default ui-button-text-only ui-corner-left" role="button" aria-disabled="false"><span class="ui-button-text">Estado Inicial</span></label>
+        <input type="radio" id="estado-ejec" name="radioEstado" value="ejecutado" class="ui-helper-hidden-accessible"><label for="estado-ejec" aria-pressed="false" class="ui-button ui-widget ui-state-default ui-button-text-only ui-corner-right" role="button" aria-disabled="false"><span class="ui-button-text">En Ejecución</span></label>
+        <input type="radio" id="estado-veri" name="radioEstado" value="verificado" class="ui-helper-hidden-accessible"><label for="estado-veri" aria-pressed="false" class="ui-button ui-widget ui-state-default ui-button-text-only ui-corner-right" role="button" aria-disabled="false"><span class="ui-button-text">Verificado Tecnicamente</span></label>
+        <input type="radio" id="estado-tfin" name="radioEstado" value="finalizado" class="ui-helper-hidden-accessible"><label for="estado-tfin" aria-pressed="false" class="ui-button ui-widget ui-state-default ui-button-text-only ui-corner-right" role="button" aria-disabled="false"><span class="ui-button-text">Finalizado</span></label>
+        <input type="radio" id="estado-insp" name="radioEstado" value="inspeccionado" class="ui-helper-hidden-accessible"><label for="estado-insp" aria-pressed="false" class="ui-button ui-widget ui-state-default ui-button-text-only ui-corner-right" role="button" aria-disabled="false"><span class="ui-button-text">Inspeccionado</span></label>
+        <input type="radio" id="estado-dene" name="radioEstado" value="denegado" class="ui-helper-hidden-accessible"><label for="estado-dene" aria-pressed="false" class="ui-button ui-widget ui-state-default ui-button-text-only ui-corner-right" role="button" aria-disabled="false"><span class="ui-button-text">Denegada</span></label>
+        <input type="radio" id="estado-all" name="radioEstado" value="all" checked="checked" class="ui-helper-hidden-accessible"><label for="estado-all" class="ui-button ui-widget ui-state-default ui-button-text-only ui-state-active" aria-pressed="true" role="button" aria-disabled="false"><span class="ui-button-text">Todas las obras</span></label>
+      </div>
+    </div>
+  </div>
+
+
+
+
+</div>
+
+<div id="map"></div>
+
+
+
+
+<div class="navbar navbar-fixed-bottom">
+  <div class="navbar-inner">
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span3"><h1 class="brand" href="#">Plan de Obras 2013, GCBA</h1></div>
+        <div class="span7"></div>
+        <div class="span2 pull-right"><h1 class="brand" href="#">Modernización</h1></div>
+
+      </div>
+    </div>
+  </div>
+</div>
+  </body>
+
+
+  <!-- include cartodb.js library -->
+  <script src="http://libs.cartocdn.com/cartodb.js/v2/cartodb.js"></script>
+  <script src="js/obras.js"> </script>
+
+
+</html>
