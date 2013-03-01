@@ -16,7 +16,7 @@
 
 // Gradient is applied to it's own element because overflow visible is not honored by IE when filter is present
 .navbar-inner {
-  min-height: @navbarHeight;
+  min-height: 40px;
   padding-left:  20px;
   padding-right: 20px;
   //#gradient > .vertical(@navbarBackgroundHighlight, @navbarBackground);
@@ -48,7 +48,7 @@
     display: block;
     // Vertically center the text given @navbarHeight
     @elementHeight: 20px;
-    padding: ((@navbarHeight - @elementHeight) / 2 + 4) 20px ((@navbarHeight - @elementHeight) / 2 + 2);
+    padding: ((@navbarHeight - @elementHeight) / 3 + 4) 20px ((@navbarHeight - @elementHeight) / 3 + 2);
     margin-left: -20px; // negative indent to left-align the text down the page
     font-size: 20px;
     font-weight: 200;

@@ -15,7 +15,7 @@ function main() {
     attribution: 'MapBox'
   }).addTo(map);
 
-  cartodb.createLayer(map, 'http://fake.cartodb.com/api/v1/viz/1255/viz.json', {
+  cartodb.createLayer(map, 'http://fake.cartodb.com/api/v1/viz/4609/viz.json', {
     query: 'select * from {{table_name}}'
 
   }).on('done', function(layer) {
@@ -38,41 +38,36 @@ function main() {
 }
 
 function updateMap() {
-  tipo = $("input[name=radioTipo]:checked").val();
+  //tipo = $("input[name=radioTipo]:checked").val();
   estado = $("input[name=radioEstado]:checked").val();
   firstDate = $("#datePickerStart").datepicker("getDate");
   lastDate = $("#datePickerEnd").datepicker("getDate")
-  tipo_sql = ""
-  switch(tipo)
-  {
-  	case 'calle':
-  		tipo_sql = " AND clase = 'CALZADA'";
-  		break;
-  	case 'vereda':
-  		tipo_sql = " AND clase = 'ACERA'";
-  		break;
-  }
+  //tipo_sql = ""
+
+  // switch(tipo)
+  // {
+  // 	case 'calle':
+  // 		tipo_sql = " AND clase = 'CALZADA'";
+  // 		break;
+  // 	case 'vereda':
+  // 		tipo_sql = " AND clase = 'ACERA'";
+  // 		break;
+  // }
 
   estado_sql = ""
   switch(estado)
   {
   	case 'ejecutado':
-  		estado_sql = " AND status = 'EJEC'"
+  		estado_sql = " AND estado = 'EJEC'"
   		break;
   	case 'verificado':
-  		estado_sql = " AND status = 'VERI'"
+  		estado_sql = " AND estado = 'VERI'"
   		break;
   	case 'iniciado':
-  		estado_sql = " AND status = 'INIC'"
-  		break;
-  	case 'finalizado':
-  		estado_sql = " AND status = 'TFIN'"
+  		estado_sql = " AND estado = 'INIC'"
   		break;
   	case 'insepeccionado':
-  		estado_sql = " AND status = 'INSP'"
-  		break;
-  	case 'denegado':
-  		estado_sql = " AND status = 'DENE'"
+  		estado_sql = " AND estado = 'INSP'"
   		break;
   }
   sql = "select * from " + 
@@ -80,7 +75,7 @@ function updateMap() {
   		" where " +
   		"date_end < '" + lastDate.toUTCString() + 
   		"' and date_st > '" + firstDate.toUTCString() + "'" +
-  		tipo_sql +
+  		//tipo_sql +
   		estado_sql 
       myLayer.setQuery( sql)
 }
@@ -118,7 +113,7 @@ function initControls() {
 		"comuna-1":[[-34.6063224902313,-58.371693887275981],14],
 		"comuna-13":[[-34.554665199180789,-58.454152403904935],14],
 	};
-	sql.execute("SELECT MIN (date_st), MAX (date_end) FROM merge5")
+	sql.execute("SELECT MIN (date_st), MAX (date_end) FROM bacheo")
 	
 	.done(function(data) {
 	  	var minDate = new Date(Date.parse(data.rows[0].min));
