@@ -1,0 +1,31 @@
+#librerias{
+    point-allow-overlap: false;
+  [zoom >= 10]{
+    point-transform: "scale(.3)";
+  }
+  [zoom >= 12]{
+    point-transform: "scale(.35)";
+  }
+  [zoom >= 13]{
+    point-transform: "scale(.4)";
+  }
+  [zoom >= 15]{
+    point-transform: "scale(.45)";
+  }
+  [zoom >= 17]{
+    point-transform: "scale(.6)";
+  }
+}
+
+#librerias [type = "Libreria"] {
+  point-file: url('https://raw.github.com/gcba/visualizaciones-gcbadata/master/Feria-del-Libro/assets/librerias.svg');
+
+}
+
+#librerias [type = "Biblioteca"] {
+  point-file: url('https://raw.github.com/gcba/visualizaciones-gcbadata/master/Feria-del-Libro/assets/bibliotecas.svg');
+}
+
+#librerias [type = "Biblioteca Comunitaria"] {
+  point-file: url('https://raw.github.com/gcba/visualizaciones-gcbadata/master/Feria-del-Libro/assets/bibliotecas-comunitarias.svg');
+}
