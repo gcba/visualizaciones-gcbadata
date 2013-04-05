@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Mapa de Librerías y Bibliotecas de GCBA</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="css/carto-gcba.css" rel="stylesheet">
+    <style>body,html {width:100%; height:100%; margin:0; padding:0; overflow:hidden;} #map_canvas {position:absolute; top:0px; left:0; right:0; bottom:0;}</style>
+    <link rel="stylesheet" href="css/leaflet.css" />
+    <!--[if IE]><link rel="stylesheet" href="css/leaflet.ie.css" /><![endif]-->
+    <link  href="css/cartodb-leaflet.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script src="js/leaflet.js"></script>
+    <script type="text/javascript" src="js/wax.leaf.min.js"></script>
+    <script type="text/javascript" src="dist/cartodb-leaflet-min.js"></script>
+    <script type="text/javascript" src="dist/cartodb-popup-min.js"></script> 
+
+
+    <link rel="stylesheet/less" href="less/bootstrap.less">
+    <link rel="stylesheet/less" href="less/responsive.less">
+    
+    <script src="js/less.js"></script>
+    
+    <script>less.watch();</script>
+
+    <script type="text/javascript">
+    	var puntos, map;
+
+  	  function initialize() {
+  			map = new L.Map('map_canvas').setView(new L.LatLng(-34.618234674892, -58.404178619384766), 12);
+
+        /*
+
+        var mapboxUrl = 'http://d.tiles.mapbox.com/v3/gcbadata.map-0ub2e509/{z}/{x}/{y}.png',
+            mapbox = new L.TileLayer(mapboxUrl, {minZoom: 11, maxZoom: 19,prefix:false});
+            map.addLayer(mapbox,true);
+
+        */     
+
+    		var query="SELECT * FROM librerias_y_bibliotecas_gcba";
+        var popup = new L.CartoDBPopup();
+        var circleMarker = {};
+        var hover_style = {radius:4, color:"#333", weight:2, opacity:1, fillColor: "#FFCC00", fillOpacity:0, clickable:false};
+          
+          
+        puntos = new L.CartoDBLayer({
+          map: map,
+          user_name:'gcbadata',
+          extra_params:{v:4},
+          cdn_url:'',
+          table_name: 'librerias_y_bibliotecas_gcba',
+          query: query,
+          interactivity: "cartodb_id,email,kind,location,name,neighborhood,phone,type,web",
+          featureOver: function(ev,latlng,pos,data) {
+            document.body.style.cursor = "pointer";
+            showTooltip(data,pos)
+            
+            if (data.cartodb_id != circleMarker.cartodb_id) {
+              map.removeLayer(circleMarker);
+            
+              circleMarker = new L.CircleMarker(new L.LatLng(data.lat, data.lon), hover_style);
+              circleMarker.cartodb_id = data.cartodb_id;
+              
+              map.addLayer(circleMarker);
+            }
+            
+          },
+          featureOut: function() {
+            document.body.style.cursor = "default";
+            hideTooltip();
+            
+            circleMarker.cartodb_id = null;
+            map.removeLayer(circleMarker)
+          },
+          auto_bound: false
+        });
+
+        map.addLayer(puntos)
+  	  }
+
+      function showTooltip(data,point) {
+        var html = "";
+
+        var name = data["name"] ? "<h3>Nombre: " + data["name"] +"</h3>" : '';
+
+        var kind = data["kind"] ? "<p><label>Temática: </label>" + data["kind"] +"</p>" : '';
+
+        var location = data["location"] ? "<p><label>Dirección: </label>" + data["location"] +"</p>" : '';
+
+        var neighborhood = data["neighborhood"] ? "<p><label>Barrio: </label>" + data["neighborhood"] +"</p>" : '';
+
+        var phone = data["phone"] ? "<p><label>Telefono: </label>" + data["phone"] +"</p>" : '';
+
+        var web = data["web"] ? "<p><label>Web: </label>" + data["web"] +"</p>" : '';
+
+        var email = data["email"] ? "<p><label>Email: </label>" + data["email"] +"</p>" : '';
+        
+        html += name;
+        html += kind;
+        html += location;
+        html += neighborhood;
+        html += phone;
+        html += web;
+        html += email;
+
+
+
+        var nameQR = data["name"] ? "N:" + data["name"]+"%0D%0A": '';
+
+        var kindQR = data["kind"] ? "TITLE:Tematica: " + data["kind"]+"%0D%0A": '';
+
+        var phoneQR = data["phone"] ? "TEL:" + data["phone"]+"%0D%0A": '';
+
+        var webQR = data["web"] ? "URL:" + data["web"]+"%0D%0A": '';
+
+        var emailQR = data["email"] ? "EMAIL:" + data["email"]+"%0D%0A": '';
+
+        var locationQR = data["location"] ? "ADR:;;" + data["location"]+"%0D%0A": '';
+
+        var neighborhoodQR = data["neighborhood"] ? "NOTES:Barrio: " + data["neighborhood"]+"%0D%0A": '';
+
+        var qrData = "BEGIN:VCARD%0D%0AVERSION:2.1%0D%0A"+nameQR+kindQR+phoneQR+webQR+emailQR+locationQR+"END:VCARD";
+
+        html += "<img src='http://chart.apis.google.com/chart?cht=qr&chs=270x270&chld=M&choe=UTF-8&chl="+qrData+" ' >";
+
+
+
+
+        
+        $("#tooltip").html(html);
+        $("#tooltip").show();
+      }
+
+      function hideTooltip() {
+        $("#tooltip").hide();
+      }
+      
+
+      function changeLayer(layer) {
+          if (layer == 'todas') {
+              puntos.setQuery("SELECT * FROM noche_librerias");
+          } else if (layer == 'libreria') {
+              puntos.setQuery("SELECT * FROM noche_librerias WHERE type='Librería'");
+          } else if (layer == 'biblioteca') {
+              puntos.setQuery("SELECT * FROM noche_librerias WHERE type='Biblioteca'");
+          } else if (layer == 'biblioteca-comunitaria') {
+              puntos.setQuery("SELECT * FROM noche_librerias WHERE type='Biblioteca Comunitaria'");
+          }
+          
+      }
+  	  
+    </script>
+
+  </head>
+  <body onload="initialize()">
+    <div class="navbar-fixed-top">
+    <div class="header-gcba">
+        <div class="header-inner">
+            <div class="container-fluid">
+                <div><a href="/" id="logo">GCBA</a></div>
+                    <h2 class="slogan">En todo estás vos</h2>
+            </div>
+        </div>
+    </div>
+</div>
+    
+    <div id="map_canvas"></div>
+
+
+    <div class="navbar navbar-fixed-bottom">
+
+ <div class="container-fluid">
+
+
+
+        <div class="row-fluid">
+
+            <div class="span3"><a href="#" onClick="changeLayer('todas')" class="todas btn btn-large btn-inverse">Ver todas</a></div>
+            <div class="span3"><a href="#" onClick="changeLayer('libreria')" class="libreria btn btn-large btn-librerias">Librerías</a></div>
+            <div class="span3"><a href="#" onClick="changeLayer('biblioteca')" class="biblioteca btn btn-large btn-bibliotecas">Bibliotecas</a></div>
+            <div class="span3"><a href="#" onClick="changeLayer('biblioteca-comunitaria')" class="biblioteca-comunitaria btn btn-large btn-bibliotecas-comunitarias">Bibliotecas Comunitarias</a></div>
+
+
+
+
+
+        </div>
+
+
+        </div>
+
+
+      <div class="navbar-inner">
+        <div class="container-fluid">
+
+           
+
+
+          <div class="row-fluid">
+            <div class="span5"><h1 class="brand" href="#">Bibliotecas y Librerías en GCBA</h1></div>
+            <div class="span7"><p>
+            Conocé todas las locaciones para conseguir tus libros favoritos. Filtrá los puntos en las 3 categorías, Liberías, Bibliotecas y Bibliotecas Comunitarias. Y utilizando un lector de códigos QR llevate estos datos en tu celular.
+          </p>  </div>
+            
+          </div>
+          
+
+          
+
+          
+        </div>
+      </div>
+    </div>
+    
+
+    <div id="tooltip">
+      <p>Tooltip</p>
+    </div>    
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-tab.js"></script>
+    <script src="js/bootstrap-tooltip.js"></script>
+  </body>
+</html>
+
