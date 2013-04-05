@@ -135,7 +135,7 @@ html, body {
   overflow:hidden;
 }
 
-#map_canvas { top: 40px; }
+#map_canvas {  }
 #loader {
   width:200px;
   padding:10px;
