@@ -30,12 +30,12 @@
   	  function initialize() {
   			map = new L.Map('map_canvas').setView(new L.LatLng(-34.618234674892, -58.404178619384766), 12);
 
-        var mapboxUrl = 'http://d.tiles.mapbox.com/v3/gcbadata.map-0ub2e509/{z}/{x}/{y}.png',
+        var mapboxUrl = 'https://dnv9my2eseobd.cloudfront.net/v3/cartodb.map-eeoepub0/{z}/{x}/{y}.png',
             mapbox = new L.TileLayer(mapboxUrl, {minZoom: 11, maxZoom: 19,prefix:false});
             map.addLayer(mapbox,true);
               
 
-    		var query="SELECT * FROM noche_librerias";
+    		var query="SELECT * FROM librerias";
         var popup = new L.CartoDBPopup();
         var circleMarker = {};
         var hover_style = {radius:4, color:"#333", weight:2, opacity:1, fillColor: "#FFCC00", fillOpacity:0, clickable:false};
@@ -46,7 +46,7 @@
           user_name:'gcbadata',
           extra_params:{v:4},
           cdn_url:'',
-          table_name: 'noche_librerias',
+          table_name: 'librerias',
           query: query,
           interactivity: "cartodb_id,email,kind,location,name,neighborhood,phone,type,web",
           featureOver: function(ev,latlng,pos,data) {
@@ -156,13 +156,13 @@ END:VCARD
 
       function changeLayer(layer) {
           if (layer == 'todas') {
-              puntos.setQuery("SELECT * FROM noche_librerias");
+              puntos.setQuery("SELECT * FROM librerias");
           } else if (layer == 'libreria') {
-              puntos.setQuery("SELECT * FROM noche_librerias WHERE type='Librería'");
+              puntos.setQuery("SELECT * FROM librerias WHERE type='Librería'");
           } else if (layer == 'biblioteca') {
-              puntos.setQuery("SELECT * FROM noche_librerias WHERE type='Biblioteca'");
+              puntos.setQuery("SELECT * FROM librerias WHERE type='Biblioteca'");
           } else if (layer == 'biblioteca-comunitaria') {
-              puntos.setQuery("SELECT * FROM noche_librerias WHERE type='Biblioteca Comunitaria'");
+              puntos.setQuery("SELECT * FROM librerias WHERE type='Biblioteca Comunitaria'");
           }
           
       }
