@@ -1,0 +1,131 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow:hidden;
+}
+
+#map_canvas { top: 40px; }
+#loader {
+  width:200px;
+  padding:10px;
+  position:absolute;
+  top: 50px;
+  z-index:1000;
+  margin:auto;
+  margin-left:-100px;
+  left:50%;
+}
+#legend {
+  position:absolute;
+  bottom: 0px;
+  right: 0px;
+  width:140px;
+  padding:0px;
+  z-index:1000;
+  background:white;
+  border-color:grey!important;
+}
+
+.btn-group {
+  float:right;
+}
+
+.container {
+  display:block;
+  width:auto;
+  margin:0 10px;
+}
+
+#tooltip {
+  position:absolute;
+  right: 0px;
+  width:300px;
+  height:auto;
+  padding:10px;
+  z-index:1000;
+  display:none;
+  background:white;
+}
+
+#tooltip label {font-weight:bold; line-height: 10px;}
+
+.navbar .btn, .navbar .btn-group {
+margin-top: 25px;
+}
+
+.navbar-inner {
+  background: rgba(255,255,255,0.9);
+  padding: 10px;
+}
+
+.brand {
+    background: url(../assets/icono-home.png);
+    background-repeat: no-repeat;
+    background-position: 23px 28px;
+    padding-left: 70px !important;
+}
+
+.navbar-fixed-bottom p {
+    text-rendering: optimizelegibility;
+    color: #414042;
+    font-size: 12px;
+    margin-top: 26px;
+
+}
+
+.nav-pills > li > a {
+    border-radius: 0 !important;
+    padding: 0 !important;
+    margin-right: -5px !important;
+}
+
+.nav-pills a {
+  width: 20%;    
+}
+
+.nav-pills a.todas {
+    display: block;
+    width: 150px;
+    height: 51px;
+    background: url(../assets/menu-todos.png);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: 100%;
+}
+
+.nav-pills a.libreria {
+    display: block;
+    width: 125px;
+    height: 51px;
+    background: url(../assets/menu-libreria.png);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: 100%;
+}
+
+.nav-pills a.biblioteca {
+    display: block;
+    width: 149px;
+    height: 51px;
+    background: url(../assets/menu-biblioteca.png);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: 100%;
+}
+
+.nav-pills a.biblioteca-comunitaria {
+    display: block;
+    width: 249px;
+    height: 51px;
+    background: url(../assets/menu-biblioteca-popular.png);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: 100%;
+}
+
+
+
+
+
+
