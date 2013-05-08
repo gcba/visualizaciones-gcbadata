@@ -15,7 +15,7 @@ function main() {
     attribution: 'MapBox'
   }).addTo(map);
 
-  cartodb.createLayer(map, 'http://tataka.cartodb.com/api/v1/viz/12556/viz.json', {
+  cartodb.createLayer(map, 'http://fake.cartodb.com/api/v1/viz/bacheo_prueba/viz.json', {
     query: 'select * from {{table_name}}'
 
   }).on('done', function(layer) {
@@ -38,49 +38,45 @@ function main() {
 }
 
 function updateMap() {
-  tipo = $("input[name=radioTipo]:checked").val();
+  //tipo = $("input[name=radioTipo]:checked").val();
   estado = $("input[name=radioEstado]:checked").val();
   firstDate = $("#datePickerStart").datepicker("getDate");
+
   lastDate = $("#datePickerEnd").datepicker("getDate")
-  tipo_sql = ""
-  switch(tipo)
-  {
-  	case 'calle':
-  		tipo_sql = " AND clase = 'CALZADA'";
-  		break;
-  	case 'vereda':
-  		tipo_sql = " AND clase = 'ACERA'";
-  		break;
-  }
+  //tipo_sql = ""
+
+  // switch(tipo)
+  // {
+  // 	case 'calle':
+  // 		tipo_sql = " AND clase = 'CALZADA'";
+  // 		break;
+  // 	case 'vereda':
+  // 		tipo_sql = " AND clase = 'ACERA'";
+  // 		break;
+  // }
 
   estado_sql = ""
   switch(estado)
   {
   	case 'ejecutado':
-  		estado_sql = " AND status = 'EJEC'"
+  		estado_sql = " AND estado = 'EJEC'"
   		break;
   	case 'verificado':
-  		estado_sql = " AND status = 'VERI'"
+  		estado_sql = " AND estado = 'VERI'"
   		break;
   	case 'iniciado':
-  		estado_sql = " AND status = 'INIC'"
-  		break;
-  	case 'finalizado':
-  		estado_sql = " AND status = 'TFIN'"
+  		estado_sql = " AND estado = 'INIC'"
   		break;
   	case 'insepeccionado':
-  		estado_sql = " AND status = 'INSP'"
-  		break;
-  	case 'denegado':
-  		estado_sql = " AND status = 'DENE'"
+  		estado_sql = " AND estado = 'INSP'"
   		break;
   }
   sql = "select * from " + 
   		myLayer.options.table_name + 
   		" where " +
-  		"date_end < '" + lastDate.toUTCString() + 
-  		"' and date_st > '" + firstDate.toUTCString() + "'" +
-  		tipo_sql +
+  		"date_end >= '" + firstDate.toUTCString() + 
+  		"' and date_st <= '" + lastDate.toUTCString() + "'" +
+  		//tipo_sql +
   		estado_sql 
       myLayer.setQuery( sql)
 }
@@ -96,10 +92,43 @@ function updateSlider(minDate) {
 // you could use $(window).load(main);
 window.onload = main;
 
+/* Inicialización en español para la extensión 'UI date picker' para jQuery. */
+/* Traducido por Vester (xvester@gmail.com). */
+(function($) {
+        $.datepicker.regional['es'] = {
+                renderer: $.ui.datepicker.defaultRenderer,
+                monthNames: ['Enero','Febrero','Marzo','Abril','Mayo','Junio',
+                'Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'],
+                monthNamesShort: ['Ene','Feb','Mar','Abr','May','Jun',
+                'Jul','Ago','Sep','Oct','Nov','Dic'],
+                dayNames: ['Domingo','Lunes','Martes','Mi&eacute;rcoles','Jueves','Viernes','S&aacute;bado'],
+                dayNamesShort: ['Dom','Lun','Mar','Mi&eacute;','Juv','Vie','S&aacute;b'],
+                dayNamesMin: ['Do','Lu','Ma','Mi','Ju','Vi','S&aacute;'],
+                dateFormat: 'dd/mm/yy',
+                firstDay: 1,
+                prevText: '&#x3c;Ant', prevStatus: '',
+                prevJumpText: '&#x3c;&#x3c;', prevJumpStatus: '',
+                nextText: 'Sig&#x3e;', nextStatus: '',
+                nextJumpText: '&#x3e;&#x3e;', nextJumpStatus: '',
+                currentText: 'Hoy', currentStatus: '',
+                todayText: 'Hoy', todayStatus: '',
+                clearText: '-', clearStatus: '',
+                closeText: 'Cerrar', closeStatus: '',
+                yearStatus: '', monthStatus: '',
+                weekText: 'Sm', weekStatus: '',
+                dayStatus: 'DD d MM',
+                defaultStatus: '',
+                isRTL: false
+        };
+        $.extend($.datepicker.defaults, $.datepicker.regional['es']);
+        
+})(jQuery);
+
+
 
 function initControls() {
 
-	var sql = new cartodb.SQL({ user: 'gcbadata' });
+	var sql = new cartodb.SQL({ user: 'fake' });
 	var coords = {
 		"comuna-all":[[-34.618234674892, -58.404178619384766],12],
 		"comuna-2":[[-34.586237270093079,-58.395217792415608],14],
@@ -118,23 +147,29 @@ function initControls() {
 		"comuna-1":[[-34.6063224902313,-58.371693887275981],14],
 		"comuna-13":[[-34.554665199180789,-58.454152403904935],14],
 	};
-	sql.execute("SELECT MIN (START_TS) FROM plan_de_obras")
+	sql.execute("SELECT MIN (date_st), MAX (date_end) FROM bacheo_prueba")
 	
 	.done(function(data) {
 	  	var minDate = new Date(Date.parse(data.rows[0].min));
 	  	var one_day = 1000*60*60*24;
-  		var timeNow = new Date();
-  		var max_days = Math.ceil((timeNow-minDate)/one_day)
+  		var maxDate = new Date(Date.parse(data.rows[0].max));
+                var now = new Date()
+                var minus = Math.ceil((now-minDate)/one_day)
+                var max = Math.ceil((maxDate-now)/one_day)
+  		var max_days = Math.ceil((maxDate-minDate)/one_day)
 
-  		$("#datePickerStart").datepicker({ defaultDate: -max_days, minDate: -max_days, maxDate: 0});
+  		$("#datePickerStart").datepicker({ defaultDate: -minus, minDate: -minus, maxDate: max});
 		$("#datePickerStart").datepicker( "setDate", minDate );
+    $("#datePickerStart" ).datepicker( "option", $.datepicker.regional[ "es" ] );
+    
 		$("#datePickerStart").change(function(eventData) {
 			updateSlider(minDate);
 			updateMap();
 		});
 
-		$("#datePickerEnd").datepicker({ defaultDate: 0, minDate: -max_days, maxDate: 0});
-		$("#datePickerEnd").datepicker( "setDate", timeNow);
+		$("#datePickerEnd").datepicker({ defaultDate: max, minDate: -minus, maxDate: max});
+		$("#datePickerEnd").datepicker( "setDate", maxDate);
+    $("#datePickerEnd" ).datepicker( "option", $.datepicker.regional[ "es" ] );
 		$("#datePickerEnd").change(function(eventData) {
 			updateSlider(minDate);
 			updateMap();
@@ -155,7 +190,10 @@ function initControls() {
 			e.preventDefault();
 		});
 
-		
+
+    $('#radioset-estado label').tooltip();
+
+    $('.explicacion a').tooltip();
 
 		$( "#slider-range" ).slider({
 			range: true,

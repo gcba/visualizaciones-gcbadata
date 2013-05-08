@@ -136,6 +136,7 @@ html, body {
 }
 
 #map_canvas {  }
+
 #loader {
   width:200px;
   padding:10px;
@@ -187,9 +188,6 @@ margin-top: 25px;
   padding: 10px;
 }
 
-.brand {
-}
-
 .navbar-fixed-bottom p {
     text-rendering: optimizelegibility;
     color: #414042;
@@ -216,7 +214,7 @@ margin-top: 25px;
     padding-left: 20px;
     display: block;
     position: absolute;
-    width: 500px;
+    width: 300px;
     height: 100%;
     right: 0px;
     top: 0px;
@@ -248,3 +246,5 @@ margin-top: 25px;
 
 
 form.example label {margin:0 0 0 26px; font:normal 13px Arial; color:#666666;}
+
+
