@@ -15,7 +15,7 @@ function main() {
     attribution: 'MapBox'
   }).addTo(map);
 
-  cartodb.createLayer(map, 'http://fake.cartodb.com/api/v1/viz/bacheo_prueba/viz.json', {
+  cartodb.createLayer(map, 'http://gcba.cartodb.com/api/v1/viz/bacheo/viz.json', {
     query: 'select * from {{table_name}}'
 
   }).on('done', function(layer) {
@@ -147,7 +147,7 @@ function initControls() {
 		"comuna-1":[[-34.6063224902313,-58.371693887275981],14],
 		"comuna-13":[[-34.554665199180789,-58.454152403904935],14],
 	};
-	sql.execute("SELECT MIN (date_st), MAX (date_end) FROM bacheo_prueba")
+	sql.execute("SELECT MIN (date_st), MAX (date_end) FROM bacheo")
 	
 	.done(function(data) {
 	  	var minDate = new Date(Date.parse(data.rows[0].min));
