@@ -1,0 +1,20 @@
+/*
+
+*/
+/*SegoUI*/
+@font-face {
+  font-family: "Segoe UI Bold";
+  src: url('/fonts/SEGOEUIB.eot');
+  src: url('/fonts/SEGOEUIB.eot?#iefix') format('eot'), url('/fonts/SEGOEUIB.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Segoe UI Bold Italic";
+  src: url('/fonts/SEGOEUIZ.eot');
+  src: url('/fonts/SEGOEUIZ.eot?#iefix') format('eot'), url('/fonts/SEGOEUIZ.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic; }
+/*
+
+*/
