@@ -19,8 +19,11 @@
 
     <script src="js/less.js"></script>
     <link rel="stylesheet" href="css/jquery-ui-1.9.2.custom.css" />
+
     <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
     <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <script src="js/jquery.flexslider.min.js"></script>
+    <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-tooltip.js"></script>
     <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-dropdown.js"></script>
     <script type="infowindow/html" id="infowindow_template">
       <div class="cartodb-popup">
@@ -50,6 +53,8 @@
     
   <body>
 
+
+
   <div class="navbar-fixed-top">
     <div class="header-gcba">
       <div class="header-inner">
@@ -64,26 +69,17 @@
   </div>
 
   <div class="nav-float">
-    <div class="row">
-      <div class="span4">
-        <h3>Mantenimiento de Calzada</h3>
-        <p>
-          Plan de obras de repavimentación y bacheo del 2013
-        </p>
-        <p><small>* A mayor tamaño mayor duración de obra.</small></p>
-      </div>
-    </div>
-    
-<!--
 
-##########################
+  <!--
 
-FILTRAR POR COMUNAS
-ID: radioset-estado
+  ##########################
 
-##########################
+  FILTRAR POR COMUNAS
+  ID: radioset-estado
 
--->
+  ##########################
+
+  -->
   <div class="row">
     <div class="span6">
       <h3>Zoom por comunas</h3>
@@ -128,12 +124,12 @@ calendar pick id 2: datePickerEnd
 
 -->
 
-  <div class="row">
-    <div class="span3">
-      <h3>Filtrar por período</h3>
-      <div id="slider-range"></div>
-    </div>
+<div class="row">
+  <div class="span3">
+    <h3>Filtrar por período</h3>
+    <div id="slider-range"></div>
   </div>
+</div>
 
   <div class="row">
     <div class="span5">
@@ -187,6 +183,33 @@ ID: radioset-estado
 
 </div>
 
+<div class="banner">
+  <div class="container">
+    <div class="jumbotron">
+      <div class="flexslider">
+        <ul class="slides">
+          <li class="slide-inicial">
+            <h1>Slide 1</h1>
+            <p>Slide content revision about this particular thing.</p>
+          </li>
+          <li class="slide-mapa">
+            <h1>Slide 2</h1>
+            <p>Slide content revision about this particular thing.</p>
+          </li>
+          <li class="slide-herramientas">
+            <h1>Slide 3</h1>
+            <p>Slide content revision about this particular thing.</p>
+          </li>
+          <li class="slide-herramientas">
+            <h1>Slide 4</h1>
+            <p>Slide content revision about this particular thing.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div id="map"></div>
 
 
@@ -199,7 +222,7 @@ ID: radioset-estado
   <!-- include cartodb.js library -->
   <script src="http://libs.cartocdn.com/cartodb.js/v2/cartodb.js"></script>
   <script src="js/obras.js"></script>
-  <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-tooltip.js"></script>
+
 
 
 
