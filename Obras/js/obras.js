@@ -1,3 +1,9 @@
+$(window).load(function() {
+  $('.flexslider').flexslider({
+    animation: "slide"
+  });
+});
+
 
 var myLayer;
 var map;
@@ -221,6 +227,5 @@ function initControls() {
 	  // errors contains a list of errors
 	  console.log("error:" + err);
 	})
-
 }
 
