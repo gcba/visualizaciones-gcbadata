@@ -263,8 +263,9 @@ form.example label {margin:0 0 0 26px; font:normal 13px Arial; color:#666666;}
   padding-top: 25%;
 }
 
-.jumbotron input {
-  font-size: 2em;
+.search-query {
+  font-size: 2em !important;
+  padding: 2em;
 }
 
  
