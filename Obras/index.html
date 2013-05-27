@@ -22,6 +22,28 @@
     <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
     <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
     <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-dropdown.js"></script>
+    <script type="infowindow/html" id="infowindow_template">
+      <div class="cartodb-popup">
+        <a href="#close" class="cartodb-popup-close-button close">x</a>
+         <div class="cartodb-popup-content-wrapper">
+           <div class="cartodb-popup-header">
+             
+           </div>
+           <div class="cartodb-popup-content">
+             <h4>Fecha Finalización: </h4>
+             <p>{{content.data.pretty_end}}</p>
+             <h4>Fecha Inicio: </h4>
+             <p>{{content.data.pretty_st}}</p>
+             <h4>Duración en días: </h4>
+             <p>{{content.data.tiempo_obra}}</p>
+             <h4>Ubicación: </h4>
+             <p>{{content.data.ubicacion}}</p>
+
+           </div>
+         </div>
+         <div class="cartodb-popup-tip-container"></div>
+      </div>
+    </script>
     <script>less.watch();</script>
 
   </head>
@@ -46,8 +68,9 @@
       <div class="span4">
         <h3>Mantenimiento de Calzada</h3>
         <p>
-          Obras de repavimentación y bacheo ejecutadas y a ejecutar.
+          Plan de obras de repavimentación y bacheo del 2013
         </p>
+        <p><small>* A mayor tamaño mayor duración de obra.</small></p>
       </div>
     </div>
     
@@ -107,7 +130,7 @@ calendar pick id 2: datePickerEnd
 
   <div class="row">
     <div class="span3">
-      <h3>Filtrar obras por período</h3>
+      <h3>Filtrar por período</h3>
       <div id="slider-range"></div>
     </div>
   </div>
@@ -135,8 +158,9 @@ ID: radioset-estado
   <div class="row">
     <div class="span4">
       <h3>Referencias</h3>
-      <p><span style="background-color:#0174DF; display: inline-block; width:10px; height:10px;"></span> Obras a realizar.</p>
-        <p><span style="background-color:#FF4000; display: inline-block; width:10px; height:10px;"></span> Obras ejecutadas o en ejecución.</p>
+      <p><span style="background-color:#0174DF; display: inline-block; width:10px; height:10px;"></span> Obras Finalizadas</p>
+      <p><span style="background-color:#FF4000; display: inline-block; width:10px; height:10px;"></span> Obras en Ejecución</p>
+      <p><span style="background-color:#FFFD00; display: inline-block; width:10px; height:10px;"></span> Obras Futuras</p>
     </div>
   </div>
 
@@ -154,7 +178,7 @@ ID: radioset-estado
     <div class="span4">
       <h3>Descargar los datos</h3>
       
-      <a href="#" class="btn btn-mini btn-primary">Click para descargar</a>
+      <a href="http://epok.buenosaires.gov.ar/mayep/exportCAREs/" class="btn btn-mini btn-primary">Click para descargar</a>
 
     </div>
   </div>

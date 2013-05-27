@@ -16,13 +16,15 @@ function main() {
   }).addTo(map);
 
   cartodb.createLayer(map, 'http://gcba.cartodb.com/api/v1/viz/bacheo/viz.json', {
-    query: 'select * from {{table_name}}'
+    query: "SELECT * , to_char(DATE_ST, 'DD-MM') AS pretty_st, to_char(DATE_END, 'DD-MM') AS pretty_end FROM {{table_name}}"
 
   }).on('done', function(layer) {
     map.addLayer(layer);
     myLayer = layer;
     initControls();
 
+    layer.infowindow.set('template', $('#infowindow_template').html());
+    layer.infowindow.addField('pretty_st')
 
     layer.on('featureOver', function(e, pos, latlng, data) {
       cartodb.log.log(e, pos, latlng, data);
@@ -128,7 +130,7 @@ window.onload = main;
 
 function initControls() {
 
-	var sql = new cartodb.SQL({ user: 'fake' });
+	var sql = new cartodb.SQL({ user: 'gcba' });
 	var coords = {
 		"comuna-all":[[-34.618234674892, -58.404178619384766],12],
 		"comuna-2":[[-34.586237270093079,-58.395217792415608],14],

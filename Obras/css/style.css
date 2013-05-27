@@ -210,7 +210,7 @@ margin-top: 25px;
 .nav-float {
    background: white;
     background: rgba(255,255,255,0.5);
-    padding-top: 120px;
+    padding-top: 70px;
     padding-left: 20px;
     display: block;
     position: absolute;
@@ -222,7 +222,7 @@ margin-top: 25px;
 }
 
 .nav-float .row {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .dropdown-menu li > a:hover,
