@@ -10,23 +10,31 @@ var map;
 
 function main() {
 
-  map = L.map('map', { 
-    zoomControl: false,
-    center: [-34.618234674892, -58.404178619384766],
-    zoom: 12
-  })
+  // map = L.map('map', { 
+  //   zoomControl: false,
+  //   center: [-34.618234674892, -58.404178619384766],
+  //   zoom: 12
+  // })
 
   // add a nice baselayer from mapbox
-  L.tileLayer('http://a.tiles.mapbox.com/v3/pixelbeat.map-pet5vndu/{z}/{x}/{y}.png', {
-    attribution: 'MapBox'
-  }).addTo(map);
+  // L.tileLayer('https://dnv9my2eseobd.cloudfront.net/v3/cartodb.map-eeoepub0/{z}/{x}/{y}.png', {
+  //   attribution: 'MapBox'
+  // }).addTo(map);
 
-  cartodb.createLayer(map, 'http://gcba.cartodb.com/api/v1/viz/bacheo/viz.json', {
-    query: "SELECT * , to_char(DATE_ST, 'DD-MM') AS pretty_st, to_char(DATE_END, 'DD-MM') AS pretty_end FROM {{table_name}}"
 
-  }).on('done', function(layer) {
-    map.addLayer(layer);
+  cartodb.createVis(
+    'map', 
+    'http://gcba.cartodb.com/api/v1/viz/bacheo/viz.json',
+    {
+      zoom: 12
+    }).done(function(vis, layers) {
+
+    layer = layers[1]
     myLayer = layer;
+
+    map = vis.getNativeMap();
+    
+    
     initControls();
 
     layer.infowindow.set('template', $('#infowindow_template').html());
@@ -40,9 +48,7 @@ function main() {
       cartodb.log.log('error: ' + err);
     });
 
-  }).on('error', function() {
-    cartodb.log.log("some error occurred");
-  });
+  })
 }
 
 function updateMap() {
