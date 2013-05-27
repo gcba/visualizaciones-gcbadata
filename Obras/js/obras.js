@@ -2,7 +2,12 @@ $(window).load(function() {
   $('.flexslider').flexslider({
     animation: "slide"
   });
+
+  
+
 });
+
+
 
 
 var myLayer;

@@ -1,9 +1,6 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700);
+
 /* Some styles missed in central :( */
-table {font:normal 15px "Helvetica Neue","Helvetica",Arial; color:#666666;}  
-table tr {border-top: 1px solid #CCC; background-color:white; margin: 0; padding: 0;}
-table tr.separator {background:#E8E8E8;}
-table tr td {border: 1px solid #CCC; text-align: left; margin: 0; padding: 6px 13px;}
-table td b {color:#333333;}
 span.string p {display:inline-block; width:auto!important; font-size:13px;}
 section.nav div.right {min-height:100px!important;}
 div.right .blue.button.download {position:relative; display:inline; top:auto; right:auto; float:none; padding-right:18px!important;}
@@ -260,6 +257,7 @@ form.example label {margin:0 0 0 26px; font:normal 13px Arial; color:#666666;}
 }
 
 .jumbotron {
+  position: relative;
   padding-top: 25%;
 }
 
@@ -267,7 +265,23 @@ form.example label {margin:0 0 0 26px; font:normal 13px Arial; color:#666666;}
   font-size: 2em !important;
   padding: 2em;
 }
+.jumbotron .close {
+  color: #fff;
+  text-shadow: 0 1px 0 #000;
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+  font-weight: bold;
+  font-size: .9em;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding-top: 200px;
+}
 
+.jumbotron .close:before {
+
+  content: "Cerrar "
+}
  
 /* Browser Resets */
 .flex-container a:active,
