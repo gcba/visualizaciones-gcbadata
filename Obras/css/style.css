@@ -209,7 +209,7 @@ margin-top: 25px;
     background: rgba(255,255,255,0.5);
     padding-top: 70px;
     padding-left: 20px;
-    display: block;
+    display: none;
     position: absolute;
     width: 300px;
     height: 100%;
@@ -246,6 +246,7 @@ form.example label {margin:0 0 0 26px; font:normal 13px Arial; color:#666666;}
 
 
 .banner {
+  display: block;
   position: absolute;
   height: 100%;
   width: 100%;
@@ -260,6 +261,10 @@ form.example label {margin:0 0 0 26px; font:normal 13px Arial; color:#666666;}
   width: 700px;
 }
 
+.banner .btn-large {
+  padding: 12px 20px;
+  font-size: 24px;
+}
 
 .jumbotron {
   position: relative;
@@ -275,7 +280,7 @@ form.example label {margin:0 0 0 26px; font:normal 13px Arial; color:#666666;}
   font-size: 1.3em !important;
   line-height: 1.8em !important;
   padding: .8em !important;
-
+  margin-right: 20px;
 
 }
 .jumbotron .close {
