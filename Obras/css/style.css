@@ -262,8 +262,10 @@ form.example label {margin:0 0 0 26px; font:normal 13px Arial; color:#666666;}
 }
 
 .search-query {
-  font-size: 2em !important;
-  padding: 2em;
+  font-size: 1.3em !important;
+  line-height: 1.8em !important;
+  padding: .7em !important;
+
 }
 .jumbotron .close {
   color: #fff;

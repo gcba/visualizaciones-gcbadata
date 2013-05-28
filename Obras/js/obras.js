@@ -3,9 +3,17 @@ $(window).load(function() {
     animation: "slide"
   });
 
-  
+
+  $('.close').click(function(){
+
+    $('.banner').css('display', 'hidden');
+
+  })
+
 
 });
+
+
 
 
 
