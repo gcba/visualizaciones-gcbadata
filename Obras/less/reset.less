@@ -5,6 +5,13 @@
 // Display in IE6-9 and FF3
 // -------------------------
 
+
+html {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+
 article,
 aside,
 details,
@@ -133,13 +140,4 @@ textarea {
 // Fonts especiales 
 // -------------------------
 
-@font-face {
-    font-family: 'Gotham';
-    src: url('gotham/gotham.eot');
-    src: url('gotham/gotham.eot?#iefix') format('embedded-opentype'),
-         url('gotham/gotham.woff') format('woff'),
-         url('gotham/gotham.ttf') format('truetype'),
-         url('gotham/gotham.svg#Gotham') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');

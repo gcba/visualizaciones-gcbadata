@@ -8,7 +8,7 @@ $(window).load(function() {
 
     $('.banner').css('display', 'hidden');
 
-  })
+  });
 
 
 });
