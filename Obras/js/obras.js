@@ -6,33 +6,52 @@ jQuery(document).ready(function($) {
   var miMap;
 
   var closeBanner = function() {
-    $('.banner').css('display', 'none'); 
+    var banner = $('.banner');
+    banner.removeClass('banner');
+    banner.addClass('banner-aside');
+    
+    $('.flexslider').flexslider({
+      animation: "slide",
+      slideshow: false,
+      startAt: 3
+    });
+    // var ac = new usig.AutoCompleter('input-dir-aside', {
+    //   afterGeoCoding: function(pt) {
+    //     changeZoom(pt);
+    //   } 
+    // });
+    $(window).resize();
   }
-  
-  var ac = new usig.AutoCompleter('input-dir', {
-    afterGeoCoding: function(pt) {
-      if ( typeof pt.getX === 'function' )
-      {
-        $.ajax({
-          url: 'http://ws.usig.buenosaires.gob.ar/rest/convertir_coordenadas?x='+ pt.getX() +'&y=' + pt.getY() + '&output=lonlat',
-          dataType: 'jsonp'
-        }).done(function(data){
-            closeBanner();
 
-            miMap.setView([data.resultado.y, data.resultado.x], 18);
-            var geo = new usig.GeoCoder();
-            geo.reverseGeoCoding(data.resultado.x, data.resultado.y, function (data) {
-              
-            }); 
-        });
-      }
-    },
-    onInputChange: function(texto) {
-      $('#input-description').text(texto);
+  var changeZoom = function (pt) {
+    if ( typeof pt.getX === 'function' )
+    {
+      $.ajax({
+        url: 'http://ws.usig.buenosaires.gob.ar/rest/convertir_coordenadas?x='+ pt.getX() +'&y=' + pt.getY() + '&output=lonlat',
+        dataType: 'jsonp'
+      }).done(function(data){
+          miMap.setView([data.resultado.y, data.resultado.x], 18);
+          var geo = new usig.GeoCoder();
+          geo.reverseGeoCoding(data.resultado.x, data.resultado.y, function (data) {
+            
+          }); 
+      });
+    }
+  }
+
+  
+  
+   var ac = new usig.AutoCompleter('input-dir', {
+    afterGeoCoding: function(pt) {
+      changeZoom(pt);
+      closeBanner();
     }
   });
 
-  $('.flexslider').flexslider({animation: "slide"});
+  $('.flexslider').flexslider({
+    animation: "slide",
+    pauseOnHover: true
+  });
   
   $('.close').click(function(){ 
     $('.banner').css('display', 'none'); 

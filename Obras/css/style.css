@@ -266,7 +266,7 @@ form.example label {margin:0 0 0 26px; font:normal 13px Arial; color:#666666;}
   font-size: 24px;
 }
 
-.jumbotron {
+.banner .jumbotron {
   position: relative;
   margin-top: 25%;
   background-color: #EAEAEA;
@@ -276,14 +276,14 @@ form.example label {margin:0 0 0 26px; font:normal 13px Arial; color:#666666;}
 
 }
 
-.search-query {
+.banner .search-query {
   font-size: 1.3em !important;
   line-height: 1.8em !important;
   padding: .8em !important;
   margin-right: 20px;
 
 }
-.jumbotron .close {
+.banner .jumbotron .close {
   color: #fff;
   text-shadow: 0 1px 0 #000;
   opacity: 0.9;
@@ -295,7 +295,7 @@ form.example label {margin:0 0 0 26px; font:normal 13px Arial; color:#666666;}
   right: 10px;
 }
 
-.slides h1 {
+.banner .slides h1 {
   padding: 10px;
   margin: 20px 0;
   
@@ -303,13 +303,97 @@ form.example label {margin:0 0 0 26px; font:normal 13px Arial; color:#666666;}
   border-bottom: 1px solid #EAEAEA;
 }
 
-.slides h3 {
+.banner .slides h3 {
   padding-bottom: 15px;
 }
 
-.jumbotron .close:before {
-  /*content: "Cerrar "*/
+
+
+
+
+
+
+
+.banner-aside {
+  display: block;
+  position: absolute;
+  top: 10px; 
+  right: 30px; 
+  background-color: none;
+  text-align: center;
+  z-index: 1000;
+  color: #FFF;
 }
+
+.banner-aside .container {
+  width: 300px;
+  height
+}
+
+.banner-aside .btn-large {
+  margin-top: 10px;
+  padding: 6px 10px;
+  font-size: 14px;
+}
+
+.banner-aside .jumbotron {
+  position: relative;
+  margin-top: 25%;
+  background-color: #666;
+  padding: 30px;
+  -webkit-border-radius: 10px; -moz-border-radius: 10px; -o-border-radius: 10px; border-radius: 10px; 
+
+}
+
+.banner-aside .flex-viewport {
+  height: 200px;
+}
+
+.banner-aside .search-query {
+  font-size: 0.7em !important;
+  padding: .6em !important;
+}
+.banner-aside .jumbotron .close {
+  color: #fff;
+  text-shadow: 0 1px 0 #000;
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+  font-weight: bold;
+  font-size: .9em;
+  position: absolute;
+  top: 4px;
+  right: 10px;
+  display: none;
+}
+
+.banner-aside .slides h1 {
+  padding: 10px;
+  margin: 5px 0;
+  font-size: 1.5em;
+  line-height: 1.1em;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid #EAEAEA;
+}
+
+.banner-aside .slides h3 {
+  margin-top: 10px;
+  padding-bottom: 15px;
+  font-size: 1.1em;
+  line-height: 1.1em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
  
 /* Browser Resets */
 .flex-container a:active,
