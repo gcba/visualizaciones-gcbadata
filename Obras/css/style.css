@@ -279,7 +279,10 @@ form.example label {margin:0 0 0 26px; font:normal 13px Arial; color:#666666;}
 .banner .search-query {
   font-size: 1.3em !important;
   line-height: 1.8em !important;
-  padding: .8em !important;
+  padding-top: 0.8em;
+  padding-right: 0.4em;
+  padding-bottom: 0.8em;
+  padding-left: 0.4em;
   margin-right: 20px;
 
 }
@@ -313,20 +316,27 @@ form.example label {margin:0 0 0 26px; font:normal 13px Arial; color:#666666;}
 
 .banner .punto {
   display: inline-block;
-  width: 45px;
-  height: 90px;
-  background: url('images/marker-obras-encurso.svg') no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  border: 1px solid white;
+  margin-right: 20px;
+  width: 60px;
+  font-size: .73em;
+  line-height: 1.1em;
+  padding-top: 125px;
+  color: rgba(255,255,255,0.6);
 }
 
+  .obras-en-curso {
+    background: url('images/marker-obras-encurso.svg') no-repeat center center; 
+  }
+  .obras-finalizadas {
+    background: url('images/marker-obras-finalizadas.svg') no-repeat center center;
+  }
 
-
-
-
+   .obras-en-curso:before {
+    content: 'Obras en ejecución';
+  }
+  .obras-finalizadas:before {
+    content: 'Obras finalizadas';
+  }
 
 .banner-aside {
   display: block;
@@ -402,8 +412,23 @@ form.example label {margin:0 0 0 26px; font:normal 13px Arial; color:#666666;}
 }
 
 
+.banner-aside .punto {
+  display: inline-block;
+  width: 70px;
+  margin-right: 20px;
+  background-size: contain;
+  font-size: 0.8em;
+  line-height: 1.16em;
+  padding-top: 142px;
+}
 
 
+.banner-aside .obras-en-curso:before {
+    content: 'En ejecución';
+  }
+.banner-aside .obras-finalizadas:before {
+    content: 'Finalizada';
+  }
 
 
 
