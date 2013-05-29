@@ -5,22 +5,28 @@ jQuery(document).ready(function($) {
   var myLayer;
   var miMap;
 
+  $('#banner-container').html($('#banner_template').html());
+
+
   var closeBanner = function() {
+    $('#banner-container').empty();
+    $('#banner-container').html($('#banner_template').html());
+    
     var banner = $('.banner');
     banner.removeClass('banner');
     banner.addClass('banner-aside');
     
     $('.flexslider').flexslider({
-      animation: "slide",
       slideshow: false,
       startAt: 3
     });
-    // var ac = new usig.AutoCompleter('input-dir-aside', {
-    //   afterGeoCoding: function(pt) {
-    //     changeZoom(pt);
-    //   } 
-    // });
-    $(window).resize();
+    
+    var ac = new usig.AutoCompleter('input-dir', {
+      afterGeoCoding: function(pt) {
+        changeZoom(pt);
+      } 
+    });
+    
   }
 
   var changeZoom = function (pt) {
@@ -40,8 +46,7 @@ jQuery(document).ready(function($) {
   }
 
   
-  
-   var ac = new usig.AutoCompleter('input-dir', {
+  var ac = new usig.AutoCompleter('input-dir', {
     afterGeoCoding: function(pt) {
       changeZoom(pt);
       closeBanner();

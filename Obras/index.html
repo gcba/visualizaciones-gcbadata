@@ -43,7 +43,40 @@
          <div class="cartodb-popup-tip-container"></div>
       </div>
     </script>
-    <script>less.watch();</script>
+
+    <script type="banner/html" id="banner_template">
+      <div class="banner">
+        <div class="container">
+
+          <div class="jumbotron">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <div class="flexslider">
+              <ul class="slides">
+                <li class="slide-inicial">
+                  <h1>Plan de Obras Interactivo</h1>
+                  <h3>En la Ciudad estamos trabajando para reparar las calles de tu barrio. <br>En este mapa podés conocer todas las obras y en que estado se encuentran.</p>
+                </li>
+                <li class="slide-mapa">
+                  <h1>¿Qué voy a ver?</h1>
+                  <h3>Cada punto en el mapa de Buenos Aires, representa una obra.<br>Los puntos están dividos en Obras en ejecución y Obras finalizadas.</p>
+                </li>
+                <li class="slide-herramientas">
+                  <h1>Aprendé más de cada obra.</h1>
+                  <h3>Clickeá sobre una obra en el mapa y conocé más sobre cuándo empieza o termina.</p>
+                </li>
+                <li class="slide-herramientas">
+                    <h1>Obras en tu comuna.</h1>
+                    <h3>Ingresá tu domicilio para ver las obras más cercanas a tu casa.</p>
+                    <div class="input-append">
+                      <input id="input-dir" type="text" class="search-query" placeholder="Obras en tu cuadra."><a class="btn btn-primary btn-large">Buscar</a>
+                    </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </script>
 
   </head>
     
@@ -64,38 +97,9 @@
     </div>
   </div>
 
-  <div class="banner">
-    <div class="container">
-
-      <div class="jumbotron">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <div class="flexslider">
-          <ul class="slides">
-            <li class="slide-inicial">
-              <h1>Plan de Obras Interactivo</h1>
-              <h3>En la Ciudad estamos trabajando para reparar las calles de tu barrio. <br>En este mapa podés conocer todas las obras y en que estado se encuentran.</p>
-            </li>
-            <li class="slide-mapa">
-              <h1>¿Qué voy a ver?</h1>
-              <h3>Cada punto en el mapa de Buenos Aires, representa una obra.<br>Los puntos están dividos en Obras en ejecución y Obras finalizadas.</p>
-            </li>
-            <li class="slide-herramientas">
-              <h1>Aprendé más de cada obra.</h1>
-              <h3>Clickeá sobre una obra en el mapa y conocé más sobre cuándo empieza o termina.</p>
-            </li>
-            <li class="slide-herramientas">
-                <h1>Obras en tu comuna.</h1>
-                <h3>Ingresá tu domicilio para ver las obras más cercanas a tu casa.</p>
-                <div class="input-append">
-                  <input id="input-dir" type="text" class="search-query" placeholder="Obras en tu cuadra."><a class="btn btn-primary btn-large">Buscar</a>
-                </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-
+  
+  <div id="banner-container"> </div>
+  
   <div id="map"></div>
 
   <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
