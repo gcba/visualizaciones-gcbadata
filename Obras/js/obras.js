@@ -11,13 +11,24 @@ jQuery(document).ready(function($) {
   
   var ac = new usig.AutoCompleter('input-dir', {
     afterGeoCoding: function(pt) {
-      $.ajax({
-        url: 'http://ws.usig.buenosaires.gob.ar/rest/convertir_coordenadas?x='+ pt.getX() +'&y=' + pt.getY() + '&output=lonlat',
-        dataType: 'jsonp'
-      }).done(function(data){
-          closeBanner();
-          miMap.setView([data.resultado.y, data.resultado.x], 18);
-      });
+      if ( typeof pt.getX === 'function' )
+      {
+        $.ajax({
+          url: 'http://ws.usig.buenosaires.gob.ar/rest/convertir_coordenadas?x='+ pt.getX() +'&y=' + pt.getY() + '&output=lonlat',
+          dataType: 'jsonp'
+        }).done(function(data){
+            closeBanner();
+
+            miMap.setView([data.resultado.y, data.resultado.x], 18);
+            var geo = new usig.GeoCoder();
+            geo.reverseGeoCoding(data.resultado.x, data.resultado.y, function (data) {
+              
+            }); 
+        });
+      }
+    },
+    onInputChange: function(texto) {
+      $('#input-description').text(texto);
     }
   });
 
