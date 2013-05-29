@@ -42,14 +42,17 @@ jQuery(document).ready(function($) {
             
           }); 
       });
+      return true;
     }
+    return false;
   }
 
   
   var ac = new usig.AutoCompleter('input-dir', {
     afterGeoCoding: function(pt) {
-      changeZoom(pt);
-      closeBanner();
+      if ( changeZoom(pt) ) {
+        closeBanner();
+      }
     }
   });
 
@@ -85,6 +88,7 @@ jQuery(document).ready(function($) {
     // layer.on('featureOver', function(e, pos, latlng, data) {
     //   cartodb.log.log(e, pos, latlng, data);
     // });
+    layer.infowindow.set('template', $('#infowindow_template').html());
 
     layer.on('error', function(err) {
       cartodb.log.log('error: ' + err);
