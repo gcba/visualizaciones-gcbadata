@@ -6,7 +6,9 @@ $(window).load(function() {
 
   $('.close').click(function(){
 
-    $('.banner').css('display', 'hidden');
+    //$(this).('.banner').css('display', 'hidden');
+
+    $(this).closest('.banner').css('display', 'none');
 
   });
 
