@@ -50,7 +50,9 @@ jQuery(document).ready(function($) {
 
   $('.flexslider').flexslider({
     animation: "slide",
-    pauseOnHover: true
+    pauseOnHover: true,
+    startAt: 1,
+    slideshow: false
   });
   
   $('.close').click(function(){ 
