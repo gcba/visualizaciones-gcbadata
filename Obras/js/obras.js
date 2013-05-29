@@ -1,20 +1,3 @@
-$(window).load(function() {
-  $('.flexslider').flexslider({
-    animation: "slide"
-  });
-
-
-  $('.close').click(function(){
-
-    //$(this).('.banner').css('display', 'hidden');
-
-    $(this).closest('.banner').css('display', 'none');
-
-  });
-
-
-});
-
 
 
 
@@ -24,6 +7,18 @@ var myLayer;
 var map;
 
 function main() {
+
+  $('.flexslider').flexslider({
+    animation: "slide"
+  });
+
+
+  $('.close').click(function(){
+
+    $(this).closest('.banner').css('display', 'none');
+
+  });
+
 
   // map = L.map('map', { 
   //   zoomControl: false,
