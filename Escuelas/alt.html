@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+  <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/themes/css/cartodb.css" />
+  <!--[if lte IE 8]>
+    <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/themes/css/cartodb.ie.css" />
+  <![endif]-->
+  <link rel="stylesheet" href="css/bootstrap.css" />
+
+
+  <script src="js/jquery-2.0.3.min.js"></script>
+
+  <script src="js/jquery.flexslider.min.js"></script>
+
+  <script src="http://libs.cartocdn.com/cartodb.js/v3/cartodb.js"></script>
+
+  <link rel="stylesheet" href="css/style.css" />
+  <script type="banner/html" id="banner_template">
+
+    <div class="banner">
+      <div class="container">
+
+        <div class="jumbotron">
+          <div class="flexslider">
+            <ul class="slides">
+              <li class="slide-inicial">
+                <h1>Titulo de slide</h1>
+              </li>
+              <li class="slide-mapa">
+                <h1>Titulo de slide</h1>
+                <h3></h3>
+                <ul>
+                  <li class="punto obras-en-curso"></li>
+                  <li class="punto obras-finalizadas"></li>
+                </ul>
+              </li>
+              <li class="slide-herramientas">
+                <h1>Titulo de slide</h1>
+                <h3></h3>
+                <ul>
+                  <li class="punto obras-en-curso"></li>
+                  <li class="punto obras-finalizadas"></li>
+                </ul>
+              </li>
+              <li class="slide-herramientas">
+                  <h1>Titulo de slide.</h1>
+                  <h3></h3>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </script>
+  <script>
+
+    var mainMap;
+    var mainLayer;
+
+    function init() {
+
+    //$('#banner-container').html($('#banner_template').html());
+
+      // initiate leaflet map
+      mainMap = new L.Map('map', { 
+        center: [-34.59877249361254, -58.455848693847656],
+        zoom: 12
+      })
+
+      L.tileLayer('https://dnv9my2eseobd.cloudfront.net/v3/cartodb.map-4xtxp73f/{z}/{x}/{y}.png', {
+        attribution: 'Mapbox <a href="http://mapbox.com/about/maps" target="_blank">Terms &amp; Feedback</a>'
+      }).addTo(mainMap);
+
+      var layerUrl = 'http://gcba.cartodb.com/api/v2/viz/4812766e-47ee-11e3-9b00-3085a9a956e8/viz.json';
+
+      var sublayers = [];
+
+      var LayerActions = {
+        all: function(){
+          sublayers[0].setSQL("SELECT * FROM mapa_escuelas_con_registros");
+          return true;
+        },
+        inicial: function(){
+          sublayers[0].setSQL("SELECT * FROM mapa_escuelas_con_registros WHERE nivel_desc IN ('Inicial')");
+          return true;
+        },
+        primario: function(){
+          sublayers[0].setSQL("SELECT * FROM mapa_escuelas_con_registros WHERE nivel_desc IN ('Primario')");
+          return true;
+        },
+        secundario: function(){
+          sublayers[0].setSQL("SELECT * FROM mapa_escuelas_con_registros WHERE nivel_desc IN ('Secundario')");
+          return true;
+        },
+        terciario: function(){
+          sublayers[0].setSQL("SELECT * FROM mapa_escuelas_con_registros WHERE nivel_desc IN ('Terciario')");
+          return true;
+        }
+      }
+
+      cartodb.createLayer(mainMap, layerUrl)
+        .addTo(mainMap)
+        .on('done', function(layer) {
+          mainMap.addLayer(layer);
+          mainLayer = layer;
+          // change the query for the first layer
+          var subLayerOptions = {
+            sql: "SELECT * FROM mapa_escuelas_con_registros"
+              }
+
+          var sublayer = layer.getSubLayer(0);
+
+          sublayer.set(subLayerOptions);
+
+          sublayers.push(sublayer);
+        }).on('error', function() {
+          //log the error
+        });
+
+      $('.button').click(function() {
+        $('.button').removeClass('selected');
+        $(this).addClass('selected');
+        LayerActions[$(this).attr('id')]();
+      });
+
+      $('.flexslider').flexslider({
+        animation: "slide",
+        pauseOnHover: true,
+        startAt: 0,
+        slideshow: true
+      });
+      
+
+    }
+
+    var closeBanner = function() {
+      $('#banner-container').empty();
+      $('#banner-container').html($('#banner_template').html());
+      
+      var banner = $('.banner');
+      banner.removeClass('banner');
+      banner.addClass('banner-aside');
+      
+    }
+
+
+
+  </script>
+</head>
+
+<body onload="init()">
+<header class="navbar-fixed-top">
+  <div class="navbar">
+      <div class="header-gcba">
+          <div class="header-inner">
+            <div class="container">
+              <a href="http://buenosaires.gob.ar" target="_blank"><div class="logo"></div></a>
+              <h2 class="slogan">En todo estás vos</h2>
+            </div>
+          </div>
+      </div>
+  </div>     
+</header>
+<div id="banner-container"></div>
+<div id='map'></div>
+
+<div id='menu'>
+  <a href="#inicial" id="inicial" class="button inicial">inicial</a> 
+  <a href="#primario" id="primario" class="button primario">primario</a> 
+  <a href="#secundario" id="secundario" class="button secundario">secundario</a> 
+  <a href="#terciario" id="terciario" class="button terciario">terciario</a> 
+  <a href="#all" id="all" class="button all selected">Todos</a>
+</div>
+</body>
+</html>
