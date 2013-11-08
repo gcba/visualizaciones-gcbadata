@@ -11,6 +11,18 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Gotham';
+    src: url('../assets/fonts/gotham.eot');
+    src: url('../assets/fonts/gotham.eot?#iefix') format('embedded-opentype'),
+         url('../assets/fonts/gotham.woff') format('woff'),
+         url('../assets/fonts/gotham.ttf') format('truetype'),
+         url('../assets/fonts/gotham.svg#Gotham') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 
 html, body {width:100%; height:100%; padding: 0; margin: 0;}
     header{display:block}header .header-gcba{padding:10px 0;overflow:visible;background-color:#f9dd00;*background-color:#ffbd04;background-image:-o-linear-gradient(top, #ffe603, #ffbd04);background-image:linear-gradient(top, #ffe603, #ffbd04);background-image:-ms-linear-gradient(top, #ffe603, #ffbd04);background-image:-webkit-linear-gradient(top, #ffe603, #ffbd04);background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#ffe603), to(#ffbd04));background-image:-moz-linear-gradient(top, #ffe603, #ffbd04);background-repeat:repeat-x;border-top:1px solid #fdfd00;border-bottom:1px solid #ffc702;filter:progid:dximagetransform.microsoft.gradient(enabled=false);filter:progid:dximagetransform.microsoft.gradient(startColorstr='#ffe603', endColorstr='#ffbd04', GradientType=0);box-shadow:0 0 10px rgba(0,0,0,0.7)}header .header-gcba .header-inner{padding-right:20px;padding-left:20px}
@@ -169,7 +181,19 @@ form.example input[type="range"]::-webkit-slider-thumb {
 
 form.example p {width:auto!important; display:block; letter-spacing:0; padding-bottom:5px; margin:0!important; text-align:center; font:normal 13px Arial; color:#666666;}
 
+.slide-disclaimer .box {
+  margin: 0 auto;
+  width: 500px;
+  position: relative;
+  background-color: #FFF;
+  text-align: center;
+}
 
+.bubbles {
+  background: url("https://gcba.cartodb.com/assets/cdb/themes/img/bubbles.png") no-repeat center center;
+  width: 120px;
+  height: 40px;
+}
 
 
 #map_canvas {  }
@@ -290,11 +314,12 @@ form.example label {margin:0 0 0 26px; font:normal 13px Arial; color:#666666;}
   height: 100%;
   width: 100%;
   top: 0; left: 0; 
-  background-color: rgba(40, 53, 38,0.9);
+  background-color: rgba(40, 53, 38,0.5);
   text-align: center;
   z-index: 1000;
   color: #FFF;
 }
+
 
 .banner .container {
   width: 700px;
@@ -305,13 +330,18 @@ form.example label {margin:0 0 0 26px; font:normal 13px Arial; color:#666666;}
   font-size: 24px;
 }
 
-.banner .jumbotron {
+.banner .jumbotron, .banner-aside .jumbotron {
+  font-family: "Gotham", "Helvetica", "Arial", _sans;
   position: relative;
-  margin-top: 30%;
+  margin-top: 25%;
   background: url(../assets/bg.jpg) center center repeat;
   padding: 30px;
   -webkit-border-radius: 10px; -moz-border-radius: 10px; -o-border-radius: 10px; border-radius: 10px; 
+}
 
+.banner h4, .banner-aside h4 {
+  font-weight: normal;
+  font-size: 14px;
 }
 
 .banner .search-query {
@@ -336,7 +366,7 @@ form.example label {margin:0 0 0 26px; font:normal 13px Arial; color:#666666;}
   right: 10px;
 }
 
-.banner .slides h1 {
+.banner .slides h1, .banner-aside .slides h1 {
   font-family: "Crayon", "Helvetica", "Arial";
   font-size: 40px;
   padding: 10px;
@@ -390,7 +420,7 @@ form.example label {margin:0 0 0 26px; font:normal 13px Arial; color:#666666;}
 }
 
 .banner-aside .container {
-  width: 350px;
+  width: 350px !important;
 }
 
 .banner-aside .btn-large {

@@ -1,0 +1,71 @@
+#mapa_escuelas_con_registros{
+  marker-fill: #ff5c00;
+  marker-line-color: #ffffff;
+  marker-line-width: 0;
+  marker-line-opacity: 0;
+  marker-opacity: 0.9;
+  marker-placement: point;
+  marker-type: ellipse;
+  marker-allow-overlap: false;
+  marker-clip: false;
+  marker-multi-policy: largest;
+}
+#mapa_escuelas_con_registros [total_inscriptos > 250] {
+   marker-width: 30;
+}
+#mapa_escuelas_con_registros [total_inscriptos <= 150] {
+   marker-width: 25;
+}
+#mapa_escuelas_con_registros [total_inscriptos <= 50] {
+   marker-width: 10;
+}
+#mapa_escuelas_con_registros [total_inscriptos <= 10] {
+   marker-width: 5.0;
+}
+
+#mapa_escuelas_con_registros[nivel_desc='Inicial'] {
+   marker-fill: #A6CEE3;
+}
+#mapa_escuelas_con_registros[nivel_desc='Primario'] {
+   marker-fill: #1F78B4;
+}
+#mapa_escuelas_con_registros[nivel_desc='Secundario'] {
+   marker-fill: #B2DF8A;
+}
+#mapa_escuelas_con_registros[nivel_desc='Terciario'] {
+   marker-fill: #33A02C;
+}
+
+
+
+
+#mapa_escuelas_con_registros[modalidad_desc="Inicial"] {
+   marker-fill: #A6CEE3;
+}
+#mapa_escuelas_con_registros[modalidad_desc="Primario"] {
+   marker-fill: #1F78B4;
+}
+#mapa_escuelas_con_registros[modalidad_desc="Técnica"] {
+   marker-fill: #B2DF8A;
+}
+#mapa_escuelas_con_registros[modalidad_desc="Bachiller"] {
+   marker-fill: #33A02C;
+}
+#mapa_escuelas_con_registros[modalidad_desc="Escuelas Normales Superiores (ENS)"] {
+   marker-fill: #FB9A99;
+}
+#mapa_escuelas_con_registros[modalidad_desc="IFTS"] {
+   marker-fill: #E31A1C;
+}
+#mapa_escuelas_con_registros[modalidad_desc="Comercial"] {
+   marker-fill: #FDBF6F;
+}
+#mapa_escuelas_con_registros[modalidad_desc="Artística"] {
+   marker-fill: #FF7F00;
+}
+#mapa_escuelas_con_registros[modalidad_desc=""] {
+   marker-fill: #CAB2D6;
+}
+#mapa_escuelas_con_registros[modalidad_desc="Especial"] {
+   marker-fill: #6A3D9A;
+}
