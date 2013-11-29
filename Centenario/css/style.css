@@ -1,0 +1,264 @@
+body {
+  padding: 0px;
+  margin: 0px;
+  font-family: "Open Sans", sans-serif; }
+  @media only screen and (min-width: 48em) {
+    body {
+      border: 5px solid yellow; } }
+  @media only screen and (min-width: 56.25em) {
+    body {
+      border: 5px solid green; } }
+  @media only screen and (min-width: 68.75em) {
+    body {
+      border: 5px solid red; } }
+
+h1, h2, h4, nav li a {
+  font-family: "Headland One", Georgia, serif; }
+
+h1 {
+  font-size: 10em;
+  margin-bottom: 0px;
+  color: #d7d3d0; }
+  @media only screen and (min-width: 48em) {
+    h1 {
+      margin-top: 10px; } }
+  @media only screen and (min-width: 56.25em) {
+    h1 {
+      margin-top: 10px; } }
+  @media only screen and (min-width: 68.75em) {
+    h1 {
+      margin-top: 0px; } }
+
+h4 {
+  font-size: 20px;
+  margin-bottom: 10px; }
+
+a {
+  cursor: pointer; }
+
+ul {
+  list-style: none; }
+
+.nav-container {
+  width: 100%;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  z-index: 300; }
+
+nav {
+  text-align: center;
+  width: auto;
+  margin: 0px auto; }
+  nav ul {
+    padding: 0px; }
+  nav li {
+    display: inline-block;
+    position: relative;
+    text-align: left;
+    width: 2.5em;
+    height: 2.5em;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    margin: 0 0.1em;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    text-align: center; }
+    nav li a {
+      color: rgba(0, 0, 0, 0.5);
+      display: block;
+      font-size: 12px;
+      padding-top: 11px; }
+    nav li a.active {
+      color: rgba(255, 255, 255, 0.8); }
+  @media screen and (max-width: 940px) {
+    nav {
+      width: 90%; }
+      nav li a {
+        font-size: 18px; } }
+
+section {
+  overflow: hidden;
+  height: 1300px;
+  width: 100%; }
+  @media only screen and (min-width: 48em) {
+    section {
+      padding-top: 22px; } }
+  @media only screen and (min-width: 56.25em) {
+    section {
+      padding-top: 0px; } }
+  @media only screen and (min-width: 68.75em) {
+    section {
+      padding-top: 192px; } }
+  section .content {
+    position: relative;
+    margin: 0px auto;
+    max-width: 940px; }
+    section .content h2 {
+      margin-top: 0px;
+      font-size: 4em;
+      padding-top: 250px;
+      text-shadow: 1px 0px 5px rgba(150, 150, 150, 0.6);
+      z-index: 10;
+      position: inherit; }
+    section .content p {
+      display: block;
+      width: 300px;
+      color: #171717;
+      z-index: 10;
+      position: inherit; }
+    section .content .sharp {
+      background-color: rgba(0, 174, 219, 0.5);
+      position: absolute;
+      display: block;
+      width: 2200px;
+      height: 1200px;
+      margin-left: -500px;
+      z-index: 0; }
+      @media only screen and (min-width: 48em) {
+        section .content .sharp {
+          top: 150px; } }
+      @media only screen and (min-width: 56.25em) {
+        section .content .sharp {
+          top: 224px; } }
+      @media only screen and (min-width: 68.75em) {
+        section .content .sharp {
+          top: 150px; } }
+    @media screen and (max-width: 940px) {
+      section .content {
+        width: 90%; } }
+    section .content a {
+      color: #171717; }
+
+.bottom-link {
+  margin-top: 80px;
+  font-style: italic; }
+
+.gist-meta {
+  display: none; }
+
+.file-data {
+  font-size: 14px; }
+
+#inicio {
+  background: url(../images/001.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  #inicio .content h1, #inicio .content h2 {
+    text-shadow: 1px 0px 5px rgba(0, 0, 0, 0.7);
+    margin-left: 200px; }
+  #inicio .content h2 {
+    margin-top: 0px;
+    font-size: 4em;
+    color: #f7f3f0; }
+    @media only screen and (min-width: 48em) {
+      #inicio .content h2 {
+        padding-top: 260px; } }
+    @media only screen and (min-width: 56.25em) {
+      #inicio .content h2 {
+        padding-top: 420px; } }
+    @media only screen and (min-width: 68.75em) {
+      #inicio .content h2 {
+        padding-top: 460px; } }
+  #inicio .content .word1, #inicio .content .word2, #inicio .content .word3, #inicio .content .word4 {
+    position: absolute; }
+  #inicio .content .word1 {
+    font-size: 1.5em;
+    display: block;
+    color: #fdd900; }
+    @media only screen and (min-width: 48em) {
+      #inicio .content .word1 {
+        top: 20px; } }
+    @media only screen and (min-width: 56.25em) {
+      #inicio .content .word1 {
+        top: 0px; } }
+    @media only screen and (min-width: 68.75em) {
+      #inicio .content .word1 {
+        top: 90px; } }
+  #inicio .content .word2, #inicio .content .word3 {
+    font-size: 0.5em; }
+  #inicio .content .word2 {
+    padding-left: 410px; }
+    @media only screen and (min-width: 48em) {
+      #inicio .content .word2 {
+        top: 262px; } }
+    @media only screen and (min-width: 56.25em) {
+      #inicio .content .word2 {
+        top: 162px; } }
+    @media only screen and (min-width: 68.75em) {
+      #inicio .content .word2 {
+        top: 262px; } }
+  @media only screen and (min-width: 48em) {
+    #inicio .content .word3 {
+      top: 242px;
+      margin-left: -96px; } }
+  @media only screen and (min-width: 56.25em) {
+    #inicio .content .word3 {
+      top: 242px;
+      margin-left: -96px; } }
+  @media only screen and (min-width: 68.75em) {
+    #inicio .content .word3 {
+      top: 352px;
+      margin-left: -110px; } }
+  #inicio .content .word4 {
+    letter-spacing: -0.09em; }
+    @media only screen and (min-width: 48em) {
+      #inicio .content .word4 {
+        top: 320px;
+        font-size: 1.5em; } }
+    @media only screen and (min-width: 56.25em) {
+      #inicio .content .word4 {
+        top: 220px;
+        font-size: 1.2em; } }
+    @media only screen and (min-width: 68.75em) {
+      #inicio .content .word4 {
+        top: 320px;
+        font-size: 1.5em; } }
+
+.year-1910 {
+  background: url(../images/002.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  .year-1910 .sharp {
+    background-color: rgba(0, 174, 219, 0.8);
+    position: absolute;
+    display: block;
+    width: 1200px;
+    height: 500px;
+    top: 150px;
+    margin-left: -500px;
+    z-index: 0; }
+
+.year-1920 {
+  background: url(../images/003.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  .year-1920 h2 {
+    color: #e8ebef; }
+  .year-1920 p {
+    color: #e8ebef; }
+
+div.viz-container {
+  position: fixed;
+  bottom: 0px;
+  right: -2px;
+  z-index: 30; }
+
+div.loading {
+  text-align: center;
+  padding-top: 20px;
+  font-weight: bold;
+  font-size: 18px;
+  color: steelblue; }
+
+body.loaded div.loading {
+  display: none; }
+
+.disable-hover,
+.disable-hover * {
+  pointer-events: none !important; }
