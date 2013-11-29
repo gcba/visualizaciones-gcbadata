@@ -1,6 +1,7 @@
 
 
-      // https://a.tiles.mapbox.com/v3/gcbadata.gde2bf5a/page.html?secure=1#13/-34.6346909622468/-58.436622619628906
+      // https://a.tiles.mapbox.com/v3/gcbadata.gdmoea7m/page.html?secure=1#13/-34.62063622492369/-58.449840545654304
+
 
       var width = 600, height = 540, chartHeight = 90, chartMargin = 5,
         layer = d3.select("div.layer").style("width",width+"px").style("height",height+"px"),
@@ -88,7 +89,7 @@
           .enter().append("img")
           .attr("class", "tile")
 
-          .attr("src", function(d) { return "http://" + ["a", "b", "c", "d"][Math.random() * 2 | 0] + ".tiles.mapbox.com/v3/gcbadata.gde2bf5a/" + d[2] + "/" + d[0] + "/" + d[1] + ".png"; })
+          .attr("src", function(d) { return "http://" + ["a", "b", "c", "d"][Math.random() * 2 | 0] + ".tiles.mapbox.com/v3/gcbadata.gdmoea7m/" + d[2] + "/" + d[0] + "/" + d[1] + ".png"; })
 
 
           // .attr("src", function(d) { return "http://" + ["a", "b", "c", "d"][Math.random() * 4 | 0] + ".tiles.mapbox.com/v3/veltman.map-5p16q1wt/" + d[2] + "/" + d[0] + "/" + d[1] + ".png"; })
@@ -156,7 +157,7 @@
         $('.chart').hide();
         $('.map').hide();
         $('.nav-container').hide();
-        $('.year-1910 h2, .year-1910 p, .year-1910 .sharp').css({ opacity: 0 });
+        $('.year-1910 h2, .year-1910 p, .year-1910 .sharp, .year-1920 h2, .year-1920 p, .year-1920 .sharp, .year-1930 h2, .year-1930 p, .year-1930 .sharp, .year-1940 h2, .year-1940 p, .year-1940 .sharp, .year-1950 h2, .year-1950 p, .year-1950 .sharp, .year-1960 h2, .year-1960 p, .year-1960 .sharp, .year-1970 h2, .year-1970 p, .year-1970 .sharp, .year-1980 h2, .year-1980 p, .year-1980 .sharp, .year-1990 h2, .year-1990 p, .year-1990 .sharp, .year-2000 h2, .year-2000 p, .year-2000 .sharp, .year-2010 h2, .year-2010 p, .year-2010 .sharp').css({ opacity: 0 });
 
         $('#inicio').waypoint(function() {
           $('.year-1910 h2, .year-1910 p, .year-1910 .sharp').stop().animate({ opacity: 0}, 1000);
@@ -192,15 +193,13 @@
           updateCutoff(1915*12+12);
         }, { offset: -100 });
 
-        // $('.year-1910').waypoint(function() {
-        //   updateCutoff(1914*12+1);
-        // }, { offset: -200 });
-
         $('.year-1920').waypoint(function() {
+          $('.year-1920 h2, .year-1920 p, .year-1920 .sharp').stop().animate({ opacity: 1 }, 1000);
           updateCutoff(1920*12+1);
         });
 
         $('.year-1930').waypoint(function() {
+          $('.year-1930 h2, .year-1930 p, .year-1930 .sharp').stop().animate({ opacity: 1 }, 1000);
           updateCutoff(1930*12+1);
         });
 
@@ -210,7 +209,44 @@
 
         $('.year-1930').waypoint(function() {
           updateCutoff(1932*12+1);
-        }, { offset: -200 });
+        }, { offset: -100 });
+
+        $('.year-1930').waypoint(function() {
+          updateCutoff(1933*12+1);
+        }, { offset: -150 });
+
+        $('.year-1940').waypoint(function() {
+          updateCutoff(1940*12+1);
+        });
+
+        $('.year-1950').waypoint(function() {
+          updateCutoff(1950*12+1);
+        });
+
+        $('.year-1960').waypoint(function() {
+          updateCutoff(1960*12+1);
+        });
+
+        $('.year-1970').waypoint(function() {
+          updateCutoff(1970*12+1);
+        });
+
+        $('.year-1980').waypoint(function() {
+          updateCutoff(1980*12+1);
+        });
+
+        $('.year-1990').waypoint(function() {
+          updateCutoff(1990*12+1);
+        });
+
+        $('.year-2000').waypoint(function() {
+          updateCutoff(2000*12+1);
+        });
+
+        $('.year-2010').waypoint(function() {
+          updateCutoff(2010*12+1);
+        });
+
 
         function updateCutoff(months) {
 
