@@ -1,0 +1,304 @@
+@import "bourbon"
+@import "breakpoints"
+
+$pageWidth: 940px
+$responsiveWidth: 90%
+$primary: #E8EBEF
+$secondary: #171717
+
+
+body
+
+  @include breakpoint(smartphone)
+    border: 5px solid yellow
+  
+  @include breakpoint(common)
+    border: 5px solid green
+  
+  @include breakpoint(large)
+    border: 5px solid red
+
+  padding: 0px
+  margin: 0px
+  font-family: 'Open Sans', sans-serif
+
+h1, h2, h4, nav li a
+  font-family: 'Headland One', Georgia, serif
+h1
+  font-size: 10em
+  
+  @include breakpoint(smartphone)
+    margin-top: 10px
+  
+  @include breakpoint(common)
+    margin-top: 10px
+  
+  @include breakpoint(large)
+    margin-top: 0px
+  
+  margin-bottom: 0px
+  color: #D7D3D0
+
+h4
+  font-size: 20px
+  margin-bottom: 10px
+a
+  cursor: pointer
+ul
+  list-style: none
+
+.nav-container
+  width: 100%
+  position: fixed
+  left: 0px
+  top: 0px
+  z-index: 300
+nav
+  text-align: center
+  width: auto
+  margin: 0px auto
+  ul
+    padding: 0px
+  li
+    display: inline-block
+    position: relative
+    text-align: left
+    width: 2.5em
+    height: 2.5em
+    background: rgba(255,255,255,0.5)
+    border-radius: 50%
+    margin: 0 0.1em
+    border: 2px solid rgba(0,0,0,0.5)
+    text-align: center
+    a
+      color: rgba(0,0,0,0.5)
+      display: block
+      font-size: 12px
+      padding-top: 11px
+      
+
+    a.active
+      color: rgba(255,255,255,0.8)
+  @media screen and (max-width: $pageWidth)
+    width: $responsiveWidth
+    li
+      a
+        font-size: 18px
+
+section
+  overflow: hidden
+  @include breakpoint(smartphone)
+    padding-top: 22px
+  
+  @include breakpoint(common)
+    padding-top: 0px
+  
+  @include breakpoint(large)
+    padding-top: 192px
+  
+  height: 1300px
+  width: 100%
+  .content
+    position: relative
+    margin: 0px auto
+    max-width: $pageWidth
+
+    h2
+      margin-top: 0px
+      font-size: 4em
+      padding-top: 250px
+      text-shadow: 1px 0px 5px rgba(150, 150, 150, 0.6)
+      z-index: 10
+      position: inherit
+    p
+      display: block
+      width: 300px
+      color: $secondary
+      z-index: 10
+      position: inherit
+
+
+    .sharp 
+      background-color: rgba(0,174,219,.5)
+      position: absolute
+      display: block
+      width: 2200px
+      height: 1200px
+
+      
+      @include breakpoint(smartphone)
+        top: 150px
+      
+      @include breakpoint(common)
+        top: 224px
+      
+      @include breakpoint(large)
+        top: 150px
+      
+      margin-left: -500px
+      z-index: 0
+
+    @media screen and (max-width: $pageWidth)
+      width: $responsiveWidth
+    a
+      color: $secondary
+
+  
+.bottom-link
+  margin-top: 80px
+  font-style: italic
+
+.gist-meta
+  display: none
+.file-data
+  font-size: 14px
+
+#inicio
+  background: url(../images/001.jpg) no-repeat center center fixed 
+  -webkit-background-size: cover
+  -moz-background-size: cover
+  -o-background-size: cover
+  background-size: cover
+
+  .content
+  
+    h1, h2
+      text-shadow: 1px 0px 5px rgba(0, 0, 0, 0.7)
+      margin-left: 200px
+    
+
+    h2
+      margin-top: 0px
+      font-size: 4em
+
+      @include breakpoint(smartphone)
+        padding-top: 260px
+      
+      @include breakpoint(common)
+        padding-top: 420px
+      
+      @include breakpoint(large)
+        padding-top: 460px
+      
+      color: #F7F3F0
+
+    .word1,.word2,.word3,.word4
+      position: absolute
+
+    .word1
+      font-size: 1.5em
+      display: block
+      
+      @include breakpoint(smartphone)
+        top: 20px
+      
+      @include breakpoint(common)
+        top: 0px
+      
+      @include breakpoint(large)
+        top: 90px
+      
+      color: #FDD900
+
+    .word2, .word3
+      font-size: .5em
+
+    .word2
+      
+      @include breakpoint(smartphone)
+        top: 262px
+      
+      @include breakpoint(common)
+        top: 162px
+      
+      @include breakpoint(large)
+        top: 262px
+      
+      padding-left: 410px
+
+    .word3
+      
+
+      @include breakpoint(smartphone)
+        top: 242px
+        margin-left: -96px
+      
+      @include breakpoint(common)
+        top: 242px
+        margin-left: -96px
+      
+      @include breakpoint(large)
+        top: 352px
+        margin-left: -110px
+      
+
+    .word4
+      
+      letter-spacing: -0.09em
+      
+      @include breakpoint(smartphone)
+        top: 320px
+        font-size: 1.5em
+      
+      @include breakpoint(common)
+        top: 220px
+        font-size: 1.2em
+      
+      @include breakpoint(large)
+        top: 320px
+        font-size: 1.5em
+      
+
+.year-1910
+  background: url(../images/002.jpg) no-repeat center center fixed 
+  -webkit-background-size: cover
+  -moz-background-size: cover
+  -o-background-size: cover
+  background-size: cover
+
+  .sharp 
+    background-color: rgba(0,174,219,.8)
+    position: absolute
+    display: block
+    width: 1200px
+    height: 500px
+
+    top: 150px
+    margin-left: -500px
+    z-index: 0
+
+.year-1920
+  background: url(../images/003.jpg) no-repeat center center fixed 
+  -webkit-background-size: cover
+  -moz-background-size: cover
+  -o-background-size: cover
+  background-size: cover
+  
+  h2
+    color: $primary
+  p
+    color: $primary
+
+
+// Data Viz Styles
+
+div.viz-container
+  position: fixed
+  bottom: 0px
+  right: -2px
+  z-index: 30
+
+
+div.loading 
+  text-align: center
+  padding-top: 20px
+  font-weight: bold
+  font-size: 18px
+  color: steelblue
+
+body.loaded div.loading
+  display: none
+
+.disable-hover,
+.disable-hover *
+  pointer-events: none !important
