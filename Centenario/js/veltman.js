@@ -88,7 +88,7 @@
           .enter().append("img")
           .attr("class", "tile")
 
-          .attr("src", function(d) { return "http://" + ["a", "b", "c", "d"][Math.random() * 2 | 0] + ".tiles.mapbox.com/v3/veltman.map-5p16q1wt/" + d[2] + "/" + d[0] + "/" + d[1] + ".png"; })
+          .attr("src", function(d) { return "http://" + ["a", "b", "c", "d"][Math.random() * 2 | 0] + ".tiles.mapbox.com/v3/gcbadata.gde2bf5a/" + d[2] + "/" + d[0] + "/" + d[1] + ".png"; })
 
 
           // .attr("src", function(d) { return "http://" + ["a", "b", "c", "d"][Math.random() * 4 | 0] + ".tiles.mapbox.com/v3/veltman.map-5p16q1wt/" + d[2] + "/" + d[0] + "/" + d[1] + ".png"; })
