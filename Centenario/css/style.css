@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+@import url(http://fonts.googleapis.com/css?family=Abril+Fatface|Headland+One|Open+Sans:400,700|Playfair+Display:400,700italic);
+>>>>>>> gh-pages
 body {
   padding: 0px;
   margin: 0px;
@@ -12,6 +16,7 @@ body {
     body {
       border: 5px solid red; } }
 
+<<<<<<< HEAD
 h1, h2, h4, nav li a {
   font-family: "Headland One", Georgia, serif; }
 
@@ -19,6 +24,24 @@ h1 {
   font-size: 10em;
   margin-bottom: 0px;
   color: #d7d3d0; }
+=======
+.help-nav {
+  position: fixed;
+  z-index: 600; }
+  .help-nav a {
+    width: auto;
+    position: absolute;
+    top: 50;
+    left: 150; }
+
+h1, h2, h4, nav li a {
+  font-family: "Abril Fatface", Georgia, serif; }
+
+h1 {
+  font-size: 10em;
+  color: #fcfcfc;
+  margin-bottom: 0px; }
+>>>>>>> gh-pages
   @media only screen and (min-width: 48em) {
     h1 {
       margin-top: 10px; } }
@@ -82,6 +105,7 @@ section {
   width: 100%; }
   @media only screen and (min-width: 48em) {
     section {
+<<<<<<< HEAD
       padding-top: 22px; } }
   @media only screen and (min-width: 56.25em) {
     section {
@@ -89,11 +113,25 @@ section {
   @media only screen and (min-width: 68.75em) {
     section {
       padding-top: 192px; } }
+=======
+      padding-top: 10%; } }
+  @media only screen and (min-width: 56.25em) {
+    section {
+      padding-top: 5%; } }
+  @media only screen and (min-width: 68.75em) {
+    section {
+      padding-top: 10%; } }
+>>>>>>> gh-pages
   section .content {
     position: relative;
     margin: 0px auto;
     max-width: 940px; }
     section .content h2 {
+<<<<<<< HEAD
+=======
+      color: #fcfcfc;
+      font-family: "Abril Fatface", serif;
+>>>>>>> gh-pages
       margin-top: 0px;
       font-size: 4em;
       padding-top: 250px;
@@ -101,11 +139,24 @@ section {
       z-index: 10;
       position: inherit; }
     section .content p {
+<<<<<<< HEAD
       display: block;
       width: 300px;
       color: #171717;
       z-index: 10;
       position: inherit; }
+=======
+      font-family: "Open Sans", Helvetica, Arial;
+      display: block;
+      width: 300px;
+      color: #fcfcfc;
+      z-index: 10;
+      position: inherit; }
+      section .content p span {
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: 2em;
+        font-weight: 400; }
+>>>>>>> gh-pages
     section .content .sharp {
       background-color: rgba(0, 174, 219, 0.5);
       position: absolute;
@@ -127,7 +178,11 @@ section {
       section .content {
         width: 90%; } }
     section .content a {
+<<<<<<< HEAD
       color: #171717; }
+=======
+      color: #fcfcfc; }
+>>>>>>> gh-pages
 
 .bottom-link {
   margin-top: 80px;
@@ -140,12 +195,17 @@ section {
   font-size: 14px; }
 
 #inicio {
+<<<<<<< HEAD
   background: url(../images/001.jpg) no-repeat center center fixed;
+=======
+  background: url(../images/inicio.jpg) no-repeat center center fixed;
+>>>>>>> gh-pages
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; }
   #inicio .content h1, #inicio .content h2 {
+<<<<<<< HEAD
     text-shadow: 1px 0px 5px rgba(0, 0, 0, 0.7);
     margin-left: 200px; }
   #inicio .content h2 {
@@ -165,10 +225,42 @@ section {
     position: absolute; }
   #inicio .content .word1 {
     font-size: 1.5em;
+=======
+    text-shadow: 1px 0px 5px rgba(0, 0, 0, 0.7); }
+    @media only screen and (min-width: 48em) {
+      #inicio .content h1, #inicio .content h2 {
+        margin-left: 150px; } }
+    @media only screen and (min-width: 56.25em) {
+      #inicio .content h1, #inicio .content h2 {
+        margin-left: 250px; } }
+    @media only screen and (min-width: 68.75em) {
+      #inicio .content h1, #inicio .content h2 {
+        margin-left: 250px; } }
+  #inicio .content h2 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #f7f3f0; }
+    @media only screen and (min-width: 48em) {
+      #inicio .content h2 {
+        padding-top: 260px;
+        font-size: 4.2em; } }
+    @media only screen and (min-width: 56.25em) {
+      #inicio .content h2 {
+        padding-top: 390px;
+        font-size: 4.2em; } }
+    @media only screen and (min-width: 68.75em) {
+      #inicio .content h2 {
+        padding-top: 260px;
+        font-size: 4.2em; } }
+  #inicio .content .word1, #inicio .content .word2, #inicio .content .word3, #inicio .content .word4 {
+    position: absolute; }
+  #inicio .content .word1 {
+>>>>>>> gh-pages
     display: block;
     color: #fdd900; }
     @media only screen and (min-width: 48em) {
       #inicio .content .word1 {
+<<<<<<< HEAD
         top: 20px; } }
     @media only screen and (min-width: 56.25em) {
       #inicio .content .word1 {
@@ -189,18 +281,51 @@ section {
     @media only screen and (min-width: 68.75em) {
       #inicio .content .word2 {
         top: 262px; } }
+=======
+        top: 20px;
+        font-size: 1.5em; } }
+    @media only screen and (min-width: 56.25em) {
+      #inicio .content .word1 {
+        top: 0px;
+        font-size: 1.5em; } }
+    @media only screen and (min-width: 68.75em) {
+      #inicio .content .word1 {
+        top: 10px;
+        font-size: 1.5em; } }
+  #inicio .content .word2, #inicio .content .word3 {
+    font-family: "Playfair Display", serif;
+    font-size: 0.5em;
+    font-weight: 700;
+    font-style: italic; }
+  @media only screen and (min-width: 48em) {
+    #inicio .content .word2 {
+      top: 262px; } }
+  @media only screen and (min-width: 56.25em) {
+    #inicio .content .word2 {
+      top: 165px;
+      padding-left: 415px; } }
+  @media only screen and (min-width: 68.75em) {
+    #inicio .content .word2 {
+      top: 262px; } }
+>>>>>>> gh-pages
   @media only screen and (min-width: 48em) {
     #inicio .content .word3 {
       top: 242px;
       margin-left: -96px; } }
   @media only screen and (min-width: 56.25em) {
     #inicio .content .word3 {
+<<<<<<< HEAD
       top: 242px;
       margin-left: -96px; } }
+=======
+      top: 248px;
+      margin-left: -86px; } }
+>>>>>>> gh-pages
   @media only screen and (min-width: 68.75em) {
     #inicio .content .word3 {
       top: 352px;
       margin-left: -110px; } }
+<<<<<<< HEAD
   #inicio .content .word4 {
     letter-spacing: -0.09em; }
     @media only screen and (min-width: 48em) {
@@ -218,6 +343,53 @@ section {
 
 .year-1910 {
   background: url(../images/002.jpg) no-repeat center center fixed;
+=======
+  @media only screen and (min-width: 48em) {
+    #inicio .content .word4 {
+      top: 320px;
+      font-size: 0.8em; } }
+  @media only screen and (min-width: 56.25em) {
+    #inicio .content .word4 {
+      top: 220px;
+      font-size: 0.96em; } }
+  @media only screen and (min-width: 68.75em) {
+    #inicio .content .word4 {
+      top: 220px;
+      font-size: 1em; } }
+  #inicio .content .logo-subte {
+    display: block;
+    margin: 0 auto; }
+    #inicio .content .logo-subte h4 a {
+      text-align: center;
+      text-indent: -5000px;
+      display: block;
+      background: url(../images/logo-subte.png) center center no-repeat;
+      margin: 0 auto;
+      -webkit-backface-visibility: hidden;
+      -moz-backface-visibility: hidden;
+      -ms-backface-visibility: hidden;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box; }
+      @media only screen and (min-width: 48em) {
+        #inicio .content .logo-subte h4 a {
+          width: 180px;
+          height: 180px;
+          background-size: 120px 120px; } }
+      @media only screen and (min-width: 56.25em) {
+        #inicio .content .logo-subte h4 a {
+          width: 180px;
+          height: 180px;
+          background-size: 120px 120px; } }
+      @media only screen and (min-width: 68.75em) {
+        #inicio .content .logo-subte h4 a {
+          width: 250px;
+          height: 250px;
+          background-size: 200px 200px; } }
+
+.year-1910 {
+  background: url(../images/1910.jpg) no-repeat center center fixed;
+>>>>>>> gh-pages
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -233,15 +405,121 @@ section {
     z-index: 0; }
 
 .year-1920 {
+<<<<<<< HEAD
   background: url(../images/003.jpg) no-repeat center center fixed;
+=======
+  background: url(../images/1920.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; }
+
+.year-1930 {
+  background: url(../images/1930.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  .year-1930 h2 {
+    color: #fcfcfc; }
+  .year-1930 p {
+    color: #fcfcfc; }
+
+.year-1940 {
+  background: url(../images/1940.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  .year-1940 h2 {
+    color: #fcfcfc; }
+  .year-1940 p {
+    color: #fcfcfc; }
+
+.year-1950 {
+  background: url(../images/1950.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  .year-1950 h2 {
+    color: #fcfcfc; }
+  .year-1950 p {
+    color: #fcfcfc; }
+
+.year-1960 {
+  background: url(../images/1960.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  .year-1960 h2 {
+    color: #fcfcfc; }
+  .year-1960 p {
+    color: #fcfcfc; }
+
+.year-1970 {
+  background: url(../images/1970.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  .year-1970 h2 {
+    color: #fcfcfc; }
+  .year-1970 p {
+    color: #fcfcfc; }
+
+.year-1980 {
+  background: url(../images/1980.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  .year-1980 h2 {
+    color: #fcfcfc; }
+  .year-1980 p {
+    color: #fcfcfc; }
+
+.year-1990 {
+  background: url(../images/1990.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  .year-1990 h2 {
+    color: #fcfcfc; }
+  .year-1990 p {
+    color: #fcfcfc; }
+
+.year-2000 {
+  background: url(../images/2000.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  .year-2000 h2 {
+    color: #fcfcfc; }
+  .year-2000 p {
+    color: #fcfcfc; }
+
+.year-2010 {
+  background: url(../images/2010.jpg) no-repeat center center fixed;
+>>>>>>> gh-pages
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+<<<<<<< HEAD
   .year-1920 h2 {
     color: #e8ebef; }
   .year-1920 p {
     color: #e8ebef; }
+=======
+  .year-2010 h2 {
+    color: #fcfcfc; }
+  .year-2010 p {
+    color: #fcfcfc; }
+>>>>>>> gh-pages
 
 div.viz-container {
   position: fixed;

@@ -1,6 +1,11 @@
 
 
+<<<<<<< HEAD
       // https://a.tiles.mapbox.com/v3/gcbadata.gde2bf5a/page.html?secure=1#13/-34.6346909622468/-58.436622619628906
+=======
+      // https://a.tiles.mapbox.com/v3/gcbadata.gdmoea7m/page.html?secure=1#13/-34.62063622492369/-58.449840545654304
+
+>>>>>>> gh-pages
 
       var width = 600, height = 540, chartHeight = 90, chartMargin = 5,
         layer = d3.select("div.layer").style("width",width+"px").style("height",height+"px"),
@@ -88,7 +93,11 @@
           .enter().append("img")
           .attr("class", "tile")
 
+<<<<<<< HEAD
           .attr("src", function(d) { return "http://" + ["a", "b", "c", "d"][Math.random() * 2 | 0] + ".tiles.mapbox.com/v3/veltman.map-5p16q1wt/" + d[2] + "/" + d[0] + "/" + d[1] + ".png"; })
+=======
+          .attr("src", function(d) { return "http://" + ["a", "b", "c", "d"][Math.random() * 2 | 0] + ".tiles.mapbox.com/v3/gcbadata.gdmoea7m/" + d[2] + "/" + d[0] + "/" + d[1] + ".png"; })
+>>>>>>> gh-pages
 
 
           // .attr("src", function(d) { return "http://" + ["a", "b", "c", "d"][Math.random() * 4 | 0] + ".tiles.mapbox.com/v3/veltman.map-5p16q1wt/" + d[2] + "/" + d[0] + "/" + d[1] + ".png"; })
@@ -118,6 +127,7 @@
 
 
         
+<<<<<<< HEAD
         chart.on("click",function() {
           clearInterval(interval);        
           clearTimeout(timeout);
@@ -139,6 +149,29 @@
         .on("mouseleave",function() {
           dragging = false;
         });
+=======
+        // chart.on("click",function() {
+        //   clearInterval(interval);        
+        //   clearTimeout(timeout);
+        //   updateCutoff(xScale.invert(d3.mouse(chart.node())[0]));
+        // });
+
+        // chart.on("mousedown",function() {
+        //   clearInterval(interval);
+        //   clearTimeout(timeout);
+        //   dragging = true;
+        //   updateCutoff(xScale.invert(d3.mouse(chart.node())[0]));
+        // })
+        // .on("mousemove",function() {        
+        //   if (dragging) updateCutoff(xScale.invert(d3.mouse(chart.node())[0]));
+        // })
+        // .on("mouseup",function() {
+        //   dragging = false;
+        // })
+        // .on("mouseleave",function() {
+        //   dragging = false;
+        // });
+>>>>>>> gh-pages
 
         // document.getElementById("play").onclick = function() {
         //   clearInterval(interval);
@@ -153,6 +186,7 @@
 
         //updateCutoff(1912*12+1);
 
+<<<<<<< HEAD
         $('.chart').hide();
         $('.map').hide();
         $('.nav-container').hide();
@@ -164,6 +198,23 @@
           $('.map').fadeOut(300);
           $('.nav-container').fadeOut(250);
         }, { offset: -150 });
+=======
+        $('.chart').css({opacity: 0 });
+        $('.map').css({ opacity: 0 });
+        $('.viz-container').css({ right: -700 });
+        $('.nav-container').css({ opacity: 0 });
+        $('.year-1910 h2, .year-1910 p, .year-1910 .sharp, .year-1920 h2, .year-1920 p, .year-1920 .sharp, .year-1930 h2, .year-1930 p, .year-1930 .sharp, .year-1940 h2, .year-1940 p, .year-1940 .sharp, .year-1950 h2, .year-1950 p, .year-1950 .sharp, .year-1960 h2, .year-1960 p, .year-1960 .sharp, .year-1970 h2, .year-1970 p, .year-1970 .sharp, .year-1980 h2, .year-1980 p, .year-1980 .sharp, .year-1990 h2, .year-1990 p, .year-1990 .sharp, .year-2000 h2, .year-2000 p, .year-2000 .sharp, .year-2010 h2, .year-2010 p, .year-2010 .sharp').css({ opacity: 0 });
+
+
+
+        $('#inicio').waypoint(function() {
+          $('.year-1910 h2, .year-1910 p, .year-1910 .sharp').stop().animate({ opacity: 0}, 1000);
+          $('.nav-container').stop().animate({top:-50, opacity: 0}, 500);
+          $('.chart').stop().animate({opacity: 0}, 300);
+          $('.map').stop().animate({opacity: 0}, 300);
+          $('.viz-container').stop().animate({ right: -700 }, 1000);
+        }, { offset: -1050 });
+>>>>>>> gh-pages
 
         // 1913, 1914, 1930, 1931, 1934, 1936, 1937, 1940, 1944,
         // 1966, 1973, 1985, 1986, 1987, 1997, 1999, 2000, 2003,
@@ -172,13 +223,21 @@
         
         $('.year-1910').waypoint(function() {
           $('.year-1910 h2, .year-1910 p, .year-1910 .sharp').stop().animate({ opacity: 1 }, 1000);
+<<<<<<< HEAD
           $('.chart').slideDown(700);
           $('.map').slideDown(500);
           $('.nav-container').fadeIn(500);
+=======
+          $('.chart').stop().animate({opacity: 1}, 250);
+          $('.map').stop().animate({opacity: 1}, 250);
+          $('.viz-container').stop().animate({ right: -2 }, 800);
+          $('.nav-container').stop().animate({top:10, opacity: 1}, 500);
+>>>>>>> gh-pages
           updateCutoff(1913*12+12);
         }, { offset: 50 });
         
         $('.year-1910').waypoint(function() {
+<<<<<<< HEAD
           $('.chart').fadeIn(500);
           $('.map').fadeIn(1000);
           $('.nav-container').fadeIn(500);
@@ -197,21 +256,112 @@
         // }, { offset: -200 });
 
         $('.year-1920').waypoint(function() {
+=======
+          updateCutoff(1915*12+12);
+        }, { offset: -100 });
+
+        $('.year-1920').waypoint(function() {
+          $('.year-1920 h2, .year-1920 p, .year-1920 .sharp').stop().animate({ opacity: 1 }, 1000);
+>>>>>>> gh-pages
           updateCutoff(1920*12+1);
         });
 
         $('.year-1930').waypoint(function() {
+<<<<<<< HEAD
+=======
+          $('.year-1930 h2, .year-1930 p, .year-1930 .sharp').stop().animate({ opacity: 1 }, 1000);
+>>>>>>> gh-pages
           updateCutoff(1930*12+1);
         });
 
         $('.year-1930').waypoint(function() {
           updateCutoff(1931*12+1);
+<<<<<<< HEAD
         }, { offset: -50 });
+=======
+        }, { offset: -150 });
+>>>>>>> gh-pages
 
         $('.year-1930').waypoint(function() {
           updateCutoff(1932*12+1);
         }, { offset: -200 });
 
+<<<<<<< HEAD
+=======
+        $('.year-1930').waypoint(function() {
+          updateCutoff(1933*12+1);
+        }, { offset: -250 });
+
+        $('.year-1940').waypoint(function() {
+          updateCutoff(1940*12+1);
+        });
+
+        $('.year-1950').waypoint(function() {
+          updateCutoff(1950*12+1);
+        });
+
+        $('.year-1960').waypoint(function() {
+          updateCutoff(1960*12+1);
+        });
+
+        $('.year-1970').waypoint(function() {
+          updateCutoff(1970*12+1);
+        });
+
+        $('.year-1980').waypoint(function() {
+          updateCutoff(1980*12+1);
+        });
+
+        $('.year-1990').waypoint(function() {
+          updateCutoff(1990*12+1);
+        });
+
+        $('.year-2000').waypoint(function() {
+          updateCutoff(2000*12+1);
+        });
+
+        $('.year-2010').waypoint(function() {
+          updateCutoff(2010*12+1);
+        });
+
+        $('.hoy').waypoint(function() {
+          updateCutoff(2013*12+1);
+        });
+
+        function showHideEverything() {
+
+          $('.viz-container').fadeToggle(
+            function () {
+              $(this).stop().animate({ opacity: 0, right: -600 }, 500)},
+            function () {
+              $(this).stop().animate({ opacity: 1, right: -2 }, 500)
+            });
+
+          $('.nav-container').fadeToggle(
+            function () {
+              $(this).stop().animate({ opacity: 0 }, 500)
+            },
+            function () {
+              $(this).stop().animate({ opacity: 1 }, 500)
+            });
+
+          $('.content p, .content .sharp').fadeToggle(
+            function () {
+              $(this).stop().animate({ opacity: 0 }, 500)
+            },
+            function () {
+              $(this).stop().animate({ opacity: 1 }, 500)
+            });
+
+        }
+
+        
+
+        $('.help-nav a').click(function(evt) {
+          showHideEverything();
+        });
+
+>>>>>>> gh-pages
         function updateCutoff(months) {
 
           cutoff = months;

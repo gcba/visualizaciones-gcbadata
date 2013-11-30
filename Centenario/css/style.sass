@@ -1,10 +1,21 @@
+<<<<<<< HEAD
+=======
+@import url(http://fonts.googleapis.com/css?family=Abril+Fatface|Headland+One|Open+Sans:400,700|Playfair+Display:400,700italic)
+
+
+>>>>>>> gh-pages
 @import "bourbon"
 @import "breakpoints"
 
 $pageWidth: 940px
 $responsiveWidth: 90%
+<<<<<<< HEAD
 $primary: #E8EBEF
 $secondary: #171717
+=======
+$primary: #FCFCFC
+$secondary: #FCFCFC
+>>>>>>> gh-pages
 
 
 body
@@ -22,10 +33,33 @@ body
   margin: 0px
   font-family: 'Open Sans', sans-serif
 
+<<<<<<< HEAD
 h1, h2, h4, nav li a
   font-family: 'Headland One', Georgia, serif
 h1
   font-size: 10em
+=======
+.help-nav
+  position: fixed
+ 
+  z-index: 600
+  a
+    width: auto
+    position: absolute
+    top: 50
+    left: 150
+
+
+h1, h2, h4, nav li a
+  font-family: 'Abril Fatface', Georgia, serif
+
+  
+
+h1
+  font-size: 10em
+  color: #FCFCFC
+  margin-bottom: 0px
+>>>>>>> gh-pages
   
   @include breakpoint(smartphone)
     margin-top: 10px
@@ -36,8 +70,12 @@ h1
   @include breakpoint(large)
     margin-top: 0px
   
+<<<<<<< HEAD
   margin-bottom: 0px
   color: #D7D3D0
+=======
+
+>>>>>>> gh-pages
 
 h4
   font-size: 20px
@@ -88,6 +126,7 @@ nav
 section
   overflow: hidden
   @include breakpoint(smartphone)
+<<<<<<< HEAD
     padding-top: 22px
   
   @include breakpoint(common)
@@ -95,6 +134,15 @@ section
   
   @include breakpoint(large)
     padding-top: 192px
+=======
+    padding-top: 10%
+  
+  @include breakpoint(common)
+    padding-top: 5%
+  
+  @include breakpoint(large)
+    padding-top: 10%
+>>>>>>> gh-pages
   
   height: 1300px
   width: 100%
@@ -104,6 +152,11 @@ section
     max-width: $pageWidth
 
     h2
+<<<<<<< HEAD
+=======
+      color: $primary
+      font-family: 'Abril Fatface', serif
+>>>>>>> gh-pages
       margin-top: 0px
       font-size: 4em
       padding-top: 250px
@@ -111,12 +164,27 @@ section
       z-index: 10
       position: inherit
     p
+<<<<<<< HEAD
       display: block
       width: 300px
       color: $secondary
       z-index: 10
       position: inherit
 
+=======
+      font-family: 'Open Sans', Helvetica, Arial
+      display: block
+      width: 300px
+      color: $primary
+      z-index: 10
+      position: inherit
+
+      span
+        font-family: "Playfair Display", Georgia, serif
+        font-size: 2em
+        font-weight: 400
+
+>>>>>>> gh-pages
 
     .sharp 
       background-color: rgba(0,174,219,.5)
@@ -154,7 +222,11 @@ section
   font-size: 14px
 
 #inicio
+<<<<<<< HEAD
   background: url(../images/001.jpg) no-repeat center center fixed 
+=======
+  background: url(../images/inicio.jpg) no-repeat center center fixed 
+>>>>>>> gh-pages
   -webkit-background-size: cover
   -moz-background-size: cover
   -o-background-size: cover
@@ -164,11 +236,24 @@ section
   
     h1, h2
       text-shadow: 1px 0px 5px rgba(0, 0, 0, 0.7)
+<<<<<<< HEAD
       margin-left: 200px
+=======
+      
+      @include breakpoint(smartphone)
+        margin-left: 150px
+      
+      @include breakpoint(common)
+        margin-left: 250px
+      
+      @include breakpoint(large)
+        margin-left: 250px
+>>>>>>> gh-pages
     
 
     h2
       margin-top: 0px
+<<<<<<< HEAD
       font-size: 4em
 
       @include breakpoint(smartphone)
@@ -179,6 +264,21 @@ section
       
       @include breakpoint(large)
         padding-top: 460px
+=======
+      margin-bottom: 0px
+
+      @include breakpoint(smartphone)
+        padding-top: 260px
+        font-size: 4.2em
+      
+      @include breakpoint(common)
+        padding-top: 390px
+        font-size: 4.2em
+      
+      @include breakpoint(large)
+        padding-top: 260px
+        font-size: 4.2em
+>>>>>>> gh-pages
       
       color: #F7F3F0
 
@@ -186,22 +286,45 @@ section
       position: absolute
 
     .word1
+<<<<<<< HEAD
       font-size: 1.5em
+=======
+>>>>>>> gh-pages
       display: block
       
       @include breakpoint(smartphone)
         top: 20px
+<<<<<<< HEAD
       
       @include breakpoint(common)
         top: 0px
       
       @include breakpoint(large)
         top: 90px
+=======
+        font-size: 1.5em
+      
+      @include breakpoint(common)
+        top: 0px
+        font-size: 1.5em
+      
+      @include breakpoint(large)
+        top: 10px
+        font-size: 1.5em
+>>>>>>> gh-pages
       
       color: #FDD900
 
     .word2, .word3
+<<<<<<< HEAD
       font-size: .5em
+=======
+      font-family: "Playfair Display", serif
+      font-size: 0.5em
+      font-weight: 700
+      font-style: italic
+
+>>>>>>> gh-pages
 
     .word2
       
@@ -209,12 +332,21 @@ section
         top: 262px
       
       @include breakpoint(common)
+<<<<<<< HEAD
         top: 162px
+=======
+        top: 165px
+        padding-left: 415px
+>>>>>>> gh-pages
       
       @include breakpoint(large)
         top: 262px
       
+<<<<<<< HEAD
       padding-left: 410px
+=======
+      
+>>>>>>> gh-pages
 
     .word3
       
@@ -224,8 +356,13 @@ section
         margin-left: -96px
       
       @include breakpoint(common)
+<<<<<<< HEAD
         top: 242px
         margin-left: -96px
+=======
+        top: 248px
+        margin-left: -86px
+>>>>>>> gh-pages
       
       @include breakpoint(large)
         top: 352px
@@ -234,6 +371,7 @@ section
 
     .word4
       
+<<<<<<< HEAD
       letter-spacing: -0.09em
       
       @include breakpoint(smartphone)
@@ -251,6 +389,62 @@ section
 
 .year-1910
   background: url(../images/002.jpg) no-repeat center center fixed 
+=======
+      @include breakpoint(smartphone)
+        top: 320px
+        font-size: 0.8em
+      
+      @include breakpoint(common)
+        top: 220px
+        font-size: 0.96em
+      
+      @include breakpoint(large)
+        top: 220px
+        font-size: 1em
+    
+    .logo-subte
+      display: block
+      margin: 0 auto
+
+      h4 a
+        text-align: center
+        text-indent: -5000px
+        display: block
+
+
+        @include breakpoint(smartphone)
+          width: 180px
+          height: 180px
+          background-size: 120px 120px
+        
+        @include breakpoint(common)
+          width: 180px
+          height: 180px
+          background-size: 120px 120px
+        
+        @include breakpoint(large)
+          width: 250px
+          height: 250px
+          background-size: 200px 200px
+        
+
+
+
+
+        background: url(../images/logo-subte.png) center center no-repeat
+        margin: 0 auto
+        -webkit-backface-visibility: hidden
+        -moz-backface-visibility: hidden
+        -ms-backface-visibility: hidden
+        -webkit-box-sizing: border-box
+        -moz-box-sizing: border-box
+        box-sizing: border-box
+
+  
+
+.year-1910
+  background: url(../images/1910.jpg) no-repeat center center fixed 
+>>>>>>> gh-pages
   -webkit-background-size: cover
   -moz-background-size: cover
   -o-background-size: cover
@@ -268,7 +462,115 @@ section
     z-index: 0
 
 .year-1920
+<<<<<<< HEAD
   background: url(../images/003.jpg) no-repeat center center fixed 
+=======
+  background: url(../images/1920.jpg) no-repeat center center fixed 
+  -webkit-background-size: cover
+  -moz-background-size: cover
+  -o-background-size: cover
+  background-size: cover
+
+.year-1930
+  background: url(../images/1930.jpg) no-repeat center center fixed 
+  -webkit-background-size: cover
+  -moz-background-size: cover
+  -o-background-size: cover
+  background-size: cover
+  
+  h2
+    color: $primary
+  p
+    color: $primary
+
+.year-1940
+  background: url(../images/1940.jpg) no-repeat center center fixed 
+  -webkit-background-size: cover
+  -moz-background-size: cover
+  -o-background-size: cover
+  background-size: cover
+  
+  h2
+    color: $primary
+  p
+    color: $primary
+
+.year-1950
+  background: url(../images/1950.jpg) no-repeat center center fixed 
+  -webkit-background-size: cover
+  -moz-background-size: cover
+  -o-background-size: cover
+  background-size: cover
+  
+  h2
+    color: $primary
+  p
+    color: $primary
+
+.year-1960
+  background: url(../images/1960.jpg) no-repeat center center fixed 
+  -webkit-background-size: cover
+  -moz-background-size: cover
+  -o-background-size: cover
+  background-size: cover
+  
+  h2
+    color: $primary
+  p
+    color: $primary
+
+.year-1970
+  background: url(../images/1970.jpg) no-repeat center center fixed 
+  -webkit-background-size: cover
+  -moz-background-size: cover
+  -o-background-size: cover
+  background-size: cover
+  
+  h2
+    color: $primary
+  p
+    color: $primary
+
+.year-1980
+  background: url(../images/1980.jpg) no-repeat center center fixed 
+  -webkit-background-size: cover
+  -moz-background-size: cover
+  -o-background-size: cover
+  background-size: cover
+  
+  h2
+    color: $primary
+  p
+    color: $primary
+
+.year-1990
+  background: url(../images/1990.jpg) no-repeat center center fixed 
+  -webkit-background-size: cover
+  -moz-background-size: cover
+  -o-background-size: cover
+  background-size: cover
+  
+  h2
+    color: $primary
+  p
+    color: $primary
+
+.year-2000
+  background: url(../images/2000.jpg) no-repeat center center fixed 
+  -webkit-background-size: cover
+  -moz-background-size: cover
+  -o-background-size: cover
+  background-size: cover
+  
+  h2
+    color: $primary
+  p
+    color: $primary
+
+
+.year-2010
+  background: url(../images/2010.jpg) no-repeat center center fixed 
+>>>>>>> gh-pages
   -webkit-background-size: cover
   -moz-background-size: cover
   -o-background-size: cover
