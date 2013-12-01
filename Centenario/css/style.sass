@@ -1,25 +1,18 @@
-<<<<<<< HEAD
-=======
-@import url(http://fonts.googleapis.com/css?family=Abril+Fatface|Headland+One|Open+Sans:400,700|Playfair+Display:400,700italic)
+@import url(http://fonts.googleapis.com/css?family=Abril+Fatface|Headland+One|PT+Serif:400,700|Playfair+Display:400,700italic)
 
-
->>>>>>> gh-pages
-@import "bourbon"
 @import "breakpoints"
 
-$pageWidth: 940px
-$responsiveWidth: 90%
-<<<<<<< HEAD
-$primary: #E8EBEF
-$secondary: #171717
-=======
+$paddingStandard: 40px
 $primary: #FCFCFC
 $secondary: #FCFCFC
->>>>>>> gh-pages
-
+$linea-a: rgba(0,174,219,0.6)
+$linea-b: rgba(238,27,46,0.6)
+$linea-c: rgba(1,103,178,0.6)
+$linea-d: rgba(0,128,103,0.6)
+$linea-e: rgba(108,33,128,0.6)
+$linea-h: rgba(255,210,3,0.6)
 
 body
-
   @include breakpoint(smartphone)
     border: 5px solid yellow
   
@@ -31,27 +24,44 @@ body
 
   padding: 0px
   margin: 0px
-  font-family: 'Open Sans', sans-serif
 
-<<<<<<< HEAD
-h1, h2, h4, nav li a
-  font-family: 'Headland One', Georgia, serif
-h1
-  font-size: 10em
-=======
-.help-nav
-  position: fixed
- 
-  z-index: 600
-  a
-    width: auto
-    position: absolute
-    top: 50
-    left: 150
+  font-family: 'PT Serif', sans-serif
 
 
 h1, h2, h4, nav li a
   font-family: 'Abril Fatface', Georgia, serif
+
+a
+  -webkit-transition: all 0.3s ease                  
+  -moz-transition: all 0.3s ease                 
+  -o-transition: all 0.3s ease   
+  -ms-transition: all 0.3s ease          
+  transition: all 0.3s ease
+
+.help-nav
+  display: block
+  width: 200px
+  position: fixed
+  text-align: left
+ 
+  z-index: 600
+  a
+    color: rgba(20,20,20,0.9)
+    font-size: .78em
+    width: auto
+    position: absolute
+    left: 40px
+    margin: 2px 0px
+    padding: 5px
+    border-radius: 4px
+    background: rgba(255,255,255,0.9)
+    top: 20px
+    
+
+  a:hover
+    color: #ffffff
+    background: rgba(60,60,60,0.7)
+
 
   
 
@@ -59,23 +69,17 @@ h1
   font-size: 10em
   color: #FCFCFC
   margin-bottom: 0px
->>>>>>> gh-pages
   
   @include breakpoint(smartphone)
     margin-top: 10px
   
   @include breakpoint(common)
-    margin-top: 10px
+    margin-top: 5px
   
   @include breakpoint(large)
     margin-top: 0px
   
-<<<<<<< HEAD
-  margin-bottom: 0px
-  color: #D7D3D0
-=======
 
->>>>>>> gh-pages
 
 h4
   font-size: 20px
@@ -100,79 +104,68 @@ nav
   li
     display: inline-block
     position: relative
-    text-align: left
-    width: 2.5em
-    height: 2.5em
-    background: rgba(255,255,255,0.5)
-    border-radius: 50%
-    margin: 0 0.1em
-    border: 2px solid rgba(0,0,0,0.5)
-    text-align: center
+    
     a
-      color: rgba(0,0,0,0.5)
+      text-align: left
+      width: 2.5em
+      height: 2.5em
+      background: rgba(255,255,255,0)
+      border-radius: 50%
+      margin: 0 0.1em
+      border: 2px solid rgba(255,255,255,0.9)
+      text-align: center
+      color: rgba(255,255,255,0.9)
       display: block
-      font-size: 12px
-      padding-top: 11px
+      font-size: 0.8em
+      line-height: 2.4em
+      padding: 0.4em
+
+    a:hover
+      color: rgba(0,0,0,0.9)
+      background: rgba(255,255,255,1)
+
       
 
     a.active
-      color: rgba(255,255,255,0.8)
-  @media screen and (max-width: $pageWidth)
-    width: $responsiveWidth
-    li
-      a
-        font-size: 18px
+      color: rgba(9,9,9,0.9)
+      background: rgba(255,255,255,1)
+
 
 section
-  overflow: hidden
-  @include breakpoint(smartphone)
-<<<<<<< HEAD
-    padding-top: 22px
-  
-  @include breakpoint(common)
-    padding-top: 0px
-  
-  @include breakpoint(large)
-    padding-top: 192px
-=======
-    padding-top: 10%
-  
-  @include breakpoint(common)
-    padding-top: 5%
-  
-  @include breakpoint(large)
-    padding-top: 10%
->>>>>>> gh-pages
-  
+  overflow: hidden  
   height: 1300px
   width: 100%
   .content
     position: relative
     margin: 0px auto
-    max-width: $pageWidth
+    width: 100%
 
     h2
-<<<<<<< HEAD
-=======
+
+      @include breakpoint(smartphone)
+        margin-top: 0px
+      
+      @include breakpoint(common)
+        margin-top: 0px
+      
+      @include breakpoint(large)
+        margin-top: 0px
+      
+      padding-left: $paddingStandard
       color: $primary
       font-family: 'Abril Fatface', serif
->>>>>>> gh-pages
       margin-top: 0px
       font-size: 4em
+      line-height: 1em
       padding-top: 250px
       text-shadow: 1px 0px 5px rgba(150, 150, 150, 0.6)
       z-index: 10
       position: inherit
     p
-<<<<<<< HEAD
-      display: block
-      width: 300px
-      color: $secondary
-      z-index: 10
-      position: inherit
-
-=======
-      font-family: 'Open Sans', Helvetica, Arial
+      padding-left: $paddingStandard
+      font-family: 'PT Serif', Helvetica, Arial
+      font-size: 0.9em
+      line-height: 1.6em
       display: block
       width: 300px
       color: $primary
@@ -184,49 +177,49 @@ section
         font-size: 2em
         font-weight: 400
 
->>>>>>> gh-pages
+      .linea-a, .linea-b, .linea-c, .linea-d, .linea-e, .linea-h
+        font-family: 'PT Serif', Helvetica, Arial
+        font-size: 0.9em
+        font-weight: 700
+        color: #ffffff
+        margin: 2px 0px
+        padding: 3px
+        border-radius: 4px
+        
+      .linea-a
+        background-color: $linea-a
+        
+      .linea-b
+        background-color: $linea-b
+        
+      .linea-c
+        background-color: $linea-c
+        
+      .linea-d
+        background-color: $linea-d
+        
+      .linea-e
+        background-color: $linea-e
+
+      .linea-h
+        background-color: $linea-h
+
+
+
 
     .sharp 
-      background-color: rgba(0,174,219,.5)
+      background-color: rgba(60,60,60,0.5)
       position: absolute
       display: block
-      width: 2200px
-      height: 1200px
-
-      
-      @include breakpoint(smartphone)
-        top: 150px
-      
-      @include breakpoint(common)
-        top: 224px
-      
-      @include breakpoint(large)
-        top: 150px
-      
-      margin-left: -500px
+      width: 100%
+      height: 1300px
+      overflow: hidden
+      top: 0px
+      left: 0px
       z-index: 0
 
-    @media screen and (max-width: $pageWidth)
-      width: $responsiveWidth
-    a
-      color: $secondary
-
-  
-.bottom-link
-  margin-top: 80px
-  font-style: italic
-
-.gist-meta
-  display: none
-.file-data
-  font-size: 14px
-
 #inicio
-<<<<<<< HEAD
-  background: url(../images/001.jpg) no-repeat center center fixed 
-=======
   background: url(../images/inicio.jpg) no-repeat center center fixed 
->>>>>>> gh-pages
   -webkit-background-size: cover
   -moz-background-size: cover
   -o-background-size: cover
@@ -235,73 +228,49 @@ section
   .content
   
     h1, h2
+      text-align: left
       text-shadow: 1px 0px 5px rgba(0, 0, 0, 0.7)
-<<<<<<< HEAD
-      margin-left: 200px
-=======
-      
+
+    h1
       @include breakpoint(smartphone)
-        margin-left: 150px
+        margin-left: 26%
       
       @include breakpoint(common)
-        margin-left: 250px
+        margin-left: 26%
       
       @include breakpoint(large)
-        margin-left: 250px
->>>>>>> gh-pages
-    
+        margin-left: 36%
 
     h2
       margin-top: 0px
-<<<<<<< HEAD
-      font-size: 4em
-
-      @include breakpoint(smartphone)
-        padding-top: 260px
-      
-      @include breakpoint(common)
-        padding-top: 420px
-      
-      @include breakpoint(large)
-        padding-top: 460px
-=======
       margin-bottom: 0px
 
       @include breakpoint(smartphone)
         padding-top: 260px
         font-size: 4.2em
-      
+        margin-left: 23%
+
       @include breakpoint(common)
         padding-top: 390px
         font-size: 4.2em
+        margin-left: 23%
       
       @include breakpoint(large)
         padding-top: 260px
         font-size: 4.2em
->>>>>>> gh-pages
-      
+        margin-left: 36%
+
       color: #F7F3F0
 
+
     .word1,.word2,.word3,.word4
-      position: absolute
+      position: absolute      
 
     .word1
-<<<<<<< HEAD
-      font-size: 1.5em
-=======
->>>>>>> gh-pages
       display: block
       
       @include breakpoint(smartphone)
         top: 20px
-<<<<<<< HEAD
-      
-      @include breakpoint(common)
-        top: 0px
-      
-      @include breakpoint(large)
-        top: 90px
-=======
         font-size: 1.5em
       
       @include breakpoint(common)
@@ -311,20 +280,15 @@ section
       @include breakpoint(large)
         top: 10px
         font-size: 1.5em
->>>>>>> gh-pages
       
       color: #FDD900
 
     .word2, .word3
-<<<<<<< HEAD
-      font-size: .5em
-=======
       font-family: "Playfair Display", serif
       font-size: 0.5em
       font-weight: 700
       font-style: italic
 
->>>>>>> gh-pages
 
     .word2
       
@@ -332,21 +296,14 @@ section
         top: 262px
       
       @include breakpoint(common)
-<<<<<<< HEAD
-        top: 162px
-=======
         top: 165px
         padding-left: 415px
->>>>>>> gh-pages
       
       @include breakpoint(large)
         top: 262px
+        display: none
       
-<<<<<<< HEAD
-      padding-left: 410px
-=======
       
->>>>>>> gh-pages
 
     .word3
       
@@ -356,40 +313,17 @@ section
         margin-left: -96px
       
       @include breakpoint(common)
-<<<<<<< HEAD
-        top: 242px
-        margin-left: -96px
-=======
         top: 248px
         margin-left: -86px
->>>>>>> gh-pages
       
       @include breakpoint(large)
         top: 352px
         margin-left: -110px
+        display: none
       
 
     .word4
       
-<<<<<<< HEAD
-      letter-spacing: -0.09em
-      
-      @include breakpoint(smartphone)
-        top: 320px
-        font-size: 1.5em
-      
-      @include breakpoint(common)
-        top: 220px
-        font-size: 1.2em
-      
-      @include breakpoint(large)
-        top: 320px
-        font-size: 1.5em
-      
-
-.year-1910
-  background: url(../images/002.jpg) no-repeat center center fixed 
-=======
       @include breakpoint(smartphone)
         top: 320px
         font-size: 0.8em
@@ -401,6 +335,7 @@ section
       @include breakpoint(large)
         top: 220px
         font-size: 1em
+        display: none
     
     .logo-subte
       display: block
@@ -426,9 +361,6 @@ section
           width: 250px
           height: 250px
           background-size: 200px 200px
-        
-
-
 
 
         background: url(../images/logo-subte.png) center center no-repeat
@@ -444,27 +376,12 @@ section
 
 .year-1910
   background: url(../images/1910.jpg) no-repeat center center fixed 
->>>>>>> gh-pages
   -webkit-background-size: cover
   -moz-background-size: cover
   -o-background-size: cover
   background-size: cover
 
-  .sharp 
-    background-color: rgba(0,174,219,.8)
-    position: absolute
-    display: block
-    width: 1200px
-    height: 500px
-
-    top: 150px
-    margin-left: -500px
-    z-index: 0
-
 .year-1920
-<<<<<<< HEAD
-  background: url(../images/003.jpg) no-repeat center center fixed 
-=======
   background: url(../images/1920.jpg) no-repeat center center fixed 
   -webkit-background-size: cover
   -moz-background-size: cover
@@ -570,7 +487,6 @@ section
 
 .year-2010
   background: url(../images/2010.jpg) no-repeat center center fixed 
->>>>>>> gh-pages
   -webkit-background-size: cover
   -moz-background-size: cover
   -o-background-size: cover
@@ -583,6 +499,88 @@ section
 
 
 // Data Viz Styles
+
+g.line path      
+  stroke-width: 12px
+  fill: none
+  stroke-linecap: round
+
+g.stations circle
+  fill: #fff
+  stroke: none      
+
+g.chart path
+  stroke: none
+
+g.marker path
+  stroke: #fff
+  stroke-width: 2px
+
+g.marker text
+  text-anchor: end
+  font-size: 20px
+  font-weight: bold
+  fill: #fff
+
+g.marker text.distance
+  font-size: 12px
+  font-weight: normal     
+
+g.stations circle.not-yet
+  opacity: 0.7
+
+g.monochrome
+  opacity: 0.7
+
+div.layer
+  position: absolute
+  opacity: 0.9
+  z-index: -1
+
+.tile
+  position: absolute
+  width: 256px
+  height: 256px
+
+g.reticle rect
+  fill: none
+  stroke: #666
+  opacity: 0.5
+  stroke-width: 2px
+  stroke-linecap: round
+
+g.corner-label text.stops
+  font-weight: bold
+  font-size: 18px
+  text-anchor: end
+
+g.corner-label text.completed     
+  font-size: 13px      
+  text-anchor: end
+
+.hidden
+  display: none
+
+body.loading div.credits span, body.loading div.chart,body.loading div.map
+  display: none
+
+
+div.map 
+  position: relative
+  border: 0px solid #999
+  margin-top: 8px    
+  overflow-x: hidden
+  overflow-y: hidden
+
+div.chart 
+  border: 1px solid transparent
+  // cursor: crosshair
+  -webkit-touch-callout: none
+  -webkit-user-select: none      
+  -khtml-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
 
 div.viz-container
   position: fixed

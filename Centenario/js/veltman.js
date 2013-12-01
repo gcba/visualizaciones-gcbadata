@@ -1,11 +1,35 @@
+$(document).ready(function() {
+
+  $("#inicio h1").lettering('words');
+
+  var body = document.body,
+      timer;
+
+  window.addEventListener('scroll', function() {
+    clearTimeout(timer);
+    if(!body.classList.contains('disable-hover')) {
+      body.classList.add('disable-hover')
+    }
+    
+    timer = setTimeout(function(){
+      body.classList.remove('disable-hover')
+    },500);
+  }, false);
+
+  $.scrollIt({
+    upKey: 38,  
+    downKey: 40,    
+    easing: 'easeInOutQuad',   
+    scrollTime: 1200, 
+    activeClass: 'active',
+    topOffset: 0
+  });
+
+});
 
 
-<<<<<<< HEAD
-      // https://a.tiles.mapbox.com/v3/gcbadata.gde2bf5a/page.html?secure=1#13/-34.6346909622468/-58.436622619628906
-=======
       // https://a.tiles.mapbox.com/v3/gcbadata.gdmoea7m/page.html?secure=1#13/-34.62063622492369/-58.449840545654304
 
->>>>>>> gh-pages
 
       var width = 600, height = 540, chartHeight = 90, chartMargin = 5,
         layer = d3.select("div.layer").style("width",width+"px").style("height",height+"px"),
@@ -16,11 +40,9 @@
         prefix = prefixMatch(["webkit", "ms", "Moz", "O"]),
         clipPath = chart.append("defs").append("clipPath").attr("id", "clip").append("rect").attr("width", 0).attr("height", chartHeight),
         dragging = false,
-        cutoff,interval,projection,stations,areaPaths,marker,markerPath,markerLabel,distanceLabel,reticle,cornerLabel,mostRecent,currentSegment,timeout, images;      
+        cutoff,interval,projection,stations,areaPaths,marker,markerPath,markerLabel,distanceLabel,reticle,cornerLabel,mostRecent,currentSegment,timeout, images;
 
-      d3.json("data/subte.json",function(error,subte) {    
-
-        //console.log(subte);      
+      d3.json("data/subte.json",function(error,subte) {
 
         var areaLayers = ["A","B","C","D","E","H"].reverse(), stationList = [];  
 
@@ -46,25 +68,11 @@
         markerLabel = marker.append("text").attr("x",0).attr("y",16).attr("x",-5).text("");
         distanceLabel = marker.append("text").attr("class","distance").attr("x",-5).attr("y",30).text("");
 
-        // imagenes = ["http://i.imgur.com/t6K5vB8.jpg", "http://i.imgur.com/zk926Ki.jpg"]
-
-        // images = chart.append("g")
-        // .attr("class","image")
-        // .selectAll("image")
-        //   .data(imagenes)
-        //   .enter()
-        //   .append("svg:image")
-        //   .attr("x", "60")
-        //   .attr("y", "60")
-        //   .attr("xlink:href", function(d){ return d;})
-        //   .attr("width", "200")
-        //   .attr("height", "200"); 
 
         for (var s in subte.stations) {
           stationList.push(subte.stations[s]);
           
         }      
-        console.log(stationList);
         projection = d3.geo.mercator()
             .scale(1)
             .translate([0, 0]);
@@ -74,8 +82,9 @@
 
         var stationGeoJSON = {"type": "MultiPoint", "coordinates": stationList.map(function(d){return d.lnglat;})};
 
+          // Calculation for position of the stations
+
           var b = path.bounds(stationGeoJSON),
-              //s = .8 / Math.max((b[1][0] - b[0][0]) / width, (b[1][1] - b[0][1]) / height),
               s = Math.pow(2,21)/2/Math.PI*0.8,
               t = [(width - s * (b[1][0] + b[0][0])) / 2, (height - s * (b[1][1] + b[0][1])) / 2];
 
@@ -93,14 +102,8 @@
           .enter().append("img")
           .attr("class", "tile")
 
-<<<<<<< HEAD
-          .attr("src", function(d) { return "http://" + ["a", "b", "c", "d"][Math.random() * 2 | 0] + ".tiles.mapbox.com/v3/veltman.map-5p16q1wt/" + d[2] + "/" + d[0] + "/" + d[1] + ".png"; })
-=======
           .attr("src", function(d) { return "http://" + ["a", "b", "c", "d"][Math.random() * 2 | 0] + ".tiles.mapbox.com/v3/gcbadata.gdmoea7m/" + d[2] + "/" + d[0] + "/" + d[1] + ".png"; })
->>>>>>> gh-pages
 
-
-          // .attr("src", function(d) { return "http://" + ["a", "b", "c", "d"][Math.random() * 4 | 0] + ".tiles.mapbox.com/v3/veltman.map-5p16q1wt/" + d[2] + "/" + d[0] + "/" + d[1] + ".png"; })
           .style("left", function(d) { return (d[0] << 8) + "px"; })
           .style("top", function(d) { return (d[1] << 8) + "px"; })      
         
@@ -112,8 +115,6 @@
 
         mostRecent = colorG.append("path").attr("d","M0,0");
 
-
-
         stations = map.append("g").attr("class","stations").selectAll("circle").data(stationList).enter().append("circle")
           .attr("class","not-yet")
           .attr("r",5)
@@ -123,11 +124,10 @@
         reticle = map.append("g").attr("class","reticle").append("rect").attr("x",0).attr("y",0).attr("width",0).attr("height",0);
 
         cornerLabel = map.append("g").attr("class","corner-label");
-        cornerLabel = [cornerLabel.append("text").attr("class","stops").attr("x",width-60).attr("y",24),cornerLabel.append("text").attr("class","completed").attr("x",width-12).attr("y",40)];  
+        cornerLabel = [cornerLabel.append("text").attr("class","stops").attr("x",width-12).attr("y",24),cornerLabel.append("text").attr("class","completed").attr("x",width-12).attr("y",40)];  
 
 
         
-<<<<<<< HEAD
         chart.on("click",function() {
           clearInterval(interval);        
           clearTimeout(timeout);
@@ -149,29 +149,6 @@
         .on("mouseleave",function() {
           dragging = false;
         });
-=======
-        // chart.on("click",function() {
-        //   clearInterval(interval);        
-        //   clearTimeout(timeout);
-        //   updateCutoff(xScale.invert(d3.mouse(chart.node())[0]));
-        // });
-
-        // chart.on("mousedown",function() {
-        //   clearInterval(interval);
-        //   clearTimeout(timeout);
-        //   dragging = true;
-        //   updateCutoff(xScale.invert(d3.mouse(chart.node())[0]));
-        // })
-        // .on("mousemove",function() {        
-        //   if (dragging) updateCutoff(xScale.invert(d3.mouse(chart.node())[0]));
-        // })
-        // .on("mouseup",function() {
-        //   dragging = false;
-        // })
-        // .on("mouseleave",function() {
-        //   dragging = false;
-        // });
->>>>>>> gh-pages
 
         // document.getElementById("play").onclick = function() {
         //   clearInterval(interval);
@@ -186,35 +163,16 @@
 
         //updateCutoff(1912*12+1);
 
-<<<<<<< HEAD
-        $('.chart').hide();
-        $('.map').hide();
-        $('.nav-container').hide();
-        $('.year-1910 h2, .year-1910 p, .year-1910 .sharp').css({ opacity: 0 });
-
-        $('#inicio').waypoint(function() {
-          $('.year-1910 h2, .year-1910 p, .year-1910 .sharp').stop().animate({ opacity: 0}, 1000);
-          $('.chart').fadeOut(300);
-          $('.map').fadeOut(300);
-          $('.nav-container').fadeOut(250);
-        }, { offset: -150 });
-=======
-        $('.chart').css({opacity: 0 });
-        $('.map').css({ opacity: 0 });
+        $('.help-nav, .map, .chart, .nav-container').css({opacity: 0 });
         $('.viz-container').css({ right: -700 });
-        $('.nav-container').css({ opacity: 0 });
-        $('.year-1910 h2, .year-1910 p, .year-1910 .sharp, .year-1920 h2, .year-1920 p, .year-1920 .sharp, .year-1930 h2, .year-1930 p, .year-1930 .sharp, .year-1940 h2, .year-1940 p, .year-1940 .sharp, .year-1950 h2, .year-1950 p, .year-1950 .sharp, .year-1960 h2, .year-1960 p, .year-1960 .sharp, .year-1970 h2, .year-1970 p, .year-1970 .sharp, .year-1980 h2, .year-1980 p, .year-1980 .sharp, .year-1990 h2, .year-1990 p, .year-1990 .sharp, .year-2000 h2, .year-2000 p, .year-2000 .sharp, .year-2010 h2, .year-2010 p, .year-2010 .sharp').css({ opacity: 0 });
-
-
+        $('.year-1910 h2, .year-1910 p, .year-1910 .sharp, .year-1920 h2, .year-1920 p, .year-1920 .sharp, .year-1930 h2, .year-1930 p, .year-1930 .sharp, .year-1940 h2, .year-1940 p, .year-1940 .sharp, .year-1950 h2, .year-1950 p, .year-1950 .sharp, .year-1960 h2, .year-1960 p, .year-1960 .sharp, .year-1970 h2, .year-1970 p, .year-1970 .sharp, .year-1980 h2, .year-1980 p, .year-1980 .sharp, .year-1990 h2, .year-1990 p, .year-1990 .sharp, .year-2000 h2, .year-2000 p, .year-2000 .sharp, .year-2010 h2, .year-2010 p, .year-2010 .sharp, .hoy h2, .hoy p, .hoy .sharp').css({ opacity: 0 });
 
         $('#inicio').waypoint(function() {
           $('.year-1910 h2, .year-1910 p, .year-1910 .sharp').stop().animate({ opacity: 0}, 1000);
           $('.nav-container').stop().animate({top:-50, opacity: 0}, 500);
-          $('.chart').stop().animate({opacity: 0}, 300);
-          $('.map').stop().animate({opacity: 0}, 300);
+          $('.help-nav, .map, .chart').stop().animate({opacity: 0}, 300);
           $('.viz-container').stop().animate({ right: -700 }, 1000);
         }, { offset: -1050 });
->>>>>>> gh-pages
 
         // 1913, 1914, 1930, 1931, 1934, 1936, 1937, 1940, 1944,
         // 1966, 1973, 1985, 1986, 1987, 1997, 1999, 2000, 2003,
@@ -223,145 +181,154 @@
         
         $('.year-1910').waypoint(function() {
           $('.year-1910 h2, .year-1910 p, .year-1910 .sharp').stop().animate({ opacity: 1 }, 1000);
-<<<<<<< HEAD
-          $('.chart').slideDown(700);
-          $('.map').slideDown(500);
-          $('.nav-container').fadeIn(500);
-=======
-          $('.chart').stop().animate({opacity: 1}, 250);
-          $('.map').stop().animate({opacity: 1}, 250);
+          $('.help-nav, .map, .chart').stop().animate({opacity: 1}, 300);
           $('.viz-container').stop().animate({ right: -2 }, 800);
-          $('.nav-container').stop().animate({top:10, opacity: 1}, 500);
->>>>>>> gh-pages
+          $('.nav-container').stop().animate({top: 0, opacity: 1}, 500);
           updateCutoff(1913*12+12);
-        }, { offset: 50 });
+        }, { offset: 250 });
         
         $('.year-1910').waypoint(function() {
-<<<<<<< HEAD
-          $('.chart').fadeIn(500);
-          $('.map').fadeIn(1000);
-          $('.nav-container').fadeIn(500);
-          updateCutoff(1914*12+12);
-        }, { offset: -50 });
-        
-        $('.year-1910').waypoint(function() {
-          $('.chart').fadeIn(500);
-          $('.map').fadeIn(1000);
-          $('.nav-container').fadeIn(500);
-          updateCutoff(1915*12+12);
-        }, { offset: -100 });
-
-        // $('.year-1910').waypoint(function() {
-        //   updateCutoff(1914*12+1);
-        // }, { offset: -200 });
-
-        $('.year-1920').waypoint(function() {
-=======
           updateCutoff(1915*12+12);
         }, { offset: -100 });
 
         $('.year-1920').waypoint(function() {
           $('.year-1920 h2, .year-1920 p, .year-1920 .sharp').stop().animate({ opacity: 1 }, 1000);
->>>>>>> gh-pages
           updateCutoff(1920*12+1);
-        });
+        }, { offset: 250 });
 
         $('.year-1930').waypoint(function() {
-<<<<<<< HEAD
-=======
           $('.year-1930 h2, .year-1930 p, .year-1930 .sharp').stop().animate({ opacity: 1 }, 1000);
->>>>>>> gh-pages
           updateCutoff(1930*12+1);
-        });
+        }, { offset: 250});
+
+        $('.year-1930').waypoint(function() {
+          updateCutoff(1931*7+1);
+        }, { offset: -50 });
 
         $('.year-1930').waypoint(function() {
           updateCutoff(1931*12+1);
-<<<<<<< HEAD
-        }, { offset: -50 });
-=======
-        }, { offset: -150 });
->>>>>>> gh-pages
+        }, { offset: -80 });
 
         $('.year-1930').waypoint(function() {
-          updateCutoff(1932*12+1);
-        }, { offset: -200 });
+          updateCutoff(1934*12+12);
+        }, { offset: -120 });
 
-<<<<<<< HEAD
-=======
         $('.year-1930').waypoint(function() {
-          updateCutoff(1933*12+1);
-        }, { offset: -250 });
+          updateCutoff(1936*12+1);
+        }, { offset: -170 });
+
+        $('.year-1930').waypoint(function() {
+          updateCutoff(1937*12+1);
+        }, { offset: -220 });
+
+        // $('.year-1930').waypoint(function() {
+        //   updateCutoff(1931*12+1);
+        // }, { offset: -150 });
+
+        // $('.year-1930').waypoint(function() {
+        //   updateCutoff(1932*12+1);
+        // }, { offset: -200 });
+
+        // $('.year-1930').waypoint(function() {
+        //   updateCutoff(1933*12+1);
+        // }, { offset: -250});
+
+
+
 
         $('.year-1940').waypoint(function() {
+          $('.year-1940 h2, .year-1940 p, .year-1940 .sharp').stop().animate({ opacity: 1 }, 1000);
           updateCutoff(1940*12+1);
-        });
+        }, { offset: 250 });
+
+        $('.year-1940').waypoint(function() {
+          updateCutoff(1944*12+6);
+        }, { offset: -50 });
+
+        $('.year-1940').waypoint(function() {
+          $('.year-1940 h2, .year-1940 p, .year-1940 .sharp').stop().animate({ opacity: 1 }, 1000);
+          updateCutoff(1944*12+12);
+        }, { offset: -120 });
 
         $('.year-1950').waypoint(function() {
+          $('.year-1950 h2, .year-1950 p, .year-1950 .sharp').stop().animate({ opacity: 1 }, 1000);
           updateCutoff(1950*12+1);
-        });
+        }, { offset: 250});
 
         $('.year-1960').waypoint(function() {
+          $('.year-1960 h2, .year-1960 p, .year-1960 .sharp').stop().animate({ opacity: 1 }, 1000);
           updateCutoff(1960*12+1);
-        });
+        }, { offset: 250});
 
         $('.year-1970').waypoint(function() {
+          $('.year-1970 h2, .year-1970 p, .year-1970 .sharp').stop().animate({ opacity: 1 }, 1000);
           updateCutoff(1970*12+1);
-        });
+        }, { offset: 250});
 
         $('.year-1980').waypoint(function() {
+          $('.year-1980 h2, .year-1980 p, .year-1980 .sharp').stop().animate({ opacity: 1 }, 1000);
           updateCutoff(1980*12+1);
-        });
+        }, { offset: 250});
 
         $('.year-1990').waypoint(function() {
+          $('.year-1990 h2, .year-1990 p, .year-1990 .sharp').stop().animate({ opacity: 1 }, 1000);
           updateCutoff(1990*12+1);
-        });
+        }, { offset: 250});
 
         $('.year-2000').waypoint(function() {
+          $('.year-2000 h2, .year-2000 p, .year-2000 .sharp').stop().animate({ opacity: 1 }, 1000);
           updateCutoff(2000*12+1);
-        });
+        }, { offset: 250 });
 
         $('.year-2010').waypoint(function() {
+          $('.year-2010 h2, .year-2010 p, .year-2010 .sharp').stop().animate({ opacity: 1 }, 1000);
           updateCutoff(2010*12+1);
-        });
+        }, { offset: 250 });
 
         $('.hoy').waypoint(function() {
+          $('.hoy h2, .hoy p, .hoy .sharp').stop().animate({ opacity: 1 }, 1000);
           updateCutoff(2013*12+1);
+        }, { offset: 250 });
+
+
+        $('.help-nav a').on('click', function() {
+
+            var height = $(window).height();
+
+            var titlePosition = height / 2 + 50;
+
+            // console.log(height, titlePosition)
+
+            
+
+
+            var flag = $('.viz-container, .nav-container, .content h2, .content p, .content .sharp').data('flag')!=undefined?$('.viz-container, .nav-container, .content h2, .content p, .content .sharp').data('flag'):true;
+
+            var text = $(this).data('text')!=undefined?$(this).data('text'):true;
+
+            $(this).stop(true, true).text(flag?'Volver':'Ver imagen').data('text', !text);
+
+            $('.viz-container').stop(true, true)
+                            .animate({ opacity: flag?'0':'1',right: flag?'-600':'-1'}, 500)
+                            .data('flag', !flag);
+
+            $('.nav-container').stop(true, true)
+                            .animate({ top: flag?'-250':'0'}, 500)
+                            .data('flag', !flag);
+
+
+            $('.content p, .content .sharp').stop(true, true)
+                            .animate({ opacity: flag?'0':'1'}, 500)
+                            .data('flag', !flag);
+
+            $('.content h2').stop(true, true)
+                            .animate({ top: flag?+titlePosition:'0'}, 500)
+                            .data('flag', !flag);
         });
 
-        function showHideEverything() {
-
-          $('.viz-container').fadeToggle(
-            function () {
-              $(this).stop().animate({ opacity: 0, right: -600 }, 500)},
-            function () {
-              $(this).stop().animate({ opacity: 1, right: -2 }, 500)
-            });
-
-          $('.nav-container').fadeToggle(
-            function () {
-              $(this).stop().animate({ opacity: 0 }, 500)
-            },
-            function () {
-              $(this).stop().animate({ opacity: 1 }, 500)
-            });
-
-          $('.content p, .content .sharp').fadeToggle(
-            function () {
-              $(this).stop().animate({ opacity: 0 }, 500)
-            },
-            function () {
-              $(this).stop().animate({ opacity: 1 }, 500)
-            });
-
-        }
-
+      
         
 
-        $('.help-nav a').click(function(evt) {
-          showHideEverything();
-        });
-
->>>>>>> gh-pages
         function updateCutoff(months) {
 
           cutoff = months;
@@ -413,7 +380,7 @@
               
        
               cornerLabel[0].text(last.from+" - "+last.to).style("fill",subte.colors[last.line]);
-              cornerLabel[1].text("Completado " + last.prettyDate).style("fill",subte.colors[last.line]);          
+              cornerLabel[1].text("Obra finalizada en " + last.prettyDate).style("fill",subte.colors[last.line]);          
               
               mostRecent.attr("d","M "+lnglats.map(projection).join(" L ")).style("stroke",highlighted(subte.colors[last.line]));
 
