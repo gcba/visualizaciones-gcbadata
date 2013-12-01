@@ -185,7 +185,7 @@ $(document).ready(function() {
           $('.viz-container').stop().animate({ right: -2 }, 800);
           $('.nav-container').stop().animate({top: 0, opacity: 1}, 500);
           updateCutoff(1913*12+12);
-        }, { offset: 50 });
+        }, { offset: 250 });
         
         $('.year-1910').waypoint(function() {
           updateCutoff(1915*12+12);
@@ -194,29 +194,61 @@ $(document).ready(function() {
         $('.year-1920').waypoint(function() {
           $('.year-1920 h2, .year-1920 p, .year-1920 .sharp').stop().animate({ opacity: 1 }, 1000);
           updateCutoff(1920*12+1);
-        });
+        }, { offset: 250 });
 
         $('.year-1930').waypoint(function() {
           $('.year-1930 h2, .year-1930 p, .year-1930 .sharp').stop().animate({ opacity: 1 }, 1000);
           updateCutoff(1930*12+1);
-        });
+        }, { offset: 250});
+
+        $('.year-1930').waypoint(function() {
+          updateCutoff(1931*7+1);
+        }, { offset: -50 });
 
         $('.year-1930').waypoint(function() {
           updateCutoff(1931*12+1);
-        }, { offset: -150 });
+        }, { offset: -80 });
 
         $('.year-1930').waypoint(function() {
-          updateCutoff(1932*12+1);
-        }, { offset: -200 });
+          updateCutoff(1934*12+12);
+        }, { offset: -120 });
 
         $('.year-1930').waypoint(function() {
-          updateCutoff(1933*12+1);
-        }, { offset: 250});
+          updateCutoff(1936*12+1);
+        }, { offset: -170 });
+
+        $('.year-1930').waypoint(function() {
+          updateCutoff(1937*12+1);
+        }, { offset: -220 });
+
+        // $('.year-1930').waypoint(function() {
+        //   updateCutoff(1931*12+1);
+        // }, { offset: -150 });
+
+        // $('.year-1930').waypoint(function() {
+        //   updateCutoff(1932*12+1);
+        // }, { offset: -200 });
+
+        // $('.year-1930').waypoint(function() {
+        //   updateCutoff(1933*12+1);
+        // }, { offset: -250});
+
+
+
 
         $('.year-1940').waypoint(function() {
           $('.year-1940 h2, .year-1940 p, .year-1940 .sharp').stop().animate({ opacity: 1 }, 1000);
           updateCutoff(1940*12+1);
         }, { offset: 250 });
+
+        $('.year-1940').waypoint(function() {
+          updateCutoff(1944*12+6);
+        }, { offset: -50 });
+
+        $('.year-1940').waypoint(function() {
+          $('.year-1940 h2, .year-1940 p, .year-1940 .sharp').stop().animate({ opacity: 1 }, 1000);
+          updateCutoff(1944*12+12);
+        }, { offset: -120 });
 
         $('.year-1950').waypoint(function() {
           $('.year-1950 h2, .year-1950 p, .year-1950 .sharp').stop().animate({ opacity: 1 }, 1000);

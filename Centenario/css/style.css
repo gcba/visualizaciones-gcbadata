@@ -30,26 +30,19 @@ a {
   text-align: left;
   z-index: 600; }
   .help-nav a {
-    color: white;
-    font-size: 0.8em;
+    color: rgba(20, 20, 20, 0.9);
+    font-size: 0.78em;
     width: auto;
     position: absolute;
     left: 40px;
     margin: 2px 0px;
-    padding: 3px;
+    padding: 5px;
     border-radius: 4px;
-    background: rgba(255, 255, 255, 0.2); }
-    @media only screen and (min-width: 48em) {
-      .help-nav a {
-        top: 250px; } }
-    @media only screen and (min-width: 56.25em) {
-      .help-nav a {
-        top: 20px; } }
-    @media only screen and (min-width: 68.75em) {
-      .help-nav a {
-        top: 250px; } }
+    background: rgba(255, 255, 255, 0.9);
+    top: 20px; }
   .help-nav a:hover {
-    color: black; }
+    color: white;
+    background: rgba(60, 60, 60, 0.7); }
 
 h1 {
   font-size: 10em;
@@ -90,41 +83,38 @@ nav {
     padding: 0px; }
   nav li {
     display: inline-block;
-    position: relative;
-    text-align: left;
-    width: 2.5em;
-    height: 2.5em;
-    background: rgba(255, 255, 255, 0.5);
-    border-radius: 50%;
-    margin: 0 0.1em;
-    border: 2px solid rgba(0, 0, 0, 0.5);
-    text-align: center; }
+    position: relative; }
     nav li a {
-      color: rgba(0, 0, 0, 0.5);
+      text-align: left;
+      width: 2.5em;
+      height: 2.5em;
+      background: rgba(255, 255, 255, 0);
+      border-radius: 50%;
+      margin: 0 0.1em;
+      border: 2px solid rgba(255, 255, 255, 0.9);
+      text-align: center;
+      color: rgba(255, 255, 255, 0.9);
       display: block;
-      font-size: 12px;
-      padding-top: 11px; }
+      font-size: 0.8em;
+      line-height: 2.4em;
+      padding: 0.4em; }
+    nav li a:hover {
+      color: rgba(0, 0, 0, 0.9);
+      background: white; }
     nav li a.active {
-      color: rgba(255, 255, 255, 0.8); }
+      color: rgba(9, 9, 9, 0.9);
+      background: white; }
 
 section {
   overflow: hidden;
   height: 1300px;
   width: 100%; }
-  @media only screen and (min-width: 48em) {
-    section {
-      padding-top: 10%; } }
-  @media only screen and (min-width: 56.25em) {
-    section {
-      padding-top: 0; } }
-  @media only screen and (min-width: 68.75em) {
-    section {
-      padding-top: 10%; } }
   section .content {
     position: relative;
     margin: 0px auto;
-    max-width: 940px; }
+    width: 100%; }
     section .content h2 {
+      padding-left: 40px;
       color: #fcfcfc;
       font-family: "Abril Fatface", serif;
       margin-top: 0px;
@@ -134,7 +124,17 @@ section {
       text-shadow: 1px 0px 5px rgba(150, 150, 150, 0.6);
       z-index: 10;
       position: inherit; }
+      @media only screen and (min-width: 48em) {
+        section .content h2 {
+          margin-top: 0px; } }
+      @media only screen and (min-width: 56.25em) {
+        section .content h2 {
+          margin-top: 0px; } }
+      @media only screen and (min-width: 68.75em) {
+        section .content h2 {
+          margin-top: 0px; } }
     section .content p {
+      padding-left: 40px;
       font-family: "PT Serif", Helvetica, Arial;
       font-size: 0.9em;
       line-height: 1.6em;
@@ -171,24 +171,12 @@ section {
       background-color: rgba(60, 60, 60, 0.5);
       position: absolute;
       display: block;
-      width: 2200px;
+      width: 100%;
       height: 1300px;
-      margin-left: -500px;
+      overflow: hidden;
+      top: 0px;
+      left: 0px;
       z-index: 0; }
-      @media only screen and (min-width: 48em) {
-        section .content .sharp {
-          top: 150px; } }
-      @media only screen and (min-width: 56.25em) {
-        section .content .sharp {
-          top: 0px; } }
-      @media only screen and (min-width: 68.75em) {
-        section .content .sharp {
-          top: 150px; } }
-    @media screen and (max-width: 940px) {
-      section .content {
-        width: 90%; } }
-    section .content a {
-      color: #fcfcfc; }
 
 #inicio {
   background: url(../images/inicio.jpg) no-repeat center center fixed;
@@ -197,16 +185,17 @@ section {
   -o-background-size: cover;
   background-size: cover; }
   #inicio .content h1, #inicio .content h2 {
+    text-align: left;
     text-shadow: 1px 0px 5px rgba(0, 0, 0, 0.7); }
-    @media only screen and (min-width: 48em) {
-      #inicio .content h1, #inicio .content h2 {
-        margin-left: 150px; } }
-    @media only screen and (min-width: 56.25em) {
-      #inicio .content h1, #inicio .content h2 {
-        margin-left: 250px; } }
-    @media only screen and (min-width: 68.75em) {
-      #inicio .content h1, #inicio .content h2 {
-        margin-left: 250px; } }
+  @media only screen and (min-width: 48em) {
+    #inicio .content h1 {
+      margin-left: 26%; } }
+  @media only screen and (min-width: 56.25em) {
+    #inicio .content h1 {
+      margin-left: 26%; } }
+  @media only screen and (min-width: 68.75em) {
+    #inicio .content h1 {
+      margin-left: 36%; } }
   #inicio .content h2 {
     margin-top: 0px;
     margin-bottom: 0px;
@@ -214,15 +203,18 @@ section {
     @media only screen and (min-width: 48em) {
       #inicio .content h2 {
         padding-top: 260px;
-        font-size: 4.2em; } }
+        font-size: 4.2em;
+        margin-left: 23%; } }
     @media only screen and (min-width: 56.25em) {
       #inicio .content h2 {
         padding-top: 390px;
-        font-size: 4.2em; } }
+        font-size: 4.2em;
+        margin-left: 23%; } }
     @media only screen and (min-width: 68.75em) {
       #inicio .content h2 {
         padding-top: 260px;
-        font-size: 4.2em; } }
+        font-size: 4.2em;
+        margin-left: 36%; } }
   #inicio .content .word1, #inicio .content .word2, #inicio .content .word3, #inicio .content .word4 {
     position: absolute; }
   #inicio .content .word1 {
@@ -254,7 +246,8 @@ section {
       padding-left: 415px; } }
   @media only screen and (min-width: 68.75em) {
     #inicio .content .word2 {
-      top: 262px; } }
+      top: 262px;
+      display: none; } }
   @media only screen and (min-width: 48em) {
     #inicio .content .word3 {
       top: 242px;
@@ -266,7 +259,8 @@ section {
   @media only screen and (min-width: 68.75em) {
     #inicio .content .word3 {
       top: 352px;
-      margin-left: -110px; } }
+      margin-left: -110px;
+      display: none; } }
   @media only screen and (min-width: 48em) {
     #inicio .content .word4 {
       top: 320px;
@@ -278,7 +272,8 @@ section {
   @media only screen and (min-width: 68.75em) {
     #inicio .content .word4 {
       top: 220px;
-      font-size: 1em; } }
+      font-size: 1em;
+      display: none; } }
   #inicio .content .logo-subte {
     display: block;
     margin: 0 auto; }
@@ -316,15 +311,6 @@ section {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; }
-  .year-1910 .sharp {
-    background-color: rgba(0, 174, 219, 0.8);
-    position: absolute;
-    display: block;
-    width: 1200px;
-    height: 500px;
-    top: 150px;
-    margin-left: -500px;
-    z-index: 0; }
 
 .year-1920 {
   background: url(../images/1920.jpg) no-repeat center center fixed;

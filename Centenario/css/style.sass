@@ -4,7 +4,7 @@
 @import "bourbon"
 @import "breakpoints"
 
-$pageWidth: 940px
+$paddingStandard: 40px
 $responsiveWidth: 90%
 $primary: #FCFCFC
 $secondary: #FCFCFC
@@ -15,9 +15,7 @@ $linea-d: rgba(0,128,103,0.6)
 $linea-e: rgba(108,33,128,0.6)
 $linea-h: rgba(255,210,3,0.6)
 
-
 body
-
   @include breakpoint(smartphone)
     border: 5px solid yellow
   
@@ -29,6 +27,7 @@ body
 
   padding: 0px
   margin: 0px
+
   font-family: 'PT Serif', sans-serif
 
 
@@ -50,28 +49,21 @@ a
  
   z-index: 600
   a
-    color: #ffffff
-    font-size: .8em
+    color: rgba(20,20,20,0.9)
+    font-size: .78em
     width: auto
     position: absolute
     left: 40px
     margin: 2px 0px
-    padding: 3px
+    padding: 5px
     border-radius: 4px
-    background: rgba(255,255,255,0.2)
-
-    @include breakpoint(smartphone)
-      top: 250px
-    
-    @include breakpoint(common)
-      top: 20px
-    
-    @include breakpoint(large)
-      top: 250px
+    background: rgba(255,255,255,0.9)
+    top: 20px
     
 
   a:hover
-    color: #000000
+    color: #ffffff
+    background: rgba(60,60,60,0.7)
 
 
   
@@ -115,44 +107,54 @@ nav
   li
     display: inline-block
     position: relative
-    text-align: left
-    width: 2.5em
-    height: 2.5em
-    background: rgba(255,255,255,0.5)
-    border-radius: 50%
-    margin: 0 0.1em
-    border: 2px solid rgba(0,0,0,0.5)
-    text-align: center
+    
     a
-      color: rgba(0,0,0,0.5)
+      text-align: left
+      width: 2.5em
+      height: 2.5em
+      background: rgba(255,255,255,0)
+      border-radius: 50%
+      margin: 0 0.1em
+      border: 2px solid rgba(255,255,255,0.9)
+      text-align: center
+      color: rgba(255,255,255,0.9)
       display: block
-      font-size: 12px
-      padding-top: 11px
+      font-size: 0.8em
+      line-height: 2.4em
+      padding: 0.4em
+
+    a:hover
+      color: rgba(0,0,0,0.9)
+      background: rgba(255,255,255,1)
+
       
 
     a.active
-      color: rgba(255,255,255,0.8)
+      color: rgba(9,9,9,0.9)
+      background: rgba(255,255,255,1)
 
 
 section
-  overflow: hidden
-  @include breakpoint(smartphone)
-    padding-top: 10%
-  
-  @include breakpoint(common)
-    padding-top: 0
-  
-  @include breakpoint(large)
-    padding-top: 10%
-  
+  overflow: hidden  
   height: 1300px
   width: 100%
   .content
     position: relative
     margin: 0px auto
-    max-width: $pageWidth
+    width: 100%
 
     h2
+
+      @include breakpoint(smartphone)
+        margin-top: 0px
+      
+      @include breakpoint(common)
+        margin-top: 0px
+      
+      @include breakpoint(large)
+        margin-top: 0px
+      
+      padding-left: $paddingStandard
       color: $primary
       font-family: 'Abril Fatface', serif
       margin-top: 0px
@@ -163,6 +165,7 @@ section
       z-index: 10
       position: inherit
     p
+      padding-left: $paddingStandard
       font-family: 'PT Serif', Helvetica, Arial
       font-size: 0.9em
       line-height: 1.6em
@@ -211,26 +214,12 @@ section
       background-color: rgba(60,60,60,0.5)
       position: absolute
       display: block
-      width: 2200px
+      width: 100%
       height: 1300px
-
-      
-      @include breakpoint(smartphone)
-        top: 150px
-      
-      @include breakpoint(common)
-        top: 0px
-      
-      @include breakpoint(large)
-        top: 150px
-      
-      margin-left: -500px
+      overflow: hidden
+      top: 0px
+      left: 0px
       z-index: 0
-
-    @media screen and (max-width: $pageWidth)
-      width: $responsiveWidth
-    a
-      color: $secondary
 
 #inicio
   background: url(../images/inicio.jpg) no-repeat center center fixed 
@@ -242,17 +231,18 @@ section
   .content
   
     h1, h2
+      text-align: left
       text-shadow: 1px 0px 5px rgba(0, 0, 0, 0.7)
-      
+
+    h1
       @include breakpoint(smartphone)
-        margin-left: 150px
+        margin-left: 26%
       
       @include breakpoint(common)
-        margin-left: 250px
+        margin-left: 26%
       
       @include breakpoint(large)
-        margin-left: 250px
-    
+        margin-left: 36%
 
     h2
       margin-top: 0px
@@ -261,19 +251,23 @@ section
       @include breakpoint(smartphone)
         padding-top: 260px
         font-size: 4.2em
-      
+        margin-left: 23%
+
       @include breakpoint(common)
         padding-top: 390px
         font-size: 4.2em
+        margin-left: 23%
       
       @include breakpoint(large)
         padding-top: 260px
         font-size: 4.2em
-      
+        margin-left: 36%
+
       color: #F7F3F0
 
+
     .word1,.word2,.word3,.word4
-      position: absolute
+      position: absolute      
 
     .word1
       display: block
@@ -310,6 +304,7 @@ section
       
       @include breakpoint(large)
         top: 262px
+        display: none
       
       
 
@@ -327,6 +322,7 @@ section
       @include breakpoint(large)
         top: 352px
         margin-left: -110px
+        display: none
       
 
     .word4
@@ -342,6 +338,7 @@ section
       @include breakpoint(large)
         top: 220px
         font-size: 1em
+        display: none
     
     .logo-subte
       display: block
@@ -367,9 +364,6 @@ section
           width: 250px
           height: 250px
           background-size: 200px 200px
-        
-
-
 
 
         background: url(../images/logo-subte.png) center center no-repeat
@@ -389,17 +383,6 @@ section
   -moz-background-size: cover
   -o-background-size: cover
   background-size: cover
-
-  .sharp 
-    background-color: rgba(0,174,219,.8)
-    position: absolute
-    display: block
-    width: 1200px
-    height: 500px
-
-    top: 150px
-    margin-left: -500px
-    z-index: 0
 
 .year-1920
   background: url(../images/1920.jpg) no-repeat center center fixed 
