@@ -1,8 +1,8 @@
-@import url(http://fonts.googleapis.com/css?family=Abril+Fatface|Headland+One|Open+Sans:400,700|Playfair+Display:400,700italic);
+@import url(http://fonts.googleapis.com/css?family=Abril+Fatface|Headland+One|PT+Serif:400,700|Playfair+Display:400,700italic);
 body {
   padding: 0px;
   margin: 0px;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "PT Serif", sans-serif; }
   @media only screen and (min-width: 48em) {
     body {
       border: 5px solid yellow; } }
@@ -13,17 +13,43 @@ body {
     body {
       border: 5px solid red; } }
 
-.help-nav {
-  position: fixed;
-  z-index: 600; }
-  .help-nav a {
-    width: auto;
-    position: absolute;
-    top: 50;
-    left: 150; }
-
 h1, h2, h4, nav li a {
   font-family: "Abril Fatface", Georgia, serif; }
+
+a {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+
+.help-nav {
+  display: block;
+  width: 200px;
+  position: fixed;
+  text-align: left;
+  z-index: 600; }
+  .help-nav a {
+    color: white;
+    font-size: 0.8em;
+    width: auto;
+    position: absolute;
+    left: 40px;
+    margin: 2px 0px;
+    padding: 3px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.2); }
+    @media only screen and (min-width: 48em) {
+      .help-nav a {
+        top: 250px; } }
+    @media only screen and (min-width: 56.25em) {
+      .help-nav a {
+        top: 20px; } }
+    @media only screen and (min-width: 68.75em) {
+      .help-nav a {
+        top: 250px; } }
+  .help-nav a:hover {
+    color: black; }
 
 h1 {
   font-size: 10em;
@@ -34,7 +60,7 @@ h1 {
       margin-top: 10px; } }
   @media only screen and (min-width: 56.25em) {
     h1 {
-      margin-top: 10px; } }
+      margin-top: 5px; } }
   @media only screen and (min-width: 68.75em) {
     h1 {
       margin-top: 0px; } }
@@ -80,11 +106,6 @@ nav {
       padding-top: 11px; }
     nav li a.active {
       color: rgba(255, 255, 255, 0.8); }
-  @media screen and (max-width: 940px) {
-    nav {
-      width: 90%; }
-      nav li a {
-        font-size: 18px; } }
 
 section {
   overflow: hidden;
@@ -95,7 +116,7 @@ section {
       padding-top: 10%; } }
   @media only screen and (min-width: 56.25em) {
     section {
-      padding-top: 5%; } }
+      padding-top: 0; } }
   @media only screen and (min-width: 68.75em) {
     section {
       padding-top: 10%; } }
@@ -108,12 +129,15 @@ section {
       font-family: "Abril Fatface", serif;
       margin-top: 0px;
       font-size: 4em;
+      line-height: 1em;
       padding-top: 250px;
       text-shadow: 1px 0px 5px rgba(150, 150, 150, 0.6);
       z-index: 10;
       position: inherit; }
     section .content p {
-      font-family: "Open Sans", Helvetica, Arial;
+      font-family: "PT Serif", Helvetica, Arial;
+      font-size: 0.9em;
+      line-height: 1.6em;
       display: block;
       width: 300px;
       color: #fcfcfc;
@@ -123,12 +147,32 @@ section {
         font-family: "Playfair Display", Georgia, serif;
         font-size: 2em;
         font-weight: 400; }
+      section .content p .linea-a, section .content p .linea-b, section .content p .linea-c, section .content p .linea-d, section .content p .linea-e, section .content p .linea-h {
+        font-family: "PT Serif", Helvetica, Arial;
+        font-size: 0.9em;
+        font-weight: 700;
+        color: white;
+        margin: 2px 0px;
+        padding: 3px;
+        border-radius: 4px; }
+      section .content p .linea-a {
+        background-color: rgba(0, 174, 219, 0.6); }
+      section .content p .linea-b {
+        background-color: rgba(238, 27, 46, 0.6); }
+      section .content p .linea-c {
+        background-color: rgba(1, 103, 178, 0.6); }
+      section .content p .linea-d {
+        background-color: rgba(0, 128, 103, 0.6); }
+      section .content p .linea-e {
+        background-color: rgba(108, 33, 128, 0.6); }
+      section .content p .linea-h {
+        background-color: rgba(255, 210, 3, 0.6); }
     section .content .sharp {
-      background-color: rgba(0, 174, 219, 0.5);
+      background-color: rgba(60, 60, 60, 0.5);
       position: absolute;
       display: block;
       width: 2200px;
-      height: 1200px;
+      height: 1300px;
       margin-left: -500px;
       z-index: 0; }
       @media only screen and (min-width: 48em) {
@@ -136,7 +180,7 @@ section {
           top: 150px; } }
       @media only screen and (min-width: 56.25em) {
         section .content .sharp {
-          top: 224px; } }
+          top: 0px; } }
       @media only screen and (min-width: 68.75em) {
         section .content .sharp {
           top: 150px; } }
@@ -145,16 +189,6 @@ section {
         width: 90%; } }
     section .content a {
       color: #fcfcfc; }
-
-.bottom-link {
-  margin-top: 80px;
-  font-style: italic; }
-
-.gist-meta {
-  display: none; }
-
-.file-data {
-  font-size: 14px; }
 
 #inicio {
   background: url(../images/inicio.jpg) no-repeat center center fixed;
@@ -397,6 +431,70 @@ section {
     color: #fcfcfc; }
   .year-2010 p {
     color: #fcfcfc; }
+
+g.line path {
+  stroke-width: 12px;
+  fill: none;
+  stroke-linecap: round; }
+
+g.stations circle {
+  fill: white;
+  stroke: none; }
+
+g.chart path {
+  stroke: none; }
+
+g.marker path {
+  stroke: white;
+  stroke-width: 2px; }
+
+g.marker text {
+  text-anchor: end;
+  font-size: 20px;
+  font-weight: bold;
+  fill: white; }
+
+g.marker text.distance {
+  font-size: 12px;
+  font-weight: normal; }
+
+g.stations circle.not-yet {
+  opacity: 0.7; }
+
+g.monochrome {
+  opacity: 0.7; }
+
+div.layer {
+  position: absolute;
+  opacity: 0.9;
+  z-index: -1; }
+
+.tile {
+  position: absolute;
+  width: 256px;
+  height: 256px; }
+
+g.reticle rect {
+  fill: none;
+  stroke: #666666;
+  opacity: 0.5;
+  stroke-width: 2px;
+  stroke-linecap: round; }
+
+g.corner-label text.stops {
+  font-weight: bold;
+  font-size: 18px;
+  text-anchor: end; }
+
+g.corner-label text.completed {
+  font-size: 13px;
+  text-anchor: end; }
+
+.hidden {
+  display: none; }
+
+body.loading div.credits span, body.loading div.chart, body.loading div.map {
+  display: none; }
 
 div.map {
   position: relative;

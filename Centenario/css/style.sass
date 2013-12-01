@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Abril+Fatface|Headland+One|Open+Sans:400,700|Playfair+Display:400,700italic)
+@import url(http://fonts.googleapis.com/css?family=Abril+Fatface|Headland+One|PT+Serif:400,700|Playfair+Display:400,700italic)
 
 
 @import "bourbon"
@@ -8,6 +8,12 @@ $pageWidth: 940px
 $responsiveWidth: 90%
 $primary: #FCFCFC
 $secondary: #FCFCFC
+$linea-a: rgba(0,174,219,0.6)
+$linea-b: rgba(238,27,46,0.6)
+$linea-c: rgba(1,103,178,0.6)
+$linea-d: rgba(0,128,103,0.6)
+$linea-e: rgba(108,33,128,0.6)
+$linea-h: rgba(255,210,3,0.6)
 
 
 body
@@ -23,21 +29,50 @@ body
 
   padding: 0px
   margin: 0px
-  font-family: 'Open Sans', sans-serif
-
-.help-nav
-  position: fixed
- 
-  z-index: 600
-  a
-    width: auto
-    position: absolute
-    top: 50
-    left: 150
+  font-family: 'PT Serif', sans-serif
 
 
 h1, h2, h4, nav li a
   font-family: 'Abril Fatface', Georgia, serif
+
+a
+  -webkit-transition: all 0.3s ease                  
+  -moz-transition: all 0.3s ease                 
+  -o-transition: all 0.3s ease   
+  -ms-transition: all 0.3s ease          
+  transition: all 0.3s ease
+
+.help-nav
+  display: block
+  width: 200px
+  position: fixed
+  text-align: left
+ 
+  z-index: 600
+  a
+    color: #ffffff
+    font-size: .8em
+    width: auto
+    position: absolute
+    left: 40px
+    margin: 2px 0px
+    padding: 3px
+    border-radius: 4px
+    background: rgba(255,255,255,0.2)
+
+    @include breakpoint(smartphone)
+      top: 250px
+    
+    @include breakpoint(common)
+      top: 20px
+    
+    @include breakpoint(large)
+      top: 250px
+    
+
+  a:hover
+    color: #000000
+
 
   
 
@@ -50,7 +85,7 @@ h1
     margin-top: 10px
   
   @include breakpoint(common)
-    margin-top: 10px
+    margin-top: 5px
   
   @include breakpoint(large)
     margin-top: 0px
@@ -97,11 +132,7 @@ nav
 
     a.active
       color: rgba(255,255,255,0.8)
-  @media screen and (max-width: $pageWidth)
-    width: $responsiveWidth
-    li
-      a
-        font-size: 18px
+
 
 section
   overflow: hidden
@@ -109,7 +140,7 @@ section
     padding-top: 10%
   
   @include breakpoint(common)
-    padding-top: 5%
+    padding-top: 0
   
   @include breakpoint(large)
     padding-top: 10%
@@ -126,12 +157,15 @@ section
       font-family: 'Abril Fatface', serif
       margin-top: 0px
       font-size: 4em
+      line-height: 1em
       padding-top: 250px
       text-shadow: 1px 0px 5px rgba(150, 150, 150, 0.6)
       z-index: 10
       position: inherit
     p
-      font-family: 'Open Sans', Helvetica, Arial
+      font-family: 'PT Serif', Helvetica, Arial
+      font-size: 0.9em
+      line-height: 1.6em
       display: block
       width: 300px
       color: $primary
@@ -143,20 +177,49 @@ section
         font-size: 2em
         font-weight: 400
 
+      .linea-a, .linea-b, .linea-c, .linea-d, .linea-e, .linea-h
+        font-family: 'PT Serif', Helvetica, Arial
+        font-size: 0.9em
+        font-weight: 700
+        color: #ffffff
+        margin: 2px 0px
+        padding: 3px
+        border-radius: 4px
+        
+      .linea-a
+        background-color: $linea-a
+        
+      .linea-b
+        background-color: $linea-b
+        
+      .linea-c
+        background-color: $linea-c
+        
+      .linea-d
+        background-color: $linea-d
+        
+      .linea-e
+        background-color: $linea-e
+
+      .linea-h
+        background-color: $linea-h
+
+
+
 
     .sharp 
-      background-color: rgba(0,174,219,.5)
+      background-color: rgba(60,60,60,0.5)
       position: absolute
       display: block
       width: 2200px
-      height: 1200px
+      height: 1300px
 
       
       @include breakpoint(smartphone)
         top: 150px
       
       @include breakpoint(common)
-        top: 224px
+        top: 0px
       
       @include breakpoint(large)
         top: 150px
@@ -168,16 +231,6 @@ section
       width: $responsiveWidth
     a
       color: $secondary
-
-  
-.bottom-link
-  margin-top: 80px
-  font-style: italic
-
-.gist-meta
-  display: none
-.file-data
-  font-size: 14px
 
 #inicio
   background: url(../images/inicio.jpg) no-repeat center center fixed 
@@ -467,6 +520,69 @@ section
 
 // Data Viz Styles
 
+g.line path      
+  stroke-width: 12px
+  fill: none
+  stroke-linecap: round
+
+g.stations circle
+  fill: #fff
+  stroke: none      
+
+g.chart path
+  stroke: none
+
+g.marker path
+  stroke: #fff
+  stroke-width: 2px
+
+g.marker text
+  text-anchor: end
+  font-size: 20px
+  font-weight: bold
+  fill: #fff
+
+g.marker text.distance
+  font-size: 12px
+  font-weight: normal     
+
+g.stations circle.not-yet
+  opacity: 0.7
+
+g.monochrome
+  opacity: 0.7
+
+div.layer
+  position: absolute
+  opacity: 0.9
+  z-index: -1
+
+.tile
+  position: absolute
+  width: 256px
+  height: 256px
+
+g.reticle rect
+  fill: none
+  stroke: #666
+  opacity: 0.5
+  stroke-width: 2px
+  stroke-linecap: round
+
+g.corner-label text.stops
+  font-weight: bold
+  font-size: 18px
+  text-anchor: end
+
+g.corner-label text.completed     
+  font-size: 13px      
+  text-anchor: end
+
+.hidden
+  display: none
+
+body.loading div.credits span, body.loading div.chart,body.loading div.map
+  display: none
 
 
 div.map 
