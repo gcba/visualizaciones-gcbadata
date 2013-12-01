@@ -398,6 +398,22 @@ section {
   .year-2010 p {
     color: #fcfcfc; }
 
+div.map {
+  position: relative;
+  border: 0px solid #999999;
+  margin-top: 8px;
+  overflow-x: hidden;
+  overflow-y: hidden; }
+
+div.chart {
+  border: 1px solid transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
 div.viz-container {
   position: fixed;
   bottom: 0px;

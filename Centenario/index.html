@@ -8,25 +8,6 @@
 
 
 
-    div.map {
-      position: relative;
-      border: 0px solid #999;
-      margin-top: 8px;    
-      overflow-x: hidden;
-      overflow-y: hidden;
-    }
-
-    div.chart {
-      border: 1px solid transparent;
-      cursor: crosshair;
-      -webkit-touch-callout: none;
-      -webkit-user-select: none;      
-      -khtml-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-    }
-
     g.line path {      
       stroke-width: 12px;
       fill: none;
@@ -374,8 +355,8 @@
     <script src='js/scrollIt.min.js' type='text/javascript'></script>
     <script src='js/waypoints.min.js' type='text/javascript'></script>
     <script src='js/jquery.lettering.min.js' type='text/javascript'></script>
-    <script src="http://d3js.org/d3.v3.min.js"></script>
-    <script src="http://d3js.org/d3.geo.tile.v0.min.js"></script>
+    <script src="js/d3.v3.min.js"></script>
+    <script src="js/d3.geo.tile.v0.min.js"></script>
     <script src='js/veltman.js' type='text/javascript'></script>
     <script>
 
@@ -392,16 +373,16 @@
       var body = document.body,
           timer;
 
-      window.addEventListener('scroll', function() {
-        clearTimeout(timer);
-        if(!body.classList.contains('disable-hover')) {
-          body.classList.add('disable-hover')
-        }
+      // window.addEventListener('scroll', function() {
+      //   clearTimeout(timer);
+      //   if(!body.classList.contains('disable-hover')) {
+      //     body.classList.add('disable-hover')
+      //   }
         
-        timer = setTimeout(function(){
-          body.classList.remove('disable-hover')
-        },500);
-      }, false);
+      //   timer = setTimeout(function(){
+      //     body.classList.remove('disable-hover')
+      //   },500);
+      // }, false);
 
       $.scrollIt({
         upKey: 38,  
