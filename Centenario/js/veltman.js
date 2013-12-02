@@ -31,7 +31,7 @@ http://noahveltman.com/subte/
 
 */
 
-var width = 600, height = 540, chartHeight = 90, chartMargin = 5,
+var width = 640, height = 540, chartHeight = 90, chartMargin = 5,
   layer = d3.select("div.layer").style("width",width+"px").style("height",height+"px"),
 
   chart = d3.select("div.chart")

@@ -2,7 +2,7 @@
 
 @import "breakpoints"
 
-$paddingStandard: 40px
+$paddingStandard: 30px
 $primary: #FCFCFC
 $secondary: #FCFCFC
 $linea-a: rgba(0,174,219,0.6)
@@ -12,15 +12,23 @@ $linea-d: rgba(0,128,103,0.6)
 $linea-e: rgba(108,33,128,0.6)
 $linea-h: rgba(255,210,3,0.6)
 
+
 body
   @include breakpoint(smartphone)
+    border: 5px solid white
+    zoom: 1
+
+  @include breakpoint(tablet)
     border: 5px solid yellow
+    zoom: 1
   
   @include breakpoint(common)
     border: 5px solid green
+    zoom: 1
   
   @include breakpoint(large)
     border: 5px solid red
+    zoom: 1
 
   padding: 0px
   margin: 0px
@@ -45,32 +53,43 @@ a
   text-align: left
  
   z-index: 600
+
   a
     color: rgba(20,20,20,0.9)
     font-size: .78em
     width: auto
     position: absolute
-    left: 40px
+  
+    @include breakpoint(smartphone)
+      top: 18px
+      left: 20px
+      zoom: 0.8
+    
+    @include breakpoint(tablet)
+      top: 13px
+      left: 30px
+      zoom: 1
+    
+    @include breakpoint(common)
+      top: 15px
+      left: 40px
+      zoom: 1.1      
+    
     margin: 2px 0px
     padding: 5px
     border-radius: 4px
     background: rgba(255,255,255,0.9)
-    top: 20px
     
-
   a:hover
     color: #ffffff
     background: rgba(60,60,60,0.7)
-
-
-  
 
 h1
   font-size: 10em
   color: #FCFCFC
   margin-bottom: 0px
   
-  @include breakpoint(smartphone)
+  @include breakpoint(tablet)
     margin-top: 10px
   
   @include breakpoint(common)
@@ -78,7 +97,6 @@ h1
   
   @include breakpoint(large)
     margin-top: 0px
-  
 
 
 h4
@@ -90,6 +108,19 @@ ul
   list-style: none
 
 .nav-container
+
+  @include breakpoint(smartphone)
+    zoom: 0.8
+  
+  @include breakpoint(tablet)
+    zoom: 0.85
+  
+  @include breakpoint(common)
+    zoom: 1
+  
+  @include breakpoint(large)
+    zoom: 1.1
+
   width: 100%
   position: fixed
   left: 0px
@@ -142,34 +173,69 @@ section
 
     h2
 
+      
       @include breakpoint(smartphone)
-        margin-top: 0px
-      
+        font-size: 2.5em
+        line-height: .6em
+        padding-top: 120px
+        z-index: 10
+
+      @include breakpoint(tablet)
+        font-size: 4em
+        line-height: 1em
+        padding-top: 250px
+        z-index: 10
+
       @include breakpoint(common)
-        margin-top: 0px
-      
+        font-size: 4em
+        line-height: 1em
+        padding-top: 250px
+        z-index: 10
+
       @include breakpoint(large)
-        margin-top: 0px
-      
+        font-size: 4em
+        line-height: 1em
+        padding-top: 250px
+        z-index: 10
+
+  
       padding-left: $paddingStandard
       color: $primary
       font-family: 'Abril Fatface', serif
       margin-top: 0px
-      font-size: 4em
-      line-height: 1em
-      padding-top: 250px
       text-shadow: 1px 0px 5px rgba(150, 150, 150, 0.6)
-      z-index: 10
       position: inherit
     p
+      display: block
       padding-left: $paddingStandard
       font-family: 'PT Serif', Helvetica, Arial
-      font-size: 0.9em
-      line-height: 1.6em
-      display: block
-      width: 300px
       color: $primary
-      z-index: 10
+      
+      
+      @include breakpoint(smartphone)
+        font-size: 0.9em
+        line-height: 1.6em
+        width: 100%
+        z-index: 10
+
+      @include breakpoint(tablet)
+        font-size: 0.9em
+        line-height: 1.6em
+        width: 290px
+        z-index: 10
+
+      @include breakpoint(common)
+        font-size: 0.9em
+        line-height: 1.6em
+        width: 30%
+        z-index: 10
+
+      @include breakpoint(large)
+        font-size: 0.9em
+        line-height: 1.6em
+        width: 40%
+        z-index: 10
+
       position: inherit
 
       span
@@ -232,8 +298,8 @@ section
       text-shadow: 1px 0px 5px rgba(0, 0, 0, 0.7)
 
     h1
-      @include breakpoint(smartphone)
-        margin-left: 26%
+      @include breakpoint(tablet)
+        margin-left: 31%
       
       @include breakpoint(common)
         margin-left: 26%
@@ -245,10 +311,10 @@ section
       margin-top: 0px
       margin-bottom: 0px
 
-      @include breakpoint(smartphone)
-        padding-top: 260px
-        font-size: 4.2em
-        margin-left: 23%
+      @include breakpoint(tablet)
+        padding-top: 320px
+        font-size: 3em
+        margin-left: 27%
 
       @include breakpoint(common)
         padding-top: 390px
@@ -256,9 +322,10 @@ section
         margin-left: 23%
       
       @include breakpoint(large)
-        padding-top: 260px
+        padding-top: 396px
         font-size: 4.2em
-        margin-left: 36%
+        margin-left: 34%
+
 
       color: #F7F3F0
 
@@ -269,9 +336,10 @@ section
     .word1
       display: block
       
-      @include breakpoint(smartphone)
+      @include breakpoint(tablet)
         top: 20px
-        font-size: 1.5em
+        font-size: 1.1em
+      
       
       @include breakpoint(common)
         top: 0px
@@ -292,50 +360,48 @@ section
 
     .word2
       
-      @include breakpoint(smartphone)
-        top: 262px
-      
+      @include breakpoint(tablet)
+        font-size: 0.3em
+        top: 150px
+        padding-left: 305px
+        
       @include breakpoint(common)
+        font-size: 0.5em
         top: 165px
         padding-left: 415px
       
       @include breakpoint(large)
-        top: 262px
-        display: none
-      
-      
+        top: 181px
 
     .word3
-      
-
-      @include breakpoint(smartphone)
-        top: 242px
-        margin-left: -96px
+      @include breakpoint(tablet)
+        top: 212px
+        margin-left: -54px
+        font-size: 0.3em
       
       @include breakpoint(common)
+        font-size: 0.5em
         top: 248px
         margin-left: -86px
       
       @include breakpoint(large)
-        top: 352px
-        margin-left: -110px
-        display: none
+        top: 252px
+        margin-left: -90px
       
 
     .word4
       
-      @include breakpoint(smartphone)
-        top: 320px
-        font-size: 0.8em
+      @include breakpoint(tablet)
+        top: 188px
+        font-size: 0.705em
       
       @include breakpoint(common)
         top: 220px
         font-size: 0.96em
       
       @include breakpoint(large)
-        top: 220px
-        font-size: 1em
-        display: none
+        top: 229px
+        font-size: .96em
     
     .logo-subte
       display: block
@@ -347,7 +413,7 @@ section
         display: block
 
 
-        @include breakpoint(smartphone)
+        @include breakpoint(tablet)
           width: 180px
           height: 180px
           background-size: 120px 120px
@@ -583,6 +649,19 @@ div.chart
   user-select: none
 
 div.viz-container
+  
+  @include breakpoint(smartphone)
+    zoom: 0.75
+  
+  @include breakpoint(tablet)
+    zoom: 0.85
+  
+  @include breakpoint(common)
+    zoom: 1
+  
+  @include breakpoint(large)
+    zoom: 1.1
+
   position: fixed
   bottom: 0px
   right: -2px

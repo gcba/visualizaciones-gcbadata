@@ -1,519 +1,179 @@
 @import url(http://fonts.googleapis.com/css?family=Abril+Fatface|Headland+One|PT+Serif:400,700|Playfair+Display:400,700italic);
-body {
-  padding: 0px;
-  margin: 0px;
-  font-family: "PT Serif", sans-serif; }
-  @media only screen and (min-width: 48em) {
-    body {
-      border: 5px solid yellow; } }
-  @media only screen and (min-width: 56.25em) {
-    body {
-      border: 5px solid green; } }
-  @media only screen and (min-width: 68.75em) {
-    body {
-      border: 5px solid red; } }
+body { padding: 0px; margin: 0px; font-family: "PT Serif", sans-serif; }
+@media only screen and (min-width: 37.5em) { body { border: 5px solid white; zoom: 1; } }
+@media only screen and (min-width: 48em) { body { border: 5px solid yellow; zoom: 1; } }
+@media only screen and (min-width: 56.25em) { body { border: 5px solid green; zoom: 1; } }
+@media only screen and (min-width: 68.75em) { body { border: 5px solid red; zoom: 1; } }
 
-h1, h2, h4, nav li a {
-  font-family: "Abril Fatface", Georgia, serif; }
+h1, h2, h4, nav li a { font-family: "Abril Fatface", Georgia, serif; }
 
-a {
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  transition: all 0.3s ease; }
+a { -webkit-transition: all 0.3s ease; -moz-transition: all 0.3s ease; -o-transition: all 0.3s ease; -ms-transition: all 0.3s ease; transition: all 0.3s ease; }
 
-.help-nav {
-  display: block;
-  width: 200px;
-  position: fixed;
-  text-align: left;
-  z-index: 600; }
-  .help-nav a {
-    color: rgba(20, 20, 20, 0.9);
-    font-size: 0.78em;
-    width: auto;
-    position: absolute;
-    left: 40px;
-    margin: 2px 0px;
-    padding: 5px;
-    border-radius: 4px;
-    background: rgba(255, 255, 255, 0.9);
-    top: 20px; }
-  .help-nav a:hover {
-    color: white;
-    background: rgba(60, 60, 60, 0.7); }
+.help-nav { display: block; width: 200px; position: fixed; text-align: left; z-index: 600; }
+.help-nav a { color: rgba(20, 20, 20, 0.9); font-size: 0.78em; width: auto; position: absolute; margin: 2px 0px; padding: 5px; border-radius: 4px; background: rgba(255, 255, 255, 0.9); }
+@media only screen and (min-width: 37.5em) { .help-nav a { top: 18px; left: 20px; zoom: 0.8; } }
+@media only screen and (min-width: 48em) { .help-nav a { top: 13px; left: 30px; zoom: 1; } }
+@media only screen and (min-width: 56.25em) { .help-nav a { top: 15px; left: 40px; zoom: 1.1; } }
+.help-nav a:hover { color: white; background: rgba(60, 60, 60, 0.7); }
 
-h1 {
-  font-size: 10em;
-  color: #fcfcfc;
-  margin-bottom: 0px; }
-  @media only screen and (min-width: 48em) {
-    h1 {
-      margin-top: 10px; } }
-  @media only screen and (min-width: 56.25em) {
-    h1 {
-      margin-top: 5px; } }
-  @media only screen and (min-width: 68.75em) {
-    h1 {
-      margin-top: 0px; } }
+h1 { font-size: 10em; color: #fcfcfc; margin-bottom: 0px; }
+@media only screen and (min-width: 48em) { h1 { margin-top: 10px; } }
+@media only screen and (min-width: 56.25em) { h1 { margin-top: 5px; } }
+@media only screen and (min-width: 68.75em) { h1 { margin-top: 0px; } }
 
-h4 {
-  font-size: 20px;
-  margin-bottom: 10px; }
+h4 { font-size: 20px; margin-bottom: 10px; }
 
-a {
-  cursor: pointer; }
+a { cursor: pointer; }
 
-ul {
-  list-style: none; }
+ul { list-style: none; }
 
-.nav-container {
-  width: 100%;
-  position: fixed;
-  left: 0px;
-  top: 0px;
-  z-index: 300; }
+.nav-container { width: 100%; position: fixed; left: 0px; top: 0px; z-index: 300; }
+@media only screen and (min-width: 37.5em) { .nav-container { zoom: 0.8; } }
+@media only screen and (min-width: 48em) { .nav-container { zoom: 0.85; } }
+@media only screen and (min-width: 56.25em) { .nav-container { zoom: 1; } }
+@media only screen and (min-width: 68.75em) { .nav-container { zoom: 1.1; } }
 
-nav {
-  text-align: center;
-  width: auto;
-  margin: 0px auto; }
-  nav ul {
-    padding: 0px; }
-  nav li {
-    display: inline-block;
-    position: relative; }
-    nav li a {
-      text-align: left;
-      width: 2.5em;
-      height: 2.5em;
-      background: rgba(255, 255, 255, 0);
-      border-radius: 50%;
-      margin: 0 0.1em;
-      border: 2px solid rgba(255, 255, 255, 0.9);
-      text-align: center;
-      color: rgba(255, 255, 255, 0.9);
-      display: block;
-      font-size: 0.8em;
-      line-height: 2.4em;
-      padding: 0.4em; }
-    nav li a:hover {
-      color: rgba(0, 0, 0, 0.9);
-      background: white; }
-    nav li a.active {
-      color: rgba(9, 9, 9, 0.9);
-      background: white; }
+nav { text-align: center; width: auto; margin: 0px auto; }
+nav ul { padding: 0px; }
+nav li { display: inline-block; position: relative; }
+nav li a { text-align: left; width: 2.5em; height: 2.5em; background: rgba(255, 255, 255, 0); border-radius: 50%; margin: 0 0.1em; border: 2px solid rgba(255, 255, 255, 0.9); text-align: center; color: rgba(255, 255, 255, 0.9); display: block; font-size: 0.8em; line-height: 2.4em; padding: 0.4em; }
+nav li a:hover { color: rgba(0, 0, 0, 0.9); background: white; }
+nav li a.active { color: rgba(9, 9, 9, 0.9); background: white; }
 
-section {
-  overflow: hidden;
-  height: 1300px;
-  width: 100%; }
-  section .content {
-    position: relative;
-    margin: 0px auto;
-    width: 100%; }
-    section .content h2 {
-      padding-left: 40px;
-      color: #fcfcfc;
-      font-family: "Abril Fatface", serif;
-      margin-top: 0px;
-      font-size: 4em;
-      line-height: 1em;
-      padding-top: 250px;
-      text-shadow: 1px 0px 5px rgba(150, 150, 150, 0.6);
-      z-index: 10;
-      position: inherit; }
-      @media only screen and (min-width: 48em) {
-        section .content h2 {
-          margin-top: 0px; } }
-      @media only screen and (min-width: 56.25em) {
-        section .content h2 {
-          margin-top: 0px; } }
-      @media only screen and (min-width: 68.75em) {
-        section .content h2 {
-          margin-top: 0px; } }
-    section .content p {
-      padding-left: 40px;
-      font-family: "PT Serif", Helvetica, Arial;
-      font-size: 0.9em;
-      line-height: 1.6em;
-      display: block;
-      width: 300px;
-      color: #fcfcfc;
-      z-index: 10;
-      position: inherit; }
-      section .content p span {
-        font-family: "Playfair Display", Georgia, serif;
-        font-size: 2em;
-        font-weight: 400; }
-      section .content p .linea-a, section .content p .linea-b, section .content p .linea-c, section .content p .linea-d, section .content p .linea-e, section .content p .linea-h {
-        font-family: "PT Serif", Helvetica, Arial;
-        font-size: 0.9em;
-        font-weight: 700;
-        color: white;
-        margin: 2px 0px;
-        padding: 3px;
-        border-radius: 4px; }
-      section .content p .linea-a {
-        background-color: rgba(0, 174, 219, 0.6); }
-      section .content p .linea-b {
-        background-color: rgba(238, 27, 46, 0.6); }
-      section .content p .linea-c {
-        background-color: rgba(1, 103, 178, 0.6); }
-      section .content p .linea-d {
-        background-color: rgba(0, 128, 103, 0.6); }
-      section .content p .linea-e {
-        background-color: rgba(108, 33, 128, 0.6); }
-      section .content p .linea-h {
-        background-color: rgba(255, 210, 3, 0.6); }
-    section .content .sharp {
-      background-color: rgba(60, 60, 60, 0.5);
-      position: absolute;
-      display: block;
-      width: 100%;
-      height: 1300px;
-      overflow: hidden;
-      top: 0px;
-      left: 0px;
-      z-index: 0; }
+section { overflow: hidden; height: 1300px; width: 100%; }
+section .content { position: relative; margin: 0px auto; width: 100%; }
+section .content h2 { padding-left: 30px; color: #fcfcfc; font-family: "Abril Fatface", serif; margin-top: 0px; text-shadow: 1px 0px 5px rgba(150, 150, 150, 0.6); position: inherit; }
+@media only screen and (min-width: 37.5em) { section .content h2 { font-size: 2.5em; line-height: 0.6em; padding-top: 120px; z-index: 10; } }
+@media only screen and (min-width: 48em) { section .content h2 { font-size: 4em; line-height: 1em; padding-top: 250px; z-index: 10; } }
+@media only screen and (min-width: 56.25em) { section .content h2 { font-size: 4em; line-height: 1em; padding-top: 250px; z-index: 10; } }
+@media only screen and (min-width: 68.75em) { section .content h2 { font-size: 4em; line-height: 1em; padding-top: 250px; z-index: 10; } }
+section .content p { display: block; padding-left: 30px; font-family: "PT Serif", Helvetica, Arial; color: #fcfcfc; position: inherit; }
+@media only screen and (min-width: 37.5em) { section .content p { font-size: 0.9em; line-height: 1.6em; width: 100%; z-index: 10; } }
+@media only screen and (min-width: 48em) { section .content p { font-size: 0.9em; line-height: 1.6em; width: 290px; z-index: 10; } }
+@media only screen and (min-width: 56.25em) { section .content p { font-size: 0.9em; line-height: 1.6em; width: 30%; z-index: 10; } }
+@media only screen and (min-width: 68.75em) { section .content p { font-size: 0.9em; line-height: 1.6em; width: 40%; z-index: 10; } }
+section .content p span { font-family: "Playfair Display", Georgia, serif; font-size: 2em; font-weight: 400; }
+section .content p .linea-a, section .content p .linea-b, section .content p .linea-c, section .content p .linea-d, section .content p .linea-e, section .content p .linea-h { font-family: "PT Serif", Helvetica, Arial; font-size: 0.9em; font-weight: 700; color: white; margin: 2px 0px; padding: 3px; border-radius: 4px; }
+section .content p .linea-a { background-color: rgba(0, 174, 219, 0.6); }
+section .content p .linea-b { background-color: rgba(238, 27, 46, 0.6); }
+section .content p .linea-c { background-color: rgba(1, 103, 178, 0.6); }
+section .content p .linea-d { background-color: rgba(0, 128, 103, 0.6); }
+section .content p .linea-e { background-color: rgba(108, 33, 128, 0.6); }
+section .content p .linea-h { background-color: rgba(255, 210, 3, 0.6); }
+section .content .sharp { background-color: rgba(60, 60, 60, 0.5); position: absolute; display: block; width: 100%; height: 1300px; overflow: hidden; top: 0px; left: 0px; z-index: 0; }
 
-#inicio {
-  background: url(../images/inicio.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
-  #inicio .content h1, #inicio .content h2 {
-    text-align: left;
-    text-shadow: 1px 0px 5px rgba(0, 0, 0, 0.7); }
-  @media only screen and (min-width: 48em) {
-    #inicio .content h1 {
-      margin-left: 26%; } }
-  @media only screen and (min-width: 56.25em) {
-    #inicio .content h1 {
-      margin-left: 26%; } }
-  @media only screen and (min-width: 68.75em) {
-    #inicio .content h1 {
-      margin-left: 36%; } }
-  #inicio .content h2 {
-    margin-top: 0px;
-    margin-bottom: 0px;
-    color: #f7f3f0; }
-    @media only screen and (min-width: 48em) {
-      #inicio .content h2 {
-        padding-top: 260px;
-        font-size: 4.2em;
-        margin-left: 23%; } }
-    @media only screen and (min-width: 56.25em) {
-      #inicio .content h2 {
-        padding-top: 390px;
-        font-size: 4.2em;
-        margin-left: 23%; } }
-    @media only screen and (min-width: 68.75em) {
-      #inicio .content h2 {
-        padding-top: 260px;
-        font-size: 4.2em;
-        margin-left: 36%; } }
-  #inicio .content .word1, #inicio .content .word2, #inicio .content .word3, #inicio .content .word4 {
-    position: absolute; }
-  #inicio .content .word1 {
-    display: block;
-    color: #fdd900; }
-    @media only screen and (min-width: 48em) {
-      #inicio .content .word1 {
-        top: 20px;
-        font-size: 1.5em; } }
-    @media only screen and (min-width: 56.25em) {
-      #inicio .content .word1 {
-        top: 0px;
-        font-size: 1.5em; } }
-    @media only screen and (min-width: 68.75em) {
-      #inicio .content .word1 {
-        top: 10px;
-        font-size: 1.5em; } }
-  #inicio .content .word2, #inicio .content .word3 {
-    font-family: "Playfair Display", serif;
-    font-size: 0.5em;
-    font-weight: 700;
-    font-style: italic; }
-  @media only screen and (min-width: 48em) {
-    #inicio .content .word2 {
-      top: 262px; } }
-  @media only screen and (min-width: 56.25em) {
-    #inicio .content .word2 {
-      top: 165px;
-      padding-left: 415px; } }
-  @media only screen and (min-width: 68.75em) {
-    #inicio .content .word2 {
-      top: 262px;
-      display: none; } }
-  @media only screen and (min-width: 48em) {
-    #inicio .content .word3 {
-      top: 242px;
-      margin-left: -96px; } }
-  @media only screen and (min-width: 56.25em) {
-    #inicio .content .word3 {
-      top: 248px;
-      margin-left: -86px; } }
-  @media only screen and (min-width: 68.75em) {
-    #inicio .content .word3 {
-      top: 352px;
-      margin-left: -110px;
-      display: none; } }
-  @media only screen and (min-width: 48em) {
-    #inicio .content .word4 {
-      top: 320px;
-      font-size: 0.8em; } }
-  @media only screen and (min-width: 56.25em) {
-    #inicio .content .word4 {
-      top: 220px;
-      font-size: 0.96em; } }
-  @media only screen and (min-width: 68.75em) {
-    #inicio .content .word4 {
-      top: 220px;
-      font-size: 1em;
-      display: none; } }
-  #inicio .content .logo-subte {
-    display: block;
-    margin: 0 auto; }
-    #inicio .content .logo-subte h4 a {
-      text-align: center;
-      text-indent: -5000px;
-      display: block;
-      background: url(../images/logo-subte.png) center center no-repeat;
-      margin: 0 auto;
-      -webkit-backface-visibility: hidden;
-      -moz-backface-visibility: hidden;
-      -ms-backface-visibility: hidden;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box; }
-      @media only screen and (min-width: 48em) {
-        #inicio .content .logo-subte h4 a {
-          width: 180px;
-          height: 180px;
-          background-size: 120px 120px; } }
-      @media only screen and (min-width: 56.25em) {
-        #inicio .content .logo-subte h4 a {
-          width: 180px;
-          height: 180px;
-          background-size: 120px 120px; } }
-      @media only screen and (min-width: 68.75em) {
-        #inicio .content .logo-subte h4 a {
-          width: 250px;
-          height: 250px;
-          background-size: 200px 200px; } }
+#inicio { background: url(../images/inicio.jpg) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+#inicio .content h1, #inicio .content h2 { text-align: left; text-shadow: 1px 0px 5px rgba(0, 0, 0, 0.7); }
+@media only screen and (min-width: 48em) { #inicio .content h1 { margin-left: 31%; } }
+@media only screen and (min-width: 56.25em) { #inicio .content h1 { margin-left: 26%; } }
+@media only screen and (min-width: 68.75em) { #inicio .content h1 { margin-left: 36%; } }
+#inicio .content h2 { margin-top: 0px; margin-bottom: 0px; color: #f7f3f0; }
+@media only screen and (min-width: 48em) { #inicio .content h2 { padding-top: 320px; font-size: 3em; margin-left: 27%; } }
+@media only screen and (min-width: 56.25em) { #inicio .content h2 { padding-top: 390px; font-size: 4.2em; margin-left: 23%; } }
+@media only screen and (min-width: 68.75em) { #inicio .content h2 { padding-top: 396px; font-size: 4.2em; margin-left: 34%; } }
+#inicio .content .word1, #inicio .content .word2, #inicio .content .word3, #inicio .content .word4 { position: absolute; }
+#inicio .content .word1 { display: block; color: #fdd900; }
+@media only screen and (min-width: 48em) { #inicio .content .word1 { top: 20px; font-size: 1.1em; } }
+@media only screen and (min-width: 56.25em) { #inicio .content .word1 { top: 0px; font-size: 1.5em; } }
+@media only screen and (min-width: 68.75em) { #inicio .content .word1 { top: 10px; font-size: 1.5em; } }
+#inicio .content .word2, #inicio .content .word3 { font-family: "Playfair Display", serif; font-size: 0.5em; font-weight: 700; font-style: italic; }
+@media only screen and (min-width: 48em) { #inicio .content .word2 { font-size: 0.3em; top: 150px; padding-left: 305px; } }
+@media only screen and (min-width: 56.25em) { #inicio .content .word2 { font-size: 0.5em; top: 165px; padding-left: 415px; } }
+@media only screen and (min-width: 68.75em) { #inicio .content .word2 { top: 181px; } }
+@media only screen and (min-width: 48em) { #inicio .content .word3 { top: 212px; margin-left: -54px; font-size: 0.3em; } }
+@media only screen and (min-width: 56.25em) { #inicio .content .word3 { font-size: 0.5em; top: 248px; margin-left: -86px; } }
+@media only screen and (min-width: 68.75em) { #inicio .content .word3 { top: 252px; margin-left: -90px; } }
+@media only screen and (min-width: 48em) { #inicio .content .word4 { top: 188px; font-size: 0.705em; } }
+@media only screen and (min-width: 56.25em) { #inicio .content .word4 { top: 220px; font-size: 0.96em; } }
+@media only screen and (min-width: 68.75em) { #inicio .content .word4 { top: 229px; font-size: 0.96em; } }
+#inicio .content .logo-subte { display: block; margin: 0 auto; }
+#inicio .content .logo-subte h4 a { text-align: center; text-indent: -5000px; display: block; background: url(../images/logo-subte.png) center center no-repeat; margin: 0 auto; -webkit-backface-visibility: hidden; -moz-backface-visibility: hidden; -ms-backface-visibility: hidden; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+@media only screen and (min-width: 48em) { #inicio .content .logo-subte h4 a { width: 180px; height: 180px; background-size: 120px 120px; } }
+@media only screen and (min-width: 56.25em) { #inicio .content .logo-subte h4 a { width: 180px; height: 180px; background-size: 120px 120px; } }
+@media only screen and (min-width: 68.75em) { #inicio .content .logo-subte h4 a { width: 250px; height: 250px; background-size: 200px 200px; } }
 
-.year-1910 {
-  background: url(../images/1910.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
+.year-1910 { background: url(../images/1910.jpg) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
 
-.year-1920 {
-  background: url(../images/1920.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
+.year-1920 { background: url(../images/1920.jpg) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
 
-.year-1930 {
-  background: url(../images/1930.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
-  .year-1930 h2 {
-    color: #fcfcfc; }
-  .year-1930 p {
-    color: #fcfcfc; }
+.year-1930 { background: url(../images/1930.jpg) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.year-1930 h2 { color: #fcfcfc; }
+.year-1930 p { color: #fcfcfc; }
 
-.year-1940 {
-  background: url(../images/1940.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
-  .year-1940 h2 {
-    color: #fcfcfc; }
-  .year-1940 p {
-    color: #fcfcfc; }
+.year-1940 { background: url(../images/1940.jpg) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.year-1940 h2 { color: #fcfcfc; }
+.year-1940 p { color: #fcfcfc; }
 
-.year-1950 {
-  background: url(../images/1950.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
-  .year-1950 h2 {
-    color: #fcfcfc; }
-  .year-1950 p {
-    color: #fcfcfc; }
+.year-1950 { background: url(../images/1950.jpg) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.year-1950 h2 { color: #fcfcfc; }
+.year-1950 p { color: #fcfcfc; }
 
-.year-1960 {
-  background: url(../images/1960.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
-  .year-1960 h2 {
-    color: #fcfcfc; }
-  .year-1960 p {
-    color: #fcfcfc; }
+.year-1960 { background: url(../images/1960.jpg) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.year-1960 h2 { color: #fcfcfc; }
+.year-1960 p { color: #fcfcfc; }
 
-.year-1970 {
-  background: url(../images/1970.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
-  .year-1970 h2 {
-    color: #fcfcfc; }
-  .year-1970 p {
-    color: #fcfcfc; }
+.year-1970 { background: url(../images/1970.jpg) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.year-1970 h2 { color: #fcfcfc; }
+.year-1970 p { color: #fcfcfc; }
 
-.year-1980 {
-  background: url(../images/1980.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
-  .year-1980 h2 {
-    color: #fcfcfc; }
-  .year-1980 p {
-    color: #fcfcfc; }
+.year-1980 { background: url(../images/1980.jpg) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.year-1980 h2 { color: #fcfcfc; }
+.year-1980 p { color: #fcfcfc; }
 
-.year-1990 {
-  background: url(../images/1990.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
-  .year-1990 h2 {
-    color: #fcfcfc; }
-  .year-1990 p {
-    color: #fcfcfc; }
+.year-1990 { background: url(../images/1990.jpg) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.year-1990 h2 { color: #fcfcfc; }
+.year-1990 p { color: #fcfcfc; }
 
-.year-2000 {
-  background: url(../images/2000.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
-  .year-2000 h2 {
-    color: #fcfcfc; }
-  .year-2000 p {
-    color: #fcfcfc; }
+.year-2000 { background: url(../images/2000.jpg) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.year-2000 h2 { color: #fcfcfc; }
+.year-2000 p { color: #fcfcfc; }
 
-.year-2010 {
-  background: url(../images/2010.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
-  .year-2010 h2 {
-    color: #fcfcfc; }
-  .year-2010 p {
-    color: #fcfcfc; }
+.year-2010 { background: url(../images/2010.jpg) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+.year-2010 h2 { color: #fcfcfc; }
+.year-2010 p { color: #fcfcfc; }
 
-g.line path {
-  stroke-width: 12px;
-  fill: none;
-  stroke-linecap: round; }
+g.line path { stroke-width: 12px; fill: none; stroke-linecap: round; }
 
-g.stations circle {
-  fill: white;
-  stroke: none; }
+g.stations circle { fill: white; stroke: none; }
 
-g.chart path {
-  stroke: none; }
+g.chart path { stroke: none; }
 
-g.marker path {
-  stroke: white;
-  stroke-width: 2px; }
+g.marker path { stroke: white; stroke-width: 2px; }
 
-g.marker text {
-  text-anchor: end;
-  font-size: 20px;
-  font-weight: bold;
-  fill: white; }
+g.marker text { text-anchor: end; font-size: 20px; font-weight: bold; fill: white; }
 
-g.marker text.distance {
-  font-size: 12px;
-  font-weight: normal; }
+g.marker text.distance { font-size: 12px; font-weight: normal; }
 
-g.stations circle.not-yet {
-  opacity: 0.7; }
+g.stations circle.not-yet { opacity: 0.7; }
 
-g.monochrome {
-  opacity: 0.7; }
+g.monochrome { opacity: 0.7; }
 
-div.layer {
-  position: absolute;
-  opacity: 0.9;
-  z-index: -1; }
+div.layer { position: absolute; opacity: 0.9; z-index: -1; }
 
-.tile {
-  position: absolute;
-  width: 256px;
-  height: 256px; }
+.tile { position: absolute; width: 256px; height: 256px; }
 
-g.reticle rect {
-  fill: none;
-  stroke: #666666;
-  opacity: 0.5;
-  stroke-width: 2px;
-  stroke-linecap: round; }
+g.reticle rect { fill: none; stroke: #666666; opacity: 0.5; stroke-width: 2px; stroke-linecap: round; }
 
-g.corner-label text.stops {
-  font-weight: bold;
-  font-size: 18px;
-  text-anchor: end; }
+g.corner-label text.stops { font-weight: bold; font-size: 18px; text-anchor: end; }
 
-g.corner-label text.completed {
-  font-size: 13px;
-  text-anchor: end; }
+g.corner-label text.completed { font-size: 13px; text-anchor: end; }
 
-.hidden {
-  display: none; }
+.hidden { display: none; }
 
-body.loading div.credits span, body.loading div.chart, body.loading div.map {
-  display: none; }
+body.loading div.credits span, body.loading div.chart, body.loading div.map { display: none; }
 
-div.map {
-  position: relative;
-  border: 0px solid #999999;
-  margin-top: 8px;
-  overflow-x: hidden;
-  overflow-y: hidden; }
+div.map { position: relative; border: 0px solid #999999; margin-top: 8px; overflow-x: hidden; overflow-y: hidden; }
 
-div.chart {
-  border: 1px solid transparent;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none; }
+div.chart { border: 1px solid transparent; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
 
-div.viz-container {
-  position: fixed;
-  bottom: 0px;
-  right: -2px;
-  z-index: 30; }
+div.viz-container { position: fixed; bottom: 0px; right: -2px; z-index: 30; }
+@media only screen and (min-width: 37.5em) { div.viz-container { zoom: 0.75; } }
+@media only screen and (min-width: 48em) { div.viz-container { zoom: 0.85; } }
+@media only screen and (min-width: 56.25em) { div.viz-container { zoom: 1; } }
+@media only screen and (min-width: 68.75em) { div.viz-container { zoom: 1.1; } }
 
-div.loading {
-  text-align: center;
-  padding-top: 20px;
-  font-weight: bold;
-  font-size: 18px;
-  color: steelblue; }
+div.loading { text-align: center; padding-top: 20px; font-weight: bold; font-size: 18px; color: steelblue; }
 
-body.loaded div.loading {
-  display: none; }
+body.loaded div.loading { display: none; }
 
-.disable-hover,
-.disable-hover * {
-  pointer-events: none !important; }
+.disable-hover, .disable-hover * { pointer-events: none !important; }
