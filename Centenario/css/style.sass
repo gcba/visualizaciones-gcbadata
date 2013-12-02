@@ -1,6 +1,10 @@
-@import url(http://fonts.googleapis.com/css?family=Abril+Fatface|Headland+One|PT+Serif:400,700|Playfair+Display:400,700italic)
+@import url(http://fonts.googleapis.com/css?family=Open+Sans|Abril+Fatface|PT+Serif:400,700)
 
 @import "breakpoints"
+@import "font-face"
+
+@include declare-font-face('Gotham', 'gotham', 'normal')
+
 
 $paddingStandard: 30px
 $primary: #FCFCFC
@@ -12,26 +16,30 @@ $linea-d: rgba(0,128,103,0.6)
 $linea-e: rgba(108,33,128,0.6)
 $linea-h: rgba(255,210,3,0.6)
 
-
 body
+
+  -webkit-font-smoothing: antialiased
+
   @include breakpoint(smartphone)
-    border: 5px solid white
+    // border: 5px solid white
     zoom: 1
 
   @include breakpoint(tablet)
-    border: 5px solid yellow
+    // border: 5px solid yellow
     zoom: 1
   
   @include breakpoint(common)
-    border: 5px solid green
+    // border: 5px solid green
     zoom: 1
   
   @include breakpoint(large)
-    border: 5px solid red
+    // border: 5px solid red
     zoom: 1
 
   padding: 0px
   margin: 0px
+  overflow: auto
+  min-height: 1300px
 
   font-family: 'PT Serif', sans-serif
 
@@ -203,7 +211,7 @@ section
       color: $primary
       font-family: 'Abril Fatface', serif
       margin-top: 0px
-      text-shadow: 1px 0px 5px rgba(150, 150, 150, 0.6)
+      // text-shadow: 1px 0px 5px rgba(150, 150, 150, 0.6)
       position: inherit
     p
       display: block
@@ -233,13 +241,19 @@ section
       @include breakpoint(large)
         font-size: 0.9em
         line-height: 1.6em
-        width: 40%
+        width: 35%
+        z-index: 10
+
+      @include breakpoint(extralarge)
+        font-size: 1.1em
+        line-height: 1.6em
+        width: 37%
         z-index: 10
 
       position: inherit
 
       span
-        font-family: "Playfair Display", Georgia, serif
+        font-family: 'Abril Fatface', Georgia, serif
         font-size: 2em
         font-weight: 400
 
@@ -285,17 +299,57 @@ section
       z-index: 0
 
 #inicio
+  
+  @include breakpoint(smartphone)
+    background: url(../images/inicio.jpg) no-repeat center center fixed 
+    -webkit-background-size: cover
+    -moz-background-size: cover
+    -o-background-size: cover
+    background-size: cover
+    height: 1300px
+    overflow: hidden
+  
+  @include breakpoint(tablet)
   background: url(../images/inicio.jpg) no-repeat center center fixed 
-  -webkit-background-size: cover
-  -moz-background-size: cover
-  -o-background-size: cover
-  background-size: cover
+  height: 1300px
+  overflow: hidden
+  
+  @include breakpoint(common)
+    background: url(../images/inicio.jpg) no-repeat center center fixed 
+    -webkit-background-size: cover
+    -moz-background-size: cover
+    -o-background-size: cover
+    background-size: cover
+    height: 1300px
+    overflow: hidden
+  
+  @include breakpoint(large)
+    background: url(../images/inicio.jpg) no-repeat center center fixed 
+    -webkit-background-size: cover
+    -moz-background-size: cover
+    -o-background-size: cover
+    background-size: cover
+    height: 1300px
+    overflow: hidden
+  
 
   .content
   
     h1, h2
       text-align: left
-      text-shadow: 1px 0px 5px rgba(0, 0, 0, 0.7)
+      
+      @include breakpoint(smartphone)
+        text-shadow: none
+      
+      @include breakpoint(tablet)
+        text-shadow: none
+      
+      @include breakpoint(common)
+        text-shadow: 1px 0px 5px rgba(0, 0, 0, 0.7)
+      
+      @include breakpoint(large)
+        text-shadow: 1px 0px 5px rgba(0, 0, 0, 0.7)
+      
 
     h1
       @include breakpoint(tablet)
@@ -563,6 +617,74 @@ section
   p
     color: $primary
 
+.hoy
+  background: url(../images/hoy.jpg) no-repeat center center fixed 
+  -webkit-background-size: cover
+  -moz-background-size: cover
+  -o-background-size: cover
+  background-size: cover
+  
+  h2
+    color: $primary
+  p
+    color: $primary
+
+footer
+  display: block
+  height: 1100px
+  background-color: #333333
+
+.site-footer
+  position: relative
+  color: #ffffff
+  padding: 50px 10px
+  filter: none
+  font-size: 12px
+
+  h4
+    font-size: 4.1em
+    margin-left: 40px
+    line-height: 1em
+
+  li
+    font-size: 1.2em
+    line-height: 1.5em
+
+    span
+      display: block
+      font-weight: bold
+    
+  li:first-child
+    span
+      margin-bottom: 15px
+
+
+  
+  a
+    color: #ffbd04
+
+  .gcba-tech
+    padding-top: 50px
+
+  .footer-gcba
+    .logo-invertido
+      float:left
+      width: 172px
+      height: 33px
+      background: url(../img/logo-invertido.png)
+
+    h2.slogan
+      float:right
+      margin-top: -4px
+      margin-bottom: 0px
+      font-size: 15px
+      letter-spacing: -1px
+      color: #fff
+
+  .footer-info 
+    display: block
+    margin-top: 30px
+  
 
 // Data Viz Styles
 
@@ -654,13 +776,16 @@ div.viz-container
     zoom: 0.75
   
   @include breakpoint(tablet)
-    zoom: 0.85
+    zoom: 0.7
   
   @include breakpoint(common)
     zoom: 1
   
   @include breakpoint(large)
     zoom: 1.1
+
+  @include breakpoint(extralarge)
+    zoom: 1.3
 
   position: fixed
   bottom: 0px

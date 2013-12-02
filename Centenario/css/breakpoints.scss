@@ -1,4 +1,7 @@
 @mixin breakpoint($point) {
+  @if $point == extralarge {
+    @media only screen and (min-width : 78.25em) { @content; }
+  }
   @if $point == large {
     @media only screen and (min-width : 68.75em) { @content; }
   }
@@ -6,9 +9,11 @@
     @media only screen and (min-width : 56.25em) { @content; }
   }
   @else if $point == tablet {
-    @media only screen and (min-width : 48em)  { @content; }
+    @media only screen and (min-width : 48em) and (-webkit-min-device-pixel-ratio: 2) { @content; }
   }
   @else if $point == smartphone {
     @media only screen and (min-width : 37.5em) { @content; }
   }
 }
+
+

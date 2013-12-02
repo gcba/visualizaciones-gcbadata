@@ -338,6 +338,19 @@ d3.json("data/subte.json",function(error,subte) {
     updateCutoff(2013*12+1);
   }, { offset: 250 });
 
+  $('footer').waypoint(function() {
+    $('.content h2, .content p, .content .sharp').stop().animate({ opacity: 0 }, 500);
+    $('.nav-container').stop().animate({top:-50, opacity: 0}, 500);
+    $('.help-nav, .map, .chart').stop().animate({opacity: 0}, 300);
+    $('.viz-container').stop().animate({ right: -700 }, 1000);
+  }, { offset: 1000 });
+
+  $('.hoy').waypoint(function() {
+    $('.content h2, .content p, .content .sharp').stop().animate({ opacity: 1 }, 500);
+    $('.nav-container').stop().animate({top:0, opacity: 1}, 500);
+    $('.help-nav, .map, .chart').stop().animate({opacity: 1}, 300);
+    $('.viz-container').stop().animate({ right: -2 }, 1000);
+  });
 
   $('.help-nav a').on('click', function() {
 
