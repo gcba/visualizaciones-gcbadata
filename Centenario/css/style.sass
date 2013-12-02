@@ -74,13 +74,13 @@ a
       zoom: 0.8
     
     @include breakpoint(tablet)
-      top: 13px
-      left: 30px
+      top: 18px
+      left: 18px
       zoom: 1
     
     @include breakpoint(common)
-      top: 15px
-      left: 40px
+      top: 20px
+      left: 30px
       zoom: 1.1      
     
     margin: 2px 0px
@@ -169,6 +169,50 @@ nav
       color: rgba(9,9,9,0.9)
       background: rgba(255,255,255,1)
 
+.gcba
+  position: absolute
+  width: 100%
+  font-family: "Gotham", "Helvetica Neue", "Helvetica", sans-serif
+  color: white
+  z-index: 1000
+  bottom: 0px
+
+
+  @include breakpoint(smartphone)
+    font-size: 0.95em
+  
+  @include breakpoint(tablet)
+    font-size: 0.95em
+  
+  @include breakpoint(common)
+    font-size: 0.95em
+  
+  @include breakpoint(large)
+    font-size: 1.08em
+  
+  
+  .content
+    position: relative
+
+    .logo
+
+      position: absolute
+      left: 20px
+      bottom: 10px
+      background: url(../images/logo.png) no-repeat
+      display: block
+      padding: 18px
+      padding-left: 60px
+      z-index: 100
+
+    .ministerio
+      position: absolute
+      display: block
+      padding: 18px
+      bottom: 10px    
+      right: 0px
+      z-index: 101
+
 
 section
   overflow: hidden  
@@ -211,7 +255,7 @@ section
       color: $primary
       font-family: 'Abril Fatface', serif
       margin-top: 0px
-      // text-shadow: 1px 0px 5px rgba(150, 150, 150, 0.6)
+      text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5)
       position: inherit
     p
       display: block
@@ -260,6 +304,7 @@ section
       .linea-a, .linea-b, .linea-c, .linea-d, .linea-e, .linea-h
         font-family: 'PT Serif', Helvetica, Arial
         font-size: 0.9em
+        text-wrap: break-word
         font-weight: 700
         color: #ffffff
         margin: 2px 0px
@@ -333,7 +378,60 @@ section
     overflow: hidden
   
 
+  
+  .gcba
+    position: relative
+    font-family: "Gotham", "Helvetica Neue", "Helvetica", sans-serif
+    color: white
+    font-size: .95em
+    z-index: 1000
+
+    .logo
+      position: absolute
+      
+      @include breakpoint(smartphone)
+        top: 170px
+
+      @include breakpoint(tablet)
+        top: 120px
+      
+      @include breakpoint(common)
+        top: 10px
+      
+      @include breakpoint(large)
+        top: 10px
+      
+      left: 20px
+      background: url(../images/logo.png) no-repeat
+      display: block
+      padding: 18px
+      padding-left: 60px
+      z-index: 100
+
+    .ministerio
+      display: block
+      padding: 18px
+      position: absolute
+
+      @include breakpoint(smartphone)
+        top: 170px
+      
+      @include breakpoint(tablet)
+        top: 10px
+      
+      @include breakpoint(common)
+        top: 10px
+      
+      @include breakpoint(large)
+        top: 10px
+      
+      top: 10px
+      right: 0px
+      display: block
+      z-index: 101
+
   .content
+
   
     h1, h2
       text-align: left
@@ -345,13 +443,16 @@ section
         text-shadow: none
       
       @include breakpoint(common)
-        text-shadow: 1px 0px 5px rgba(0, 0, 0, 0.7)
+        text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5)
       
       @include breakpoint(large)
-        text-shadow: 1px 0px 5px rgba(0, 0, 0, 0.7)
+        text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5)
       
 
     h1
+      @include breakpoint(smartphone)
+        margin-left: 26%
+
       @include breakpoint(tablet)
         margin-left: 31%
       
@@ -364,6 +465,11 @@ section
     h2
       margin-top: 0px
       margin-bottom: 0px
+
+      @include breakpoint(smartphone)
+        padding-top: 320px
+        font-size: 3em
+        margin-left: 22%
 
       @include breakpoint(tablet)
         padding-top: 320px
@@ -390,10 +496,13 @@ section
     .word1
       display: block
       
-      @include breakpoint(tablet)
+      @include breakpoint(smartphone)
         top: 20px
         font-size: 1.1em
       
+      @include breakpoint(tablet)
+        top: 20px
+        font-size: 1.1em
       
       @include breakpoint(common)
         top: 0px
@@ -414,6 +523,12 @@ section
 
     .word2
       
+      @include breakpoint(smartphone)
+        font-size: 0.3em
+        top: 150px
+        padding-left: 305px
+        
+      
       @include breakpoint(tablet)
         font-size: 0.3em
         top: 150px
@@ -428,6 +543,11 @@ section
         top: 181px
 
     .word3
+      @include breakpoint(smartphone)
+        top: 212px
+        margin-left: -54px
+        font-size: 0.3em
+      
       @include breakpoint(tablet)
         top: 212px
         margin-left: -54px
@@ -444,6 +564,10 @@ section
       
 
     .word4
+      
+      @include breakpoint(smartphone)
+        top: 188px
+        font-size: 0.705em
       
       @include breakpoint(tablet)
         top: 188px
@@ -467,15 +591,20 @@ section
         display: block
 
 
+        @include breakpoint(smartphone)
+          width: 180px
+          height: 180px
+          background-size: 100px 100px
+
         @include breakpoint(tablet)
           width: 180px
           height: 180px
           background-size: 120px 120px
         
         @include breakpoint(common)
-          width: 180px
-          height: 180px
-          background-size: 120px 120px
+          width: 150px
+          height: 150px
+          background-size: 140px 140px
         
         @include breakpoint(large)
           width: 250px
@@ -491,6 +620,10 @@ section
         -webkit-box-sizing: border-box
         -moz-box-sizing: border-box
         box-sizing: border-box
+
+
+
+
 
   
 
@@ -631,18 +764,33 @@ section
 
 footer
   display: block
-  height: 1100px
+  min-height: 900px
+
+  
+  @include breakpoint(smartphone)
+    min-height: 900px
+  
+  @include breakpoint(tablet)
+    min-height: 900px
+  
+  @include breakpoint(common)
+    min-height: 900px
+  
+  @include breakpoint(large)
+    min-height: 1300px
+  
+
   background-color: #333333
+  font-family: "Gotham", "Helvetica Neue", "Helvetica", sans-serif
 
 .site-footer
   position: relative
   color: #ffffff
   padding: 50px 10px
-  filter: none
-  font-size: 12px
+  font-size: 0.7em
 
   h4
-    font-size: 4.1em
+    font-size: 4em
     margin-left: 40px
     line-height: 1em
 
@@ -653,6 +801,7 @@ footer
     span
       display: block
       font-weight: bold
+      margin-top: 10px
     
   li:first-child
     span
@@ -664,22 +813,7 @@ footer
     color: #ffbd04
 
   .gcba-tech
-    padding-top: 50px
-
-  .footer-gcba
-    .logo-invertido
-      float:left
-      width: 172px
-      height: 33px
-      background: url(../img/logo-invertido.png)
-
-    h2.slogan
-      float:right
-      margin-top: -4px
-      margin-bottom: 0px
-      font-size: 15px
-      letter-spacing: -1px
-      color: #fff
+    padding-top: 30px
 
   .footer-info 
     display: block
@@ -782,10 +916,13 @@ div.viz-container
     zoom: 1
   
   @include breakpoint(large)
-    zoom: 1.1
+    zoom: 0.94
 
   @include breakpoint(extralarge)
-    zoom: 1.3
+    zoom: 1.2
+
+  @media only screen and (min-width: 1400px) and (min-height: 820px)
+    zoom: 1.2
 
   position: fixed
   bottom: 0px

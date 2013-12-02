@@ -9,11 +9,9 @@
     @media only screen and (min-width : 56.25em) { @content; }
   }
   @else if $point == tablet {
-    @media only screen and (min-width : 48em) and (-webkit-min-device-pixel-ratio: 2) { @content; }
+    @media only screen and (min-width : 48em) and (max-width: 64em) { @content; }
   }
   @else if $point == smartphone {
-    @media only screen and (min-width : 37.5em) { @content; }
+    @media only screen and (min-width : 20em) and (max-width: 30em) { @content; }
   }
 }
-
-

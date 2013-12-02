@@ -31,7 +31,7 @@ http://noahveltman.com/subte/
 
 */
 
-var width = 640, height = 540, chartHeight = 90, chartMargin = 5,
+var width = 600, height = 540, chartHeight = 80, chartMargin = 0,
   layer = d3.select("div.layer").style("width",width+"px").style("height",height+"px"),
 
   chart = d3.select("div.chart")
@@ -129,7 +129,13 @@ d3.json("data/subte.json",function(error,subte) {
 
     var b = path.bounds(stationGeoJSON),
         s = Math.pow(2,21)/2/Math.PI*0.8,
-        t = [(width - s * (b[1][0] + b[0][0])) / 2, (height - s * (b[1][1] + b[0][1])) / 2];
+        // t = [(width - s * (b[1][0] + b[0][0])) / 2, (height - s * (b[1][1] + b[0][1])) / 2];
+
+        t = [272592, -171774] 
+
+  console.log(b);
+  console.log(s);
+  console.log(t);
 
   projection = projection.scale(s).translate(t);
 
@@ -137,6 +143,13 @@ d3.json("data/subte.json",function(error,subte) {
     .scale(s*2*Math.PI)
     .translate(t)
     ();
+
+  console.log(t);
+
+  // gcbadata.geifffi5
+
+  // gcbadata.gdmoea7m
+
 
   var image = layer
     .style(prefix + "transform", matrix3d(tiles.scale, tiles.translate))
@@ -356,7 +369,7 @@ d3.json("data/subte.json",function(error,subte) {
 
       var height = $(window).height();
 
-      var titlePosition = height / 2 + 50;
+      var titlePosition = height / 2 + 20;
 
 
       var flag = $('.viz-container, .nav-container, .content h2, .content p, .content .sharp').data('flag')!=undefined?$('.viz-container, .nav-container, .content h2, .content p, .content .sharp').data('flag'):true;
