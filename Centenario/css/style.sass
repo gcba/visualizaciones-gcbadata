@@ -918,11 +918,16 @@ div.viz-container
   @include breakpoint(large)
     zoom: 0.94
 
-  @include breakpoint(extralarge)
-    zoom: 1.2
+  
+  @media only screen and (min-width: 1280px) and (max-height: 800px)
+    zoom: 0.96
 
+  
   @media only screen and (min-width: 1400px) and (min-height: 820px)
-    zoom: 1.2
+    zoom: 0.98
+
+  @include breakpoint(extralarge)
+    zoom: 1.1
 
   position: fixed
   bottom: 0px

@@ -31,7 +31,7 @@ http://noahveltman.com/subte/
 
 */
 
-var width = 600, height = 540, chartHeight = 80, chartMargin = 0,
+var width = 600, height = 540, chartHeight = 90, chartMargin = 0,
   layer = d3.select("div.layer").style("width",width+"px").style("height",height+"px"),
 
   chart = d3.select("div.chart")
@@ -348,7 +348,7 @@ d3.json("data/subte.json",function(error,subte) {
 
   $('.hoy').waypoint(function() {
     $('.hoy h2, .hoy p, .hoy .sharp').stop().animate({ opacity: 1 }, 1000);
-    updateCutoff(2013*12+1);
+    updateCutoff(2013*12+10);
   }, { offset: 250 });
 
   $('footer').waypoint(function() {
@@ -425,7 +425,9 @@ d3.json("data/subte.json",function(error,subte) {
     var filtered = subte.areaChartValues[0].filter(function(e){return (e.months <= cutoff); }).map(function(e){ return e.distance; });
     markerLabel.text(Math.floor((cutoff-1)/12)).attr("x",x).style("text-anchor",anch);        
     var dist = filtered.length ? d3.max(filtered) : 0;
-    distanceLabel.text(Math.round(dist/1000*10)/10+" km de vías").attr("x",x*1.2).style("text-anchor",anch);;
+
+    var totalDist = Math.round((Math.round(dist/1000*10)/10)+3.2);
+    distanceLabel.text(totalDist+" km de vías").attr("x",x*1.2).style("text-anchor",anch);;
 
     stations.classed("not-yet",function(d) { return d.firstAppearance > months; });
 
