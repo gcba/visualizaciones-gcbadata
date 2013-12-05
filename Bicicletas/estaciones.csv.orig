@@ -1,0 +1,57 @@
+name,latitude,longitude,population,color
+<<<<<<< HEAD
+Aduana,0,0,0,#C4C4C4
+Alsina,0,0,0,#BABABA
+Arenales,0,0,0,#7F7F7F
+CMD,0,0,0,#DEDEDE
+Congreso,0,0,0,#BEBEBE
+Distrito Audiovisual,0,0,0,#556270
+Emma de la Barra,0,0,0,#DCDCDC
+Facultad de Derecho,0,0,0,#454545
+Independencia,0,0,0,#858585
+Montevideo,0,0,0,#ABABAB
+Obelisco,0,0,0,#B8B8B8
+Once,0,0,0,#C0C0C0
+Pacífico,0,0,0,#EDEDED
+Parque Centenario,0,0,0,#5E5E5E
+Parque Las Heras,0,0,0,#6CDFEA
+Parque Lezama,0,0,0,#D3D3D3
+Parque Patricios,0,0,0,#4A4A4A
+Plaza Almagro,0,0,0,"#C3FF68	"
+Plaza Boedo,0,0,0,#CFCFCF
+Plaza de Mayo,0,0,0,#A1A1A1
+Plaza Emilio Mitre,0,0,0,#7A7A7A
+Plaza Guemes,0,0,1,#7A7A7A
+Plaza Houssay,0,0,2,#7A7A7A
+Plaza Italia,0,0,3,#7A7A7A
+Plaza Roma,0,0,4,#7A7A7A
+Plaza San Martín,0,0,5,#7A7A7A
+Plaza Vicente López,0,0,6,#7A7A7A
+Puerto Madero - UCA,0,0,7,#7A7A7A
+Retiro,0,0,8,#7A7A7A
+Suipacha,0,0,9,#7A7A7A
+Tribunales,0,0,10,#7A7A7A
+Virrey Cevallos,0,0,11,#7A7A7A
+=======
+Aduana,-34.611365,-58.369077,0,#C4C4C4
+Cmd,-34.654286,-58.380429,0,#BABABA
+Congreso,-34.609829,-58.389289,0,#7F7F7F
+Derecho,-34.583669,-58.391243,0,#DEDEDE
+Independencia,-34.617908,-58.380470,0,#BEBEBE
+Obelisco,-34.606297,-58.381051,0,#556270
+Once,-34.609475,-58.407615,0,#DCDCDC
+Pacifico,-34.577468,-58.426158,0,#454545
+Parque Las Heras,-34.585030,-58.407637,0,#858585
+Parque Lezama,-34.628170,-58.369853,0,#ABABAB
+Pza. Almagro,-34.605926,-58.419482,0,#B8B8B8
+Pza. De Mayo,-34.609917,-58.374721,0,#C0C0C0
+Pza. Houssay,-34.599020,-58.398217,0,#EDEDED
+Pza. Italia,-34.580224,-58.420751,0,#5E5E5E
+Pza. Roma,-34.601599,-58.369421,0,#6CDFEA
+Pza. San Martin,-34.594958,-58.378283,0,#D3D3D3
+Pza. Vicente Lopez,-34.593367,-58.389698,0,#4A4A4A
+Retiro,-34.592308,-58.375010,0,#C3FF68	
+Tribunales,-34.601342,-58.385008,0,#CFCFCF
+UCA Puerto Madero,-34.615974,-58.365666,0,#A1A1A1
+Virrey Cevallos,-34.622755,-58.388947,0,#7A7A7A
+>>>>>>> gh-pages

@@ -21,17 +21,17 @@ $(document).ready(function() {
     scrollTime: 1200, 
     activeClass: 'active'
   });
-
 });
 
 /*
+
 
 Disclaimer: The following code was created by Noah Veltman.
 http://noahveltman.com/subte/
 
 */
 
-var width = 600, height = 540, chartHeight = 90, chartMargin = 0,
+var width = 650, height = 540, chartHeight = 90, chartMargin = 0,
   layer = d3.select("div.layer").style("width",width+"px").style("height",height+"px"),
 
   chart = d3.select("div.chart")
@@ -79,7 +79,7 @@ d3.json("data/subte.json",function(error,subte) {
   
   var yScale = d3.scale.linear()
     .domain([0,d3.max(subte.areaChartValues[0].map(function(d){return d.distance;}))])
-    .range([chartHeight,30]).clamp(true);
+    .range([chartHeight,40]).clamp(true);
 
   var g = chart.append("g").attr("class","chart");      
   g.append("g").attr("class","monochrome").selectAll("path").data(subte.areaChartValues).enter().append("path")                
@@ -103,13 +103,14 @@ d3.json("data/subte.json",function(error,subte) {
     .attr("d","M0,0 L 0,"+chartHeight);
 
   markerLabel = marker.append("text")
+    .attr("class","year")
     .attr("x",0)
-    .attr("y",16)
+    .attr("y",22)
     .attr("x",-5).text("");
   distanceLabel = marker.append("text")
     .attr("class","distance")
     .attr("x",-5)
-    .attr("y",30).text("");
+    .attr("y",40).text("");
 
 
   for (var s in subte.stations) {
@@ -128,16 +129,22 @@ d3.json("data/subte.json",function(error,subte) {
     // Calculations for position of the stations
 
     var b = path.bounds(stationGeoJSON),
+        //b = b+b[1][0]+10,
         s = Math.pow(2,21)/2/Math.PI*0.8,
-        // t = [(width - s * (b[1][0] + b[0][0])) / 2, (height - s * (b[1][1] + b[0][1])) / 2];
+        //t = [(width - s * (b[1][0] + b[0][0])) / 2, (height - s * (b[1][1] + b[0][1])) / 2];
 
-        t = [272592, -171774] 
+        t = [272590, -171810]
 
-  console.log(b);
-  console.log(s);
-  console.log(t);
+  // console.log(b);
+  // console.log(s);
+  // console.log(t);
 
   projection = projection.scale(s).translate(t);
+
+  var mapPosition = {
+      left : 62,
+      top : 52
+  };
 
   var tiles = tile
     .scale(s*2*Math.PI)
@@ -167,7 +174,10 @@ d3.json("data/subte.json",function(error,subte) {
     .data(subte.lineOrder)
     .enter()
     .append("path")
-    .attr("d",function(d){ return getMapPathString(d);}).style("stroke",function(d){ return monochrome(subte.colors[d]);});
+    .attr("d",function(d){ return getMapPathString(d);}).style("stroke",function(d){ return monochrome(subte.colors[d]);})
+    .attr("transform", "translate(" + mapPosition.left + "," + mapPosition.top + ")");
+
+
 
   var colorG = map.append("g")
     .attr("class","color line");
@@ -177,10 +187,12 @@ d3.json("data/subte.json",function(error,subte) {
     .enter()
     .append("path")
     .attr("d","M0,0")
-    .style("stroke",function(d){ return subte.colors[d]; });
+    .style("stroke",function(d){ return subte.colors[d]; })
+    .attr("transform", "translate(" + mapPosition.left + "," + mapPosition.top + ")");
 
   mostRecent = colorG.append("path")
-    .attr("d","M0,0");
+    .attr("d","M0,0")
+    .attr("transform", "translate(" + mapPosition.left + "," + mapPosition.top + ")");
 
   stations = map.append("g")
     .attr("class","stations")
@@ -189,9 +201,10 @@ d3.json("data/subte.json",function(error,subte) {
     .enter()
     .append("circle")
     .attr("class","not-yet")
-    .attr("r",5)
+    .attr("r",3.5)
     .attr("cx",function(d){ return projection(d.lnglat)[0]; })
-    .attr("cy",function(d){ return projection(d.lnglat)[1]; });
+    .attr("cy",function(d){ return projection(d.lnglat)[1]; })
+    .attr("transform", "translate(" + mapPosition.left + "," + mapPosition.top + ")");
 
   reticle = map.append("g")
     .attr("class","reticle")
@@ -199,11 +212,19 @@ d3.json("data/subte.json",function(error,subte) {
     .attr("x",0)
     .attr("y",0)
     .attr("width",0)
-    .attr("height",0);
+    .attr("height",0)
+    .attr("transform", "translate(" + mapPosition.left + "," + mapPosition.top + ")");
 
   cornerLabel = map.append("g")
     .attr("class","corner-label");
-  cornerLabel = [cornerLabel.append("text").attr("class","stops").attr("x",width-12).attr("y",24),cornerLabel.append("text").attr("class","completed").attr("x",width-12).attr("y",40)];  
+  cornerLabel = [cornerLabel.append("text")
+    .attr("class","stops")
+    .attr("x",width-12)
+    .attr("y",24),
+      cornerLabel.append("text")
+      .attr("class","completed")
+      .attr("x",width-12)
+      .attr("y",40)];  
   
   chart.on("click",function() {
     clearInterval(interval);        
@@ -271,7 +292,7 @@ d3.json("data/subte.json",function(error,subte) {
   }, { offset: -80 });
 
   $('.year-1930').waypoint(function() {
-    updateCutoff(1934*12+12);
+    updateCutoff(1934*12+1);
   }, { offset: -120 });
 
   $('.year-1930').waypoint(function() {
@@ -279,8 +300,12 @@ d3.json("data/subte.json",function(error,subte) {
   }, { offset: -170 });
 
   $('.year-1930').waypoint(function() {
-    updateCutoff(1937*12+1);
+    updateCutoff(1936*12+1);
   }, { offset: -220 });
+
+  $('.year-1930').waypoint(function() {
+    updateCutoff(1938*12+1);
+  }, { offset: -250 });
 
   // $('.year-1930').waypoint(function() {
   //   updateCutoff(1931*12+1);
@@ -303,13 +328,8 @@ d3.json("data/subte.json",function(error,subte) {
   }, { offset: 250 });
 
   $('.year-1940').waypoint(function() {
-    updateCutoff(1944*12+6);
+    updateCutoff(1944*12+1);
   }, { offset: -50 });
-
-  $('.year-1940').waypoint(function() {
-    $('.year-1940 h2, .year-1940 p, .year-1940 .sharp').stop().animate({ opacity: 1 }, 1000);
-    updateCutoff(1944*12+12);
-  }, { offset: -120 });
 
   $('.year-1950').waypoint(function() {
     $('.year-1950 h2, .year-1950 p, .year-1950 .sharp').stop().animate({ opacity: 1 }, 1000);
@@ -320,6 +340,10 @@ d3.json("data/subte.json",function(error,subte) {
     $('.year-1960 h2, .year-1960 p, .year-1960 .sharp').stop().animate({ opacity: 1 }, 1000);
     updateCutoff(1960*12+1);
   }, { offset: 250});
+
+  $('.year-1960').waypoint(function() {
+    updateCutoff(1966*12+1);
+  }, { offset: -70});
 
   $('.year-1970').waypoint(function() {
     $('.year-1970 h2, .year-1970 p, .year-1970 .sharp').stop().animate({ opacity: 1 }, 1000);

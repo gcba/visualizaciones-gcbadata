@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <!--Edit the title of the page-->
+    <title>Jacarandás de Buenos Aires</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/themes/css/cartodb.css" />
+    <!--[if lte IE 8]>
+      <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/themes/css/cartodb.ie.css" />
+    <![endif]-->
+    <!--Switch between the different themes changing the stylesheet below - light-theme.css |dark-theme.css -->
+    <link rel="stylesheet" href="css/dark-theme.css">
+    <link rel="stylesheet" href="css/makeitresponsive.css">
+  </head>
+  <body>
+
+    <div class="map" id="map"></div>
+
+    <div class="sidepanel">
+      <div class="wrapper">
+        <div class="context subheader">
+          <p>Mapa creado por <a href="https://twitter.com/gcbadata">GCBAdata</a></p>
+        </div>
+        <h1>Jacarandás de Buenos Aires </h1>
+<<<<<<< HEAD
+        <p>En noviembre la Ciudad se tiñe de un color particular. Los jacarandás comienzan a florecer y embellecen aún más las calles porteñas. Si te cruzás con uno, sacale una foto y twitteala usando <a href="https://twitter.com/search?q=%23Jacaranda&src=hash&mode=realtime">#jacaranda</a> y <a href="https://twitter.com/search?q=%23BuenosAires&src=hash&mode=realtime">#BuenosAires</a></p>
+
+                <!--Copy and paste the div below for creating content blocks-->
+        <h3>¿Cuántos hay?</h3>
+        <p>En la Ciudad hay 372.699 mil árboles de alineación, de los cuales poco más de 11.034 son jacarandás.<br><br>
+
+        <a href="http://www.buenosaires.gob.ar/noticias/el-jacaranda-simbolo-de-la-primavera-en-buenos-aires">Link a noticia</a>
+=======
+          <h3>¿Cuántos hay?</h3>
+        <p>En la Ciudad hay 372.699 mil árboles de alineación, de los cuales poco más de 11.034 son jacarandás.<br><br>
+
+        Leé la <a href="http://www.buenosaires.gob.ar/noticias/el-jacaranda-simbolo-de-la-primavera-en-buenos-aires">nota completa</a>.
+>>>>>>> gh-pages
+
+        </p>
+        
+
+
+        <h3>Fuente</h3>
+        <p>En 2011, el Ministerio de Ambiente y Espacio Público realizó un censo de cada uno de los árboles de alineación de la Ciudad. Esto significa que relevó cada árbol -con su especie, sub especie, nombre común y ubicación- que se encuentra a los lados de las calles porteñas. <br>Descargá el censo en <a href="http://data.buenosaires.gob.ar/dataset/censo-arbolado">Buenos Aires Data</a>.</p>
+
+        <div class="context footer">
+          <p>Creado con <a href="http://cartodb.com">CartoDB</a></p></p>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false&v=3.8"></script>
+    <script src="http://libs.cartocdn.com/cartodb.js/v3/cartodb.js"></script>
+    <!--Change the URL below in order to change the map that is being shown.
+    Go to your map in CartoDB, click on share, and copy the URL undert the API section
+    Check the cartodb.js documentation for more info
+    http://developers.cartodb.com/documentation/cartodb-js.html-->
+    <script type="text/javascript">
+      cartodb.createVis('map', 'http://gcba.cartodb.com/api/v2/viz/c0681f70-1403-11e3-9e4e-3085a9a956e8/viz.json');
+    </script>
+
+  </body>
+      </html>

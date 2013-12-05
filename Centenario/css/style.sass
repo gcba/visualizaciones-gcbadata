@@ -6,6 +6,9 @@
 @include declare-font-face('Gotham', 'gotham', 'normal')
 
 
+.dg.ac
+  z-index: 500 !important
+
 $paddingStandard: 30px
 $primary: #FCFCFC
 $secondary: #FCFCFC
@@ -277,13 +280,13 @@ section
         z-index: 10
 
       @include breakpoint(common)
-        font-size: 0.9em
+        font-size: 0.95em
         line-height: 1.6em
-        width: 30%
+        width: 27%
         z-index: 10
 
       @include breakpoint(large)
-        font-size: 0.9em
+        font-size: 0.95em
         line-height: 1.6em
         width: 35%
         z-index: 10
@@ -823,13 +826,14 @@ footer
 // Data Viz Styles
 
 g.line path      
-  stroke-width: 12px
+  stroke-width: 7px
   fill: none
   stroke-linecap: round
 
 g.stations circle
   fill: #fff
-  stroke: none      
+  stroke: none  
+  opacity: 0.96   
 
 g.chart path
   stroke: none
@@ -840,16 +844,19 @@ g.marker path
 
 g.marker text
   text-anchor: end
-  font-size: 20px
+  font-size: 30px
   font-weight: bold
   fill: #fff
 
+g.marker text.year
+  font-family: "Abril Fatface", serif
+
 g.marker text.distance
-  font-size: 12px
+  font-size: 15px
   font-weight: normal     
 
 g.stations circle.not-yet
-  opacity: 0.7
+  opacity: 0.3
 
 g.monochrome
   opacity: 0.7
