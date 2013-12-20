@@ -1,0 +1,4349 @@
+{
+    "name" : "Arboles",
+    "children": [
+        {
+            "name": "Aceráceas",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "Arce negundo",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Aceráceas",
+                        "nombre_comun": "Arce negundo"
+                    },
+                    "map": {
+                        "color": "Aceráceas",
+                        "size": 6651
+                    }
+                },
+                {
+                    "name": "Arce tridente",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Aceráceas",
+                        "nombre_comun": "Arce tridente"
+                    },
+                    "map": {
+                        "color": "Aceráceas",
+                        "size": 690
+                    }
+                },
+                {
+                    "name": "Arce",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Aceráceas",
+                        "nombre_comun": "Arce"
+                    },
+                    "map": {
+                        "color": "Aceráceas",
+                        "size": 144
+                    }
+                },
+                {
+                    "name": "Arce campestre (Arce común o  Arce menor)",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Aceráceas",
+                        "nombre_comun": "Arce campestre (Arce común o  Arce menor)"
+                    },
+                    "map": {
+                        "color": "Aceráceas",
+                        "size": 116
+                    }
+                },
+                {
+                    "name": "Arce real",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Aceráceas",
+                        "nombre_comun": "Arce real"
+                    },
+                    "map": {
+                        "color": "Aceráceas",
+                        "size": 29
+                    }
+                },
+                {
+                    "name": "Arce blanco",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Aceráceas",
+                        "nombre_comun": "Arce blanco"
+                    },
+                    "map": {
+                        "color": "Aceráceas",
+                        "size": 17
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "Aceráceas",
+                "nombre_comun": "Arce negundo"
+            }
+        },
+        {
+            "name": "Adoxaceae",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "Sauco austral",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Adoxaceae",
+                        "nombre_comun": "Sauco austral"
+                    },
+                    "map": {
+                        "color": "Adoxaceae",
+                        "size": 3
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "Adoxaceae",
+                "nombre_comun": "Sauco austral"
+            }
+        },
+        {
+            "name": "Agavaceae",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "Yuca",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Agavaceae",
+                        "nombre_comun": "Yuca"
+                    },
+                    "map": {
+                        "color": "Agavaceae",
+                        "size": 9
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "Agavaceae",
+                "nombre_comun": "Yuca"
+            }
+        },
+        {
+            "name": "Anacardiáceas",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "Aguaribay",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Anacardiáceas",
+                        "nombre_comun": "Aguaribay"
+                    },
+                    "map": {
+                        "color": "Anacardiáceas",
+                        "size": 98
+                    }
+                },
+                {
+                    "name": "Zumaque de Virginia (Rus o Rustifina)",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Anacardiáceas",
+                        "nombre_comun": "Zumaque de Virginia (Rus o Rustifina)"
+                    },
+                    "map": {
+                        "color": "Anacardiáceas",
+                        "size": 33
+                    }
+                },
+                {
+                    "name": "Rus",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Anacardiáceas",
+                        "nombre_comun": "Rus"
+                    },
+                    "map": {
+                        "color": "Anacardiáceas",
+                        "size": 8
+                    }
+                },
+                {
+                    "name": "Schinus",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Anacardiáceas",
+                        "nombre_comun": "Schinus"
+                    },
+                    "map": {
+                        "color": "Anacardiáceas",
+                        "size": 6
+                    }
+                },
+                {
+                    "name": "Aruera",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Anacardiáceas",
+                        "nombre_comun": "Aruera"
+                    },
+                    "map": {
+                        "color": "Anacardiáceas",
+                        "size": 1
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "Anacardiáceas",
+                "nombre_comun": "Aguaribay"
+            }
+        },
+        {
+            "name": "Apocynaceae",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "Laurel de jardin (Laurel de flor)",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Apocynaceae",
+                        "nombre_comun": "Laurel de jardin (Laurel de flor)"
+                    },
+                    "map": {
+                        "color": "Apocynaceae",
+                        "size": 419
+                    }
+                },
+                {
+                    "name": "Adelfa amarilla",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Apocynaceae",
+                        "nombre_comun": "Adelfa amarilla"
+                    },
+                    "map": {
+                        "color": "Apocynaceae",
+                        "size": 10
+                    }
+                },
+                {
+                    "name": "Guatambu amarillo",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Apocynaceae",
+                        "nombre_comun": "Guatambu amarillo"
+                    },
+                    "map": {
+                        "color": "Apocynaceae",
+                        "size": 3
+                    }
+                },
+                {
+                    "name": "Nerium",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Apocynaceae",
+                        "nombre_comun": "Nerium"
+                    },
+                    "map": {
+                        "color": "Apocynaceae",
+                        "size": 2
+                    }
+                },
+                {
+                    "name": "Thevetia",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Apocynaceae",
+                        "nombre_comun": "Thevetia"
+                    },
+                    "map": {
+                        "color": "Apocynaceae",
+                        "size": 2
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "Apocynaceae",
+                "nombre_comun": "Laurel de jardin (Laurel de flor)"
+            }
+        },
+        {
+            "name": "Araliaceas",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "Aralia",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Araliaceas",
+                        "nombre_comun": "Aralia"
+                    },
+                    "map": {
+                        "color": "Araliaceas",
+                        "size": 29
+                    }
+                },
+                {
+                    "name": "Aralia variegada",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Araliaceas",
+                        "nombre_comun": "Aralia variegada"
+                    },
+                    "map": {
+                        "color": "Araliaceas",
+                        "size": 21
+                    }
+                },
+                {
+                    "name": "Cheflera",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Araliaceas",
+                        "nombre_comun": "Cheflera"
+                    },
+                    "map": {
+                        "color": "Araliaceas",
+                        "size": 19
+                    }
+                },
+                {
+                    "name": "Aralia elegantisima",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Araliaceas",
+                        "nombre_comun": "Aralia elegantisima"
+                    },
+                    "map": {
+                        "color": "Araliaceas",
+                        "size": 8
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "Araliaceas",
+                "nombre_comun": "Aralia"
+            }
+        },
+        {
+            "name": "Araucariaceas",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "Bunya-bunya (Araucaria de Bidwill)",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Araucariaceas",
+                        "nombre_comun": "Bunya-bunya (Araucaria de Bidwill)"
+                    },
+                    "map": {
+                        "color": "Araucariaceas",
+                        "size": 60
+                    }
+                },
+                {
+                    "name": "Araucaria (Araucaria de pisos)",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Araucariaceas",
+                        "nombre_comun": "Araucaria (Araucaria de pisos)"
+                    },
+                    "map": {
+                        "color": "Araucariaceas",
+                        "size": 46
+                    }
+                },
+                {
+                    "name": "Araucaria",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Araucariaceas",
+                        "nombre_comun": "Araucaria"
+                    },
+                    "map": {
+                        "color": "Araucariaceas",
+                        "size": 36
+                    }
+                },
+                {
+                    "name": "Pino del Paraná (Pino de Misiones o Pino de Brasil)",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Araucariaceas",
+                        "nombre_comun": "Pino del Paraná (Pino de Misiones o Pino de Brasil)"
+                    },
+                    "map": {
+                        "color": "Araucariaceas",
+                        "size": 13
+                    }
+                },
+                {
+                    "name": "Kauri de corteza lisa",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Araucariaceas",
+                        "nombre_comun": "Kauri de corteza lisa"
+                    },
+                    "map": {
+                        "color": "Araucariaceas",
+                        "size": 11
+                    }
+                },
+                {
+                    "name": "Araucaria columnar",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Araucariaceas",
+                        "nombre_comun": "Araucaria columnar"
+                    },
+                    "map": {
+                        "color": "Araucariaceas",
+                        "size": 3
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "Araucariaceas",
+                "nombre_comun": "Bunya-bunya (Araucaria de Bidwill)"
+            }
+        },
+        {
+            "name": "Arecaceas",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "Pindó",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Arecaceas",
+                        "nombre_comun": "Pindó"
+                    },
+                    "map": {
+                        "color": "Arecaceas",
+                        "size": 1875
+                    }
+                },
+                {
+                    "name": "Fenix",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Arecaceas",
+                        "nombre_comun": "Fenix"
+                    },
+                    "map": {
+                        "color": "Arecaceas",
+                        "size": 331
+                    }
+                },
+                {
+                    "name": "Palmera china",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Arecaceas",
+                        "nombre_comun": "Palmera china"
+                    },
+                    "map": {
+                        "color": "Arecaceas",
+                        "size": 179
+                    }
+                },
+                {
+                    "name": "Palma de california",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Arecaceas",
+                        "nombre_comun": "Palma de california"
+                    },
+                    "map": {
+                        "color": "Arecaceas",
+                        "size": 109
+                    }
+                },
+                {
+                    "name": "Palmera enana",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Arecaceas",
+                        "nombre_comun": "Palmera enana"
+                    },
+                    "map": {
+                        "color": "Arecaceas",
+                        "size": 87
+                    }
+                },
+                {
+                    "name": "Washingtonia (Palmera washingtonia)",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Arecaceas",
+                        "nombre_comun": "Washingtonia (Palmera washingtonia)"
+                    },
+                    "map": {
+                        "color": "Arecaceas",
+                        "size": 84
+                    }
+                },
+                {
+                    "name": "Washingtonia",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Arecaceas",
+                        "nombre_comun": "Washingtonia"
+                    },
+                    "map": {
+                        "color": "Arecaceas",
+                        "size": 63
+                    }
+                },
+                {
+                    "name": "Palmera del senegal",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Arecaceas",
+                        "nombre_comun": "Palmera del senegal"
+                    },
+                    "map": {
+                        "color": "Arecaceas",
+                        "size": 37
+                    }
+                },
+                {
+                    "name": "Palma Bangalow  (Palma Rey)",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Arecaceas",
+                        "nombre_comun": "Palma Bangalow  (Palma Rey)"
+                    },
+                    "map": {
+                        "color": "Arecaceas",
+                        "size": 26
+                    }
+                },
+                {
+                    "name": "Areca",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Arecaceas",
+                        "nombre_comun": "Areca"
+                    },
+                    "map": {
+                        "color": "Arecaceas",
+                        "size": 14
+                    }
+                },
+                {
+                    "name": "Trachycarpus",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Arecaceas",
+                        "nombre_comun": "Trachycarpus"
+                    },
+                    "map": {
+                        "color": "Arecaceas",
+                        "size": 10
+                    }
+                },
+                {
+                    "name": "Caranday",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Arecaceas",
+                        "nombre_comun": "Caranday"
+                    },
+                    "map": {
+                        "color": "Arecaceas",
+                        "size": 6
+                    }
+                },
+                {
+                    "name": "Fénix paludosa",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Arecaceas",
+                        "nombre_comun": "Fénix paludosa"
+                    },
+                    "map": {
+                        "color": "Arecaceas",
+                        "size": 4
+                    }
+                },
+                {
+                    "name": "Palmito",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Arecaceas",
+                        "nombre_comun": "Palmito"
+                    },
+                    "map": {
+                        "color": "Arecaceas",
+                        "size": 2
+                    }
+                },
+                {
+                    "name": "Livistona de China (Palmera china de abanico)",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Arecaceas",
+                        "nombre_comun": "Livistona de China (Palmera china de abanico)"
+                    },
+                    "map": {
+                        "color": "Arecaceas",
+                        "size": 2
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "Arecaceas",
+                "nombre_comun": "Pindó"
+            }
+        },
+        {
+            "name": "Betuláceas",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "Abedul común (Abedul de Europa o Abedul verrugoso)",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Betuláceas",
+                        "nombre_comun": "Abedul común (Abedul de Europa o Abedul verrugoso)"
+                    },
+                    "map": {
+                        "color": "Betuláceas",
+                        "size": 74
+                    }
+                },
+                {
+                    "name": "Abedul blanco",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Betuláceas",
+                        "nombre_comun": "Abedul blanco"
+                    },
+                    "map": {
+                        "color": "Betuláceas",
+                        "size": 13
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "Betuláceas",
+                "nombre_comun": "Abedul común (Abedul de Europa o Abedul verrugoso)"
+            }
+        },
+        {
+            "name": "Bignoniáceas",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "Jacarandá",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Bignoniáceas",
+                        "nombre_comun": "Jacarandá"
+                    },
+                    "map": {
+                        "color": "Bignoniáceas",
+                        "size": 10240
+                    }
+                },
+                {
+                    "name": "Guarán amarillo",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Bignoniáceas",
+                        "nombre_comun": "Guarán amarillo"
+                    },
+                    "map": {
+                        "color": "Bignoniáceas",
+                        "size": 470
+                    }
+                },
+                {
+                    "name": "Lapacho rosado",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Bignoniáceas",
+                        "nombre_comun": "Lapacho rosado"
+                    },
+                    "map": {
+                        "color": "Bignoniáceas",
+                        "size": 313
+                    }
+                },
+                {
+                    "name": "Catalpa",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Bignoniáceas",
+                        "nombre_comun": "Catalpa"
+                    },
+                    "map": {
+                        "color": "Bignoniáceas",
+                        "size": 209
+                    }
+                },
+                {
+                    "name": "Lapacho",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Bignoniáceas",
+                        "nombre_comun": "Lapacho"
+                    },
+                    "map": {
+                        "color": "Bignoniáceas",
+                        "size": 180
+                    }
+                },
+                {
+                    "name": "Lapacho amarillo",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Bignoniáceas",
+                        "nombre_comun": "Lapacho amarillo"
+                    },
+                    "map": {
+                        "color": "Bignoniáceas",
+                        "size": 79
+                    }
+                },
+                {
+                    "name": "Lapacho negro",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Bignoniáceas",
+                        "nombre_comun": "Lapacho negro"
+                    },
+                    "map": {
+                        "color": "Bignoniáceas",
+                        "size": 1
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "Bignoniáceas",
+                "nombre_comun": "Jacarandá"
+            }
+        },
+        {
+            "name": "Bombacáceas",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "Palo borracho rosado",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Bombacáceas",
+                        "nombre_comun": "Palo borracho rosado"
+                    },
+                    "map": {
+                        "color": "Bombacáceas",
+                        "size": 1490
+                    }
+                },
+                {
+                    "name": "Palo borracho",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Bombacáceas",
+                        "nombre_comun": "Palo borracho"
+                    },
+                    "map": {
+                        "color": "Bombacáceas",
+                        "size": 227
+                    }
+                },
+                {
+                    "name": "Palo borracho blanco",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Bombacáceas",
+                        "nombre_comun": "Palo borracho blanco"
+                    },
+                    "map": {
+                        "color": "Bombacáceas",
+                        "size": 83
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "Bombacáceas",
+                "nombre_comun": "Palo borracho rosado"
+            }
+        },
+        {
+            "name": "Borragináceas",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "Guayaibi",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Borragináceas",
+                        "nombre_comun": "Guayaibi"
+                    },
+                    "map": {
+                        "color": "Borragináceas",
+                        "size": 2
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "Borragináceas",
+                "nombre_comun": "Guayaibi"
+            }
+        },
+        {
+            "name": "Buxaceas",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "Boj común",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Buxaceas",
+                        "nombre_comun": "Boj común"
+                    },
+                    "map": {
+                        "color": "Buxaceas",
+                        "size": 5
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "Buxaceas",
+                "nombre_comun": "Boj común"
+            }
+        },
+        {
+            "name": "Caprifoliaceas",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "Viburnum",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Caprifoliaceas",
+                        "nombre_comun": "Viburnum"
+                    },
+                    "map": {
+                        "color": "Caprifoliaceas",
+                        "size": 23
+                    }
+                },
+                {
+                    "name": "Bola de nieve",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Caprifoliaceas",
+                        "nombre_comun": "Bola de nieve"
+                    },
+                    "map": {
+                        "color": "Caprifoliaceas",
+                        "size": 2
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "Caprifoliaceas",
+                "nombre_comun": "Viburnum"
+            }
+        },
+        {
+            "name": "Casuarinaceas",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "Casuarina",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Casuarinaceas",
+                        "nombre_comun": "Casuarina"
+                    },
+                    "map": {
+                        "color": "Casuarinaceas",
+                        "size": 451
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "Casuarinaceas",
+                "nombre_comun": "Casuarina"
+            }
+        },
+        {
+            "name": "Celtidacea",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "Almez del Mississippi",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Celtidacea",
+                        "nombre_comun": "Almez del Mississippi"
+                    },
+                    "map": {
+                        "color": "Celtidacea",
+                        "size": 2
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "Celtidacea",
+                "nombre_comun": "Almez del Mississippi"
+            }
+        },
+        {
+            "name": "Cervantesiaceae",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "Sombra de toro",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Cervantesiaceae",
+                        "nombre_comun": "Sombra de toro"
+                    },
+                    "map": {
+                        "color": "Cervantesiaceae",
+                        "size": 2
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "Cervantesiaceae",
+                "nombre_comun": "Sombra de toro"
+            }
+        },
+        {
+            "name": "Cicadaceas",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "Cica",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Cicadaceas",
+                        "nombre_comun": "Cica"
+                    },
+                    "map": {
+                        "color": "Cicadaceas",
+                        "size": 24
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "Cicadaceas",
+                "nombre_comun": "Cica"
+            }
+        },
+        {
+            "name": "Combretaceae",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "Palo amarillo",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Combretaceae",
+                        "nombre_comun": "Palo amarillo"
+                    },
+                    "map": {
+                        "color": "Combretaceae",
+                        "size": 1
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "Combretaceae",
+                "nombre_comun": "Palo amarillo"
+            }
+        },
+        {
+            "name": "Cupresáceas",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "Ciprés",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Cupresáceas",
+                        "nombre_comun": "Ciprés"
+                    },
+                    "map": {
+                        "color": "Cupresáceas",
+                        "size": 519
+                    }
+                },
+                {
+                    "name": "Tuya oriental",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Cupresáceas",
+                        "nombre_comun": "Tuya oriental"
+                    },
+                    "map": {
+                        "color": "Cupresáceas",
+                        "size": 116
+                    }
+                },
+                {
+                    "name": "Tuya",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Cupresáceas",
+                        "nombre_comun": "Tuya"
+                    },
+                    "map": {
+                        "color": "Cupresáceas",
+                        "size": 76
+                    }
+                },
+                {
+                    "name": "Tuja",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Cupresáceas",
+                        "nombre_comun": "Tuja"
+                    },
+                    "map": {
+                        "color": "Cupresáceas",
+                        "size": 56
+                    }
+                },
+                {
+                    "name": "Ciprés piramidal",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Cupresáceas",
+                        "nombre_comun": "Ciprés piramidal"
+                    },
+                    "map": {
+                        "color": "Cupresáceas",
+                        "size": 52
+                    }
+                },
+                {
+                    "name": "Macrocarpa (Ciprés de Monterrey o Ciprés de Lambert)",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Cupresáceas",
+                        "nombre_comun": "Macrocarpa (Ciprés de Monterrey o Ciprés de Lambert)"
+                    },
+                    "map": {
+                        "color": "Cupresáceas",
+                        "size": 35
+                    }
+                },
+                {
+                    "name": "Cedro blanco de California",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Cupresáceas",
+                        "nombre_comun": "Cedro blanco de California"
+                    },
+                    "map": {
+                        "color": "Cupresáceas",
+                        "size": 32
+                    }
+                },
+                {
+                    "name": "Ciprés horizontal",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Cupresáceas",
+                        "nombre_comun": "Ciprés horizontal"
+                    },
+                    "map": {
+                        "color": "Cupresáceas",
+                        "size": 19
+                    }
+                },
+                {
+                    "name": "Arizónica (Ciprés de Arizona)",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Cupresáceas",
+                        "nombre_comun": "Arizónica (Ciprés de Arizona)"
+                    },
+                    "map": {
+                        "color": "Cupresáceas",
+                        "size": 18
+                    }
+                },
+                {
+                    "name": "Falso ciprés de Lawson",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Cupresáceas",
+                        "nombre_comun": "Falso ciprés de Lawson"
+                    },
+                    "map": {
+                        "color": "Cupresáceas",
+                        "size": 12
+                    }
+                },
+                {
+                    "name": "Juniperus",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Cupresáceas",
+                        "nombre_comun": "Juniperus"
+                    },
+                    "map": {
+                        "color": "Cupresáceas",
+                        "size": 11
+                    }
+                },
+                {
+                    "name": "Ciprés fúnebre (Ciprés llorón chino)",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Cupresáceas",
+                        "nombre_comun": "Ciprés fúnebre (Ciprés llorón chino)"
+                    },
+                    "map": {
+                        "color": "Cupresáceas",
+                        "size": 8
+                    }
+                },
+                {
+                    "name": "Ciprés blanco",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Cupresáceas",
+                        "nombre_comun": "Ciprés blanco"
+                    },
+                    "map": {
+                        "color": "Cupresáceas",
+                        "size": 7
+                    }
+                },
+                {
+                    "name": "Libocedro (Calocedro)",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Cupresáceas",
+                        "nombre_comun": "Libocedro (Calocedro)"
+                    },
+                    "map": {
+                        "color": "Cupresáceas",
+                        "size": 5
+                    }
+                },
+                {
+                    "name": "Libocedrus",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Cupresáceas",
+                        "nombre_comun": "Libocedrus"
+                    },
+                    "map": {
+                        "color": "Cupresáceas",
+                        "size": 2
+                    }
+                },
+                {
+                    "name": "Cedro de San Juan",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Cupresáceas",
+                        "nombre_comun": "Cedro de San Juan"
+                    },
+                    "map": {
+                        "color": "Cupresáceas",
+                        "size": 1
+                    }
+                },
+                {
+                    "name": "Falso alerce",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Cupresáceas",
+                        "nombre_comun": "Falso alerce"
+                    },
+                    "map": {
+                        "color": "Cupresáceas",
+                        "size": 1
+                    }
+                },
+                {
+                    "name": "Ciprés funerario",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Cupresáceas",
+                        "nombre_comun": "Ciprés funerario"
+                    },
+                    "map": {
+                        "color": "Cupresáceas",
+                        "size": 1
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "Cupresáceas",
+                "nombre_comun": "Ciprés"
+            }
+        },
+        {
+            "name": "Ebenaceas",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "Caqui",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Ebenaceas",
+                        "nombre_comun": "Caqui"
+                    },
+                    "map": {
+                        "color": "Ebenaceas",
+                        "size": 9
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "Ebenaceas",
+                "nombre_comun": "Caqui"
+            }
+        },
+        {
+            "name": "Esterculiáceas",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "Brachichiton (Árbol botella, Brachichito)",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Esterculiáceas",
+                        "nombre_comun": "Brachichiton (Árbol botella, Brachichito)"
+                    },
+                    "map": {
+                        "color": "Esterculiáceas",
+                        "size": 171
+                    }
+                },
+                {
+                    "name": "Braquiquito",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Esterculiáceas",
+                        "nombre_comun": "Braquiquito"
+                    },
+                    "map": {
+                        "color": "Esterculiáceas",
+                        "size": 35
+                    }
+                },
+                {
+                    "name": "Brachichito rosa",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Esterculiáceas",
+                        "nombre_comun": "Brachichito rosa"
+                    },
+                    "map": {
+                        "color": "Esterculiáceas",
+                        "size": 14
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "Esterculiáceas",
+                "nombre_comun": "Brachichiton (Árbol botella, Brachichito)"
+            }
+        },
+        {
+            "name": "Euforbiáceas",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "Falso cafeto",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Euforbiáceas",
+                        "nombre_comun": "Falso cafeto"
+                    },
+                    "map": {
+                        "color": "Euforbiáceas",
+                        "size": 123
+                    }
+                },
+                {
+                    "name": "Estrella federal",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Euforbiáceas",
+                        "nombre_comun": "Estrella federal"
+                    },
+                    "map": {
+                        "color": "Euforbiáceas",
+                        "size": 19
+                    }
+                },
+                {
+                    "name": "Euforbia",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Euforbiáceas",
+                        "nombre_comun": "Euforbia"
+                    },
+                    "map": {
+                        "color": "Euforbiáceas",
+                        "size": 10
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "Euforbiáceas",
+                "nombre_comun": "Falso cafeto"
+            }
+        },
+        {
+            "name": "Fagáceas",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "Roble común",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Fagáceas",
+                        "nombre_comun": "Roble común"
+                    },
+                    "map": {
+                        "color": "Fagáceas",
+                        "size": 243
+                    }
+                },
+                {
+                    "name": "Roble americano",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Fagáceas",
+                        "nombre_comun": "Roble americano"
+                    },
+                    "map": {
+                        "color": "Fagáceas",
+                        "size": 224
+                    }
+                },
+                {
+                    "name": "Roble palustre",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Fagáceas",
+                        "nombre_comun": "Roble palustre"
+                    },
+                    "map": {
+                        "color": "Fagáceas",
+                        "size": 170
+                    }
+                },
+                {
+                    "name": "Roble",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Fagáceas",
+                        "nombre_comun": "Roble"
+                    },
+                    "map": {
+                        "color": "Fagáceas",
+                        "size": 91
+                    }
+                },
+                {
+                    "name": "Encina",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Fagáceas",
+                        "nombre_comun": "Encina"
+                    },
+                    "map": {
+                        "color": "Fagáceas",
+                        "size": 22
+                    }
+                },
+                {
+                    "name": "Castaño",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Fagáceas",
+                        "nombre_comun": "Castaño"
+                    },
+                    "map": {
+                        "color": "Fagáceas",
+                        "size": 20
+                    }
+                },
+                {
+                    "name": "Alcornoque",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Fagáceas",
+                        "nombre_comun": "Alcornoque"
+                    },
+                    "map": {
+                        "color": "Fagáceas",
+                        "size": 7
+                    }
+                },
+                {
+                    "name": "",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Fagáceas",
+                        "nombre_comun": ""
+                    },
+                    "map": {
+                        "color": "Fagáceas",
+                        "size": null
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "Fagáceas",
+                "nombre_comun": "Roble común"
+            }
+        },
+        {
+            "name": "Fitolacáceas",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "Ombú",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Fitolacáceas",
+                        "nombre_comun": "Ombú"
+                    },
+                    "map": {
+                        "color": "Fitolacáceas",
+                        "size": 69
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "Fitolacáceas",
+                "nombre_comun": "Ombú"
+            }
+        },
+        {
+            "name": "Ginkgoaceas",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "Ginkgo",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Ginkgoaceas",
+                        "nombre_comun": "Ginkgo"
+                    },
+                    "map": {
+                        "color": "Ginkgoaceas",
+                        "size": 557
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "Ginkgoaceas",
+                "nombre_comun": "Ginkgo"
+            }
+        },
+        {
+            "name": "Hamamelidáceas",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "Liquidambar",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Hamamelidáceas",
+                        "nombre_comun": "Liquidambar"
+                    },
+                    "map": {
+                        "color": "Hamamelidáceas",
+                        "size": 4115
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "Hamamelidáceas",
+                "nombre_comun": "Liquidambar"
+            }
+        },
+        {
+            "name": "Hipocastanáceas",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "Castaño de Indias común",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Hipocastanáceas",
+                        "nombre_comun": "Castaño de Indias común"
+                    },
+                    "map": {
+                        "color": "Hipocastanáceas",
+                        "size": 17
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "Hipocastanáceas",
+                "nombre_comun": "Castaño de Indias común"
+            }
+        },
+        {
+            "name": "Juglandáceas",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "Nogal europeo (Nogal común)",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Juglandáceas",
+                        "nombre_comun": "Nogal europeo (Nogal común)"
+                    },
+                    "map": {
+                        "color": "Juglandáceas",
+                        "size": 50
+                    }
+                },
+                {
+                    "name": "Nogal criollo",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Juglandáceas",
+                        "nombre_comun": "Nogal criollo"
+                    },
+                    "map": {
+                        "color": "Juglandáceas",
+                        "size": 31
+                    }
+                },
+                {
+                    "name": "Nogal americano",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Juglandáceas",
+                        "nombre_comun": "Nogal americano"
+                    },
+                    "map": {
+                        "color": "Juglandáceas",
+                        "size": 25
+                    }
+                },
+                {
+                    "name": "Pecán",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Juglandáceas",
+                        "nombre_comun": "Pecán"
+                    },
+                    "map": {
+                        "color": "Juglandáceas",
+                        "size": 22
+                    }
+                },
+                {
+                    "name": "Juglans",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Juglandáceas",
+                        "nombre_comun": "Juglans"
+                    },
+                    "map": {
+                        "color": "Juglandáceas",
+                        "size": 10
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "Juglandáceas",
+                "nombre_comun": "Nogal europeo (Nogal común)"
+            }
+        },
+        {
+            "name": "Lauráceas",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "Palto",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Lauráceas",
+                        "nombre_comun": "Palto"
+                    },
+                    "map": {
+                        "color": "Lauráceas",
+                        "size": 1249
+                    }
+                },
+                {
+                    "name": "Falso Alcanforero",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Lauráceas",
+                        "nombre_comun": "Falso Alcanforero"
+                    },
+                    "map": {
+                        "color": "Lauráceas",
+                        "size": 142
+                    }
+                },
+                {
+                    "name": "Laurel",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Lauráceas",
+                        "nombre_comun": "Laurel"
+                    },
+                    "map": {
+                        "color": "Lauráceas",
+                        "size": 88
+                    }
+                },
+                {
+                    "name": "Alcanforero",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Lauráceas",
+                        "nombre_comun": "Alcanforero"
+                    },
+                    "map": {
+                        "color": "Lauráceas",
+                        "size": 62
+                    }
+                },
+                {
+                    "name": "Cinnamomun",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Lauráceas",
+                        "nombre_comun": "Cinnamomun"
+                    },
+                    "map": {
+                        "color": "Lauráceas",
+                        "size": 16
+                    }
+                },
+                {
+                    "name": "Laurel blanco",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Lauráceas",
+                        "nombre_comun": "Laurel blanco"
+                    },
+                    "map": {
+                        "color": "Lauráceas",
+                        "size": 6
+                    }
+                },
+                {
+                    "name": "Laurus",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Lauráceas",
+                        "nombre_comun": "Laurus"
+                    },
+                    "map": {
+                        "color": "Lauráceas",
+                        "size": 1
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "Lauráceas",
+                "nombre_comun": "Palto"
+            }
+        },
+        {
+            "name": "Leguminosas",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "Tipa blanca",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Leguminosas",
+                        "nombre_comun": "Tipa blanca"
+                    },
+                    "map": {
+                        "color": "Leguminosas",
+                        "size": 8310
+                    }
+                },
+                {
+                    "name": "Sófora japónica",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Leguminosas",
+                        "nombre_comun": "Sófora japónica"
+                    },
+                    "map": {
+                        "color": "Leguminosas",
+                        "size": 2739
+                    }
+                },
+                {
+                    "name": "Acacia blanca",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Leguminosas",
+                        "nombre_comun": "Acacia blanca"
+                    },
+                    "map": {
+                        "color": "Leguminosas",
+                        "size": 1655
+                    }
+                },
+                {
+                    "name": "Acacia bola",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Leguminosas",
+                        "nombre_comun": "Acacia bola"
+                    },
+                    "map": {
+                        "color": "Leguminosas",
+                        "size": 1111
+                    }
+                },
+                {
+                    "name": "Acacia de constantinopla",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Leguminosas",
+                        "nombre_comun": "Acacia de constantinopla"
+                    },
+                    "map": {
+                        "color": "Leguminosas",
+                        "size": 1033
+                    }
+                },
+                {
+                    "name": "Visco (Viscote, Arca)",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Leguminosas",
+                        "nombre_comun": "Visco (Viscote, Arca)"
+                    },
+                    "map": {
+                        "color": "Leguminosas",
+                        "size": 1004
+                    }
+                },
+                {
+                    "name": "Acacia",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Leguminosas",
+                        "nombre_comun": "Acacia"
+                    },
+                    "map": {
+                        "color": "Leguminosas",
+                        "size": 806
+                    }
+                },
+                {
+                    "name": "Arce plateado (Arce blanco)",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Leguminosas",
+                        "nombre_comun": "Arce plateado (Arce blanco)"
+                    },
+                    "map": {
+                        "color": "Leguminosas",
+                        "size": 530
+                    }
+                },
+                {
+                    "name": "Pata de vaca  (Pezuña de vaca)",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Leguminosas",
+                        "nombre_comun": "Pata de vaca  (Pezuña de vaca)"
+                    },
+                    "map": {
+                        "color": "Leguminosas",
+                        "size": 508
+                    }
+                },
+                {
+                    "name": "Ceibo",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Leguminosas",
+                        "nombre_comun": "Ceibo"
+                    },
+                    "map": {
+                        "color": "Leguminosas",
+                        "size": 374
+                    }
+                },
+                {
+                    "name": "Acacia de Baile (Mimosa de Baile)",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Leguminosas",
+                        "nombre_comun": "Acacia de Baile (Mimosa de Baile)"
+                    },
+                    "map": {
+                        "color": "Leguminosas",
+                        "size": 287
+                    }
+                },
+                {
+                    "name": "Ibirá pitá",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Leguminosas",
+                        "nombre_comun": "Ibirá pitá"
+                    },
+                    "map": {
+                        "color": "Leguminosas",
+                        "size": 250
+                    }
+                },
+                {
+                    "name": "Mimosa (Aromo francés)",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Leguminosas",
+                        "nombre_comun": "Mimosa (Aromo francés)"
+                    },
+                    "map": {
+                        "color": "Leguminosas",
+                        "size": 200
+                    }
+                },
+                {
+                    "name": "Arce japones",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Leguminosas",
+                        "nombre_comun": "Arce japones"
+                    },
+                    "map": {
+                        "color": "Leguminosas",
+                        "size": 187
+                    }
+                },
+                {
+                    "name": "Sófora péndula",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Leguminosas",
+                        "nombre_comun": "Sófora péndula"
+                    },
+                    "map": {
+                        "color": "Leguminosas",
+                        "size": 183
+                    }
+                },
+                {
+                    "name": "Timbó (Oreja de negro)",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Leguminosas",
+                        "nombre_comun": "Timbó (Oreja de negro)"
+                    },
+                    "map": {
+                        "color": "Leguminosas",
+                        "size": 159
+                    }
+                },
+                {
+                    "name": "Lapachillo",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Leguminosas",
+                        "nombre_comun": "Lapachillo"
+                    },
+                    "map": {
+                        "color": "Leguminosas",
+                        "size": 149
+                    }
+                },
+                {
+                    "name": "Palo coca",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Leguminosas",
+                        "nombre_comun": "Palo coca"
+                    },
+                    "map": {
+                        "color": "Leguminosas",
+                        "size": 136
+                    }
+                },
+                {
+                    "name": "Corona de cristo",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Leguminosas",
+                        "nombre_comun": "Corona de cristo"
+                    },
+                    "map": {
+                        "color": "Leguminosas",
+                        "size": 114
+                    }
+                },
+                {
+                    "name": "Arbol de las orquideas",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Leguminosas",
+                        "nombre_comun": "Arbol de las orquideas"
+                    },
+                    "map": {
+                        "color": "Leguminosas",
+                        "size": 88
+                    }
+                },
+                {
+                    "name": "Acacia frisia",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Leguminosas",
+                        "nombre_comun": "Acacia frisia"
+                    },
+                    "map": {
+                        "color": "Leguminosas",
+                        "size": 70
+                    }
+                },
+                {
+                    "name": "Espinillo (Aromo)",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Leguminosas",
+                        "nombre_comun": "Espinillo (Aromo)"
+                    },
+                    "map": {
+                        "color": "Leguminosas",
+                        "size": 50
+                    }
+                },
+                {
+                    "name": "Robinia",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Leguminosas",
+                        "nombre_comun": "Robinia"
+                    },
+                    "map": {
+                        "color": "Leguminosas",
+                        "size": 42
+                    }
+                },
+                {
+                    "name": "Algarrobo Blanco",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Leguminosas",
+                        "nombre_comun": "Algarrobo Blanco"
+                    },
+                    "map": {
+                        "color": "Leguminosas",
+                        "size": 34
+                    }
+                },
+                {
+                    "name": "Acacia rosada",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Leguminosas",
+                        "nombre_comun": "Acacia rosada"
+                    },
+                    "map": {
+                        "color": "Leguminosas",
+                        "size": 29
+                    }
+                },
+                {
+                    "name": "Aromo",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Leguminosas",
+                        "nombre_comun": "Aromo"
+                    },
+                    "map": {
+                        "color": "Leguminosas",
+                        "size": 25
+                    }
+                },
+                {
+                    "name": "Carnaval",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Leguminosas",
+                        "nombre_comun": "Carnaval"
+                    },
+                    "map": {
+                        "color": "Leguminosas",
+                        "size": 23
+                    }
+                },
+                {
+                    "name": "Plumerillo rojo",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Leguminosas",
+                        "nombre_comun": "Plumerillo rojo"
+                    },
+                    "map": {
+                        "color": "Leguminosas",
+                        "size": 19
+                    }
+                },
+                {
+                    "name": "Árbol del amor (Ciclamor o  árbol de Judas",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Leguminosas",
+                        "nombre_comun": "Árbol del amor (Ciclamor o  árbol de Judas"
+                    },
+                    "map": {
+                        "color": "Leguminosas",
+                        "size": 18
+                    }
+                },
+                {
+                    "name": "Cina cina",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Leguminosas",
+                        "nombre_comun": "Cina cina"
+                    },
+                    "map": {
+                        "color": "Leguminosas",
+                        "size": 16
+                    }
+                },
+                {
+                    "name": "Ceibo del monte",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Leguminosas",
+                        "nombre_comun": "Ceibo del monte"
+                    },
+                    "map": {
+                        "color": "Leguminosas",
+                        "size": 13
+                    }
+                },
+                {
+                    "name": "Acacia negra",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Leguminosas",
+                        "nombre_comun": "Acacia negra"
+                    },
+                    "map": {
+                        "color": "Leguminosas",
+                        "size": 11
+                    }
+                },
+                {
+                    "name": "Boungavillea",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Leguminosas",
+                        "nombre_comun": "Boungavillea"
+                    },
+                    "map": {
+                        "color": "Leguminosas",
+                        "size": 10
+                    }
+                },
+                {
+                    "name": "Casia (Rama negra)",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Leguminosas",
+                        "nombre_comun": "Casia (Rama negra)"
+                    },
+                    "map": {
+                        "color": "Leguminosas",
+                        "size": 7
+                    }
+                },
+                {
+                    "name": "Sesbania",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Leguminosas",
+                        "nombre_comun": "Sesbania"
+                    },
+                    "map": {
+                        "color": "Leguminosas",
+                        "size": 7
+                    }
+                },
+                {
+                    "name": "Peladera (Liliaque, huaje o guaje)",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Leguminosas",
+                        "nombre_comun": "Peladera (Liliaque, huaje o guaje)"
+                    },
+                    "map": {
+                        "color": "Leguminosas",
+                        "size": 6
+                    }
+                },
+                {
+                    "name": "Prosopis",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Leguminosas",
+                        "nombre_comun": "Prosopis"
+                    },
+                    "map": {
+                        "color": "Leguminosas",
+                        "size": 4
+                    }
+                },
+                {
+                    "name": "Naranjillo",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Leguminosas",
+                        "nombre_comun": "Naranjillo"
+                    },
+                    "map": {
+                        "color": "Leguminosas",
+                        "size": 2
+                    }
+                },
+                {
+                    "name": "Acacia verde",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Leguminosas",
+                        "nombre_comun": "Acacia verde"
+                    },
+                    "map": {
+                        "color": "Leguminosas",
+                        "size": 2
+                    }
+                },
+                {
+                    "name": "Algarrobo",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Leguminosas",
+                        "nombre_comun": "Algarrobo"
+                    },
+                    "map": {
+                        "color": "Leguminosas",
+                        "size": 2
+                    }
+                },
+                {
+                    "name": "Vainillo",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Leguminosas",
+                        "nombre_comun": "Vainillo"
+                    },
+                    "map": {
+                        "color": "Leguminosas",
+                        "size": 1
+                    }
+                },
+                {
+                    "name": "Poinciana (Caesalpinia o Barba de chivo)",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Leguminosas",
+                        "nombre_comun": "Poinciana (Caesalpinia o Barba de chivo)"
+                    },
+                    "map": {
+                        "color": "Leguminosas",
+                        "size": 1
+                    }
+                },
+                {
+                    "name": "Inga",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Leguminosas",
+                        "nombre_comun": "Inga"
+                    },
+                    "map": {
+                        "color": "Leguminosas",
+                        "size": 1
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "Leguminosas",
+                "nombre_comun": "Tipa blanca"
+            }
+        },
+        {
+            "name": "Litráceas",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "Crespón (ñrbol de Júpiter)",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Litráceas",
+                        "nombre_comun": "Crespón (ñrbol de Júpiter)"
+                    },
+                    "map": {
+                        "color": "Litráceas",
+                        "size": 10033
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "Litráceas",
+                "nombre_comun": "Crespón (ñrbol de Júpiter)"
+            }
+        },
+        {
+            "name": "Magnoliáceas",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "Tulipanero",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Magnoliáceas",
+                        "nombre_comun": "Tulipanero"
+                    },
+                    "map": {
+                        "color": "Magnoliáceas",
+                        "size": 203
+                    }
+                },
+                {
+                    "name": "Magnolia",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Magnoliáceas",
+                        "nombre_comun": "Magnolia"
+                    },
+                    "map": {
+                        "color": "Magnoliáceas",
+                        "size": 110
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "Magnoliáceas",
+                "nombre_comun": "Tulipanero"
+            }
+        },
+        {
+            "name": "Malvácea",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "Rosa de Siria",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Malvácea",
+                        "nombre_comun": "Rosa de Siria"
+                    },
+                    "map": {
+                        "color": "Malvácea",
+                        "size": 522
+                    }
+                },
+                {
+                    "name": "Rosa de China (Hibisco)",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Malvácea",
+                        "nombre_comun": "Rosa de China (Hibisco)"
+                    },
+                    "map": {
+                        "color": "Malvácea",
+                        "size": 473
+                    }
+                },
+                {
+                    "name": "Abutilo",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Malvácea",
+                        "nombre_comun": "Abutilo"
+                    },
+                    "map": {
+                        "color": "Malvácea",
+                        "size": 149
+                    }
+                },
+                {
+                    "name": "Hibiscus",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Malvácea",
+                        "nombre_comun": "Hibiscus"
+                    },
+                    "map": {
+                        "color": "Malvácea",
+                        "size": 84
+                    }
+                },
+                {
+                    "name": "Rosa de mayo",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Malvácea",
+                        "nombre_comun": "Rosa de mayo"
+                    },
+                    "map": {
+                        "color": "Malvácea",
+                        "size": 59
+                    }
+                },
+                {
+                    "name": "Lagunaria (Árbol pica-pica)",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Malvácea",
+                        "nombre_comun": "Lagunaria (Árbol pica-pica)"
+                    },
+                    "map": {
+                        "color": "Malvácea",
+                        "size": 5
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "Malvácea",
+                "nombre_comun": "Rosa de Siria"
+            }
+        },
+        {
+            "name": "Meliáceas",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "Paraíso",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Meliáceas",
+                        "nombre_comun": "Paraíso"
+                    },
+                    "map": {
+                        "color": "Meliáceas",
+                        "size": 24077
+                    }
+                },
+                {
+                    "name": "Paraíso umbraculifera",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Meliáceas",
+                        "nombre_comun": "Paraíso umbraculifera"
+                    },
+                    "map": {
+                        "color": "Meliáceas",
+                        "size": 82
+                    }
+                },
+                {
+                    "name": "Cedro misionero (Cedro colorado o Cedro real)",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Meliáceas",
+                        "nombre_comun": "Cedro misionero (Cedro colorado o Cedro real)"
+                    },
+                    "map": {
+                        "color": "Meliáceas",
+                        "size": 32
+                    }
+                },
+                {
+                    "name": "Cedrela",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Meliáceas",
+                        "nombre_comun": "Cedrela"
+                    },
+                    "map": {
+                        "color": "Meliáceas",
+                        "size": 8
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "Meliáceas",
+                "nombre_comun": "Paraíso"
+            }
+        },
+        {
+            "name": "Menispermaceas",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "Coculus, Cóculo",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Menispermaceas",
+                        "nombre_comun": "Coculus, Cóculo"
+                    },
+                    "map": {
+                        "color": "Menispermaceas",
+                        "size": 5
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "Menispermaceas",
+                "nombre_comun": "Coculus, Cóculo"
+            }
+        },
+        {
+            "name": "Mioporaceas",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "Siempreverde",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Mioporaceas",
+                        "nombre_comun": "Siempreverde"
+                    },
+                    "map": {
+                        "color": "Mioporaceas",
+                        "size": 7
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "Mioporaceas",
+                "nombre_comun": "Siempreverde"
+            }
+        },
+        {
+            "name": "Mirtáceas",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "Limpiatubos",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Mirtáceas",
+                        "nombre_comun": "Limpiatubos"
+                    },
+                    "map": {
+                        "color": "Mirtáceas",
+                        "size": 1780
+                    }
+                },
+                {
+                    "name": "Eucalipto",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Mirtáceas",
+                        "nombre_comun": "Eucalipto"
+                    },
+                    "map": {
+                        "color": "Mirtáceas",
+                        "size": 80
+                    }
+                },
+                {
+                    "name": "Arrayán (Anacahuita)",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Mirtáceas",
+                        "nombre_comun": "Arrayán (Anacahuita)"
+                    },
+                    "map": {
+                        "color": "Mirtáceas",
+                        "size": 73
+                    }
+                },
+                {
+                    "name": "Callistemon",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Mirtáceas",
+                        "nombre_comun": "Callistemon"
+                    },
+                    "map": {
+                        "color": "Mirtáceas",
+                        "size": 57
+                    }
+                },
+                {
+                    "name": "Falso Guayabo (Guayaba del Brasil)",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Mirtáceas",
+                        "nombre_comun": "Falso Guayabo (Guayaba del Brasil)"
+                    },
+                    "map": {
+                        "color": "Mirtáceas",
+                        "size": 21
+                    }
+                },
+                {
+                    "name": "Eucalipto (Eucalipto común)",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Mirtáceas",
+                        "nombre_comun": "Eucalipto (Eucalipto común)"
+                    },
+                    "map": {
+                        "color": "Mirtáceas",
+                        "size": 19
+                    }
+                },
+                {
+                    "name": "ñangapirí (Grosella o Cereza de Cayena)",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Mirtáceas",
+                        "nombre_comun": "ñangapirí (Grosella o Cereza de Cayena)"
+                    },
+                    "map": {
+                        "color": "Mirtáceas",
+                        "size": 17
+                    }
+                },
+                {
+                    "name": "Robusta",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Mirtáceas",
+                        "nombre_comun": "Robusta"
+                    },
+                    "map": {
+                        "color": "Mirtáceas",
+                        "size": 8
+                    }
+                },
+                {
+                    "name": "Eucalipto cinerea",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Mirtáceas",
+                        "nombre_comun": "Eucalipto cinerea"
+                    },
+                    "map": {
+                        "color": "Mirtáceas",
+                        "size": 8
+                    }
+                },
+                {
+                    "name": "Eucalipto saligna",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Mirtáceas",
+                        "nombre_comun": "Eucalipto saligna"
+                    },
+                    "map": {
+                        "color": "Mirtáceas",
+                        "size": 7
+                    }
+                },
+                {
+                    "name": "Guayabo",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Mirtáceas",
+                        "nombre_comun": "Guayabo"
+                    },
+                    "map": {
+                        "color": "Mirtáceas",
+                        "size": 7
+                    }
+                },
+                {
+                    "name": "Eucalipto sideroxylon",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Mirtáceas",
+                        "nombre_comun": "Eucalipto sideroxylon"
+                    },
+                    "map": {
+                        "color": "Mirtáceas",
+                        "size": 6
+                    }
+                },
+                {
+                    "name": "Eucalipto tereticornis",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Mirtáceas",
+                        "nombre_comun": "Eucalipto tereticornis"
+                    },
+                    "map": {
+                        "color": "Mirtáceas",
+                        "size": 5
+                    }
+                },
+                {
+                    "name": "Mirto",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Mirtáceas",
+                        "nombre_comun": "Mirto"
+                    },
+                    "map": {
+                        "color": "Mirtáceas",
+                        "size": 4
+                    }
+                },
+                {
+                    "name": "Cerella",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Mirtáceas",
+                        "nombre_comun": "Cerella"
+                    },
+                    "map": {
+                        "color": "Mirtáceas",
+                        "size": 2
+                    }
+                },
+                {
+                    "name": "Guabiyú",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Mirtáceas",
+                        "nombre_comun": "Guabiyú"
+                    },
+                    "map": {
+                        "color": "Mirtáceas",
+                        "size": 2
+                    }
+                },
+                {
+                    "name": "Boj cepillo",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Mirtáceas",
+                        "nombre_comun": "Boj cepillo"
+                    },
+                    "map": {
+                        "color": "Mirtáceas",
+                        "size": 1
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "Mirtáceas",
+                "nombre_comun": "Limpiatubos"
+            }
+        },
+        {
+            "name": "Moráceas",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "Ficus",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Moráceas",
+                        "nombre_comun": "Ficus"
+                    },
+                    "map": {
+                        "color": "Moráceas",
+                        "size": 23714
+                    }
+                },
+                {
+                    "name": "Ficus variegado",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Moráceas",
+                        "nombre_comun": "Ficus variegado"
+                    },
+                    "map": {
+                        "color": "Moráceas",
+                        "size": 928
+                    }
+                },
+                {
+                    "name": "Gomero",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Moráceas",
+                        "nombre_comun": "Gomero"
+                    },
+                    "map": {
+                        "color": "Moráceas",
+                        "size": 828
+                    }
+                },
+                {
+                    "name": "Morera blanca",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Moráceas",
+                        "nombre_comun": "Morera blanca"
+                    },
+                    "map": {
+                        "color": "Moráceas",
+                        "size": 636
+                    }
+                },
+                {
+                    "name": "Morera de papel (Moral de China)",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Moráceas",
+                        "nombre_comun": "Morera de papel (Moral de China)"
+                    },
+                    "map": {
+                        "color": "Moráceas",
+                        "size": 113
+                    }
+                },
+                {
+                    "name": "Morus",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Moráceas",
+                        "nombre_comun": "Morus"
+                    },
+                    "map": {
+                        "color": "Moráceas",
+                        "size": 82
+                    }
+                },
+                {
+                    "name": "Higueron",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Moráceas",
+                        "nombre_comun": "Higueron"
+                    },
+                    "map": {
+                        "color": "Moráceas",
+                        "size": 80
+                    }
+                },
+                {
+                    "name": "Morera negra",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Moráceas",
+                        "nombre_comun": "Morera negra"
+                    },
+                    "map": {
+                        "color": "Moráceas",
+                        "size": 76
+                    }
+                },
+                {
+                    "name": "Higuera",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Moráceas",
+                        "nombre_comun": "Higuera"
+                    },
+                    "map": {
+                        "color": "Moráceas",
+                        "size": 72
+                    }
+                },
+                {
+                    "name": "Ficus lirá (Árbol lirá)",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Moráceas",
+                        "nombre_comun": "Ficus lirá (Árbol lirá)"
+                    },
+                    "map": {
+                        "color": "Moráceas",
+                        "size": 36
+                    }
+                },
+                {
+                    "name": "Laurel de indias",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Moráceas",
+                        "nombre_comun": "Laurel de indias"
+                    },
+                    "map": {
+                        "color": "Moráceas",
+                        "size": 10
+                    }
+                },
+                {
+                    "name": "Morera péndula",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Moráceas",
+                        "nombre_comun": "Morera péndula"
+                    },
+                    "map": {
+                        "color": "Moráceas",
+                        "size": 6
+                    }
+                },
+                {
+                    "name": "Naranjo de Luisana",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Moráceas",
+                        "nombre_comun": "Naranjo de Luisana"
+                    },
+                    "map": {
+                        "color": "Moráceas",
+                        "size": 3
+                    }
+                },
+                {
+                    "name": "Ficus herrumbroso (Ficus oxidado o Higuera herrumbrosa)",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Moráceas",
+                        "nombre_comun": "Ficus herrumbroso (Ficus oxidado o Higuera herrumbrosa)"
+                    },
+                    "map": {
+                        "color": "Moráceas",
+                        "size": 3
+                    }
+                },
+                {
+                    "name": "Ficus ali",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Moráceas",
+                        "nombre_comun": "Ficus ali"
+                    },
+                    "map": {
+                        "color": "Moráceas",
+                        "size": 2
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "Moráceas",
+                "nombre_comun": "Ficus"
+            }
+        },
+        {
+            "name": "Musaceae",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "Bananero",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Musaceae",
+                        "nombre_comun": "Bananero"
+                    },
+                    "map": {
+                        "color": "Musaceae",
+                        "size": 6
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "Musaceae",
+                "nombre_comun": "Bananero"
+            }
+        },
+        {
+            "name": "No identificada",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "No Determinable",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "No identificada",
+                        "nombre_comun": "No Determinable"
+                    },
+                    "map": {
+                        "color": "No identificada",
+                        "size": 5616
+                    }
+                },
+                {
+                    "name": "No Determinado",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "No identificada",
+                        "nombre_comun": "No Determinado"
+                    },
+                    "map": {
+                        "color": "No identificada",
+                        "size": 266
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "No identificada",
+                "nombre_comun": "No Determinable"
+            }
+        },
+        {
+            "name": "Oleáceas",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "Fresno americano",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Oleáceas",
+                        "nombre_comun": "Fresno americano"
+                    },
+                    "map": {
+                        "color": "Oleáceas",
+                        "size": 138663
+                    }
+                },
+                {
+                    "name": "Fresno (Fresno común)",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Oleáceas",
+                        "nombre_comun": "Fresno (Fresno común)"
+                    },
+                    "map": {
+                        "color": "Oleáceas",
+                        "size": 10376
+                    }
+                },
+                {
+                    "name": "Ligustro",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Oleáceas",
+                        "nombre_comun": "Ligustro"
+                    },
+                    "map": {
+                        "color": "Oleáceas",
+                        "size": 9571
+                    }
+                },
+                {
+                    "name": "Ligustro disciplinado (Ligustro variegado)",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Oleáceas",
+                        "nombre_comun": "Ligustro disciplinado (Ligustro variegado)"
+                    },
+                    "map": {
+                        "color": "Oleáceas",
+                        "size": 9142
+                    }
+                },
+                {
+                    "name": "Fresno",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Oleáceas",
+                        "nombre_comun": "Fresno"
+                    },
+                    "map": {
+                        "color": "Oleáceas",
+                        "size": 2899
+                    }
+                },
+                {
+                    "name": "Ligustrum",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Oleáceas",
+                        "nombre_comun": "Ligustrum"
+                    },
+                    "map": {
+                        "color": "Oleáceas",
+                        "size": 457
+                    }
+                },
+                {
+                    "name": "Olivo",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Oleáceas",
+                        "nombre_comun": "Olivo"
+                    },
+                    "map": {
+                        "color": "Oleáceas",
+                        "size": 253
+                    }
+                },
+                {
+                    "name": "Ligustrina",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Oleáceas",
+                        "nombre_comun": "Ligustrina"
+                    },
+                    "map": {
+                        "color": "Oleáceas",
+                        "size": 120
+                    }
+                },
+                {
+                    "name": "Ligustrina de California",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Oleáceas",
+                        "nombre_comun": "Ligustrina de California"
+                    },
+                    "map": {
+                        "color": "Oleáceas",
+                        "size": 13
+                    }
+                },
+                {
+                    "name": "Olivo oloroso",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Oleáceas",
+                        "nombre_comun": "Olivo oloroso"
+                    },
+                    "map": {
+                        "color": "Oleáceas",
+                        "size": 4
+                    }
+                },
+                {
+                    "name": "Olea",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Oleáceas",
+                        "nombre_comun": "Olea"
+                    },
+                    "map": {
+                        "color": "Oleáceas",
+                        "size": 3
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "Oleáceas",
+                "nombre_comun": "Fresno americano"
+            }
+        },
+        {
+            "name": "Palmaceas",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "Rafis (Palmerita china)",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Palmaceas",
+                        "nombre_comun": "Rafis (Palmerita china)"
+                    },
+                    "map": {
+                        "color": "Palmaceas",
+                        "size": 3
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "Palmaceas",
+                "nombre_comun": "Rafis (Palmerita china)"
+            }
+        },
+        {
+            "name": "Paulowniaceae",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "Paulonia (Árbol de la emperatriz)",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Paulowniaceae",
+                        "nombre_comun": "Paulonia (Árbol de la emperatriz)"
+                    },
+                    "map": {
+                        "color": "Paulowniaceae",
+                        "size": 5
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "Paulowniaceae",
+                "nombre_comun": "Paulonia (Árbol de la emperatriz)"
+            }
+        },
+        {
+            "name": "Pináceas",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "Pino",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Pináceas",
+                        "nombre_comun": "Pino"
+                    },
+                    "map": {
+                        "color": "Pináceas",
+                        "size": 171
+                    }
+                },
+                {
+                    "name": "Cedro del Himalaya",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Pináceas",
+                        "nombre_comun": "Cedro del Himalaya"
+                    },
+                    "map": {
+                        "color": "Pináceas",
+                        "size": 73
+                    }
+                },
+                {
+                    "name": "Cedro",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Pináceas",
+                        "nombre_comun": "Cedro"
+                    },
+                    "map": {
+                        "color": "Pináceas",
+                        "size": 47
+                    }
+                },
+                {
+                    "name": "Pino piñonero",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Pináceas",
+                        "nombre_comun": "Pino piñonero"
+                    },
+                    "map": {
+                        "color": "Pináceas",
+                        "size": 29
+                    }
+                },
+                {
+                    "name": "Cedro del Atlas (Cedro plateado o Cedro atlántico)",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Pináceas",
+                        "nombre_comun": "Cedro del Atlas (Cedro plateado o Cedro atlántico)"
+                    },
+                    "map": {
+                        "color": "Pináceas",
+                        "size": 25
+                    }
+                },
+                {
+                    "name": "Cedro del Himalaya variedad aurea",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Pináceas",
+                        "nombre_comun": "Cedro del Himalaya variedad aurea"
+                    },
+                    "map": {
+                        "color": "Pináceas",
+                        "size": 24
+                    }
+                },
+                {
+                    "name": "Pino de las canarias",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Pináceas",
+                        "nombre_comun": "Pino de las canarias"
+                    },
+                    "map": {
+                        "color": "Pináceas",
+                        "size": 24
+                    }
+                },
+                {
+                    "name": "Cedro azulado",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Pináceas",
+                        "nombre_comun": "Cedro azulado"
+                    },
+                    "map": {
+                        "color": "Pináceas",
+                        "size": 22
+                    }
+                },
+                {
+                    "name": "Pino de Siberia",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Pináceas",
+                        "nombre_comun": "Pino de Siberia"
+                    },
+                    "map": {
+                        "color": "Pináceas",
+                        "size": 7
+                    }
+                },
+                {
+                    "name": "Picea",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Pináceas",
+                        "nombre_comun": "Picea"
+                    },
+                    "map": {
+                        "color": "Pináceas",
+                        "size": 6
+                    }
+                },
+                {
+                    "name": "Pino carrasco (Pino de Jerusalén)",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Pináceas",
+                        "nombre_comun": "Pino carrasco (Pino de Jerusalén)"
+                    },
+                    "map": {
+                        "color": "Pináceas",
+                        "size": 5
+                    }
+                },
+                {
+                    "name": "Cedro del Líbano  (Cedro de Salomón)",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Pináceas",
+                        "nombre_comun": "Cedro del Líbano  (Cedro de Salomón)"
+                    },
+                    "map": {
+                        "color": "Pináceas",
+                        "size": 2
+                    }
+                },
+                {
+                    "name": "Pino rodeno",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Pináceas",
+                        "nombre_comun": "Pino rodeno"
+                    },
+                    "map": {
+                        "color": "Pináceas",
+                        "size": 1
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "Pináceas",
+                "nombre_comun": "Pino"
+            }
+        },
+        {
+            "name": "Pitosporáceas",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "Azarero",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Pitosporáceas",
+                        "nombre_comun": "Azarero"
+                    },
+                    "map": {
+                        "color": "Pitosporáceas",
+                        "size": 62
+                    }
+                },
+                {
+                    "name": "Pitosporum",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Pitosporáceas",
+                        "nombre_comun": "Pitosporum"
+                    },
+                    "map": {
+                        "color": "Pitosporáceas",
+                        "size": 3
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "Pitosporáceas",
+                "nombre_comun": "Azarero"
+            }
+        },
+        {
+            "name": "Platanaceae",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "Plátano",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Platanaceae",
+                        "nombre_comun": "Plátano"
+                    },
+                    "map": {
+                        "color": "Platanaceae",
+                        "size": 33019
+                    }
+                },
+                {
+                    "name": "Plátano de Oriente (Plátano oriental)",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Platanaceae",
+                        "nombre_comun": "Plátano de Oriente (Plátano oriental)"
+                    },
+                    "map": {
+                        "color": "Platanaceae",
+                        "size": 363
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "Platanaceae",
+                "nombre_comun": "Plátano"
+            }
+        },
+        {
+            "name": "Podocarpaceae",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "Afrocarpus",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Podocarpaceae",
+                        "nombre_comun": "Afrocarpus"
+                    },
+                    "map": {
+                        "color": "Podocarpaceae",
+                        "size": 5
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "Podocarpaceae",
+                "nombre_comun": "Afrocarpus"
+            }
+        },
+        {
+            "name": "Polygonaceas",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "Viraró (Viraró crespo)",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Polygonaceas",
+                        "nombre_comun": "Viraró (Viraró crespo)"
+                    },
+                    "map": {
+                        "color": "Polygonaceas",
+                        "size": 1
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "Polygonaceas",
+                "nombre_comun": "Viraró (Viraró crespo)"
+            }
+        },
+        {
+            "name": "Proteáceas",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "Roble sedoso (Grevillea)",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Proteáceas",
+                        "nombre_comun": "Roble sedoso (Grevillea)"
+                    },
+                    "map": {
+                        "color": "Proteáceas",
+                        "size": 151
+                    }
+                },
+                {
+                    "name": "Grevillea",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Proteáceas",
+                        "nombre_comun": "Grevillea"
+                    },
+                    "map": {
+                        "color": "Proteáceas",
+                        "size": 6
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "Proteáceas",
+                "nombre_comun": "Roble sedoso (Grevillea)"
+            }
+        },
+        {
+            "name": "Punicaceas",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "Granado",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Punicaceas",
+                        "nombre_comun": "Granado"
+                    },
+                    "map": {
+                        "color": "Punicaceas",
+                        "size": 8
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "Punicaceas",
+                "nombre_comun": "Granado"
+            }
+        },
+        {
+            "name": "Ramnaceas",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "Árbol de las pasas",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Ramnaceas",
+                        "nombre_comun": "Árbol de las pasas"
+                    },
+                    "map": {
+                        "color": "Ramnaceas",
+                        "size": 9
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "Ramnaceas",
+                "nombre_comun": "Árbol de las pasas"
+            }
+        },
+        {
+            "name": "Rosáceas",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "Níspero japonés",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Rosáceas",
+                        "nombre_comun": "Níspero japonés"
+                    },
+                    "map": {
+                        "color": "Rosáceas",
+                        "size": 1047
+                    }
+                },
+                {
+                    "name": "Ciruelo de jardín",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Rosáceas",
+                        "nombre_comun": "Ciruelo de jardín"
+                    },
+                    "map": {
+                        "color": "Rosáceas",
+                        "size": 668
+                    }
+                },
+                {
+                    "name": "Fotinia",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Rosáceas",
+                        "nombre_comun": "Fotinia"
+                    },
+                    "map": {
+                        "color": "Rosáceas",
+                        "size": 403
+                    }
+                },
+                {
+                    "name": "Ciruelo rojo",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Rosáceas",
+                        "nombre_comun": "Ciruelo rojo"
+                    },
+                    "map": {
+                        "color": "Rosáceas",
+                        "size": 99
+                    }
+                },
+                {
+                    "name": "Prunus",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Rosáceas",
+                        "nombre_comun": "Prunus"
+                    },
+                    "map": {
+                        "color": "Rosáceas",
+                        "size": 98
+                    }
+                },
+                {
+                    "name": "Durazno",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Rosáceas",
+                        "nombre_comun": "Durazno"
+                    },
+                    "map": {
+                        "color": "Rosáceas",
+                        "size": 92
+                    }
+                },
+                {
+                    "name": "Ciruelo",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Rosáceas",
+                        "nombre_comun": "Ciruelo"
+                    },
+                    "map": {
+                        "color": "Rosáceas",
+                        "size": 76
+                    }
+                },
+                {
+                    "name": "Cerezo",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Rosáceas",
+                        "nombre_comun": "Cerezo"
+                    },
+                    "map": {
+                        "color": "Rosáceas",
+                        "size": 24
+                    }
+                },
+                {
+                    "name": "Cotoneaster",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Rosáceas",
+                        "nombre_comun": "Cotoneaster"
+                    },
+                    "map": {
+                        "color": "Rosáceas",
+                        "size": 9
+                    }
+                },
+                {
+                    "name": "Malus",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Rosáceas",
+                        "nombre_comun": "Malus"
+                    },
+                    "map": {
+                        "color": "Rosáceas",
+                        "size": 3
+                    }
+                },
+                {
+                    "name": "Membrillero",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Rosáceas",
+                        "nombre_comun": "Membrillero"
+                    },
+                    "map": {
+                        "color": "Rosáceas",
+                        "size": 3
+                    }
+                },
+                {
+                    "name": "Crataegus",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Rosáceas",
+                        "nombre_comun": "Crataegus"
+                    },
+                    "map": {
+                        "color": "Rosáceas",
+                        "size": 3
+                    }
+                },
+                {
+                    "name": "Espino de fuego",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Rosáceas",
+                        "nombre_comun": "Espino de fuego"
+                    },
+                    "map": {
+                        "color": "Rosáceas",
+                        "size": 1
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "Rosáceas",
+                "nombre_comun": "Níspero japonés"
+            }
+        },
+        {
+            "name": "Rubiaceae",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "Jazmín",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Rubiaceae",
+                        "nombre_comun": "Jazmín"
+                    },
+                    "map": {
+                        "color": "Rubiaceae",
+                        "size": 3
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "Rubiaceae",
+                "nombre_comun": "Jazmín"
+            }
+        },
+        {
+            "name": "Ruscaceae",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "Drácena indivisa",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Ruscaceae",
+                        "nombre_comun": "Drácena indivisa"
+                    },
+                    "map": {
+                        "color": "Ruscaceae",
+                        "size": 89
+                    }
+                },
+                {
+                    "name": "Drácena marginata",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Ruscaceae",
+                        "nombre_comun": "Drácena marginata"
+                    },
+                    "map": {
+                        "color": "Ruscaceae",
+                        "size": 63
+                    }
+                },
+                {
+                    "name": "dracaena",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Ruscaceae",
+                        "nombre_comun": "dracaena"
+                    },
+                    "map": {
+                        "color": "Ruscaceae",
+                        "size": 4
+                    }
+                },
+                {
+                    "name": "Nolina",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Ruscaceae",
+                        "nombre_comun": "Nolina"
+                    },
+                    "map": {
+                        "color": "Ruscaceae",
+                        "size": 1
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "Ruscaceae",
+                "nombre_comun": "Drácena indivisa"
+            }
+        },
+        {
+            "name": "Rutaceas",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "Limonero",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Rutaceas",
+                        "nombre_comun": "Limonero"
+                    },
+                    "map": {
+                        "color": "Rutaceas",
+                        "size": 1018
+                    }
+                },
+                {
+                    "name": "Naranjo amargo",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Rutaceas",
+                        "nombre_comun": "Naranjo amargo"
+                    },
+                    "map": {
+                        "color": "Rutaceas",
+                        "size": 333
+                    }
+                },
+                {
+                    "name": "Citricos",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Rutaceas",
+                        "nombre_comun": "Citricos"
+                    },
+                    "map": {
+                        "color": "Rutaceas",
+                        "size": 315
+                    }
+                },
+                {
+                    "name": "Mandarino",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Rutaceas",
+                        "nombre_comun": "Mandarino"
+                    },
+                    "map": {
+                        "color": "Rutaceas",
+                        "size": 312
+                    }
+                },
+                {
+                    "name": "Naranjo dulce",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Rutaceas",
+                        "nombre_comun": "Naranjo dulce"
+                    },
+                    "map": {
+                        "color": "Rutaceas",
+                        "size": 117
+                    }
+                },
+                {
+                    "name": "Arbol del pomelo",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Rutaceas",
+                        "nombre_comun": "Arbol del pomelo"
+                    },
+                    "map": {
+                        "color": "Rutaceas",
+                        "size": 43
+                    }
+                },
+                {
+                    "name": "Lima",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Rutaceas",
+                        "nombre_comun": "Lima"
+                    },
+                    "map": {
+                        "color": "Rutaceas",
+                        "size": 16
+                    }
+                },
+                {
+                    "name": "Quinoto",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Rutaceas",
+                        "nombre_comun": "Quinoto"
+                    },
+                    "map": {
+                        "color": "Rutaceas",
+                        "size": 11
+                    }
+                },
+                {
+                    "name": "Canela de venado",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Rutaceas",
+                        "nombre_comun": "Canela de venado"
+                    },
+                    "map": {
+                        "color": "Rutaceas",
+                        "size": 1
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "Rutaceas",
+                "nombre_comun": "Limonero"
+            }
+        },
+        {
+            "name": "Salicáceas",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "Álamo carolina",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Salicáceas",
+                        "nombre_comun": "Álamo carolina"
+                    },
+                    "map": {
+                        "color": "Salicáceas",
+                        "size": 1737
+                    }
+                },
+                {
+                    "name": "Sauce llorón",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Salicáceas",
+                        "nombre_comun": "Sauce llorón"
+                    },
+                    "map": {
+                        "color": "Salicáceas",
+                        "size": 942
+                    }
+                },
+                {
+                    "name": "Sauce eléctrico",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Salicáceas",
+                        "nombre_comun": "Sauce eléctrico"
+                    },
+                    "map": {
+                        "color": "Salicáceas",
+                        "size": 589
+                    }
+                },
+                {
+                    "name": "Álamo",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Salicáceas",
+                        "nombre_comun": "Álamo"
+                    },
+                    "map": {
+                        "color": "Salicáceas",
+                        "size": 406
+                    }
+                },
+                {
+                    "name": "Álamo plateado",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Salicáceas",
+                        "nombre_comun": "Álamo plateado"
+                    },
+                    "map": {
+                        "color": "Salicáceas",
+                        "size": 321
+                    }
+                },
+                {
+                    "name": "Sauce criollo",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Salicáceas",
+                        "nombre_comun": "Sauce criollo"
+                    },
+                    "map": {
+                        "color": "Salicáceas",
+                        "size": 248
+                    }
+                },
+                {
+                    "name": "Sauce",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Salicáceas",
+                        "nombre_comun": "Sauce"
+                    },
+                    "map": {
+                        "color": "Salicáceas",
+                        "size": 145
+                    }
+                },
+                {
+                    "name": "Álamo negro",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Salicáceas",
+                        "nombre_comun": "Álamo negro"
+                    },
+                    "map": {
+                        "color": "Salicáceas",
+                        "size": 105
+                    }
+                },
+                {
+                    "name": "Álamo blanco piramidal",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Salicáceas",
+                        "nombre_comun": "Álamo blanco piramidal"
+                    },
+                    "map": {
+                        "color": "Salicáceas",
+                        "size": 77
+                    }
+                },
+                {
+                    "name": "Álamo de Italia",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Salicáceas",
+                        "nombre_comun": "Álamo de Italia"
+                    },
+                    "map": {
+                        "color": "Salicáceas",
+                        "size": 68
+                    }
+                },
+                {
+                    "name": "Sauce blanco",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Salicáceas",
+                        "nombre_comun": "Sauce blanco"
+                    },
+                    "map": {
+                        "color": "Salicáceas",
+                        "size": 45
+                    }
+                },
+                {
+                    "name": "Álamo negro del Canada",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Salicáceas",
+                        "nombre_comun": "Álamo negro del Canada"
+                    },
+                    "map": {
+                        "color": "Salicáceas",
+                        "size": 32
+                    }
+                },
+                {
+                    "name": "Sauce blanco variedad tristis",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Salicáceas",
+                        "nombre_comun": "Sauce blanco variedad tristis"
+                    },
+                    "map": {
+                        "color": "Salicáceas",
+                        "size": 7
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "Salicáceas",
+                "nombre_comun": "Álamo carolina"
+            }
+        },
+        {
+            "name": "Sapindaceas",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "Chal Chal",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Sapindaceas",
+                        "nombre_comun": "Chal Chal"
+                    },
+                    "map": {
+                        "color": "Sapindaceas",
+                        "size": 3
+                    }
+                },
+                {
+                    "name": "Mataojos",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Sapindaceas",
+                        "nombre_comun": "Mataojos"
+                    },
+                    "map": {
+                        "color": "Sapindaceas",
+                        "size": 1
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "Sapindaceas",
+                "nombre_comun": "Chal Chal"
+            }
+        },
+        {
+            "name": "Simarrubáceas",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "Árbol del cielo (Ailanto o Árbol de los dioses)",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Simarrubáceas",
+                        "nombre_comun": "Árbol del cielo (Ailanto o Árbol de los dioses)"
+                    },
+                    "map": {
+                        "color": "Simarrubáceas",
+                        "size": 1368
+                    }
+                },
+                {
+                    "name": "Ailanthus",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Simarrubáceas",
+                        "nombre_comun": "Ailanthus"
+                    },
+                    "map": {
+                        "color": "Simarrubáceas",
+                        "size": 34
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "Simarrubáceas",
+                "nombre_comun": "Árbol del cielo (Ailanto o Árbol de los dioses)"
+            }
+        },
+        {
+            "name": "Solanaceas",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "Jazmín del Paraguay",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Solanaceas",
+                        "nombre_comun": "Jazmín del Paraguay"
+                    },
+                    "map": {
+                        "color": "Solanaceas",
+                        "size": 15
+                    }
+                },
+                {
+                    "name": "Tabaquillo",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Solanaceas",
+                        "nombre_comun": "Tabaquillo"
+                    },
+                    "map": {
+                        "color": "Solanaceas",
+                        "size": 13
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "Solanaceas",
+                "nombre_comun": "Jazmín del Paraguay"
+            }
+        },
+        {
+            "name": "Sterculiaceae",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "Parasol de la china",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Sterculiaceae",
+                        "nombre_comun": "Parasol de la china"
+                    },
+                    "map": {
+                        "color": "Sterculiaceae",
+                        "size": 67
+                    }
+                },
+                {
+                    "name": "Esterculea",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Sterculiaceae",
+                        "nombre_comun": "Esterculea"
+                    },
+                    "map": {
+                        "color": "Sterculiaceae",
+                        "size": 1
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "Sterculiaceae",
+                "nombre_comun": "Parasol de la china"
+            }
+        },
+        {
+            "name": "Taxodiáceas",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "Ciprés calvo",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Taxodiáceas",
+                        "nombre_comun": "Ciprés calvo"
+                    },
+                    "map": {
+                        "color": "Taxodiáceas",
+                        "size": 48
+                    }
+                },
+                {
+                    "name": "Criptomeria (Cedro del Japón)",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Taxodiáceas",
+                        "nombre_comun": "Criptomeria (Cedro del Japón)"
+                    },
+                    "map": {
+                        "color": "Taxodiáceas",
+                        "size": 12
+                    }
+                },
+                {
+                    "name": "Ahuehuete",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Taxodiáceas",
+                        "nombre_comun": "Ahuehuete"
+                    },
+                    "map": {
+                        "color": "Taxodiáceas",
+                        "size": 2
+                    }
+                },
+                {
+                    "name": "Taxodium",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Taxodiáceas",
+                        "nombre_comun": "Taxodium"
+                    },
+                    "map": {
+                        "color": "Taxodiáceas",
+                        "size": 1
+                    }
+                },
+                {
+                    "name": "Cedro del Japón",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Taxodiáceas",
+                        "nombre_comun": "Cedro del Japón"
+                    },
+                    "map": {
+                        "color": "Taxodiáceas",
+                        "size": 1
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "Taxodiáceas",
+                "nombre_comun": "Ciprés calvo"
+            }
+        },
+        {
+            "name": "Teaceae",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "Camelia",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Teaceae",
+                        "nombre_comun": "Camelia"
+                    },
+                    "map": {
+                        "color": "Teaceae",
+                        "size": 3
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "Teaceae",
+                "nombre_comun": "Camelia"
+            }
+        },
+        {
+            "name": "Tiliaceas",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "Tilo",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Tiliaceas",
+                        "nombre_comun": "Tilo"
+                    },
+                    "map": {
+                        "color": "Tiliaceas",
+                        "size": 16981
+                    }
+                },
+                {
+                    "name": "Sota Caballo ",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Tiliaceas",
+                        "nombre_comun": "Sota Caballo "
+                    },
+                    "map": {
+                        "color": "Tiliaceas",
+                        "size": 9
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "Tiliaceas",
+                "nombre_comun": "Tilo"
+            }
+        },
+        {
+            "name": "Ulmaceas",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "Olmo europeo",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Ulmaceas",
+                        "nombre_comun": "Olmo europeo"
+                    },
+                    "map": {
+                        "color": "Ulmaceas",
+                        "size": 350
+                    }
+                },
+                {
+                    "name": "Olmo",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Ulmaceas",
+                        "nombre_comun": "Olmo"
+                    },
+                    "map": {
+                        "color": "Ulmaceas",
+                        "size": 332
+                    }
+                },
+                {
+                    "name": "Almez (Almecino o Almecina)",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Ulmaceas",
+                        "nombre_comun": "Almez (Almecino o Almecina)"
+                    },
+                    "map": {
+                        "color": "Ulmaceas",
+                        "size": 163
+                    }
+                },
+                {
+                    "name": "Celtis tala",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Ulmaceas",
+                        "nombre_comun": "Celtis tala"
+                    },
+                    "map": {
+                        "color": "Ulmaceas",
+                        "size": 17
+                    }
+                },
+                {
+                    "name": "Olmo de montaña",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Ulmaceas",
+                        "nombre_comun": "Olmo de montaña"
+                    },
+                    "map": {
+                        "color": "Ulmaceas",
+                        "size": 7
+                    }
+                },
+                {
+                    "name": "Almez de china",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Ulmaceas",
+                        "nombre_comun": "Almez de china"
+                    },
+                    "map": {
+                        "color": "Ulmaceas",
+                        "size": 3
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "Ulmaceas",
+                "nombre_comun": "Olmo europeo"
+            }
+        },
+        {
+            "name": "Verbenaceas",
+            "class": "nombre_familia",
+            "children": [
+                {
+                    "name": "Duranta",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Verbenaceas",
+                        "nombre_comun": "Duranta"
+                    },
+                    "map": {
+                        "color": "Verbenaceas",
+                        "size": 15
+                    }
+                },
+                {
+                    "name": "Duranta variedad aurea",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Verbenaceas",
+                        "nombre_comun": "Duranta variedad aurea"
+                    },
+                    "map": {
+                        "color": "Verbenaceas",
+                        "size": 3
+                    }
+                },
+                {
+                    "name": "Espina del bañado",
+                    "class": "nombre_comun",
+                    "path": {
+                        "nombre_familia": "Verbenaceas",
+                        "nombre_comun": "Espina del bañado"
+                    },
+                    "map": {
+                        "color": "Verbenaceas",
+                        "size": 1
+                    }
+                }
+            ],
+            "path": {
+                "nombre_familia": "Verbenaceas",
+                "nombre_comun": "Duranta"
+            }
+        }
+    ]
+}
