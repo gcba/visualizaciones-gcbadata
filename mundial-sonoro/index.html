@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+body {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+.dot {
+  fill: white;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+</style>
+<body>
+<script src="http://d3js.org/d3.v3.js"></script>
+<script>
+
+var margin = {top: 20, right: 20, bottom: 30, left: 50},
+    width = 1800 - margin.left - margin.right,
+    height = 1200 - margin.top - margin.bottom;
+
+// Formato original de fecha: 6/15/2014 7:00:43 PM
+
+var parseDate = d3.time.format("%m/%d/%Y %I:%M:%S %p").parse;
+
+var x = d3.time.scale()
+    .range([0, width]);
+
+var y = d3.scale.linear()
+    .range([height, 0]);
+
+// 
+
+var xAxis = d3.svg.axis()
+    .scale(x).ticks(d3.time.minute, 5)
+    .orient("bottom");
+
+var yAxis = d3.svg.axis()
+    .scale(y)
+    .orient("left");
+
+var line = d3.svg.line()
+    .interpolate("basis") 
+    .x(function(d) { return x(d.timestamp); })
+    .y(function(d) { return y(d.db); });
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+d3.csv("data/medicion-dbs.csv", function(error, data) {
+  data.forEach(function(d) {
+    d.timestamp = parseDate(d.timestamp);
+    d.db = +d.db;
+    d.jugada = +d.jugadaclave;
+    console.log(d.jugadaclave);
+  });
+
+  x.domain(d3.extent(data, function(d) { return d.timestamp; }));
+  y.domain(d3.extent(data, function(d) { return d.db; }));
+
+  svg.append("clipPath")
+        .attr("id", "clip-above")
+      .append("rect")
+        .attr("width", width)
+        .attr("height", y(55));
+
+    svg.append("clipPath")
+        .attr("id", "clip-below")
+      .append("rect")
+        .attr("y", y(55))
+        .attr("width", width)
+        .attr("height", height - y(55));
+
+  svg.append("g")
+      .attr("class", "x axis")
+      .attr("transform", "translate(0," + height + ")")
+      .call(xAxis);
+
+  svg.append("g")
+      .attr("class", "y axis")
+      .call(yAxis)
+    .append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 6)
+      .attr("dy", ".71em")
+      .style("text-anchor", "end")
+      .text("DBs");
+
+  svg.append("path")
+      .datum(data)
+      .attr("class", "line")
+      .attr("d", line);
+
+  svg.selectAll(".dot")
+      .data(data.filter(function(d) { return d.y; }))
+    .enter().append("circle")
+      .attr("class", "dot")
+      .attr("cx", line.x())
+      .attr("cy", line.y())
+      .attr("r", 3.5);
+});
+
+</script>
