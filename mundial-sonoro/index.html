@@ -80,19 +80,6 @@ d3.csv("data/medicion-dbs.csv", function(error, data) {
   x.domain(d3.extent(data, function(d) { return d.timestamp; }));
   y.domain(d3.extent(data, function(d) { return d.db; }));
 
-  svg.append("clipPath")
-        .attr("id", "clip-above")
-      .append("rect")
-        .attr("width", width)
-        .attr("height", y(55));
-
-    svg.append("clipPath")
-        .attr("id", "clip-below")
-      .append("rect")
-        .attr("y", y(55))
-        .attr("width", width)
-        .attr("height", height - y(55));
-
   svg.append("g")
       .attr("class", "x axis")
       .attr("transform", "translate(0," + height + ")")
