@@ -29,6 +29,12 @@ body {
   stroke-width: 1.5px;
 }
 
+text{
+
+  z-index: 999;
+}
+
+
 </style>
 <body>
 <script src="http://d3js.org/d3.v3.js"></script>
@@ -78,6 +84,8 @@ d3.tsv("data/final-1t.tsv", function(error, data) {
   data.forEach(function(d) {
     d.tiempojuego = parseDateGame(d.tiempojuego);
     d.db = +d.db;
+    d.evento = d.evento;
+    d.key = d.key;
   });
 
   x.domain(d3.extent(data, function(d) { return d.tiempojuego; }));
@@ -103,13 +111,33 @@ d3.tsv("data/final-1t.tsv", function(error, data) {
       .attr("class", "line")
       .attr("d", line);
 
-  svg.selectAll(".dot")
-      .data(data.filter(function(d) { return d.y; }))
-    .enter().append("circle")
+  var node = svg.selectAll(".node")
+      .data(data.filter(function(d) { return d.key; }))
+      .enter().append("g");
+
+
+
+
+  circulo = node.append("circle") /* reemplazar esto por lo comentado */
       .attr("class", "dot")
       .attr("cx", line.x())
       .attr("cy", line.y())
       .attr("r", 3.5);
+
+/*
+  
+  var circulo = node.append("circle")
+      .attr("class", "dot")
+      .attr("cx", line.x())
+      .attr("cy", line.y())
+      .attr("r", 3.5);
+
+  node.append("text")
+      .attr("x", function(d) { return d.evento })
+      .attr("dy", ".35em")
+      .text(function(d) { return d.evento });
+*/
+
 });
 
 
