@@ -3,11 +3,6 @@
 <style>
 
 body {
-  margin: auto;
-  width: 960px;
-}
-
-text {
   font: 10px sans-serif;
 }
 
@@ -28,29 +23,28 @@ text {
   stroke-width: 1.5px;
 }
 
-.line.above {
-  stroke: #f00;
+.dot {
+  fill: white;
+  stroke: steelblue;
+  stroke-width: 1.5px;
 }
 
 </style>
 <body>
-
-
 <script src="http://d3js.org/d3.v3.js"></script>
-<script src="libs/crossfilter.min.js"></script>
 <script>
 
-// var xf = crossfilter();
-
 var margin = {top: 20, right: 20, bottom: 30, left: 50},
-    width = 1400 - margin.left - margin.right,
+    width = 1200 - margin.left - margin.right,
     height = 900 - margin.top - margin.bottom;
 
-// Formato original de fecha: 6/15/2014 7:00:43 PM
-var parseDate = d3.time.format("%m/%d/%Y %I:%M:%S %p").parse;
+// Formato original de fecha: 01/07/2014 13:00:27
+
+var parseDate = d3.time.format("%d/%m/%Y %H:%M:%S").parse;
 
 // Formato original de fecha: 00:00
-var parseDatePartido = d3.time.format("%M:%S").parse;
+
+var parseDateGame = d3.time.format("%M:%S").parse;
 
 var x = d3.time.scale()
     .range([0, width]);
@@ -58,18 +52,20 @@ var x = d3.time.scale()
 var y = d3.scale.linear()
     .range([height, 0]);
 
+// 
+
 var xAxis = d3.svg.axis()
-    .scale(x).ticks(d3.time.minute, 15)
-    .orient("bottom");
+    .scale(x).ticks(d3.time.minute, 5)
+    .orient("bottom")
+    .tickFormat(d3.time.format("%M"));
 
 var yAxis = d3.svg.axis()
     .scale(y)
     .orient("left");
 
 var line = d3.svg.line()
-    .interpolate('basis')
-    .defined(function(d) { return d.y != null; })
-    .x(function(d) { return x(d.timestamp); })
+    .interpolate("basis") 
+    .x(function(d) { return x(d.tiempojuego); })
     .y(function(d) { return y(d.db); });
 
 var svg = d3.select("body").append("svg")
@@ -78,41 +74,14 @@ var svg = d3.select("body").append("svg")
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-
-
-d3.csv("data/medicion-dbs.csv", function(error, data) {
+d3.tsv("data/final-1t.tsv", function(error, data) {
   data.forEach(function(d) {
-    d.timestamp = parseDatePartido(d.timestamp);
+    d.tiempojuego = parseDateGame(d.tiempojuego);
     d.db = +d.db;
-    d.jugada = +d.jugadaclave;
-
-    // console.log(d);
   });
 
-  // xf.add(data);
-
-  // var dbmax = xf.dimension(function (d) { return d.db });
-
-  // var calculateMax = dbmax.group().reduceSum();
-
-
-  // console.log(calculateMax);
-
-  x.domain([data[0].timestamp, data[data.length - 1].timestamp]);
+  x.domain(d3.extent(data, function(d) { return d.tiempojuego; }));
   y.domain(d3.extent(data, function(d) { return d.db; }));
-
-  svg.append("clipPath")
-      .attr("id", "clip-above")
-    .append("rect")
-      .attr("width", width)
-      .attr("height", y(100));
-
-  svg.append("clipPath")
-      .attr("id", "clip-below")
-    .append("rect")
-      .attr("y", y(100))
-      .attr("width", width)
-      .attr("height", height - y(100));
 
   svg.append("g")
       .attr("class", "x axis")
@@ -127,15 +96,22 @@ d3.csv("data/medicion-dbs.csv", function(error, data) {
       .attr("y", 6)
       .attr("dy", ".71em")
       .style("text-anchor", "end")
-      .text("Decibeles");
+      .text("DBs");
 
-  svg.selectAll(".line")
-      .data(["above", "below"])
-    .enter().append("path")
-      .attr("class", function(d) { return "line " + d; })
-      .attr("clip-path", function(d) { return "url(#clip-" + d + ")"; })
+  svg.append("path")
       .datum(data)
+      .attr("class", "line")
       .attr("d", line);
+
+  svg.selectAll(".dot")
+      .data(data.filter(function(d) { return d.y; }))
+    .enter().append("circle")
+      .attr("class", "dot")
+      .attr("cx", line.x())
+      .attr("cy", line.y())
+      .attr("r", 3.5);
 });
+
+
 
 </script>
