@@ -42,6 +42,9 @@ var margin = {top: 20, right: 20, bottom: 30, left: 50},
 
 var parseDate = d3.time.format("%m/%d/%Y %I:%M:%S %p").parse;
 
+// Formato original de fecha: 00:00
+var parseDatePartido = d3.time.format("%M:%S").parse;
+
 var x = d3.time.scale()
     .range([0, width]);
 
@@ -60,8 +63,8 @@ var yAxis = d3.svg.axis()
 
 var line = d3.svg.line()
     .interpolate("basis") 
-    .x(function(d) { return x(d.timestamp); })
-    .y(function(d) { return y(d.db); });
+    .x(function(d) { return x(d.minpartido); })
+    .y(function(d) { return y(d.avg); });
 
 var svg = d3.select("body").append("svg")
     .attr("width", width + margin.left + margin.right)
@@ -71,13 +74,11 @@ var svg = d3.select("body").append("svg")
 
 d3.csv("data/medicion-dbs-avg.csv", function(error, data) {
   data.forEach(function(d) {
-    d.timestamp = parseDate(d.timestamp);
-    d.db = +d.avg;
-    d.jugada = +d.jugadaclave;
-    console.log(d.jugadaclave);
+    d.minpartido = parseDate(d.minpartido);
+    d.avg = +d.avg;
   });
 
-  x.domain(d3.extent(data, function(d) { return d.timestamp; }));
+  x.domain(d3.extent(data, function(d) { return d.minpartido; }));
   y.domain(d3.extent(data, function(d) { return d.avg; }));
 
   svg.append("g")

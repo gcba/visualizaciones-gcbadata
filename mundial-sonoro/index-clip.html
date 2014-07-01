@@ -69,7 +69,7 @@ var yAxis = d3.svg.axis()
 var line = d3.svg.line()
     .interpolate('basis')
     .defined(function(d) { return d.y != null; })
-    .x(function(d) { return x(d.timestamp); })
+    .x(function(d) { return x(d.minpartido); })
     .y(function(d) { return y(d.avg); });
 
 var svg = d3.select("body").append("svg")
@@ -82,7 +82,7 @@ var svg = d3.select("body").append("svg")
 
 d3.csv("data/medicion-dbs-avg.csv", function(error, data) {
   data.forEach(function(d) {
-    d.timestamp = parseDate(d.timestamp);
+    d.minpartido = parseDatePartido(d.minpartido);
     d.avg = +d.avg;
     d.jugada = +d.jugadaclave;
 
@@ -98,7 +98,7 @@ d3.csv("data/medicion-dbs-avg.csv", function(error, data) {
 
   // console.log(calculateMax);
 
-  x.domain([data[0].timestamp, data[data.length - 1].timestamp]);
+  x.domain([data[0].minpartido, data[data.length - 1].minpartido]);
   y.domain(d3.extent(data, function(d) { return d.avg; }));
 
   svg.append("clipPath")

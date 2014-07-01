@@ -1,4 +1,4 @@
-timestamp,db,min partido,jugada,clave,valorinicial,avg
+timestamp,db,minpartido,jugada,clave,valorinicial,avg
 6/15/2014 7:00:43 PM,100.40,00:00,Inicio,1tinicio,1,94.17
 6/15/2014 7:00:53 PM,96.30,00:10,,,1,93.45
 6/15/2014 7:01:03 PM,94.80,00:20,,,1,92.74

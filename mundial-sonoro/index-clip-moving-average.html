@@ -81,7 +81,7 @@ var yAxis = d3.svg.axis()
     .orient("left");
 
 var line = d3.svg.line()
-    .interpolate(movingAvg(40))
+    .interpolate(movingAvg(100))
     .x(function(d) { return x(d.timestamp); })
     .y(function(d) { return y(d.db); });
 
