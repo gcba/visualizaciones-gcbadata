@@ -72,7 +72,7 @@ var thePlot;
 var margin = {top: 20, right: 10, bottom: 25, left: 70};
 var height = 200;
 
-var parseDate = d3.time.format("%Y-%m-%d").parse;
+var parseDate = d3.time.format("%Y/%m/%d %hh:%mm:%ss").parse;
 
 d3.csv("data/flights.csv", function (error, data) {
   // FORMATTING DATA //
