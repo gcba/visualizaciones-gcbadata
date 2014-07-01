@@ -70,11 +70,11 @@ path, line {
 <script>
 var thePlot;
 var margin = {top: 20, right: 10, bottom: 25, left: 70};
-var height = 200;
+var height = 600;
 
 var parseDate = d3.time.format("%Y/%m/%d %hh:%mm:%ss").parse;
 
-d3.csv("data/flights.csv", function (error, data) {
+d3.csv("data/medicion-dbs.csv", function (error, data) {
   // FORMATTING DATA //
 
   if (error) {
@@ -83,7 +83,13 @@ d3.csv("data/flights.csv", function (error, data) {
   }
 
   var json = data.map(function (d) {
-    return {val: +d.value, ms: parseDate(d.date).getTime()};
+
+      console.log(parseDate(d.timestamp));
+
+    return {
+      val: d.db, ms: parseDate(d.timestamp)
+
+    };
   });
 
 
