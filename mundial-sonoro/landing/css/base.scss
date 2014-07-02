@@ -74,9 +74,10 @@ header {
     margin-bottom: 50px;
     font-family: Helvetica, Arial, sans-serif;
     font-size: 0.8em;
-//    width: 400%;
+    width: 400%;
     height: 100%;
     display: block;
+    //display: table;
     img {height:100%; max-height: 100%; max-width: 100%}
     .panel_01{ float: left;}
     .panel_02{ float: left;}
@@ -94,11 +95,5 @@ footer {
     background-color: #333333;
     .ministerio {
         padding: 20px 50px;
-    }
-    .modernizacion {
-        text-align: left;
-    }
-    .desarrollo-economico {
-        text-align: right;
     }
 }
