@@ -74,13 +74,14 @@ header {
     margin-bottom: 50px;
     font-family: Helvetica, Arial, sans-serif;
     font-size: 0.8em;
-    width: 400%;
+//    width: 400%;
     height: 100%;
     display: block;
-    .panel_01{ float: left; background-color: #FF0000; width: 25%; }
-    .panel_02{ float: left; background-color: #09FF00; width: 25%; }
-    .panel_03{ float: left; background-color: #0090FF; width: 25%; }
-    .panel_04{ float: left; background-color: #FFFF00; width: 25%; }
+    img {height:100%; max-height: 100%; max-width: 100%}
+    .panel_01{ float: left;}
+    .panel_02{ float: left;}
+    .panel_03{ float: left;}
+    .panel_04{ float: left;}
 }
 
 footer {

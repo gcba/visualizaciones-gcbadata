@@ -7,7 +7,7 @@
   <script type='text/javascript' src='libs/jquery.mousewheel.min.js?ver=3.1.11'></script>
 
 </head>
-<body>
+<body onresize="OnResizeDocument()">
 
 <header>
     <div class="navbar navbar-default navbar-static-top" id="top" role="banner">
@@ -25,10 +25,18 @@
 </header>
 
 <div id="contenido">
-  <div class="panel_01 "> a</div>
-  <div class="panel_02 "> b</div>
-  <div class="panel_03 "> c</div>
-  <div class="panel_04 "> d</div>
+  <div class="panel_01"> 
+    <img src="img/ideas-01.png" class="imagen">  
+  </div>
+  <div class="panel_02">
+    <img src="img/ideas-02.png" class="imagen">  
+  </div>
+  <div class="panel_03">
+      <img src="img/ideas-03.png" class="imagen">  
+</div>
+  <div class="panel_04">
+      <img src="img/ideas-04.png" class="imagen">   
+</div>
 </div>
 
 
@@ -52,6 +60,15 @@
       event.preventDefault();
     });
   });
+
+  function OnResizeDocument () {
+    var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0) - 120;
+    var w = Math.max(document.documentElement.clientWidth, window.innerHeight || 0);
+
+    $(".imagen").height( h );
+    $("#contenido").width( w * 2.4 );
+  }
+  OnResizeDocument ();
 </script>
 
 </body>
