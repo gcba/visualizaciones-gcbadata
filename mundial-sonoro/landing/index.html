@@ -56,7 +56,7 @@
 <script>
   $(function() {
     $("*").mousewheel(function(event, delta) {
-      this.scrollLeft -= (delta * 30);
+      this.scrollLeft -= (delta * 5);
       event.preventDefault();
     });
   });
@@ -66,7 +66,7 @@
     var w = Math.max(document.documentElement.clientWidth, window.innerHeight || 0);
 
     $(".imagen").height( h );
-    $("#contenido").width( w * 2.4 );
+    $("#contenido").width( w * 4 );
   }
   OnResizeDocument ();
 </script>
