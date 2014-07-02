@@ -56,6 +56,7 @@ header {
   margin-bottom: 50px;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 0.8em;
+  width: 400%;
   height: 100%;
   display: block; }
   #contenido img {
@@ -63,7 +64,8 @@ header {
     max-height: 100%;
     max-width: 100%; }
   #contenido .panel_01 {
-    float: left; }
+    float: left;
+    background: url("img/bamundial2-2blur.jpg") no-repeat center center; }
   #contenido .panel_02 {
     float: left; }
   #contenido .panel_03 {
@@ -81,7 +83,3 @@ footer {
   background-color: #333333; }
   footer .ministerio {
     padding: 20px 50px; }
-  footer .modernizacion {
-    text-align: left; }
-  footer .desarrollo-economico {
-    text-align: right; }

@@ -7,7 +7,7 @@
   <script type='text/javascript' src='libs/jquery.mousewheel.min.js?ver=3.1.11'></script>
 
 </head>
-<body onresize="OnResizeDocument()">
+<body onresize="OnResizeDocument()" onload="OnResizeDocument ();">
 
 <header>
     <div class="navbar navbar-default navbar-static-top" id="top" role="banner">
@@ -26,32 +26,31 @@
 
 <div id="contenido">
   <div class="panel_01"> 
-    <img src="img/ideas-01.png" class="imagen">  
+    <img src="css/img/ideas-01.png" class="imagen">  
   </div>
   <div class="panel_02">
-    <img src="img/ideas-02.png" class="imagen">  
+    <img src="css/img/ideas-02.png" class="imagen">  
   </div>
   <div class="panel_03">
-      <img src="img/ideas-03.png" class="imagen">  
+      <img src="css/img/ideas-03.png" class="imagen">  
 </div>
   <div class="panel_04">
-      <img src="img/ideas-04.png" class="imagen">   
+      <img src="css/img/ideas-04.png" class="imagen">   
 </div>
 </div>
+
 
 
 <footer>
     <div class="container">
         <div class="row">
-            <div class="col-xs-6 ministerio modernizacion">
+            <div class="col-md-6 col-md-offset-4 ministerio modernizacion">
                 Ministerio de Modernización
-            </div>
-            <div class="col-xs-6 ministerio desarrollo-economico">
-                Ministerio de Gobierno
             </div>
         </div>
     </div>
 </footer>
+
 
 <script>
   $(function() {
@@ -64,11 +63,10 @@
   function OnResizeDocument () {
     var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0) - 120;
     var w = Math.max(document.documentElement.clientWidth, window.innerHeight || 0);
-
     $(".imagen").height( h );
-    $("#contenido").width( w * 4 );
+    var items = $("#contenido div");
+    $("#contenido").width( items.width() * 5);
   }
-  OnResizeDocument ();
 </script>
 
 </body>
