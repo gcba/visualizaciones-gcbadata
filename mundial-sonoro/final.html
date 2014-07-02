@@ -80,7 +80,7 @@ var svg = d3.select("body").append("svg")
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-d3.tsv("data/final-1t.tsv", function(error, data) {
+d3.tsv("data/final-2s.tsv", function(error, data) {
   data.forEach(function(d) {
     d.tiempojuego = parseDateGame(d.tiempojuego);
     d.db = +d.db;
