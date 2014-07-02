@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title>Argentina vs. Suiza - Buenos Aires Ciudad</title>
+  <link rel="stylesheet" href="css/base.css" />
+  <script type='text/javascript' src='libs/jquery.min.js?ver=1.3.2'></script>
+  <script type='text/javascript' src='libs/jquery.mousewheel.min.js?ver=3.1.11'></script>
+
+</head>
+<body>
+
+<header>
+    <div class="navbar navbar-default navbar-static-top" id="top" role="banner">
+        <div class="header-gcba">
+            <div class="header-inner">
+                <div class="container">
+                    <a add="log('a-href-header', 'buenosaires.gob.ar')" href="http://buenosaires.gob.ar" target="_blank">
+                        <div class="logo"></div>
+                    </a>
+                    <h2 class="slogan">En todo estás vos</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div id="contenido">
+  <div class="panel_01 "> a</div>
+  <div class="panel_02 "> b</div>
+  <div class="panel_03 "> c</div>
+  <div class="panel_04 "> d</div>
+</div>
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6 ministerio modernizacion">
+                Ministerio de Modernización
+            </div>
+            <div class="col-xs-6 ministerio desarrollo-economico">
+                Ministerio de Gobierno
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+  $(function() {
+    $("*").mousewheel(function(event, delta) {
+      this.scrollLeft -= (delta * 30);
+      event.preventDefault();
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "name": "landing-mundial-sonoro",
+  "version": "0.0.1",
+  "dependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-sass": "~0.7.3",
+    "grunt-contrib-watch": "~0.6.1",
+    "load-grunt-tasks": "~0.2.0"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  }
+}
