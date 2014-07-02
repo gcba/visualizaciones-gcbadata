@@ -23,8 +23,8 @@ header {
   header .header-gcba {
     height: 50px;
     padding: 10px 0;
-    overflow: visible;
-    background-color: #ffd300; }
+    background-color: #ffd300;
+    overflow: hidden; }
   header .header-inner {
     padding-right: 20px;
     padding-left: 20px; }
@@ -56,7 +56,7 @@ header {
   margin-bottom: 50px;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 0.8em;
-  width: 400%;
+  width: 100%;
   height: 100%;
   display: block; }
   #contenido img {
